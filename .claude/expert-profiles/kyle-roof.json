@@ -1,0 +1,379 @@
+{
+  "expert": {
+    "name": "Kyle Roof",
+    "domain": "7 - Search & Discovery",
+    "active_period": "2015-present",
+    "core_thesis": "Google's algorithm is math. Ranking is determined by whether a page gives the algorithm the correct mathematical profile, right terms, right counts, right placements, reverse-engineered from what already wins in SERPs. Content quality affects conversions; math determines rank.",
+    "key_questions": [
+      "What is the target keyword?",
+      "What page types does Google rank top 10 for this keyword?",
+      "What is the site's current authority tier (Search Console daily click range)?",
+      "Compound page (within tier, minimal SEO) or target page (above tier, full treatment)?",
+      "Does the site have existing supporting content for silo-linking?"
+    ],
+    "operating_beliefs": [
+      "Ranking is mathematical. Algorithm counts terms in specific locations and compares against competitors.",
+      "Google shows you what it rewards. Reverse-engineer top pages and match their mathematical profile.",
+      "Testing beats guessing. Untested SEO opinions ('GuesSEO') are invalid decision inputs.",
+      "The secret hides in plain sight in the SERPs.",
+      "Content quality helps conversions but doesn't determine rank. Lorem Ipsum with correct math outranked real content.",
+      "Meta title is the undisputed highest-weighted on-page signal.",
+      "Sites ranking for more keywords need fewer backlinks to rank for target terms.",
+      "E-E-A-T is not a direct ranking factor but a back-end check triggered at a traffic threshold.",
+      "Google reads pages as 'bag of words', counts terms regardless of grammar or order.",
+      "A page can be simultaneously over-optimized in one section and under-optimized in another."
+    ],
+    "biases": [
+      "Heavily favors on-page math. May underweight off-page factors (backlinks, brand signals) not decomposed at same granularity.",
+      "Assumes Google organic is primary discovery channel. Non-search channels invisible.",
+      "Privileges quantitative signals over qualitative content. Rates mathematically optimized mediocre writing above brilliant writing with no keyword strategy.",
+      "Relies on competitor SERP data existing. Cannot evaluate brand-new queries with no search history.",
+      "Trusts Search Console over third-party tools. May dismiss signals visible only in Ahrefs/SEMrush."
+    ],
+    "limitations": [
+      "Off-site discovery: Only covers organic search. Social, email, paid, referral, community discovery outside scope.",
+      "Link building: Backlinks acknowledged as 'votes' but not systematically tested. Perfect on-page math may still fail without links; methodology cannot prescribe the fix.",
+      "Content quality for UX: Page that ranks but fails to convert is outside lens. Ranking and user value treated as separate problems.",
+      "Algorithm fringe changes: 70-80% of algorithm (bell curve core) is stable, but fringe changes can temporarily affect specific tactics.",
+      "AI/NLP evolution: As Google incorporates BERT, MUM, etc., pure 'bag of words' model may lose explanatory power.",
+      "Brand-dominated SERPs: Massive domain authority sites may rank regardless of on-page math.",
+      "Novel content with no SERP competitors to reverse-engineer.",
+      "Sites relying on non-Google engines or non-search discovery."
+    ]
+  },
+  "frameworks": [
+    {
+      "name": "Page Type Matching (SERP Intent Alignment)",
+      "source": "Kyle Roof, Bigeye podcast, multiple interviews",
+      "purpose": "Is the deliverable the same TYPE of page Google ranks for the target keyword?",
+      "mechanics": {
+        "description": "Google ranks specific page types for specific keywords. A product page won't compete with articles if Google ranks articles. First step: verify page type alignment with SERP.",
+        "components": [
+          {
+            "name": "SERP Page Type Audit",
+            "definition": "Search target keyword, categorize what Google ranks positions 1-10 (product, listicle, guide, category, local service, comparison, etc.)",
+            "key_questions": [
+              "What page type dominates positions 1-10?",
+              "Does deliverable match that type?",
+              "If mixed types, does deliverable match the most common?"
+            ],
+            "red_flags": "Complete type mismatch with no structural overlap to what Google ranks."
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF page type doesn't match SERP, THEN stop, rebuild to match before any other optimization.",
+        "IF mixed types (e.g., 6 articles + 4 products), THEN match dominant unless site authority strongly favors minority.",
+        "IF format Google has never ranked for this keyword, THEN near-fatal misalignment."
+      ]
+    },
+    {
+      "name": "Correlation Math Framework (Scientific On-Page Method)",
+      "source": "Kyle Roof methodology, operationalized through PageOptimizer Pro (POP)",
+      "purpose": "Does the page have the correct mathematical profile to match top-ranking competitors?",
+      "mechanics": {
+        "description": "Reverse-engineer top-ranking pages: count three term types, map placement across weighted sections, calculate optimal ranges, score against those ranges.",
+        "components": [
+          {
+            "name": "Three Types of Important Terms",
+            "definition": "Exact keyword (precise search term), keyword variations (phrase-match synonyms/variants), contextual terms/LSI (terms signaling topic relevance).",
+            "key_questions": [
+              "Exact keyword present? Count vs competitors?",
+              "Variations (synonyms, close variants) present and distributed?",
+              "Contextual terms creating complete semantic picture?",
+              "Each type within competitor-established range?"
+            ]
+          },
+          {
+            "name": "Placement Across Weighted Page Sections",
+            "definition": "Group A (highest): Meta title, body, URL, H1. Group B (secondary): H2-H4, anchor text. Group C (tertiary): Bold, italic, image alt. Group D (minimal/null): Schema, HTML tags, OG. Meta description and meta keyword do not index.",
+            "key_questions": [
+              "Terms in Group A locations?",
+              "Distributed into Group B?",
+              "Group C reinforcements present?",
+              "Distribution consistent with competitors?"
+            ]
+          },
+          {
+            "name": "POP Score Equivalent",
+            "definition": "Overall mathematical optimization percentage. ~70% = should see movement; ~80% = target; ~100% = ideal. 100% but not ranking triggers over-optimization check.",
+            "key_questions": [
+              "POP score if available?",
+              "If no POP: does manual assessment suggest mathematical competitiveness?",
+              "Systematically optimized or haphazardly written?"
+            ]
+          }
+        ],
+        "sequence": "1. Identify target keyword. 2. Analyze top SERP competitors. 3. Count three term types across competitors. 4. Map placement across weighted sections. 5. Calculate optimal ranges. 6. Score deliverable against ranges.",
+        "interactions": "Depends on Page Type Matching (correct type first). Feeds Over/Under Optimization Diagnostic."
+      },
+      "decision_rules": [
+        "IF meta title lacks target keyword, THEN critical gap, 'undisputed highest weighted signal.'",
+        "IF keyword absent from URL on new page, THEN missed opportunity (never change URL on established pages).",
+        "IF no H1 or H1 lacks keyword, THEN structural gap.",
+        "IF contextual terms absent, THEN page lacks semantic signals for topic relevance.",
+        "IF POP >= 80% but not ranking, THEN proceed to over-optimization diagnostic and authority tier check."
+      ]
+    },
+    {
+      "name": "On-Page Optimization Ladder (Top 4 Placement Framework)",
+      "source": "HVSEO blog, multiple podcast interviews, MarketingProfs",
+      "purpose": "Are target keyword and related terms in the four highest-impact locations?",
+      "mechanics": {
+        "description": "'Quick and dirty approach to SEO', four placements accounting for ~60% of on-page optimization. Minimum viable on-page.",
+        "components": [
+          {
+            "name": "URL",
+            "definition": "Target keyword in URL. Priority #1 for new pages. NEVER change URL on established page with authority.",
+            "key_questions": [
+              "Keyword in URL?",
+              "Clean structure?"
+            ]
+          },
+          {
+            "name": "Meta Title",
+            "definition": "Title search engines display. 'Undisputed #1 weighted on-page signal.' Must contain target keyword.",
+            "key_questions": [
+              "Exact keyword present?",
+              "Front-loaded?",
+              "Within ~60 char display limit?",
+              "Compelling?"
+            ],
+            "red_flags": "Meta title absent or contains no relevance signal for target keyword."
+          },
+          {
+            "name": "H1 Tag",
+            "definition": "Title humans see. One per page, at top, containing target keyword.",
+            "key_questions": [
+              "Single H1?",
+              "Top of page?",
+              "Exact keyword?",
+              "Readable?"
+            ]
+          },
+          {
+            "name": "Body Content",
+            "definition": "Main body. Target keyword at frequency consistent with top-ranking competitors.",
+            "key_questions": [
+              "Keyword at competitor-matching frequency?",
+              "Variations and contextual terms distributed throughout?"
+            ]
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF keyword in all 4, THEN ~60% of on-page done. For low-competition within-tier keywords, may suffice.",
+        "IF keyword missing from meta title, THEN highest-priority fix.",
+        "IF established page with URL authority, THEN do NOT change URL, optimize remaining three.",
+        "IF keyword in 0-1 of 4, THEN fundamental gaps before advanced optimization matters."
+      ]
+    },
+    {
+      "name": "Compound SEO (Authority Tier Framework)",
+      "source": "Kyle Roof agency methodology; foundational from Chris Carter/SERPWoo",
+      "purpose": "Is the keyword within the site's demonstrated authority tier, or punching above weight without support?",
+      "mechanics": {
+        "description": "Site's natural authority tier determines which keywords rank with minimal effort vs full treatment. Tier measured by Search Console click data (NOT third-party tools). Within-tier = minimal SEO; above-tier = backlinks + intensive optimization. Authority compounds as keyword rankings accumulate.",
+        "components": [
+          {
+            "name": "Authority Tier Determination",
+            "definition": "Search Console data over 3 months. Low-clicks day to high-clicks day (removing outliers) = current tier.",
+            "key_questions": [
+              "Daily click range from Search Console?",
+              "Target keyword volume within or above this range?",
+              "Within-tier vs above-tier treated differently?"
+            ]
+          },
+          {
+            "name": "Compound Content Foundation",
+            "definition": "Within-tier content published to accumulate clicks, impressions, keywords, building authority over time.",
+            "key_questions": [
+              "Body of within-tier content generating clicks?",
+              "Compound pages supporting authority growth?",
+              "Deliberate tier-climbing strategy?"
+            ]
+          }
+        ],
+        "interactions": "Directly impacts all other frameworks. Above-tier without support = even perfect on-page may fail."
+      },
+      "decision_rules": [
+        "IF keyword volume within daily click range, THEN compound approach, minimal SEO (title, H1, body, answer the question).",
+        "IF above tier, THEN target page approach, full POP optimization, silo support, link building.",
+        "IF no compound foundation, THEN strategic gap, competing at unearned levels.",
+        "IF only high-competition keywords with no within-tier foundation, THEN 'skipping tiers.'",
+        "IF using Ahrefs/SEMrush instead of Search Console for tier assessment, THEN unreliable measurement."
+      ]
+    },
+    {
+      "name": "Virtual Silo / Interlinking Strategy",
+      "source": "Kyle Roof agency methodology; multiple conference presentations",
+      "purpose": "Does supporting content pass internal authority and relevancy to target page through disciplined interlinking?",
+      "mechanics": {
+        "description": "Capitalize on internal authority by strategically interlinking supporting content to target page. Supporting pages link sequentially and all link up to target. Each serves ONE target. Virtual silos use body links, not URL structure.",
+        "components": [
+          {
+            "name": "Supporting Page Volume",
+            "definition": "5-7 supporting pages per silo, each targeting within-tier related keywords.",
+            "key_questions": [
+              "How many supporting pages link to target?",
+              "Topically related?",
+              "Within-tier keywords?"
+            ]
+          },
+          {
+            "name": "Silo Discipline",
+            "definition": "Each supporting page serves ONE target. No cross-category linking. Sequential interlinking (A-B, B-C, C-D). All link up to target. Target links into one silo page to complete circuit.",
+            "key_questions": [
+              "Each page links to only one target?",
+              "Sequential interlinking?",
+              "All link up to target?",
+              "Circuit completed?",
+              "Links in body content (not sidebar/footer)?"
+            ]
+          },
+          {
+            "name": "Anchor Text Quality",
+            "definition": "Descriptive: tell reader where they're going and why. Keyword or variation plus contextual terms WITHIN the hypertext. Google reads inside the link.",
+            "key_questions": [
+              "Descriptive anchor text?",
+              "Contains keyword or variation?",
+              "Contextual terms inside link?",
+              "Varied across pages?"
+            ]
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF no silo content, THEN flag missing internal authority, recommend 5-7 supporting pages.",
+        "IF supporting pages link to multiple targets across categories, THEN broken discipline, diluting equity.",
+        "IF links in sidebars/footers instead of body, THEN suboptimal, body links carry silo signal.",
+        "IF WordPress plugins auto-link cross-category, THEN silo integrity risk.",
+        "IF relying on physical silo (URL structure) without body interlinking, THEN no direct ranking benefit."
+      ]
+    },
+    {
+      "name": "E-E-A-T Signal Framework",
+      "source": "Multiple podcast interviews (Doug Show Oct 2023, Niche Pursuits Mar 2024)",
+      "purpose": "Are trust/authority/experience signals machine-readable so deliverable survives Google's back-end E-E-A-T check?",
+      "mechanics": {
+        "description": "E-E-A-T is NOT a direct ranking factor. Back-end check triggered at traffic threshold. Failure causes 'cliff drop' with 6+ month recovery. Signals must be bot-detectable (schema critical, bots miss plain-text ~30% of time). Implementation ~half a day.",
+        "components": [
+          {
+            "name": "Trust (T). Highest Priority",
+            "definition": "Determines if site should be in index. Signals: physical address, local phone, multiple department emails, privacy policy, refunds page, complaints page, contact page, ToS, current copyright.",
+            "key_questions": [
+              "Physical address?",
+              "Local phone + multiple emails?",
+              "Legal/trust pages present?",
+              "Current copyright?",
+              "Directory citations with matching NAP?"
+            ]
+          },
+          {
+            "name": "Authority (A)",
+            "definition": "Measured by keywords ranked for. Bigger sites get more 'grace.' Authority builds through compound content."
+          },
+          {
+            "name": "Experience/Expertise (E-E)",
+            "definition": "Prove real human responsible. Author bios on every piece with Person schema linking to social profiles. First-person language. Organization schema on homepage. Article schema linking to author.",
+            "key_questions": [
+              "Author bio on every piece?",
+              "Person schema on bio pages?",
+              "Organization schema on homepage?",
+              "Article schema linking to author?",
+              "First-person experience language?",
+              "Moderated comments/UGC?"
+            ]
+          },
+          {
+            "name": "Site Health and Transaction Integrity",
+            "definition": "Fix 404s, broken links, slow loading. Minimize Search Console errors. Complete transactions on-site. Avoid being 'doorway page' funneling users elsewhere.",
+            "red_flags": "Site operates as doorway page ranking for keywords but sending all transactions to another domain."
+          }
+        ],
+        "interactions": "E-E-A-T check triggered at traffic threshold. Below threshold = preventive insurance. After cliff drop = likely fix but 6+ month recovery."
+      },
+      "decision_rules": [
+        "IF sudden traffic cliff drop, THEN prioritize E-E-A-T audit, likely cause.",
+        "IF new/small site, THEN implement preventively (half day's work).",
+        "IF schema absent, THEN critical, bots miss plain text ~30% of time.",
+        "IF affiliate with no on-site transactions, THEN doorway page risk per Roof's HCU interpretation.",
+        "IF E-E-A-T implemented but no recovery, THEN timeline unknown, may take 1+ year."
+      ]
+    },
+    {
+      "name": "Over/Under Optimization Diagnostic",
+      "source": "PageOptimizer Pro feature, Kyle Roof algorithm history",
+      "purpose": "If page scores well on math but isn't performing, is it over-optimized in specific sections?",
+      "mechanics": {
+        "description": "Page can score 100% yet underperform because individual terms over-used in specific sections while other sections are correctly optimized. Over- and under-optimization coexist on same page. As of ~2024, Google penalizes over-optimization again.",
+        "components": [
+          {
+            "name": "Over-Optimization Detection",
+            "definition": "Check if any term appears too many times in any section relative to competitors.",
+            "key_questions": [
+              "Any term significantly exceeding competitor frequency in a section?",
+              "Keyword-stuffed in one area while sparse in others?",
+              "High math score but underperforming, over-optimization the cause?"
+            ]
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF high math score AND not ranking, THEN check over-optimization before blaming authority/links.",
+        "IF over-optimization detected, THEN reduce specific terms in specific sections, not globally.",
+        "IF high score + no over-optimization + not ranking, THEN problem is authority tier or missing links."
+      ]
+    },
+    {
+      "name": "Avalanche Theory (Content-Only Authority Strategy)",
+      "source": "Kyle Roof White Hat SEO course; State of Search/DFWSEM conference",
+      "purpose": "Does the deliverable exist within a broader content strategy accumulating keyword rankings without depending on backlinks?",
+      "mechanics": {
+        "description": "Content-only strategy: publish optimized content at right keyword tier, build authority through accumulation. Uses Google's PAA and Related Searches for semantically related pages. Each page should rank for hundreds/thousands of terms, not just one.",
+        "components": [
+          {
+            "name": "Keyword Tier Targeting",
+            "definition": "Start at site's current tier using KGR or similar for quick wins.",
+            "key_questions": [
+              "Targeting keyword at current tier?",
+              "Zero-volume and low-competition terms for accumulation?",
+              "Deliberate progression from lower to higher tier?"
+            ]
+          },
+          {
+            "name": "Semantic Content Architecture",
+            "definition": "PAA for H2 subheadings. Related Searches for additional sections. Structure for multi-keyword ranking.",
+            "key_questions": [
+              "H2s from PAA or query data?",
+              "Addresses related searches?",
+              "Structured for hundreds of terms, not just primary?"
+            ]
+          }
+        ],
+        "interactions": "Works with Compound SEO (same tier framework). Feeds Virtual Silo (avalanche pages become supporting content). Reduces link dependence."
+      },
+      "decision_rules": [
+        "IF new site with no authority, THEN avalanche is recommended start, accumulate before targeting competitive terms.",
+        "IF deliverable exists in isolation, THEN flag missing accumulation strategy.",
+        "IF more keywords ranked, THEN fewer backlinks needed, accumulation IS authority building.",
+        "IF using PAA for H2s, THEN more likely to capture featured snippets and long-tail."
+      ]
+    }
+  ],
+  "vocabulary": {
+    "GuesSEO": "Untested industry opinions treated as facts. The dominant (invalid) approach to SEO decisions.",
+    "correlation_math": "Reverse-engineering mathematical profile of top competitors, term frequency and placement. NOT correlation studies.",
+    "contextual_terms_LSI": "Terms giving context to topic, distinct from keyword. 'LSI' technically inaccurate but industry-adopted. E.g., 'kitchen' -> 'sink, stove, refrigerator' or 'pastel colors, marble' depending on intent.",
+    "bag_of_words": "How Google reads pages: all words in a 'bag,' counted regardless of order. Grammar irrelevant to ranking math.",
+    "tier_natural_tier": "Keyword competitiveness level rankable without SEO. Based on Search Console data, NOT third-party metrics.",
+    "boost": "External signal (typically backlink) pushing page above natural tier. Vulnerable to updates (removed = drops back).",
+    "compound_SEO": "Publishing within-tier content to accumulate authority organically. NOT about winning competitive keywords immediately.",
+    "virtual_silo": "Interlinking via body links between supporting and target pages. Physical silo (URL structure) has no direct ranking benefit.",
+    "over_optimization": "Term used too many times in specific section vs competitors. Can coexist with under-optimization in different sections.",
+    "doorway_page": "Page ranking for keywords but funneling users elsewhere for transactions. Roof's interpretation of HCU affiliate impact.",
+    "inverse_testing": "Testing finding in reverse: add variable to all controls, watch if test drops. Equivalent to 5x replication.",
+    "indexing_zones": "Places Google looks to understand what a page is about (for indexing/categorization). Slightly different from ranking zones.",
+    "POP_score": "PageOptimizer Pro percentage. ~70% = movement. ~80% = target. ~100% = ideal. 100% + not ranking = check over-optimization."
+  }
+}

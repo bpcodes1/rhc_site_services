@@ -1,0 +1,484 @@
+{
+  "expert": {
+    "name": "Joanna Wiebe",
+    "domain": "1B - Copy Execution Quality",
+    "active_period": "2011-present",
+    "core_thesis": "Conversion copy is an engineered artifact assembled from customer language through proven frameworks and validated through experimentation. The writer is not the source of the message. The customer is. Copy that sounds like a marketer wrote it fails. Copy that sounds like the customer said it converts.",
+    "key_questions": [
+      "What copy type? (landing page, email, sales page, CTA, onboarding)",
+      "Visitor's likely stage of awareness? (Unaware > Problem > Solution > Product > Most Aware)",
+      "Risk level of the action? (1-10: free app=2, high-stakes purchase=10)",
+      "Evidence of VoC research? (specific scenarios, recurring phrases, raw customer phrasing)",
+      "Who is the ONE reader this is written for?"
+    ],
+    "operating_beliefs": [
+      "Copy channels existing desire via customer language. It does not create desire.",
+      "Customer research > frameworks > writing skill. Research-light = process failure.",
+      "Copy is a hypothesis until tested. Elegance proves nothing; outcomes do.",
+      "The magic is in editing, not drafting. First drafts should be ugly.",
+      "In nearly every test, framework-driven copy beat creative-voice copy.",
+      "Shorter is not better by default. Length matches what convincing requires.",
+      "Safe copy produces flat results. Push far enough for decisive win or loss.",
+      "Specificity and believability are directly correlated."
+    ],
+    "biases": [
+      "SaaS/digital-product fluent. Assumes web-native conversion paths.",
+      "Privileges data-grounded copy over intuition-driven creative.",
+      "Treats committee-polished language as default failure mode.",
+      "Weights clarity disproportionately. Harsh caps for clarity failure.",
+      "Prefers long copy when the argument requires it."
+    ],
+    "limitations": [
+      "Ultra-minimal prestige copy: Clarity/specificity criteria assume explicit value statement. Deliberate vagueness for Most Aware audiences doesn't fit the framework well.",
+      "Story-building sections in long narrative sales letters: 'So What' applied section-by-section flags tension-building as failure when it may be functional.",
+      "Insider/community copy: Clarity criteria assume cold visitors; in-group copy fails five-second test but converts its audience.",
+      "Strategic positioning: Perfect execution of the wrong message would not be caught. Framework covers execution, not strategy.",
+      "Saturated markets: Strict VoC adherence can produce undifferentiated copy that sounds like everyone else because all competitors mine the same customer language.",
+      "Operational backlash risk: Breakthrough copy can lift conversions while triggering internal complaints that kill the campaign. Framework doesn't account for organizational politics.",
+      "Non-conversion content: 'So What' and 'Prove It' are not designed for educational or relationship content."
+    ]
+  },
+  "frameworks": [
+    {
+      "name": "Seven Sweeps Editing System",
+      "source": "Tutorial Tuesday series (2017-2018), Copy School, 14-Day Freelance Bootcamp",
+      "purpose": "Post-draft QA across seven quality dimensions. ~30 minutes total. After each sweep, go back through all previous sweeps. Clarity is checked seven times. The system is cumulative, not linear.",
+      "mechanics": {
+        "description": "Seven sequential sweeps that each examine copy from a different angle, with cumulative re-checking after each pass.",
+        "components": [
+          {
+            "name": "Clarity",
+            "definition": "Value proposition understandable in 5 seconds. Most important sweep and multiplier for all others.",
+            "key_questions": [
+              "Five-second test: can reader state what/who/why?",
+              "Single-idea per unit: no conjunction stacking (and/or/but chains)?",
+              "No implied steps: key facts and next steps explicit?",
+              "No boardroom slogans: headline translates to user meaning?",
+              "Visuals captioned so user knows what to look at?",
+              "Cardinal sentences identified: do they carry core meaning?",
+              "Backward read: each sentence stands alone?"
+            ],
+            "red_flags": [
+              "Headline fails five-second test"
+            ]
+          },
+          {
+            "name": "Voice and Tone",
+            "definition": "Voice = persistent brand personality. Tone = context-specific modulation. Must support, not compete with, clarity.",
+            "key_questions": [
+              "Line-by-line: sounds like the brand in conversation?",
+              "Backward pass: detect over-voice (heavy-handed, cute, performative)?",
+              "Tone fits context (welcome vs apology vs shutdown)?",
+              "Self-focus ratio: brand name and 'we/our' density low?",
+              "Added elements (testimonials, CTAs) match voice?"
+            ]
+          },
+          {
+            "name": "So What",
+            "definition": "Every section answers 'why should I care?' from customer's POV. Line-by-line in customer voice.",
+            "key_questions": [
+              "Outcome relevance: explains what reader gets, not feature you have?",
+              "Personal consequence: reader maps claim to their life/work?",
+              "No trust gaps: trust claims earned, not assumed?",
+              "Hesitation pause: if evaluator pauses, users will too. Flag it.",
+              "Section-level: every block resolves the question?"
+            ],
+            "red_flags": [
+              "Headline fails So What"
+            ]
+          },
+          {
+            "name": "Prove It",
+            "definition": "Every claim backed by evidence that is not more copy. Proof type must match claim type. Not synonymous with testimonials.",
+            "key_questions": [
+              "Claim-by-claim: what is the proof artifact?",
+              "Logical match: proof type matches claim? (demo for 'easy', data for 'results', screenshot for design)",
+              "Adjacent placement: proof near the claim it supports?",
+              "Proof density: primary claims adequately proved?",
+              "Show-and-tell: state claim, show evidence, restate what viewer saw?"
+            ],
+            "valid_proof_types": [
+              "demos/walkthroughs",
+              "screenshots/GIFs",
+              "specific data points",
+              "named testimonials with outcomes",
+              "logos of known customers",
+              "user quantities",
+              "third-party reviews",
+              "case studies with before/after",
+              "expert endorsements"
+            ],
+            "red_flags": [
+              "Primary promise lacks proof",
+              "Superiority language ('easy/results/trusted/best/#1') is unproved"
+            ]
+          },
+          {
+            "name": "Specificity",
+            "definition": "Tangible, visual, reader-life-specific language. Replaces committee-polished summaries. Creates mental images without dot-connecting burden.",
+            "key_questions": [
+              "Visualization: does line create mental picture of what user does/gets/avoids?",
+              "Dot-connecting burden: reader translating abstractions, or copy did it?",
+              "Topic focus: one idea per unit, not stacked unfamiliar features?",
+              "Concrete anchors: numbers, before/after states, named objects?",
+              "No committee compression: 'streamline workflow' vs 'cut report time from 3 hours to 20 minutes'?"
+            ]
+          },
+          {
+            "name": "Heightened Emotion",
+            "definition": "Reader feels understood, not just informed. Grounded in customer reality, not manufactured hype.",
+            "key_questions": [
+              "Emotional target: what should reader feel at hero, mid-page, CTA? Aligned?",
+              "Before/after contrast: vivid pain state and desirable after state?",
+              "Customer-first ratio: brand name appears max 1-2 times?",
+              "Testimonial function: address specific fears, not generic praise?",
+              "Emotion-proof integration: emotional claims backed by proof/specificity, not hype adjectives?",
+              "Grounded test: did a customer feel this, or did a marketer decide they should?"
+            ]
+          },
+          {
+            "name": "Zero Risk",
+            "definition": "Perceived risk neutralized at moment of action. Focus on dominant risk category.",
+            "key_questions": [
+              "Risk rating (1-10) for the action being asked?",
+              "Primary risk category: Performance / Value / Design-Friction / Social Success / Joy?",
+              "Neutralizer present for that specific category?",
+              "CTA-adjacent: click triggers, next-step clarity, recourse info?",
+              "Risk-introducing language: any phrase creating NEW anxiety?",
+              "Focused: addressing one dominant risk, not all five?"
+            ],
+            "risk_neutralizer_matches": {
+              "performance": "demo, walkthrough, screenshot",
+              "value": "guarantee, money-back, ROI data",
+              "design_friction": "next-step clarity, onboarding preview",
+              "social_success": "user quantities, 'teams like yours', named companies",
+              "joy": "satisfaction testimonials, before/after stories"
+            },
+            "red_flags": [
+              "Risk 7+ with no neutralizers at CTA"
+            ]
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF headline fails five-second restatement THEN clarity is LOW regardless of other sweeps.",
+        "IF conjunction chains join multiple ideas THEN split or delete unless cleanly supporting one idea.",
+        "IF headline/crosshead fails So What THEN require benefit-bearing rewrite or follow-on 'why it matters' line.",
+        "IF superiority language ('easy/results/trusted') present THEN require immediate adjacent proof or weaken claim.",
+        "IF phrase triggers 'what do they mean?' THEN replace with tangible outcome.",
+        "IF block stacks multiple new nouns without grounding THEN collapse to one big idea + proof.",
+        "IF feature-and-pricing dominant with no emotion THEN translate features into lived experience; use testimonials as problem-solvers not applause.",
+        "IF high-risk CTA with no neutralizer THEN require microcommitment or specific risk reversal."
+      ],
+      "calibration": {
+        "high": "'Put your sweat-proof confidence to the test. Wear what you want. Hug who you want.' (SweatBlock, 108% revenue lift). Immediately clear. Every benefit = tangible life improvement. Language from Amazon reviews. PAS structure.",
+        "low": "'Move Work Forward' headline. Fails clarity (slogan), So What (no consequence), Specificity (no image), Prove It (nothing to prove).",
+        "medium": "'Finally, a way to stop redoing the same report every Monday.' Strong clarity/VoC/specificity but flat emotion. Factual without feeling."
+      }
+    },
+    {
+      "name": "Voice of Customer (VoC) Research Methodology",
+      "source": "Tutorial Tuesdays, CXL courses, CXL Live 2019, Copy School",
+      "purpose": "VoC is the SOURCE of copy, not supporting evidence for copy already written. 'Instead of writing your message, steal it directly from your prospects.'",
+      "mechanics": {
+        "description": "Multiple research methods for extracting customer language to use as the raw material for copy.",
+        "components": [
+          {
+            "name": "Thank-You Survey",
+            "definition": "Post-conversion survey asking 'What was going on in your life that brought you to [try/join/buy] [product] today?' Produces moment-of-commitment triggers, desired outcome language, objections, sticky phrases. Maps to hero/headline, messaging hierarchy, objection/risk reducers."
+          },
+          {
+            "name": "Review Mining",
+            "definition": "List keywords → Google '[keyword] reviews' → Check Amazon/G2/Capterra/TrustPilot → Collect to spreadsheet → Categorize: motivators, value prop messages, anxiety messages. Extract recurring questions, frustration language, excitement language, specific dislikes about competitors, interesting analogies, language that makes researcher pause."
+          },
+          {
+            "name": "User Testing",
+            "definition": "Do users restate offer in similar language to headline? (Mismatch = marketer-speak.) Do users ask questions the copy already answers? (Yes = clarity/hierarchy broken.)"
+          },
+          {
+            "name": "Customer Interviews",
+            "definition": "Key question: 'What was going on in your life that brought you to [product]?' Produces rich trigger/anxiety/outcome language."
+          },
+          {
+            "name": "Sales Calls and Support Tickets",
+            "definition": "Produces objections in prospect's own words, buying triggers, post-purchase concerns."
+          }
+        ]
+      },
+      "fidelity_signals": {
+        "voc_grounded": [
+          "raw/specific/unglamorous language",
+          "vivid scenarios ('afraid to high-five people')",
+          "unexpected specific benefits ('I can finally wear light blue')",
+          "surprising non-obvious adjectives",
+          "verifiable specific numbers",
+          "sounds like a person talking"
+        ],
+        "marketer_invented": [
+          "polished/summarized/committee-approved",
+          "abstract categories ('reduces embarrassment')",
+          "predictable generic benefits ('boost productivity')",
+          "default marketing words ('innovative/powerful/seamless')",
+          "round unsubstantiated numbers",
+          "sounds like a brochure"
+        ]
+      },
+      "decision_rules": [
+        "IF copy uses raw/specific/unglamorous language → VoC-grounded.",
+        "IF copy uses polished/summarized language with default marketing words → marketer-invented.",
+        "IF vivid scenarios present that a copywriter couldn't invent → strong VoC evidence."
+      ]
+    },
+    {
+      "name": "Messaging Hierarchy",
+      "source": "Copyhackers blog (SweatBlock case study), Tutorial Tuesdays, Copy School",
+      "purpose": "Information ordered in the sequence the reader needs to progress toward action.",
+      "mechanics": {
+        "description": "Seven sequential questions that define the correct information order on a conversion page. Top 10% matches visitor's awareness stage; remaining 90% convinces through logical sequence.",
+        "components": [
+          {
+            "name": "Question 1",
+            "definition": "What do you do?"
+          },
+          {
+            "name": "Question 2",
+            "definition": "Why should I care?"
+          },
+          {
+            "name": "Question 3",
+            "definition": "Am I alone in caring, or do others like me care?"
+          },
+          {
+            "name": "Question 4",
+            "definition": "Show me HOW you do what you say."
+          },
+          {
+            "name": "Question 5",
+            "definition": "How will my life improve?"
+          },
+          {
+            "name": "Question 6",
+            "definition": "Why is it safe for me to believe you?"
+          },
+          {
+            "name": "Question 7",
+            "definition": "Now what?"
+          }
+        ]
+      },
+      "failure_indicators": [
+        "Page jumps around (A does not lead to B)",
+        "'What do you do?' answered repeatedly",
+        "Social proof appears randomly",
+        "Risk-reducers before reader has reason to feel risk",
+        "Page is 'a beginning, a muddle, and an end'"
+      ],
+      "decision_rules": [
+        "IF proof before establishing So What THEN inverted hierarchy.",
+        "IF same claim 3+ times THEN redundancy noise.",
+        "IF CTA appears only once requiring scroll-back THEN poor placement; repeat after persuasion blocks."
+      ]
+    },
+    {
+      "name": "CTA Optimization: Call to Value vs Call to Action",
+      "source": "Tutorial Tuesday (Button Copy, June 2020), SweatBlock case study, Book 4",
+      "purpose": "CTA must match reader's commitment level and funnel position.",
+      "mechanics": {
+        "description": "Distinguishes between Call to Value (outcome-focused, top/mid funnel) and Call to Action (action-focused, bottom funnel near payment).",
+        "components": [
+          {
+            "name": "Call to Value (CTV)",
+            "definition": "Completes 'I want to ___' with desired OUTCOME. Top/mid funnel. ('Be my own boss', 'See my top option')"
+          },
+          {
+            "name": "Call to Action (CTA)",
+            "definition": "Describes literal ACTION. Bottom funnel near payment. ('Add to cart', 'Complete booking')"
+          },
+          {
+            "name": "I-Want-To Test",
+            "definition": "Fill in 'I want to ___' with button copy. Outcome = CTV. Action = CTA."
+          }
+        ]
+      },
+      "decision_rules": [
+        "'Buy' is scary. Eliminate from button copy where possible.",
+        "'Sign up' implies work. 'Learn more' implies work. Even a tiny pinch of implied work reduces conversion.",
+        "First-person outperforms second-person in tests ('End my scheduling hassles' > 'End your scheduling hassles').",
+        "Click triggers near buttons: 'no credit card,' 'free shipping,' short testimonials, incentives, deadlines.",
+        "Headline-CTA alignment: mismatch reduces clicks. 123.9% lift from aligning them.",
+        "One primary CTA per section. 45% registration increase from simplifying to one."
+      ]
+    },
+    {
+      "name": "Headline Frameworks",
+      "source": "Book 3 (Headlines, Subheads & Value Propositions), YouTube, Conference talks",
+      "purpose": "The headline does 90% of the copywriting work.",
+      "mechanics": {
+        "description": "Five value proposition formulas plus evaluation criteria and anti-patterns.",
+        "components": [
+          {
+            "name": "JTBD Formula",
+            "definition": "'You want ___.'"
+          },
+          {
+            "name": "Transformation Formula",
+            "definition": "'Change/Transform [what they have] into [what they want].'"
+          },
+          {
+            "name": "Credibility Formula",
+            "definition": "'[Desirable outcome] from [no-brainer makers].'"
+          },
+          {
+            "name": "Differentiator Formula",
+            "definition": "'The [adjective] [noun] for [use case].'"
+          },
+          {
+            "name": "Full-Spectrum Formula",
+            "definition": "'The [adj] way for [segment] to [outcome] so you can [benefit].'"
+          },
+          {
+            "name": "Evil Formula (anti-pattern)",
+            "definition": "'Word. Word. Word.' format (e.g., 'Play. Laugh. Achieve.'). Boardroom-approved, customer-ignored."
+          }
+        ]
+      },
+      "key_questions": [
+        "Functions as value proposition, not tagline?",
+        "Matches visitor's awareness stage?",
+        "Sets up messaging hierarchy below?",
+        "Specific, promising, unique, desirable, believable?"
+      ],
+      "subhead_rules": "Supporting subhead expands promise, does not repeat it. Crossheads answer questions, do not ask them.",
+      "decision_rules": [
+        "IF headline is a tagline/slogan → fails as value proposition.",
+        "IF headline doesn't match awareness stage → misaligned with visitor.",
+        "IF headline uses Evil Formula → boardroom-approved, customer-ignored."
+      ]
+    },
+    {
+      "name": "Long-Form Sales Page Structure",
+      "source": "10x Sales Pages (Copy School), Tutorial Tuesdays",
+      "purpose": "Coherent structural sequence for long-form conversion pages.",
+      "mechanics": {
+        "description": "Six-phase structure moving from problem through agitation, solution, authority, product tour, to close.",
+        "components": [
+          {
+            "name": "Problem",
+            "definition": "Meet reader at pain. Pre-headline qualifier, question loop headline, expanding lead."
+          },
+          {
+            "name": "Agitate",
+            "definition": "Life now vs could be. Vivid low point, dream outcome, slaughter sacred cows / install new beliefs."
+          },
+          {
+            "name": "Solution",
+            "definition": "Blue Ocean Bridge: introduce the solution that changes everything."
+          },
+          {
+            "name": "Why",
+            "definition": "Authority through STORY, not just credentials. Testimonials solidifying beliefs. Product reveal by name."
+          },
+          {
+            "name": "Try",
+            "definition": "Aladdin Product Tour: each element as mini sales page. Bonuses. Reinforcing proofs."
+          },
+          {
+            "name": "Buy",
+            "definition": "Golden Guarantee, Upgraded FAQ (objection-flipping), 'Perfect For You If' qualifier, final appeal, MVC challenge."
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF product introduced before pain established → premature reveal.",
+        "IF authority via credentials only (no story) → weaker persuasion.",
+        "IF offer not stacked with value before price → price feels high.",
+        "IF FAQs don't flip real objections → missed opportunity."
+      ]
+    },
+    {
+      "name": "Stages of Awareness (Schwartz, adapted by Wiebe)",
+      "source": "Breakthrough Advertising adapted for digital",
+      "purpose": "Copy must match awareness stage of arriving visitor.",
+      "mechanics": {
+        "description": "Five awareness stages that determine what the opening copy must accomplish.",
+        "components": [
+          {
+            "name": "Most Aware",
+            "definition": "Needs: offer/deal."
+          },
+          {
+            "name": "Product Aware",
+            "definition": "Needs: differentiation, proof it's the right choice."
+          },
+          {
+            "name": "Solution Aware",
+            "definition": "Needs: why yours is different and better."
+          },
+          {
+            "name": "Problem Aware",
+            "definition": "Needs: education that solutions exist."
+          },
+          {
+            "name": "Unaware",
+            "definition": "Needs: problem identification."
+          }
+        ]
+      },
+      "decision_rules": [
+        "Opening MUST match arriving visitor's stage.",
+        "Product features for Problem Aware = lost.",
+        "Problem education for Most Aware = wasted."
+      ]
+    },
+    {
+      "name": "Supporting Frameworks",
+      "source": "Various Copyhackers sources",
+      "purpose": "Supplementary principles applied across all copy work.",
+      "mechanics": {
+        "description": "Three supporting frameworks: Rule of One, Three Essential Techniques, and Breakthrough or Bust.",
+        "components": [
+          {
+            "name": "Rule of One",
+            "definition": "One reader, one big idea, one promise, one offer. Violation = page tries to be everything to everyone."
+          },
+          {
+            "name": "Front-Loading",
+            "definition": "Important info first in sentences and sections."
+          },
+          {
+            "name": "Even-If Technique",
+            "definition": "Objection-stomper: [Benefit] even if [biggest objection]."
+          },
+          {
+            "name": "Connecting Dots",
+            "definition": "Never burden reader with figuring out implications. State them."
+          },
+          {
+            "name": "Breakthrough or Bust",
+            "definition": "Push copy far enough for decisive win or loss. Safe copy = flat results. Checklist: Boldly breaks best practices for medium? Runs counter to Control? Still on-brand? Makes you scared to present it? WHY for every practice challenged?"
+          }
+        ]
+      },
+      "decision_rules": [
+        "IF page serves multiple readers/ideas/offers → Rule of One violated.",
+        "IF important info buried late → front-loading needed.",
+        "IF reader must figure out implications → dots not connected.",
+        "IF copy is safe and unlikely to produce strong reaction → breakthrough or bust not applied."
+      ]
+    }
+  ],
+  "vocabulary": {
+    "conversion_copywriting": "Copy that moves reader to 'yes' via VoC data + frameworks + persuasion techniques. Not creative writing. Coined by Wiebe.",
+    "message_mining": "Extracting exact customer phrases verbatim for direct use as copy. Not summarizing. Literally stealing language.",
+    "so_what_test": "For every claim: 'Why should the reader care?' Applied section-by-section. Some claims have it baked in; others need explicit resolution.",
+    "prove_it_test": "For every claim including implied: 'What evidence supports this?' Proof TYPE must match claim TYPE. 'Where's the social proof?' is a rookie default.",
+    "minimum_viable_commitment": "Smallest possible 'yes.' Reduces resistance by lowering initial ask. Applied in CTAs and risk reversals.",
+    "marketer_voice": "Polished, committee-approved, brochure language. Identifiable by: 'innovative/powerful/seamless,' abstract benefits, 'We are proud to...', round numbers.",
+    "sticky_language": "VoC phrases that make the researcher pause. Memorable, unusual, emotional, highly specific. Cannot be generated by a marketer.",
+    "wireframe": "Copy context: layout showing messaging hierarchy with copy blocks positioned in order. Not UX wireframe. Shows which messages go where.",
+    "site_of_conversion": "CTA area including surrounding copy, click triggers, risk neutralizers. Not just the button. Fastest place to improve conversion.",
+    "evil_formula": "'Word. Word. Word.' headlines. Boardroom-approved, customer-ignored. Common failure mode.",
+    "click_trigger": "Copy near/below button reducing friction: 'no credit card,' 'free shipping,' short testimonials, incentives, deadlines.",
+    "copy_assembly": "'Copy is assembled, not written.' Organizing VoC data into frameworks. Writer is architect of found materials, not author of original prose."
+  }
+}
