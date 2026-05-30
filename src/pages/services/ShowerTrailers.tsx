@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
+import showerTrailerDeployedImg from '../../assets/shower-trailer2.JPEG'
+import showerTrailerLargeImg from '../../assets/shower-trailer1.JPEG'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -31,6 +33,7 @@ const units = [
   {
     num: '02',
     title: '3-Stall Shower Trailer',
+    image: showerTrailerDeployedImg,
     tag: 'The standard choice for mid-sized outdoor weddings, agriculture camps, and smaller disaster deployments.',
     specs: [
       { label: 'Fresh Water', value: '125-150 gal (unlimited with garden hose hookup)' },
@@ -74,6 +77,7 @@ const units = [
   {
     num: '05',
     title: '8-Stall Shower Trailer',
+    image: showerTrailerLargeImg,
     tag: 'Built for FEMA and wildfire camps, military training deployments, and festivals with 10,000 or more guests.',
     specs: [
       { label: 'Fresh Water', value: '200-300 gal (unlimited with garden hose hookup)' },
@@ -269,9 +273,13 @@ export default function ShowerTrailers() {
             {units.map((unit, i) => (
               <article key={unit.num} className="unit">
                 <div className="unit-photo">
-                  <div className={`placeholder${i % 2 !== 0 ? ' dark' : ''}`}>
-                    <span className="ph-tag">Photo · {unit.title}</span>
-                  </div>
+                  {unit.image ? (
+                    <img src={unit.image} alt={unit.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  ) : (
+                    <div className={`placeholder${i % 2 !== 0 ? ' dark' : ''}`}>
+                      <span className="ph-tag">Photo · {unit.title}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="unit-body">
                   <div className="mono-num">{unit.num} / {unit.title.replace(' Shower Trailer', '')}</div>
