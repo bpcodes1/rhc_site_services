@@ -1,8 +1,29 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../components/LeadForm'
 
+const testimonials = [
+  {
+    quote: "We had a tight mobilization window on a mixed-use project in SE Portland. I've been burned by delivery delays before, so I asked for a hard arrival window and a backup contact. Got both. Equipment was staged exactly where our site manager marked it. First vendor in three years who didn't need a second call.",
+    name: 'Tom C.',
+    role: 'Project Superintendent · Commercial Site Mobilization · Portland, OR',
+  },
+  {
+    quote: "We run outdoor events at a property in the Willamette Valley and the trailer situation is always what I'm most stressed about. Last July we had 200 guests and nobody complained once — which is the highest compliment I can give. The units were immaculate, the service was quiet, and the generator didn't make a sound all night.",
+    name: 'Kristen M.',
+    role: 'Event Coordinator · Estate & Winery Events · Salem, OR',
+  },
+  {
+    quote: "We've used RHC on two jobs — a ground-up commercial build in Gresham and a site remediation in Tacoma. Both times the quote matched the invoice exactly. No environmental compliance fee tacked on the back end, no fuel surcharge I didn't approve. That's rarer than it should be in this industry.",
+    name: 'Mike A.',
+    role: 'Senior Estimator · Civil Infrastructure · Portland, OR',
+  },
+]
+
 export default function Home() {
+  const [tcIndex, setTcIndex] = useState(0)
+
   return (
     <main id="main">
       <Helmet>
@@ -189,31 +210,55 @@ export default function Home() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">03 / Method</div>
-              <h2 className="h-lg">Getting equipment on site is simpler than you think.</h2>
+              <h2 className="h-lg">Getting equipment on site is <span className="accent">simpler</span> than you think.</h2>
             </div>
             <p>Four steps from quote to cleanup. One dispatcher handles the logistics so your crew doesn't have to babysit a vendor.</p>
           </div>
 
           <div className="steps">
             <div className="step">
-              <div className="step-num">01<span className="slash">/</span></div>
-              <h3>Tell us what you need</h3>
-              <p>Fill out our short form. Let us know your service, location, and dates — it takes less than 60 seconds.</p>
+              <div className="step-left">
+                <div className="step-num">01</div>
+                <div className="step-line" aria-hidden="true"></div>
+              </div>
+              <div className="step-right">
+                <h3>Tell us what you need</h3>
+                <p>Fill out our short form. Let us know your service, location, and dates — it takes less than 60 seconds.</p>
+                <div className="placeholder step-ph"><span className="ph-tag">Step 01 — photo</span></div>
+              </div>
             </div>
             <div className="step">
-              <div className="step-num">02<span className="slash">/</span></div>
-              <h3>We confirm &amp; schedule everything</h3>
-              <p>Our team reviews your request, confirms equipment availability for your location and dates, and handles all the logistics so you don't have to.</p>
+              <div className="step-left">
+                <div className="step-num">02</div>
+                <div className="step-line" aria-hidden="true"></div>
+              </div>
+              <div className="step-right">
+                <h3>We confirm &amp; schedule everything</h3>
+                <p>Our team reviews your request, confirms equipment availability for your location and dates, and handles all the logistics so you don't have to.</p>
+                <div className="placeholder step-ph"><span className="ph-tag">Step 02 — photo</span></div>
+              </div>
             </div>
             <div className="step">
-              <div className="step-num">03<span className="slash">/</span></div>
-              <h3>Equipment delivered on time</h3>
-              <p>Your equipment shows up when and where it needs to be. No chasing, no follow-up calls, no last-minute surprises.</p>
+              <div className="step-left">
+                <div className="step-num">03</div>
+                <div className="step-line" aria-hidden="true"></div>
+              </div>
+              <div className="step-right">
+                <h3>Equipment delivered on time</h3>
+                <p>Your equipment shows up when and where it needs to be. No chasing, no follow-up calls, no last-minute surprises.</p>
+                <div className="placeholder step-ph"><span className="ph-tag">Step 03 — photo</span></div>
+              </div>
             </div>
             <div className="step">
-              <div className="step-num">04<span className="slash">/</span></div>
-              <h3>We handle the pickup</h3>
-              <p>When your rental period ends, our team comes back to remove the equipment and leave your site clean. You don't lift a finger.</p>
+              <div className="step-left">
+                <div className="step-num">04</div>
+                <div className="step-line" aria-hidden="true"></div>
+              </div>
+              <div className="step-right">
+                <h3>We handle the pickup</h3>
+                <p>When your rental period ends, our team comes back to remove the equipment and leave your site clean. You don't lift a finger.</p>
+                <div className="placeholder step-ph"><span className="ph-tag">Step 04 — photo</span></div>
+              </div>
             </div>
           </div>
 
@@ -415,48 +460,29 @@ export default function Home() {
             <p>We don't do vague, polished praise. Here is exactly what our regional PNW clients say when their crew morale, project timeline, or high-stakes event budget is directly on the line.</p>
           </div>
 
-          <div className="quote-grid">
-            <article className="quote-card">
-              <div className="quote-mark" aria-hidden="true">"</div>
-              <h3 className="quote-headline">They showed up before my crew did.</h3>
-              <blockquote>We had a tight mobilization window on a mixed-use project in SE Portland. I've been burned by delivery delays before, so I asked for a hard arrival window and a backup contact. Got both. Equipment was staged exactly where our site manager marked it. First vendor in three years who didn't need a second call.</blockquote>
-              <div className="quote-meta">
-                <div className="avatar">TC</div>
-                <div className="who">Tom C. <small>Project Superintendent · Commercial Site Mobilization · Portland, OR</small></div>
-              </div>
-            </article>
-
-            <article className="quote-card">
-              <div className="quote-mark" aria-hidden="true">"</div>
-              <h3 className="quote-headline">I genuinely forgot the restrooms were even out there.</h3>
-              <blockquote>We run outdoor events at a property in the Willamette Valley and the trailer situation is always what I'm most stressed about. Last July we had 200 guests and nobody complained once — which is the highest compliment I can give. The units were immaculate, the service was quiet, and the generator didn't make a sound all night.</blockquote>
-              <div className="quote-meta">
-                <div className="avatar">KM</div>
-                <div className="who">Kristen M. <small>Event Coordinator · Estate &amp; Winery Events · Salem, OR</small></div>
-              </div>
-            </article>
-
-            <article className="quote-card">
-              <div className="quote-mark" aria-hidden="true">"</div>
-              <h3 className="quote-headline">No line items I didn't recognize.</h3>
-              <blockquote>We've used RHC on two jobs — a ground-up commercial build in Gresham and a site remediation in Tacoma. Both times the quote matched the invoice exactly. No environmental compliance fee tacked on the back end, no fuel surcharge I didn't approve. That's rarer than it should be in this industry.</blockquote>
-              <div className="quote-meta">
-                <div className="avatar">MA</div>
-                <div className="who">Mike A. <small>Senior Estimator · Civil Infrastructure · Portland, OR</small></div>
-              </div>
-            </article>
-          </div>
-
-          <div className="social-strip">
-            <div className="label">Trusted by crews at</div>
-            <div className="badge-row">
-              <div className="badge-item">COMMERCIAL GC</div>
-              <div className="sep" aria-hidden="true"></div>
-              <div className="badge-item">ESTATE &amp; WINERY EVENTS</div>
-              <div className="sep" aria-hidden="true"></div>
-              <div className="badge-item">CIVIL INFRASTRUCTURE</div>
-              <div className="sep" aria-hidden="true"></div>
-              <div className="badge-item">Google <span className="stars">★★★★★</span></div>
+          <div className="tc-carousel">
+            <div className="tc-divider" aria-hidden="true" />
+            <blockquote className="tc-quote">
+              &ldquo;{testimonials[tcIndex].quote}&rdquo;
+            </blockquote>
+            <div className="tc-author">
+              <strong>{testimonials[tcIndex].name}</strong>
+              <span>{testimonials[tcIndex].role}</span>
+            </div>
+            <div className="tc-divider" aria-hidden="true" />
+            <div className="tc-nav">
+              <button
+                className={`tc-arrow${tcIndex === 0 ? ' tc-arrow--off' : ''}`}
+                onClick={() => setTcIndex(i => i - 1)}
+                disabled={tcIndex === 0}
+                aria-label="Previous testimonial"
+              >←</button>
+              <button
+                className={`tc-arrow${tcIndex === testimonials.length - 1 ? ' tc-arrow--off' : ''}`}
+                onClick={() => setTcIndex(i => i + 1)}
+                disabled={tcIndex === testimonials.length - 1}
+                aria-label="Next testimonial"
+              >→</button>
             </div>
           </div>
         </div>

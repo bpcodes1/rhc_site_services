@@ -24,7 +24,7 @@ Key tokens:
 - HQ: Portland, OR (Portland is the `is-hq` city in city grids)
 - Phone: 503-607-7412
 - Email for forms: Enrique has this — connect to Formspree before launch (TODO in LeadForm.tsx)
-- No pricing on site for most services. Exception: Restroom Trailers shows starting range ($900–$1,200 for 2-stall weekend event)
+- No pricing on site for any service. Restroom Trailers previously had a $900–$1,200 range but this was removed — range is too wide to be useful and amplifies price anxiety. All services use form-only with explanation of pricing variables.
 - Primary CTA is always the lead form. Phone number ONLY at the very bottom of the page (final CTA section). Never in the hero.
 
 ## Pages Build Status
@@ -36,15 +36,26 @@ Key tokens:
 - Temporary Fencing `/temporary-fencing` ✓ BUILT
 - Shower Trailers `/shower-trailers` ✓ BUILT
 - Storage Containers `/storage-containers` ✓ BUILT
-- Roll-Off Dumpsters `/roll-off-dumpsters` — TODO (placeholder exists)
+- Roll-Off Dumpsters `/roll-off-dumpsters` ✓ BUILT
 - About Us `/about-us` — TODO (placeholder exists)
 - Contact Us `/contact-us` — TODO (placeholder exists)
 - FAQ `/faq` — TODO (placeholder exists)
 
-### Location Pages (all placeholders exist, none fully built)
-Bend, OR: `/porta-potty-rental-bend-or`, `/restroom-trailer-rental-bend-or`, `/temporary-fencing-rental-bend-or`
-Portland, OR: `/porta-potty-rental-portland-or`, `/restroom-trailer-rental-portland-or`, `/temporary-fencing-rental-portland-or`
-Seattle, WA: `/restroom-trailer-rental-seattle-wa`, `/temporary-fencing-rental-seattle-wa`
+### Location Pages
+Bend, OR:
+- `/porta-potty-rental-bend-or` ✓ BUILT
+- `/restroom-trailer-rental-bend-or` ✓ BUILT
+- `/temporary-fencing-rental-bend-or` — TODO (placeholder exists)
+
+Portland, OR:
+- `/porta-potty-rental-portland-or` — TODO (placeholder exists)
+- `/restroom-trailer-rental-portland-or` — TODO (placeholder exists)
+- `/temporary-fencing-rental-portland-or` — TODO (placeholder exists)
+
+Seattle, WA:
+- `/porta-potty-rental-seattle-wa` — TODO (placeholder exists)
+- `/restroom-trailer-rental-seattle-wa` — TODO (placeholder exists)
+- `/temporary-fencing-rental-seattle-wa` — TODO (placeholder exists)
 
 ## Service Areas (8 cities)
 Salem OR | Portland OR (HQ) | Eugene OR | Bend OR | Gresham OR | Tacoma WA | Vancouver WA | Seattle WA
@@ -141,7 +152,7 @@ Full JSON profiles stored in `.claude/expert-profiles/`. Load them at the Brutal
 | Service | Pricing Approach |
 |---|---|
 | Portable Toilets | Form only — no starting range |
-| Restroom Trailers | Starting range allowed: $900–$1,200 for 2-stall weekend |
+| Restroom Trailers | Form only — no starting range (range too wide to be useful, amplifies anxiety) |
 | Temporary Fencing | Form only — no starting range |
 | Shower Trailers | TBD — ask Enrique |
 | Storage Containers | TBD — ask Enrique |

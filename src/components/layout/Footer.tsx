@@ -29,11 +29,18 @@ export default function Footer() {
           <div>
             <h4>Locations</h4>
             <ul>
-              <li><a href="#">Portland, OR (HQ)</a></li>
-              <li><a href="#">Salem, OR</a></li>
-              <li><a href="#">Bend, OR</a></li>
-              <li><a href="#">Seattle, WA</a></li>
-              <li><a href="#">Nationwide Coverage</a></li>
+              <li style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--outline)', marginTop: '4px', marginBottom: '2px' }}>Portland, OR</li>
+              <li><Link to="/porta-potty-rental-portland-or">Porta Potty</Link></li>
+              <li><Link to="/restroom-trailer-rental-portland-or">Restroom Trailers</Link></li>
+              <li><Link to="/temporary-fencing-rental-portland-or">Temporary Fencing</Link></li>
+              <li style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--outline)', marginTop: '8px', marginBottom: '2px' }}>Bend, OR</li>
+              <li><Link to="/porta-potty-rental-bend-or">Porta Potty</Link></li>
+              <li><Link to="/restroom-trailer-rental-bend-or">Restroom Trailers</Link></li>
+              <li><Link to="/temporary-fencing-rental-bend-or">Temporary Fencing</Link></li>
+              <li style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--outline)', marginTop: '8px', marginBottom: '2px' }}>Seattle, WA</li>
+              <li><Link to="/porta-potty-rental-seattle-wa">Porta Potty</Link></li>
+              <li><Link to="/restroom-trailer-rental-seattle-wa">Restroom Trailers</Link></li>
+              <li><Link to="/temporary-fencing-rental-seattle-wa">Temporary Fencing</Link></li>
             </ul>
           </div>
 

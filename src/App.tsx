@@ -24,6 +24,7 @@ import RestroomTrailerPortland from './pages/locations/portland/RestroomTrailerP
 import TemporaryFencingPortland from './pages/locations/portland/TemporaryFencingPortland'
 
 // Location pages — Seattle, WA
+import PortaPottySeattle from './pages/locations/seattle/PortaPottySeattle'
 import RestroomTrailerSeattle from './pages/locations/seattle/RestroomTrailerSeattle'
 import TemporaryFencingSeattle from './pages/locations/seattle/TemporaryFencingSeattle'
 
@@ -48,6 +49,7 @@ function App() {
           <Route path="porta-potty-rental-portland-or" element={<PortaPottyPortland />} />
           <Route path="restroom-trailer-rental-portland-or" element={<RestroomTrailerPortland />} />
           <Route path="temporary-fencing-rental-portland-or" element={<TemporaryFencingPortland />} />
+          <Route path="porta-potty-rental-seattle-wa" element={<PortaPottySeattle />} />
           <Route path="restroom-trailer-rental-seattle-wa" element={<RestroomTrailerSeattle />} />
           <Route path="temporary-fencing-rental-seattle-wa" element={<TemporaryFencingSeattle />} />
         </Route>
