@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
+import restroomTrailerADAImg from '../../assets/restroom-trailer2.JPEG'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -60,6 +61,7 @@ const trailers = [
     ],
     dark: false,
     photo: 'Photo · ADA + 2-Stall Restroom Trailer',
+    image: restroomTrailerADAImg,
   },
 ]
 
@@ -192,9 +194,13 @@ export default function RestroomTrailers() {
             {trailers.map((trailer) => (
               <article key={trailer.num} className="unit">
                 <div className="unit-photo">
-                  <div className={`placeholder${trailer.dark ? ' dark' : ''}`}>
-                    <span className="ph-tag">{trailer.photo}</span>
-                  </div>
+                  {trailer.image ? (
+                    <img src={trailer.image} alt={trailer.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  ) : (
+                    <div className={`placeholder${trailer.dark ? ' dark' : ''}`}>
+                      <span className="ph-tag">{trailer.photo}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="unit-body">
                   <div className="mono-num">{trailer.num}</div>

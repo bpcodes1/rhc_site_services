@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
+import fencePanelsImg from '../../assets/fence.JPEG'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -133,7 +134,7 @@ export default function TemporaryFencing() {
           <div className="units">
             <article className="unit">
               <div className="unit-photo">
-                <div className="placeholder"><span className="ph-tag">Photo · Freestanding Panel Fencing</span></div>
+                <img src={fencePanelsImg} alt="Freestanding panel fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">01 / Panel</div>

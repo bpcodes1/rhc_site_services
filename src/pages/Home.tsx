@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../components/LeadForm'
+import portaPottyRow from '../assets/porta-potty2.JPEG'
+import restroomTrailerImg from '../assets/restroom-trailer1.JPEG'
+import fencePerimeterImg from '../assets/fence2.JPEG'
 
 const testimonials = [
   {
@@ -102,7 +105,7 @@ export default function Home() {
 
           <div className="services">
             <Link to="/portable-toilets" className="service">
-              <div className="service-photo"><div className="placeholder"><span className="ph-tag">Photo · Portable Sanitation Row</span></div></div>
+              <div className="service-photo"><img src={portaPottyRow} alt="Row of portable toilets" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">01 / Sanitation</div>
                 <h3>On-Time Portable Sanitation</h3>
@@ -119,7 +122,7 @@ export default function Home() {
             </Link>
 
             <Link to="/restroom-trailers" className="service">
-              <div className="service-photo"><div className="placeholder dark"><span className="ph-tag">Photo · Luxury Restroom Trailer</span></div></div>
+              <div className="service-photo"><img src={restroomTrailerImg} alt="Luxury restroom trailer" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">02 / Event Grade</div>
                 <h3>Luxury Restroom &amp; Shower Suites</h3>
@@ -136,7 +139,7 @@ export default function Home() {
             </Link>
 
             <Link to="/temporary-fencing" className="service">
-              <div className="service-photo"><div className="placeholder"><span className="ph-tag">Photo · Chain-Link Perimeter</span></div></div>
+              <div className="service-photo"><img src={fencePerimeterImg} alt="Chain-link perimeter fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">03 / Perimeter</div>
                 <h3>Heavy-Duty Temporary Fencing</h3>
