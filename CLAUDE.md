@@ -45,11 +45,11 @@ Key tokens:
 Bend, OR:
 - `/porta-potty-rental-bend-or` ✓ BUILT
 - `/restroom-trailer-rental-bend-or` ✓ BUILT
-- `/temporary-fencing-rental-bend-or` — TODO (placeholder exists)
+- `/temporary-fencing-rental-bend-or` ✓ BUILT
 
 Portland, OR:
-- `/porta-potty-rental-portland-or` — TODO (placeholder exists)
-- `/restroom-trailer-rental-portland-or` — TODO (placeholder exists)
+- `/porta-potty-rental-portland-or` ✓ BUILT
+- `/restroom-trailer-rental-portland-or` ✓ BUILT
 - `/temporary-fencing-rental-portland-or` — TODO (placeholder exists)
 
 Seattle, WA:
