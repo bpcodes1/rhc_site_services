@@ -37,7 +37,7 @@ import TemporaryFencingSeattle from './pages/locations/seattle/TemporaryFencingS
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/rhc_site_services">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
