@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RHC Site Services</title>
     <script>
-      // SPA redirect: encode the path into the query string so index.html can restore it
       var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1).join('/') + '/?p=' +
-        encodeURIComponent(l.pathname + l.search) + l.hash
-      );
+      var base = '/rhc_site_services/';
+      var path = l.pathname.replace(base, '') || '/';
+      l.replace(l.protocol + '//' + l.host + base + '?p=' + encodeURIComponent('/' + path) + l.hash);
     </script>
   </head>
   <body></body>
