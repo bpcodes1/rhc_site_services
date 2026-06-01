@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../components/LeadForm'
@@ -11,6 +12,19 @@ import step01Img from '../assets/request.webp'
 import step02Img from '../assets/scheduling.webp'
 import step03Img from '../assets/delivery.webp'
 import step04Img from '../assets/pickup.webp'
+
+const GEO_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'
+
+const mapCities: { name: string; coords: [number, number]; hq: boolean; anchor: 'start' | 'middle' | 'end'; dx: number; dy: number }[] = [
+  { name: 'Seattle',       coords: [-122.3321, 47.6062], hq: false, anchor: 'middle', dx: 0,  dy: -10 },
+  { name: 'Tacoma',        coords: [-122.4443, 47.2529], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
+  { name: 'Vancouver',     coords: [-122.6615, 45.6387], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
+  { name: 'Portland · HQ', coords: [-122.6765, 45.46],   hq: true,  anchor: 'end',   dx: -8, dy: 4   },
+  { name: 'Gresham',       coords: [-122.4302, 45.4984], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
+  { name: 'Salem',         coords: [-123.0351, 44.9429], hq: false, anchor: 'end',   dx: -8, dy: 4   },
+  { name: 'Eugene',        coords: [-123.0868, 44.0521], hq: false, anchor: 'end',   dx: -8, dy: 4   },
+  { name: 'Bend',          coords: [-121.3153, 44.0582], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
+]
 
 const testimonials = [
   {
@@ -381,60 +395,67 @@ export default function Home() {
 
           <div className="areas">
             <div className="map-card">
-              <svg className="map-svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <ComposableMap
+                projection="geoMercator"
+                projectionConfig={{ center: [-120.5, 45.5], scale: 2800 }}
+                width={600}
+                height={450}
+                style={{ width: '100%', height: '100%' }}
+                aria-hidden="true"
+              >
                 <defs>
-                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <pattern id="map-grid" width="40" height="40" patternUnits="userSpaceOnUse">
                     <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(17,28,45,.06)" strokeWidth="1" />
-                  </pattern>
-                  <pattern id="lat" width="600" height="60" patternUnits="userSpaceOnUse">
-                    <line x1="0" y1="30" x2="600" y2="30" stroke="rgba(17,28,45,.04)" strokeWidth="1" strokeDasharray="4 6" />
                   </pattern>
                 </defs>
                 <rect width="600" height="450" fill="#f0f3ff" />
-                <rect width="600" height="450" fill="url(#grid)" />
-                <rect width="600" height="450" fill="url(#lat)" />
-                <path d="M 90 60 Q 130 130 110 200 T 140 320 Q 160 380 200 410 L 500 410 L 540 360 Q 520 290 540 220 T 510 80 Z" fill="rgba(17,28,45,.04)" stroke="rgba(17,28,45,.22)" strokeWidth="1" />
-                <path d="M 100 215 Q 220 230 320 225 T 540 220" fill="none" stroke="rgba(17,28,45,.18)" strokeWidth="1" strokeDasharray="2 4" />
-                <circle cx="195" cy="225" r="60" fill="rgba(253,101,30,.08)" stroke="rgba(253,101,30,.5)" strokeWidth="1" strokeDasharray="2 4" />
-                <circle cx="195" cy="225" r="110" fill="rgba(253,101,30,.04)" stroke="rgba(253,101,30,.25)" strokeWidth="1" strokeDasharray="2 4" />
-                <text x="20" y="30" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="rgba(17,28,45,.55)" letterSpacing="1">SECTOR · PNW · 24.05</text>
-                <text x="106" y="170" fontFamily="JetBrains Mono, monospace" fontSize="11" fill="rgba(17,28,45,.5)" letterSpacing="2">WA</text>
-                <text x="106" y="280" fontFamily="JetBrains Mono, monospace" fontSize="11" fill="rgba(17,28,45,.5)" letterSpacing="2">OR</text>
-                <text x="20" y="438" fontFamily="JetBrains Mono, monospace" fontSize="10" fill="rgba(17,28,45,.45)" letterSpacing="1">RHC DISPATCH MAP — NOT TO SCALE</text>
-              </svg>
+                <rect width="600" height="450" fill="url(#map-grid)" />
 
-              <div className="pin pin-above" style={{ left: '30%', top: '38%' }}>
-                <span className="pin-label">Seattle</span>
-                <span className="pin-dot"></span>
-              </div>
-              <div className="pin pin-right" style={{ left: '32%', top: '43%' }}>
-                <span className="pin-dot"></span>
-                <span className="pin-label">Tacoma</span>
-              </div>
-              <div className="pin pin-left" style={{ left: '28%', top: '48%' }}>
-                <span className="pin-label">Vancouver</span>
-                <span className="pin-dot"></span>
-              </div>
-              <div className="pin pin-hq" style={{ left: '33%', top: '50%' }}>
-                <span className="pin-label">Portland · HQ</span>
-                <span className="pin-dot"></span>
-              </div>
-              <div className="pin pin-right" style={{ left: '39%', top: '50%' }}>
-                <span className="pin-dot"></span>
-                <span className="pin-label">Gresham</span>
-              </div>
-              <div className="pin" style={{ left: '36%', top: '62%' }}>
-                <span className="pin-label">Salem</span>
-                <span className="pin-dot"></span>
-              </div>
-              <div className="pin" style={{ left: '36%', top: '72%' }}>
-                <span className="pin-label">Eugene</span>
-                <span className="pin-dot"></span>
-              </div>
-              <div className="pin pin-right" style={{ left: '50%', top: '66%' }}>
-                <span className="pin-dot"></span>
-                <span className="pin-label">Bend</span>
-              </div>
+                <Geographies geography={GEO_URL}>
+                  {({ geographies }: { geographies: any[] }) =>
+                    geographies
+                      .filter((geo: any) => ['06', '16', '30', '32', '41', '53'].includes(String(geo.id)))
+                      .map((geo: any) => {
+                        const isPrimary = geo.id === '41' || geo.id === '53'
+                        return (
+                          <Geography
+                            key={geo.rsmKey}
+                            geography={geo}
+                            fill={isPrimary ? 'rgba(17,28,45,.07)' : 'rgba(17,28,45,.03)'}
+                            stroke={isPrimary ? 'rgba(17,28,45,.2)' : 'rgba(17,28,45,.1)'}
+                            strokeWidth={1}
+                            style={{ outline: 'none' }}
+                          />
+                        )
+                      })
+                  }
+                </Geographies>
+
+                {mapCities.map(city => (
+                  <Marker key={city.name} coordinates={city.coords}>
+                    <circle
+                      r={city.hq ? 6 : 4}
+                      fill={city.hq ? '#fd651e' : '#1d2b3e'}
+                      stroke="#f9f9ff"
+                      strokeWidth={2}
+                    />
+                    <text
+                      textAnchor={city.anchor}
+                      dx={city.dx}
+                      dy={city.dy}
+                      fontFamily="JetBrains Mono, monospace"
+                      fontSize={9}
+                      fill={city.hq ? '#a73a00' : 'rgba(17,28,45,.75)'}
+                      letterSpacing="0.05em"
+                      style={{ pointerEvents: 'none', userSelect: 'none' }}
+                    >
+                      {city.name}
+                    </text>
+                  </Marker>
+                ))}
+
+                <text x="10" y="442" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(17,28,45,.35)" letterSpacing="1">RHC SERVICE AREA</text>
+              </ComposableMap>
             </div>
 
             <div>
