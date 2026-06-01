@@ -38,6 +38,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
 html, body { margin: 0; padding: 0; }
 body {
   font-family: var(--font-body);
@@ -210,6 +211,8 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--outline-variant);
   margin-bottom: 24px;
@@ -301,8 +304,9 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.5;
   color: var(--on-surface-variant);
 }
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.lead-form .btn { width: 100%; margin-top: 8px; }
+.field-row { display: grid; grid-template-columns: 1fr; gap: 0; }
+@media (min-width: 500px) { .field-row { grid-template-columns: 1fr 1fr; gap: 16px; } }
+.lead-form .btn { width: 100%; margin-top: 8px; font-size: 12px; letter-spacing: 0.06em; }
 .lead-fine { margin-top: 16px; font-size: 11px; color: var(--on-surface-variant); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
 .lead-fine svg { flex-shrink: 0; margin-top: 1px; }
 
@@ -661,6 +665,7 @@ section { padding: 80px 0; border-bottom: 1px solid var(--outline-variant); }
   overflow: hidden;
 }
 .map-svg { width: 100%; height: 100%; }
+.map-card svg { display: block; width: 100%; height: 100%; max-width: 100%; }
 .pin {
   position: absolute;
   transform: translate(-50%, -100%);
@@ -1197,6 +1202,7 @@ footer.site-footer .foot-brand p { font-size: 14px; max-width: 36ch; margin-top:
 .unit p { margin: 0; color: var(--on-surface-variant); font-size: 14px; line-height: 1.6; }
 
 /* ---------- SIZING TABLE ---------- */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .sizing-table {
   width: 100%;
   border-collapse: collapse;
@@ -1228,6 +1234,99 @@ footer.site-footer .foot-brand p { font-size: 14px; max-width: 36ch; margin-top:
 .sizing-table td:first-child { color: var(--on-surface); font-weight: 600; font-family: var(--font-head); font-size: 16px; }
 .sizing-table td:last-child { border-right: 0; }
 .sizing-table tr:last-child td { border-bottom: 0; }
+
+/* ============================================================
+   MOBILE OVERRIDES — max 699px
+   ============================================================ */
+@media (max-width: 699px) {
+
+  /* --- Typography --- */
+  .h-xl  { font-size: clamp(28px, 8vw, 44px); }
+  .h-lg  { font-size: clamp(22px, 6vw, 32px); }
+  .h-md  { font-size: 16px; }
+  .body-lg, .hero-sub, .hero-lean-sub { font-size: 15px; }
+  .lie-quote blockquote { font-size: clamp(18px, 5vw, 26px); }
+  .lie-num  { font-size: 36px; }
+  .step-num { font-size: 26px; }
+  section p, .section-head p { font-size: 14px; }
+
+  /* --- Card & section headings --- */
+  .unit h3      { font-size: 18px; }
+  .service h3   { font-size: 18px; }
+  .use-case h3  { font-size: 16px; }
+  .why-item h3  { font-size: 15px; }
+  .quote-headline { font-size: 17px; }
+  .step h3      { font-size: 16px; }
+  .faq-q        { font-size: 15px; }
+
+  /* --- Section vertical spacing --- */
+  section       { padding: 48px 0; }
+  .hero         { padding: 40px 0 48px; }
+  .hero-lean    { padding: 40px 0 48px; }
+  .final-cta    { padding: 60px 0; }
+  .lie          { padding: 36px 0 40px; }
+  .section-head { margin-bottom: 36px; }
+  .hero-trust   { margin-top: 32px; }
+  .hero-actions, .hero-lean-actions { margin-top: 24px; }
+
+  /* --- Stat numbers in hero trust bar --- */
+  .hero-trust .stat-num { font-size: 26px; }
+  .hero-trust > div     { padding: 16px 12px 0 0; }
+
+  /* --- Card & cell padding --- */
+  .unit-body    { padding: 16px 16px 20px; }
+  .service-body { padding: 16px 16px 20px; }
+  .use-case     { padding: 20px 16px; }
+  .why-item     { padding: 24px 16px; }
+  .quote-card   { padding: 20px; }
+  .step-right   { padding-bottom: 20px; }
+  .lead-form    { padding: 20px; }
+
+  /* --- Nav brand --- */
+  .brand small { display: none; }
+  .brand { font-size: 20px; }
+
+  /* --- Areas / map section --- */
+  .areas { gap: 28px; }
+  .areas .btn { width: 100%; justify-content: center; }
+  .city-tag { padding: 12px 14px; gap: 8px; }
+  .city-tag .city-name { font-size: 15px; }
+  .city-tag .city-state { font-size: 9px; }
+
+  /* --- Social strip --- */
+  .badge-row .badge-item { font-size: 14px; }
+
+  /* --- Testimonial carousel --- */
+  .tc-author strong { font-size: 15px; }
+  .tc-author span   { font-size: 13px; }
+
+  /* --- Buttons --- */
+  .btn { padding: 13px 20px; font-size: 13px; }
+
+  /* --- At a Glance meta sidebar --- */
+  .meta-value { font-size: 15px !important; overflow-wrap: break-word; word-break: break-word; }
+
+  /* --- Final CTA phone block --- */
+  .final-phone-num  { font-size: 20px; }
+  .final-phone      { padding: 16px; gap: 12px; }
+
+  /* --- Tables --- */
+  .sizing-table th, .sizing-table td { padding: 8px 8px; font-size: 12px; }
+  .sizing-table td:first-child       { font-size: 13px; }
+  .table-scroll                      { overflow-x: visible; }
+
+  /* --- Testimonial quote carousel --- */
+  .tc-quote  { font-size: clamp(18px, 5vw, 26px); }
+  .tc-arrow  { width: 40px; height: 40px; }
+
+  /* --- FAQ --- */
+  details.faq-item > summary { padding: 16px 20px; gap: 12px; }
+  details.faq-item .faq-a    { padding: 0 20px 16px; font-size: 14px; }
+  details.faq-item .faq-q    { font-size: clamp(15px, 4vw, 18px); }
+
+  /* --- Footer --- */
+  footer.site-footer { padding: 48px 0 24px; }
+}
 
 /* ---------- USE CASES GRID ---------- */
 .use-cases {

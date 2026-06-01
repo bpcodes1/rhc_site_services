@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import showerTrailerDeployedImg from '../../assets/shower-trailer2.webp'
+import showerTrailerDeployedImg from '../../assets/shower-trailer3.webp'
 import showerTrailerLargeImg from '../../assets/shower-trailer1.webp'
 import shower2Img from '../../assets/shower2.webp'
 import shower4Img from '../../assets/shower4.webp'
@@ -98,11 +98,11 @@ const units = [
 ]
 
 const sizingGuide = [
-  { headcount: 'Up to 20 people', config: '2-Stall', notes: 'Works with staggered shower windows' },
-  { headcount: '20-40 people', config: '3-Stall', notes: 'Standard for weddings and small camps' },
-  { headcount: '30-60 people', config: '4-Stall', notes: 'Most versatile for events and job sites' },
-  { headcount: '50-100 people', config: '6-Stall', notes: 'Commercial construction and large events' },
-  { headcount: '100+ people', config: '8-Stall', notes: 'High-volume and emergency deployments' },
+  { headcount: 'Up to 20', config: '2-Stall', notes: 'Staggered windows' },
+  { headcount: '20–40', config: '3-Stall', notes: 'Weddings & small camps' },
+  { headcount: '30–60', config: '4-Stall', notes: 'Events & job sites' },
+  { headcount: '50–100', config: '6-Stall', notes: 'Large events & construction' },
+  { headcount: '100+', config: '8-Stall', notes: 'High-volume & emergency' },
 ]
 
 const faqs = [
@@ -319,26 +319,24 @@ export default function ShowerTrailers() {
             <p>The two variables that determine the right stall count are headcount and deployment length. Use the table below as a starting point, then note your specifics on the quote form and RHC confirms the right configuration for your exact situation.</p>
           </div>
 
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
-              <thead>
-                <tr style={{ borderBottom: '2px solid var(--outline-variant)' }}>
-                  {['Headcount', 'Recommended Configuration', 'Notes'].map((col) => (
-                    <th key={col} style={{ textAlign: 'left', padding: '10px 12px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--on-surface-variant)', fontWeight: 400 }}>{col}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {sizingGuide.map((row, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid var(--outline-variant)' }}>
-                    <td style={{ padding: '12px', color: 'var(--on-surface)' }}>{row.headcount}</td>
-                    <td style={{ padding: '12px', color: 'var(--on-surface)', fontWeight: 600 }}>{row.config}</td>
-                    <td style={{ padding: '12px', color: 'var(--on-surface-variant)' }}>{row.notes}</td>
-                  </tr>
+          <table className="sizing-table">
+            <thead>
+              <tr>
+                {['Headcount', 'Config', 'Notes'].map((col) => (
+                  <th key={col}>{col}</th>
                 ))}
-              </tbody>
-            </table>
-          </div>
+              </tr>
+            </thead>
+            <tbody>
+              {sizingGuide.map((row, i) => (
+                <tr key={i}>
+                  <td>{row.headcount}</td>
+                  <td>{row.config}</td>
+                  <td>{row.notes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
           <p style={{ marginTop: '20px', fontSize: '13px', color: 'var(--on-surface-variant)' }}>
             For multi-day events or job sites without a water hookup, bulk freshwater delivery is available. Note your site conditions on the quote form.

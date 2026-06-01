@@ -161,7 +161,7 @@ export default function PortableToilets() {
 
             <div>
               <p className="mono" style={{ marginBottom: '20px', color: 'var(--secondary)' }}>For Construction Sites · OSHA Standard</p>
-              <table className="sizing-table">
+              <div className="table-scroll"><table className="sizing-table">
                 <thead>
                   <tr>
                     <th>Crew Size</th>
@@ -191,12 +191,12 @@ export default function PortableToilets() {
                     <td>Twice per week</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <div>
               <p className="mono" style={{ marginBottom: '20px', color: 'var(--secondary)' }}>For Events · General Guidelines</p>
-              <table className="sizing-table">
+              <div className="table-scroll"><table className="sizing-table">
                 <thead>
                   <tr>
                     <th>Guest Count</th>
@@ -231,7 +231,7 @@ export default function PortableToilets() {
                     <td>18–22 units</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
           </div>

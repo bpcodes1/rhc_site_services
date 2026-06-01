@@ -7,7 +7,7 @@ import portaPottyRow from '../assets/porta-potty2.webp'
 import restroomTrailerImg from '../assets/restroom-trailer1.webp'
 import fencePerimeterImg from '../assets/fence2.webp'
 import conexContainerImg from '../assets/conex_container.webp'
-import rollOffOnPlanksImg from '../assets/dumpster.webp'
+import showerSuiteImg from '../assets/shower-trailer1.webp'
 import step01Img from '../assets/request.webp'
 import step02Img from '../assets/scheduling.webp'
 import step03Img from '../assets/delivery.webp'
@@ -192,20 +192,20 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link to="/roll-off-dumpsters" className="service">
-              <div className="service-photo"><img src={rollOffOnPlanksImg} alt="Roll-off dumpster on planks in driveway" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
+            <Link to="/shower-trailers" className="service">
+              <div className="service-photo"><img src={showerSuiteImg} alt="Luxury shower trailer deployed at outdoor event" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
-                <div className="mono-num">05 / Debris</div>
-                <h3>Roll-Off Debris Dumpsters</h3>
+                <div className="mono-num">05 / Shower</div>
+                <h3>Luxury Shower Suites</h3>
                 <div className="svc-block">
                   <div className="svc-label">The Reality</div>
-                  <p>High-capacity, open-top roll-off bins dropped precisely on planks to protect asphalt or turf from structural damage.</p>
+                  <p>Hot-water shower trailers with private stalls, climate control, and onboard water tanks built for multi-day outdoor events and remote job sites.</p>
                 </div>
                 <div className="svc-block svc-block-accent">
                   <div className="svc-label">The PNW Standard</div>
-                  <p>Sized perfectly for heavy commercial demolition management or rapid residential estate cleanouts, then hauled away the moment you text us.</p>
+                  <p>Reliable hot water and solid water pressure in any Pacific Northwest condition — from Cascade foothills to coastal festival grounds.</p>
                 </div>
-                <span className="service-link">Pick a Size <span className="arrow">→</span></span>
+                <span className="service-link">View Shower Suites <span className="arrow">→</span></span>
               </div>
             </Link>
 
