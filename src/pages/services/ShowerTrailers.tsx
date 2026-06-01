@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
 import showerTrailerDeployedImg from '../../assets/shower-trailer2.JPEG'
 import showerTrailerLargeImg from '../../assets/shower-trailer1.JPEG'
+import shower2Img from '../../assets/shower2.png'
+import shower4Img from '../../assets/shower4.png'
+import shower6Img from '../../assets/shower6.png'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -19,6 +22,7 @@ const units = [
   {
     num: '01',
     title: '2-Stall Shower Trailer',
+    image: shower2Img,
     tag: 'Best for small VIP event camping, emergency rapid response, and small remodel sites.',
     specs: [
       { label: 'Fresh Water', value: '125-150 gal (unlimited with garden hose hookup)' },
@@ -48,6 +52,7 @@ const units = [
   {
     num: '03',
     title: '4-Stall Shower Trailer',
+    image: shower4Img,
     tag: 'The most versatile configuration for mid-size construction crews, weekend festivals, and multi-day events.',
     specs: [
       { label: 'Fresh Water', value: '150-200 gal (unlimited with garden hose hookup)' },
@@ -63,6 +68,7 @@ const units = [
   {
     num: '04',
     title: '6-Stall Shower Trailer',
+    image: shower6Img,
     tag: 'The heavy-duty workhorse for commercial construction, large multi-day festivals, and high-volume workforce housing.',
     specs: [
       { label: 'Fresh Water', value: '200-300 gal (unlimited with garden hose hookup)' },

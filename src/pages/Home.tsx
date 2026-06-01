@@ -5,6 +5,12 @@ import LeadForm from '../components/LeadForm'
 import portaPottyRow from '../assets/porta-potty2.JPEG'
 import restroomTrailerImg from '../assets/restroom-trailer1.JPEG'
 import fencePerimeterImg from '../assets/fence2.JPEG'
+import conexContainerImg from '../assets/conex_container.png'
+import rollOffOnPlanksImg from '../assets/dumpster.png'
+import step01Img from '../assets/request.png'
+import step02Img from '../assets/scheduling.png'
+import step03Img from '../assets/delivery.png'
+import step04Img from '../assets/pickup.png'
 
 const testimonials = [
   {
@@ -156,7 +162,7 @@ export default function Home() {
             </Link>
 
             <Link to="/storage-containers" className="service">
-              <div className="service-photo"><div className="placeholder"><span className="ph-tag">Photo · 40ft Conex Container</span></div></div>
+              <div className="service-photo"><img src={conexContainerImg} alt="40ft steel shipping container on job site" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">04 / Secure Storage</div>
                 <h3>Weatherproof Steel Storage Containers</h3>
@@ -173,7 +179,7 @@ export default function Home() {
             </Link>
 
             <Link to="/roll-off-dumpsters" className="service">
-              <div className="service-photo"><div className="placeholder dark"><span className="ph-tag">Photo · Roll-Off Bin on Planks</span></div></div>
+              <div className="service-photo"><img src={rollOffOnPlanksImg} alt="Roll-off dumpster on planks in driveway" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">05 / Debris</div>
                 <h3>Roll-Off Debris Dumpsters</h3>
@@ -227,7 +233,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>Tell us what you need</h3>
                 <p>Fill out our short form. Let us know your service, location, and dates — it takes less than 60 seconds.</p>
-                <div className="placeholder step-ph"><span className="ph-tag">Step 01 — photo</span></div>
+                <img src={step01Img} alt="Submitting a quote request online" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
             <div className="step">
@@ -238,7 +244,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>We confirm &amp; schedule everything</h3>
                 <p>Our team reviews your request, confirms equipment availability for your location and dates, and handles all the logistics so you don't have to.</p>
-                <div className="placeholder step-ph"><span className="ph-tag">Step 02 — photo</span></div>
+                <img src={step02Img} alt="Scheduling and confirming equipment delivery" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
             <div className="step">
@@ -249,7 +255,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>Equipment delivered on time</h3>
                 <p>Your equipment shows up when and where it needs to be. No chasing, no follow-up calls, no last-minute surprises.</p>
-                <div className="placeholder step-ph"><span className="ph-tag">Step 03 — photo</span></div>
+                <img src={step03Img} alt="Equipment delivered on time to site" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
             <div className="step">
@@ -260,7 +266,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>We handle the pickup</h3>
                 <p>When your rental period ends, our team comes back to remove the equipment and leave your site clean. You don't lift a finger.</p>
-                <div className="placeholder step-ph"><span className="ph-tag">Step 04 — photo</span></div>
+                <img src={step04Img} alt="Equipment picked up and site cleared" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
           </div>

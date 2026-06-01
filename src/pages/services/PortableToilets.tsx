@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
 import portaPottyImg from '../../assets/porta-potty1.PNG'
+import deluxPortableImg from '../../assets/delux_portable.png'
+import adaPortableImg from '../../assets/ada_portable.png'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -133,7 +135,7 @@ export default function PortableToilets() {
 
             <article className="unit">
               <div className="unit-photo">
-                <div className="placeholder dark"><span className="ph-tag">Photo · Deluxe Portable Toilet</span></div>
+                <img src={deluxPortableImg} alt="Deluxe portable toilet with handwash station" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">02 / Deluxe</div>
@@ -144,7 +146,7 @@ export default function PortableToilets() {
 
             <article className="unit">
               <div className="unit-photo">
-                <div className="placeholder"><span className="ph-tag">Photo · ADA-Compliant Unit</span></div>
+                <img src={adaPortableImg} alt="ADA-compliant accessible portable toilet" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">03 / ADA</div>

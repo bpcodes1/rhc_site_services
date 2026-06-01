@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
 import fencePanelsImg from '../../assets/fence.JPEG'
+import chainFencingImg from '../../assets/chain_fencing.png'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -161,7 +162,7 @@ export default function TemporaryFencing() {
 
             <article className="unit">
               <div className="unit-photo">
-                <div className="placeholder dark"><span className="ph-tag">Photo · Post-Driven Chain Link</span></div>
+                <img src={chainFencingImg} alt="Post-driven chain link temporary fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">02 / Post-Driven</div>
