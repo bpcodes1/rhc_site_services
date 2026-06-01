@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import fencePanelsImg from '../../assets/fence.JPEG'
-import chainFencingImg from '../../assets/chain_fencing.png'
+import fencePanelsImg from '../../assets/fence.webp'
+import chainFencingImg from '../../assets/chain_fencing.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
