@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
+import rolloff10ydImg from '../../assets/container_10ft.png'
+import rolloff15ydImg from '../../assets/container_15ft.png'
+import rolloff20ydImg from '../../assets/rolloff_bins.png'
+import rolloff30ydImg from '../../assets/container_30ft.png'
+import rolloff40ydImg from '../../assets/container_40ft.png'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -17,6 +22,7 @@ const sizes = [
   {
     num: '01',
     title: '10-Yard Roll-Off',
+    image: rolloff10ydImg,
     tag: 'The only size rated for heavy fill: concrete, dirt, brick, and asphalt.',
     specs: [
       { label: 'Dimensions', value: "~14' L × 7.5' W × 3.5' H" },
@@ -28,6 +34,7 @@ const sizes = [
   {
     num: '02',
     title: '15-Yard Roll-Off',
+    image: rolloff15ydImg,
     tag: 'Standard kitchen demos, carpet removal from a full floor, and minor roofing projects.',
     specs: [
       { label: 'Dimensions', value: "~16' L × 7.5' W × 4.5' H" },
@@ -39,6 +46,7 @@ const sizes = [
   {
     num: '03',
     title: '20-Yard Roll-Off',
+    image: rolloff20ydImg,
     tag: 'Multi-room renovations, master bath gut-remodels, standard roof tear-offs, and garage cleanouts.',
     specs: [
       { label: 'Dimensions', value: "~16' L × 8' W × 4.5' H" },
@@ -50,6 +58,7 @@ const sizes = [
   {
     num: '04',
     title: '30-Yard Roll-Off',
+    image: rolloff30ydImg,
     tag: 'Full home remodels, large commercial renovations, and multi-room drywall tear-outs.',
     specs: [
       { label: 'Dimensions', value: "~22' L × 8' W × 6' H" },
@@ -61,6 +70,7 @@ const sizes = [
   {
     num: '05',
     title: '40-Yard Roll-Off',
+    image: rolloff40ydImg,
     tag: 'New construction waste, whole-house demolition, major framing projects, and large estate cleanouts.',
     specs: [
       { label: 'Dimensions', value: "~22' L × 8' W × 8' H" },
@@ -231,9 +241,13 @@ export default function RollOffDumpsters() {
             {sizes.map((size, i) => (
               <article key={size.num} className="unit">
                 <div className="unit-photo">
-                  <div className={`placeholder${i % 2 !== 0 ? ' dark' : ''}`}>
-                    <span className="ph-tag">Photo · {size.title}</span>
-                  </div>
+                  {size.image ? (
+                    <img src={size.image} alt={size.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  ) : (
+                    <div className={`placeholder${i % 2 !== 0 ? ' dark' : ''}`}>
+                      <span className="ph-tag">Photo · {size.title}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="unit-body">
                   <div className="mono-num">{size.num} / {size.title}</div>

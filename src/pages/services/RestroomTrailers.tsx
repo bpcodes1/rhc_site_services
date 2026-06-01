@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
 import restroomTrailerADAImg from '../../assets/restroom-trailer2.JPEG'
+import restroom2StallImg from '../../assets/2stall_portable.png'
+import restroom4StallImg from '../../assets/4stall_portable.png'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -29,6 +31,7 @@ const trailers = [
     ],
     dark: false,
     photo: 'Photo · 2-Stall Luxury Restroom Trailer',
+    image: restroom2StallImg,
   },
   {
     num: '02 / 4-Stall',
@@ -44,6 +47,7 @@ const trailers = [
     ],
     dark: true,
     photo: 'Photo · 4-Stall Luxury Restroom Trailer',
+    image: restroom4StallImg,
   },
   {
     num: '03 / ADA + 2',
