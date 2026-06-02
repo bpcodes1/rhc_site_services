@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
+import heroImg from '../../assets/luxury_restroom_hero.png'
 import restroomTrailerADAImg from '../../assets/restroom-trailer2.webp'
 import restroom2StallImg from '../../assets/2stall_portable.webp'
 import restroom4StallImg from '../../assets/4stall_portable.webp'
@@ -141,7 +142,7 @@ export default function RestroomTrailers() {
       </div>
 
       {/* LEAN HERO */}
-      <section className="hero-lean">
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-lean-grid">
             <div>

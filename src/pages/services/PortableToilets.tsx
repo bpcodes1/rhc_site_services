@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
+import heroImg from '../../assets/portable_hero.png'
 import portaPottyImg from '../../assets/porta-potty1.webp'
 import adaPortableImg from '../../assets/ada_portable.webp'
 
@@ -67,7 +68,7 @@ export default function PortableToilets() {
       </div>
 
       {/* LEAN HERO */}
-      <section className="hero-lean">
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-lean-grid">
             <div>

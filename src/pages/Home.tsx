@@ -3,6 +3,7 @@ import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../components/LeadForm'
+import heroImg from '../assets/hero.png'
 import portaPottyRow from '../assets/porta-potty2.webp'
 import restroomTrailerImg from '../assets/restroom-trailer1.webp'
 import fencePerimeterImg from '../assets/fence2.webp'
@@ -44,8 +45,38 @@ const testimonials = [
   },
 ]
 
+const cityServices: Record<string, { label: string; to: string }[]> = {
+  Portland: [
+    { label: 'Porta Potty Rental', to: '/porta-potty-rental-portland-or' },
+    { label: 'Restroom Trailers', to: '/restroom-trailer-rental-portland-or' },
+    { label: 'Temporary Fencing', to: '/temporary-fencing-rental-portland-or' },
+  ],
+  Bend: [
+    { label: 'Porta Potty Rental', to: '/porta-potty-rental-bend-or' },
+    { label: 'Restroom Trailers', to: '/restroom-trailer-rental-bend-or' },
+    { label: 'Temporary Fencing', to: '/temporary-fencing-rental-bend-or' },
+  ],
+  Seattle: [
+    { label: 'Porta Potty Rental', to: '/porta-potty-rental-seattle-wa' },
+    { label: 'Restroom Trailers', to: '/restroom-trailer-rental-seattle-wa' },
+    { label: 'Temporary Fencing', to: '/temporary-fencing-rental-seattle-wa' },
+  ],
+}
+
+const homeCities = [
+  { name: 'Salem',     state: 'OR', hq: false },
+  { name: 'Portland',  state: 'OR', hq: true  },
+  { name: 'Eugene',    state: 'OR', hq: false },
+  { name: 'Bend',      state: 'OR', hq: false },
+  { name: 'Gresham',   state: 'OR', hq: false },
+  { name: 'Tacoma',    state: 'WA', hq: false },
+  { name: 'Vancouver', state: 'WA', hq: false },
+  { name: 'Seattle',   state: 'WA', hq: false },
+]
+
 export default function Home() {
   const [tcIndex, setTcIndex] = useState(0)
+  const [selectedCity, setSelectedCity] = useState<string | null>(null)
 
   return (
     <main id="main">
@@ -56,7 +87,7 @@ export default function Home() {
       </Helmet>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="hero" style={{ borderBottom: '1px solid var(--outline-variant)' }}>
+      <section className="hero hero--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-grid">
             <div>
@@ -460,15 +491,45 @@ export default function Home() {
 
             <div>
               <div className="city-tags">
-                <a href="#" className="city-tag"><span className="city-name">Salem</span><span className="city-state">OR</span></a>
-                <a href="#" className="city-tag is-hq"><span className="city-name">Portland</span><span className="city-state">OR · HQ</span></a>
-                <a href="#" className="city-tag"><span className="city-name">Eugene</span><span className="city-state">OR</span></a>
-                <a href="#" className="city-tag"><span className="city-name">Bend</span><span className="city-state">OR</span></a>
-                <a href="#" className="city-tag"><span className="city-name">Gresham</span><span className="city-state">OR</span></a>
-                <a href="#" className="city-tag"><span className="city-name">Tacoma</span><span className="city-state">WA</span></a>
-                <a href="#" className="city-tag"><span className="city-name">Vancouver</span><span className="city-state">WA</span></a>
-                <a href="#" className="city-tag"><span className="city-name">Seattle</span><span className="city-state">WA</span></a>
+                {homeCities.map(city => {
+                  const hasServices = !!cityServices[city.name]
+                  const isSelected = selectedCity === city.name
+                  const cls = `city-tag${city.hq ? ' is-hq' : ''}${isSelected ? ' is-selected' : ''}`
+                  const label = city.hq ? `${city.state} · HQ` : city.state
+                  return hasServices ? (
+                    <button
+                      key={city.name}
+                      className={cls}
+                      onClick={() => setSelectedCity(isSelected ? null : city.name)}
+                      aria-expanded={isSelected}
+                    >
+                      <span className="city-name">{city.name}</span>
+                      <span className="city-state">{label}</span>
+                    </button>
+                  ) : (
+                    <a key={city.name} href="#quote" className={cls}>
+                      <span className="city-name">{city.name}</span>
+                      <span className="city-state">{label}</span>
+                    </a>
+                  )
+                })}
               </div>
+
+              {selectedCity && cityServices[selectedCity] && (
+                <div className="city-services-panel">
+                  <div className="city-services-header">
+                    <span className="city-services-title">{selectedCity} Services</span>
+                    <button className="city-services-close" onClick={() => setSelectedCity(null)} aria-label="Close">✕</button>
+                  </div>
+                  <div className="city-services-links">
+                    {cityServices[selectedCity].map(link => (
+                      <Link key={link.to} to={link.to} className="city-service-link">
+                        {link.label} <span className="arrow">→</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
               <div className="area-foot">
                 <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
                 <p><strong>Don't see your city listed?</strong> Fill out the form — we're actively expanding and may still be able to serve your location.</p>
