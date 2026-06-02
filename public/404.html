@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RHC Site Services</title>
+    <script>
+      var l = window.location;
+      var base = '/rhc_site_services/';
+      var path = l.pathname.replace(base, '') || '/';
+      l.replace(l.protocol + '//' + l.host + base + '?p=' + encodeURIComponent('/' + path) + l.hash);
+    </script>
+  </head>
+  <body></body>
+</html>

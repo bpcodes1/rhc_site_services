@@ -22,7 +22,6 @@ export default function Footer() {
               <li><Link to="/shower-trailers">Shower Trailers</Link></li>
               <li><Link to="/temporary-fencing">Temporary Fencing</Link></li>
               <li><Link to="/storage-containers">Storage Containers</Link></li>
-              <li><Link to="/roll-off-dumpsters">Roll-Off Dumpsters</Link></li>
             </ul>
           </div>
 

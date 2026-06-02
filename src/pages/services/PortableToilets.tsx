@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import portaPottyImg from '../../assets/porta-potty1.PNG'
-import deluxPortableImg from '../../assets/delux_portable.png'
-import adaPortableImg from '../../assets/ada_portable.png'
+import heroImg from '../../assets/portable_hero.png'
+import portaPottyImg from '../../assets/porta-potty1.webp'
+import adaPortableImg from '../../assets/ada_portable.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'Do portable toilets have lights inside?',
-    a: 'Standard units use a translucent roof panel for daylight visibility. For nighttime events or early-morning construction sites, ask about our deluxe units — those include interior lighting.',
+    a: 'Standard units use a translucent roof panel for daylight visibility. For nighttime events or early-morning construction sites, ask about units with interior lighting when you request a quote.',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function PortableToilets() {
       </div>
 
       {/* LEAN HERO */}
-      <section className="hero-lean">
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-lean-grid">
             <div>
@@ -95,7 +95,7 @@ export default function PortableToilets() {
               </div>
               <div className="meta-row">
                 <div className="meta-label">Unit Types</div>
-                <div className="meta-value">Standard · Deluxe · ADA</div>
+                <div className="meta-value">Standard · ADA</div>
               </div>
               <div className="meta-row">
                 <div className="meta-label">Coverage</div>
@@ -116,7 +116,7 @@ export default function PortableToilets() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">01 / Unit Types</div>
-              <h2 className="h-lg">Standard, Deluxe, and ADA — What's the right unit for your site?</h2>
+              <h2 className="h-lg">Standard and ADA — What's the right unit for your site?</h2>
             </div>
             <p>Three unit classes cover almost every construction site and event scenario in Oregon and Washington. Pick by use case, or call RHC and we'll spec it for you in under five minutes.</p>
           </div>
@@ -135,21 +135,10 @@ export default function PortableToilets() {
 
             <article className="unit">
               <div className="unit-photo">
-                <img src={deluxPortableImg} alt="Deluxe portable toilet with handwash station" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={adaPortableImg} alt="ADA-compliant accessible portable toilet" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block', background: '#f9f9ff' }} />
               </div>
               <div className="unit-body">
-                <div className="mono-num">02 / Deluxe</div>
-                <h3>Deluxe Portable Toilet</h3>
-                <p>Everything in the standard unit plus a fresh-water hand-wash station with soap. The right choice when guests, clients, or homeowners will be on site — or when your crew expects something better than bare minimum.</p>
-              </div>
-            </article>
-
-            <article className="unit">
-              <div className="unit-photo">
-                <img src={adaPortableImg} alt="ADA-compliant accessible portable toilet" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              </div>
-              <div className="unit-body">
-                <div className="mono-num">03 / ADA</div>
+                <div className="mono-num">02 / ADA</div>
                 <h3>ADA-Compliant Portable Toilet</h3>
                 <p>Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair accessibility. Required — not optional — for any public event or job site where workers or guests with mobility limitations are present. Don't wait until an inspector flags it.</p>
               </div>
@@ -173,7 +162,7 @@ export default function PortableToilets() {
 
             <div>
               <p className="mono" style={{ marginBottom: '20px', color: 'var(--secondary)' }}>For Construction Sites · OSHA Standard</p>
-              <table className="sizing-table">
+              <div className="table-scroll"><table className="sizing-table">
                 <thead>
                   <tr>
                     <th>Crew Size</th>
@@ -203,12 +192,12 @@ export default function PortableToilets() {
                     <td>Twice per week</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <div>
               <p className="mono" style={{ marginBottom: '20px', color: 'var(--secondary)' }}>For Events · General Guidelines</p>
-              <table className="sizing-table">
+              <div className="table-scroll"><table className="sizing-table">
                 <thead>
                   <tr>
                     <th>Guest Count</th>
@@ -243,7 +232,7 @@ export default function PortableToilets() {
                     <td>18–22 units</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
           </div>
@@ -315,7 +304,7 @@ export default function PortableToilets() {
             <div className="why-item">
               <div className="why-num">03</div>
               <h3>Confirmed Clean Before It Arrives</h3>
-              <p>Standard units don't get skipped service loops when it rains. Deluxe units don't arrive with broken hand-wash stations. Every unit is verified before delivery and serviced on the schedule we committed to.</p>
+              <p>Units don't get skipped service loops when it rains. Every unit is verified before delivery and serviced on the schedule we committed to.</p>
             </div>
           </div>
         </div>
@@ -405,7 +394,7 @@ export default function PortableToilets() {
             <LeadForm
               id="quote"
               variant="final"
-              defaultService="Standard, Deluxe, or ADA Portable Toilets"
+              defaultService="Standard or ADA Portable Toilets"
             />
           </div>
         </div>

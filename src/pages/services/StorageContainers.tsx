@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import container10ftImg from '../../assets/container_10ft.png'
-import container20ftImg from '../../assets/container_20ft.png'
-import container40ftImg from '../../assets/steel_container.png'
+import heroImg from '../../assets/container_hero.png'
+import container10ftImg from '../../assets/container_10ft.webp'
+import container20ftImg from '../../assets/container_20ft.webp'
+import container40ftImg from '../../assets/steel_container.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -169,7 +170,7 @@ export default function StorageContainers() {
       </div>
 
       {/* LEAN HERO */}
-      <section className="hero-lean">
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-lean-grid">
             <div>

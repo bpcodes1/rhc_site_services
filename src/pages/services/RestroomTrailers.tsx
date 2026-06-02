@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import restroomTrailerADAImg from '../../assets/restroom-trailer2.JPEG'
-import restroom2StallImg from '../../assets/2stall_portable.png'
-import restroom4StallImg from '../../assets/4stall_portable.png'
+import heroImg from '../../assets/luxury_restroom_hero.png'
+import restroomTrailerADAImg from '../../assets/restroom-trailer2.webp'
+import restroom2StallImg from '../../assets/2stall_portable.webp'
+import restroom4StallImg from '../../assets/4stall_portable.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -141,7 +142,7 @@ export default function RestroomTrailers() {
       </div>
 
       {/* LEAN HERO */}
-      <section className="hero-lean">
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-lean-grid">
             <div>
@@ -250,40 +251,40 @@ export default function RestroomTrailers() {
           <table className="sizing-table">
             <thead>
               <tr>
-                <th>Guest Count</th>
-                <th>Under 4 Hours</th>
-                <th>4–6 Hours (Standard)</th>
-                <th>6+ Hours or Heavy Bar</th>
+                <th>Guests</th>
+                <th>&lt; 4 hrs</th>
+                <th>4–6 hrs</th>
+                <th>6+ hrs / Bar</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Up to 100 guests</td>
+                <td>Up to 100</td>
                 <td>2-Stall</td>
                 <td>2-Stall</td>
-                <td>2-Stall + mid-event service</td>
+                <td>2-Stall +</td>
               </tr>
               <tr>
-                <td>100–150 guests</td>
+                <td>100–150</td>
                 <td>2-Stall</td>
                 <td>2-Stall</td>
                 <td>4-Stall</td>
               </tr>
               <tr>
-                <td>150–250 guests</td>
+                <td>150–250</td>
                 <td>4-Stall</td>
                 <td>4-Stall</td>
-                <td>4-Stall + mid-event service</td>
+                <td>4-Stall +</td>
               </tr>
               <tr>
-                <td>250–350 guests</td>
+                <td>250–350</td>
                 <td>4-Stall</td>
                 <td>4-Stall + ADA</td>
                 <td>4-Stall + ADA</td>
               </tr>
               <tr>
-                <td>350+ guests</td>
-                <td colSpan={3} style={{ textAlign: 'center', fontStyle: 'italic' }}>Contact RHC, we'll spec the right configuration for your event</td>
+                <td>350+</td>
+                <td colSpan={3} style={{ textAlign: 'center', fontStyle: 'italic' }}>Contact RHC for a custom spec</td>
               </tr>
             </tbody>
           </table>

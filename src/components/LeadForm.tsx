@@ -65,7 +65,7 @@ export default function LeadForm({ id, variant = 'hero', defaultService = '' }: 
           <div className="field-row">
             <div className="field">
               <label htmlFor={`${id}-zip`}>Project ZIP / City</label>
-              <input id={`${id}-zip`} type="text" placeholder="97301 / Salem" required />
+              <input id={`${id}-zip`} type="text" placeholder="97201 / Portland" required />
             </div>
             <div className="field">
               <label htmlFor={`${id}-date`}>Delivery Date</label>
@@ -79,7 +79,7 @@ export default function LeadForm({ id, variant = 'hero', defaultService = '' }: 
                 (access restrictions, mud conditions, etc.)
               </span>
             </label>
-            <textarea id={`${id}-notes`} rows={3} placeholder="Tight alley, soft ground after rain, gate code 4421…" />
+            <textarea id={`${id}-notes`} rows={3} placeholder="e.g. 2 portable toilets, chain-link fencing, 4-stall shower trailer, 20yd dumpster…" />
           </div>
           <button type="submit" className="btn btn-primary">{buttonText}</button>
           <p className="lead-fine">
