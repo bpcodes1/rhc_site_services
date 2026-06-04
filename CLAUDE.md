@@ -24,7 +24,7 @@ Key tokens:
 - HQ: Portland, OR (Portland is the `is-hq` city in city grids)
 - Phone: 503-607-7412
 - Email for forms: Enrique has this — connect to Formspree before launch (TODO in LeadForm.tsx)
-- No pricing on site for any service. Restroom Trailers previously had a $900–$1,200 range but this was removed — range is too wide to be useful and amplifies price anxiety. All services use form-only with explanation of pricing variables.
+- Pricing on site by exception only. Roll-Off Dumpsters: $350–$850 range published (confirmed by Rafa). Shower Trailers: $2,000–$6,000 range referenced in FAQ answer only (not in hero or CTA). All other services: form-only with explanation of pricing variables. Restroom Trailers previously had a $900–$1,200 range but it was removed — range too wide, amplifies price anxiety.
 - Primary CTA is always the lead form. Phone number ONLY at the very bottom of the page (final CTA section). Never in the hero.
 
 ## Pages Build Status
@@ -50,10 +50,10 @@ Bend, OR:
 Portland, OR:
 - `/porta-potty-rental-portland-or` ✓ BUILT
 - `/restroom-trailer-rental-portland-or` ✓ BUILT
-- `/temporary-fencing-rental-portland-or` — TODO (placeholder exists)
+- `/temporary-fencing-rental-portland-or` ✓ BUILT
 
 Seattle, WA:
-- `/porta-potty-rental-seattle-wa` — TODO (placeholder exists)
+- `/porta-potty-rental-seattle-wa` ✓ BUILT
 - `/restroom-trailer-rental-seattle-wa` — TODO (placeholder exists)
 - `/temporary-fencing-rental-seattle-wa` — TODO (placeholder exists)
 
@@ -69,7 +69,7 @@ Salem OR | Portland OR (HQ) | Eugene OR | Bend OR | Gresham OR | Tacoma WA | Van
 5. **No "national company" comparisons in hero sections.** The Why RHC section may reference national competitors (they're named as "national corporations with 275+ locations" etc.) but hero and use cases sections do not compare to named or unnamed national companies.
 6. **No middleman language.** Never say "we broker," "we're a middleman," or "no middlemen." Never claim fleet ownership either ("our inventory," "our trucks," "we own every unit"). Correct framing: "confirmed clean before it arrives," "delivered and installed by RHC," "one accountable team."
 7. **"Or call PNW dispatch"** in final CTA phone label → **"Or call RHC directly"**
-8. **No pricing on site** except Restroom Trailers (starting range $900–$1,200 allowed). All other services use "fill out the form" approach with explanation of why no pricing is posted.
+8. **No pricing on site** except where already confirmed: Roll-Off Dumpsters ($350–$850 published), Shower Trailers ($2,000–$6,000 in FAQ answer only). All other services use "fill out the form" approach. Restroom Trailers range was removed — do not reinstate without Rafa approval.
 9. **Specs must be published** for each service page. No competitor does this. It's the primary Prove It mechanism (Wiebe) and the main ranking differentiator (Kyle Roof).
 10. **Dream outcome must be stated** for each audience on service pages (Hormozi). Not the vehicle (fence delivered) but the destination (site is compliant and crew never touched a panel).
 
@@ -141,7 +141,7 @@ Full JSON profiles stored in `.claude/expert-profiles/`. Load them at the Brutal
 - **react-helmet-async** — installed, HelmetProvider wraps app in main.tsx.
 
 ## Rafa's Requirements
-- No pricing on site (except Restroom Trailers starting range)
+- No pricing on site except confirmed exceptions: Roll-Off Dumpsters ($350–$850), Shower Trailers ($2,000–$6,000 in FAQ only)
 - Phone number is LAST RESORT — bottom of page only
 - Primary CTA is always the form
 - Site covers 6 services: Portable Toilets, Restroom Trailers, Temporary Fencing, Storage Containers, Shower Trailers, Roll-Off Dumpsters
@@ -154,9 +154,9 @@ Full JSON profiles stored in `.claude/expert-profiles/`. Load them at the Brutal
 | Portable Toilets | Form only — no starting range |
 | Restroom Trailers | Form only — no starting range (range too wide to be useful, amplifies anxiety) |
 | Temporary Fencing | Form only — no starting range |
-| Shower Trailers | TBD — ask Enrique |
-| Storage Containers | TBD — ask Enrique |
-| Roll-Off Dumpsters | TBD — ask Enrique |
+| Shower Trailers | $2,000–$6,000 range referenced in FAQ answer only; form-only CTA |
+| Storage Containers | Form only — no starting range |
+| Roll-Off Dumpsters | $350–$850 range published (hero sidebar, FAQ, final CTA copy) |
 
 ## Writing Voice (for any client-facing copy outside the website)
 See `/Users/enriquep/ai-fundamentals/module-outputs/module-06-writing/Self-writing-profile.json` and `self-writing-skill.md` for Enrique's personal writing voice (used for sales scripts and outreach, not website copy).
