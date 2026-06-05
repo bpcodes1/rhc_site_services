@@ -40,10 +40,11 @@ export default function Header() {
     pathname.startsWith('/shower-trailers') ||
     pathname.startsWith('/roll-off-dumpsters')
 
-  const servicesHref = onServicePage ? '/#services' : '#services'
-  const howHref     = onServicePage ? '/#how'      : '#how'
-  const areasHref   = onServicePage ? '/#areas'    : '#areas'
-  const faqHref     = onServicePage ? '/#faq'      : '#faq'
+  const isHome = pathname === '/'
+  const servicesHref = isHome ? '#services' : '/#services'
+  const howHref      = isHome ? '#how'      : '/#how'
+  const areasHref    = isHome ? '#areas'    : '/#areas'
+  const faqHref      = isHome ? '#faq'      : '/#faq'
 
   const closeMenu = () => { setMenuOpen(false); setOpenCity(null) }
 

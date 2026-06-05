@@ -1,10 +1,30 @@
+import { Helmet } from 'react-helmet-async'
+import heroImg from '../../../assets/cities/portland/portland_hero.webp'
+
 export default function PortaPottyPortland() {
   return (
-    <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-24">
-      <h1 className="font-['Archivo_Narrow'] text-5xl font-bold text-[#1d2b3e]">
-        Porta Potty Rental in Portland, OR
-      </h1>
-      <p className="font-['Public_Sans'] text-[#44474c] mt-4">Placeholder — build in progress.</p>
-    </div>
+    <main id="main">
+      <Helmet>
+        <title>Porta Potty Rental Portland, OR | RHC Site Services</title>
+        <meta name="description" content="Portable toilet rentals for Portland job sites and events. Same-day quotes from RHC." />
+        <link rel="canonical" href="https://rhcsiteservices.com/porta-potty-rental-portland-or" />
+      </Helmet>
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
+        <div className="container">
+          <div className="hero-lean-grid">
+            <div>
+              <div className="hero-eyebrow-row">
+                <span className="eyebrow">Portable Sanitation · Portland, OR</span>
+              </div>
+              <h1 className="h-xl">Porta Potty Rental in <span className="underline accent">Portland, OR</span></h1>
+              <p className="hero-lean-sub body-lg">Same-day quotes for Portland construction sites and events. Hard delivery windows, no surprise fees.</p>
+              <div className="hero-lean-actions">
+                <a href="#quote" className="btn btn-primary">Get a Same-Day Quote →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }

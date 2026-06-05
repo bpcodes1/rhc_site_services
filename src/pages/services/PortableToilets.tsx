@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import heroImg from '../../assets/portable_hero.png'
-import portaPottyImg from '../../assets/porta-potty1.webp'
-import adaPortableImg from '../../assets/ada_portable.webp'
+import heroImg from '../../assets/portable-toilets/portable_hero.webp'
+import portaPottyImg from '../../assets/portable-toilets/porta-potty1.webp'
+import adaPortableImg from '../../assets/portable-toilets/ada_portable.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },

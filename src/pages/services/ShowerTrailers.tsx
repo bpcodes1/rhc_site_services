@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import showerTrailerDeployedImg from '../../assets/shower-trailer3.webp'
-import showerTrailerLargeImg from '../../assets/shower-trailer1.webp'
-import shower2Img from '../../assets/shower2.webp'
-import shower4Img from '../../assets/shower4.webp'
-import shower6Img from '../../assets/shower6.webp'
+import showerTrailerDeployedImg from '../../assets/shower-trailers/shower-trailer3.webp'
+import showerTrailerLargeImg from '../../assets/shower-trailers/shower-trailer1.webp'
+import shower2Img from '../../assets/shower-trailers/shower2.webp'
+import shower4Img from '../../assets/shower-trailers/shower4.webp'
+import shower6Img from '../../assets/shower-trailers/shower6.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
