@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import rolloff10ydImg from '../../assets/container_10ft.webp'
-import rolloff15ydImg from '../../assets/container_15ft.webp'
-import rolloff20ydImg from '../../assets/rolloff_bins.webp'
-import rolloff30ydImg from '../../assets/container_30ft.webp'
-import rolloff40ydImg from '../../assets/container_40ft.webp'
+import rolloff10ydImg from '../../assets/storage-containers/container_10ft.webp'
+import rolloff15ydImg from '../../assets/storage-containers/container_15ft.webp'
+import rolloff20ydImg from '../../assets/roll-off-dumpsters/rolloff_bins.webp'
+import rolloff30ydImg from '../../assets/storage-containers/container_30ft.webp'
+import rolloff40ydImg from '../../assets/storage-containers/container_40ft.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },

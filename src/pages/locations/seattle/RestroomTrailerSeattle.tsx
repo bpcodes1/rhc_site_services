@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
+import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
 
 const venueGuide = [
   {
@@ -135,7 +136,7 @@ export default function RestroomTrailerSeattle() {
       </div>
 
       {/* LEAN HERO */}
-      <section className="hero-lean">
+      <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-lean-grid">
             <div>

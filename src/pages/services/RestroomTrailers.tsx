@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../components/LeadForm'
-import heroImg from '../../assets/luxury_restroom_hero.png'
-import restroomTrailerADAImg from '../../assets/restroom-trailer2.webp'
-import restroom2StallImg from '../../assets/2stall_portable.webp'
-import restroom4StallImg from '../../assets/4stall_portable.webp'
+import heroImg from '../../assets/restroom-trailers/luxury_restroom_hero.webp'
+import restroomTrailerADAImg from '../../assets/restroom-trailers/restroom-trailer2.webp'
+import restroom2StallImg from '../../assets/restroom-trailers/2stall_portable.webp'
+import restroom4StallImg from '../../assets/restroom-trailers/4stall_portable.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
