@@ -88,8 +88,9 @@ export default function Home() {
 
       {/* ── HERO + STAT STRIP (fills full viewport below nav) ───────────── */}
       <div className="hero-viewport">
-      <section className="hero hero--image" style={{ backgroundImage: `url(${heroImg})` }}>
+      <section className="hero hero--image" id="quote" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
+          <div className="hero-grid">
           <div className="hero-text">
             <div className="hero-eyebrow-row">
               <span className="eyebrow">For GCs, PMs &amp; Event Organizers in Oregon &amp; Washington</span>
@@ -136,7 +137,14 @@ export default function Home() {
                 </div>
               </li>
             </ul>
+          </div>{/* end hero-text */}
+
+          <div className="hero-form-card">
+            <p className="hero-form-heading">Get a Same-Day Quote</p>
+            <p className="hero-form-sub">Tell us your service, location, and dates. We respond the same business day.</p>
+            <LeadForm id="quote-hero" variant="hero" />
           </div>
+          </div>{/* end hero-grid */}
         </div>
       </section>
 
@@ -165,19 +173,6 @@ export default function Home() {
       </div>
 
       </div>{/* end hero-viewport */}
-
-      {/* ── QUOTE FORM (just below the fold) ─────────────────────────────── */}
-      <section className="hero-quote" id="quote">
-        <div className="container">
-          <div className="hero-quote-grid">
-            <div>
-              <h2 className="h-md">Get a Same-Day Quote</h2>
-              <p>Tell us your service, location, and dates. We respond the same business day — no obligation.</p>
-            </div>
-            <LeadForm variant="hero" />
-          </div>
-        </div>
-      </section>
 
       {/* ── SERVICES ─────────────────────────────────────────────────────── */}
       <section id="services">
