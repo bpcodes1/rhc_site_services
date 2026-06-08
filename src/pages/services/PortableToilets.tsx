@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: 'How many portable toilets do I need?',
-    a: 'For construction sites: OSHA standard is one unit per 10 workers, serviced at least once every 7 days. For events: one unit per 50 guests for events under 4 hours. Add 15–25% capacity if alcohol is served or the event runs longer than 4 hours.',
+    a: 'For construction sites: OSHA standard is one unit per 20 workers, serviced at least once every 7 days. For events: one unit per 50 guests for events under 4 hours. Add 15–25% capacity if alcohol is served or the event runs longer than 4 hours.',
   },
   {
     q: 'Do I need a permit to place a porta potty in Portland?',
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'How often does a portable toilet need to be serviced on a construction site?',
-    a: "OSHA requires service at least once every 7 days for single-shift operation. High-use sites, two-shift operations, or sites with more than 10 workers per unit need more frequent service. Tell us your crew size and we'll build the right cadence into your quote.",
+    a: "OSHA requires service at least once every 7 days for single-shift operation. High-use sites, two-shift operations, or sites with more than 20 workers per unit need more frequent service. Tell us your crew size and we'll build the right cadence into your quote.",
   },
   {
     q: 'Where does the waste from portable toilets in Oregon go?',
@@ -313,7 +313,7 @@ export default function PortableToilets() {
             <div className="use-case">
               <div className="use-num">01 / Construction</div>
               <h3>Construction &amp; Job Sites</h3>
-              <p>OSHA requires one unit per 10 workers. We deliver to active job sites, position units exactly where your site manager marks them, and service on the schedule your crew needs — including through winter mud season on the I-5 corridor.</p>
+              <p>OSHA requires one unit per 20 workers. We deliver to active job sites, position units exactly where your site manager marks them, and service on the schedule your crew needs — including through winter mud season on the I-5 corridor.</p>
             </div>
             <div className="use-case">
               <div className="use-num">02 / Events</div>
