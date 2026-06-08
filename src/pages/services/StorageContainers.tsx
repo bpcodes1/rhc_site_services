@@ -172,8 +172,8 @@ export default function StorageContainers() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Storage Container Rentals · Oregon &amp; Washington</span>
               </div>
@@ -181,11 +181,8 @@ export default function StorageContainers() {
                 Storage Container Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Solid Corten steel. Watertight doors, sealed steel roof, no moisture inside, even through Oregon winters. Confirmed clean before delivery. One transparent quote with no fuel surcharges or billing surprises added after. Construction, moving, and renovation rentals across Oregon and Washington. Same-day quote.
+                Solid Corten steel, watertight doors, confirmed clean before delivery. One transparent quote with no fuel surcharges or billing surprises. Construction, moving, and renovation rentals across Oregon and Washington.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get a Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -224,9 +221,37 @@ export default function StorageContainers() {
                 <div className="meta-value">24-48 hrs from payment</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get a Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* CONTAINER SIZES */}
       <section id="configurations">

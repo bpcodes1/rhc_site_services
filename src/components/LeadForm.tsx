@@ -79,7 +79,7 @@ export default function LeadForm({ id, variant = 'hero', defaultService = '' }: 
                 (access restrictions, mud conditions, etc.)
               </span>
             </label>
-            <textarea id={`${id}-notes`} rows={3} placeholder="e.g. 2 portable toilets, chain-link fencing, 4-stall shower trailer, 20yd dumpster…" />
+            <textarea id={`${id}-notes`} rows={2} placeholder="e.g. 2 portable toilets, chain-link fencing, 4-stall shower trailer, 20yd dumpster…" />
           </div>
           <button type="submit" className="btn btn-primary">{buttonText}</button>
           <p className="lead-fine">

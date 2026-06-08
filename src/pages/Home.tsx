@@ -9,10 +9,10 @@ import restroomTrailerImg from '../assets/restroom-trailers/restroom-trailer1.we
 import fencePerimeterImg from '../assets/temporary-fencing/fence2.webp'
 import conexContainerImg from '../assets/storage-containers/conex_container.webp'
 import showerSuiteImg from '../assets/shower-trailers/shower-trailer1.webp'
-import step01Img from '../assets/general/request.webp'
-import step02Img from '../assets/general/scheduling.webp'
-import step03Img from '../assets/general/delivery.webp'
-import step04Img from '../assets/general/pickup.webp'
+import step01Img from '../assets/general/request.png'
+import step02Img from '../assets/general/scheduling.png'
+import step03Img from '../assets/general/delivery.png'
+import step04Img from '../assets/general/pickup.png'
 
 const GEO_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'
 
@@ -86,59 +86,95 @@ export default function Home() {
         <link rel="canonical" href="https://rhcsiteservices.com/" />
       </Helmet>
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* ── HERO + STAT STRIP (fills full viewport below nav) ───────────── */}
+      <div className="hero-viewport">
       <section className="hero hero--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-grid">
-            <div>
-              <div className="hero-eyebrow-row">
-                <span className="eyebrow">For GCs, PMs &amp; Event Organizers in Oregon &amp; Washington</span>
-              </div>
-              <h1 className="h-xl">
-                The equipment you ordered. Placed <span className="underline accent">exactly</span> where you need it. On-site before your crew clocks in.
-              </h1>
-              <p className="hero-sub body-lg">
-                Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services dispatches clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
-              </p>
-
-              <ul className="triggers" role="list">
-                <li>
-                  <div className="trig-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
-                      <path d="M4 7h16M4 12h16M4 17h10" /><circle cx="19" cy="17" r="2.5" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="trig-title">No Broker Lag</div>
-                    <div className="trig-body">Every piece of equipment on your site is vetted, inspected, and dispatched from a single point of accountability. No excuse chains.</div>
-                  </div>
-                </li>
-                <li>
-                  <div className="trig-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
-                      <circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="trig-title">Same-Day Response</div>
-                    <div className="trig-body">Guaranteed quote in your inbox before 5:00 PM today.</div>
-                  </div>
-                </li>
-                <li>
-                  <div className="trig-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
-                      <rect x="4" y="4" width="16" height="16" /><path d="M8 9h8M8 13h8M8 17h5" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="trig-title">Zero Surprise Fees</div>
-                    <div className="trig-body">The price on your quote is the exact number on your invoice.</div>
-                  </div>
-                </li>
-              </ul>
+          <div className="hero-text">
+            <div className="hero-eyebrow-row">
+              <span className="eyebrow">For GCs, PMs &amp; Event Organizers in Oregon &amp; Washington</span>
             </div>
+            <h1 className="h-xl">
+              The equipment you ordered. Placed <span className="underline accent">exactly</span> where you need it. On-site before your crew clocks in.
+            </h1>
+            <p className="hero-sub body-lg">
+              Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services dispatches clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
+            </p>
 
-            <LeadForm id="quote" variant="hero" />
+            <ul className="triggers" role="list">
+              <li>
+                <div className="trig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
+                    <path d="M4 7h16M4 12h16M4 17h10" /><circle cx="19" cy="17" r="2.5" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="trig-title">No Broker Lag</div>
+                  <div className="trig-body">Every piece of equipment on your site is vetted, inspected, and dispatched from a single point of accountability. No excuse chains.</div>
+                </div>
+              </li>
+              <li>
+                <div className="trig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
+                    <circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="trig-title">Same-Day Response</div>
+                  <div className="trig-body">Guaranteed quote in your inbox before 5:00 PM today.</div>
+                </div>
+              </li>
+              <li>
+                <div className="trig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
+                    <rect x="4" y="4" width="16" height="16" /><path d="M8 9h8M8 13h8M8 17h5" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="trig-title">Zero Surprise Fees</div>
+                  <div className="trig-body">The price on your quote is the exact number on your invoice.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── STAT STRIP ───────────────────────────────────────────────────── */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>{/* end hero-viewport */}
+
+      {/* ── QUOTE FORM (just below the fold) ─────────────────────────────── */}
+      <section className="hero-quote" id="quote">
+        <div className="container">
+          <div className="hero-quote-grid">
+            <div>
+              <h2 className="h-md">Get a Same-Day Quote</h2>
+              <p>Tell us your service, location, and dates. We respond the same business day — no obligation.</p>
+            </div>
+            <LeadForm variant="hero" />
           </div>
         </div>
       </section>

@@ -60,8 +60,10 @@ export default function Header() {
         <div className="container nav">
           <Link to="/" className="brand" aria-label="RHC Site Services home">
             <span className="brand-mark" aria-hidden="true"></span>
-            RHC<span style={{ color: 'var(--secondary)' }}>.</span>
-            <small>Site Services</small>
+            <span className="brand-text">
+              <span className="brand-name">RHC<span className="brand-dot">.</span></span>
+              <small>Site Services</small>
+            </span>
           </Link>
 
           <nav className="nav-links" aria-label="Primary">
@@ -119,8 +121,10 @@ export default function Header() {
         <div className="mob-menu-top">
           <Link to="/" className="brand" onClick={closeMenu} aria-label="RHC Site Services home">
             <span className="brand-mark" aria-hidden="true"></span>
-            RHC<span style={{ color: 'var(--secondary)' }}>.</span>
-            <small>Site Services</small>
+            <span className="brand-text">
+              <span className="brand-name">RHC<span className="brand-dot">.</span></span>
+              <small>Site Services</small>
+            </span>
           </Link>
           <button className="mob-menu-close" onClick={closeMenu} aria-label="Close menu">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
