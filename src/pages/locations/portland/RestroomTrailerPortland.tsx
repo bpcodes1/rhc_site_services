@@ -7,18 +7,22 @@ const venueGuide = [
   {
     label: 'Power is required. Most Portland venues have it. Outdoor and rural properties often do not.',
     body: 'A 2-stall trailer requires one dedicated 110V / 20-amp circuit. A 4-stall requires two to three. Urban event spaces in the Pearl District, established hotel outdoor venues, and dedicated wedding properties typically have accessible power nearby. Backyard events, Sauvie Island sites, and Willamette Valley winery properties vary significantly. A trailer without power means no climate control, no interior lighting, and no flushing. Note your venue\'s power situation on the form and RHC will confirm the approach, including generator provision if needed, before delivery.',
+    status: 'required',
   },
   {
     label: 'Winery properties, ranch estates, and rural venue access require advance planning.',
     body: 'Many winery properties, ranch estates, and Columbia River Gorge event sites have soft terrain, gravel access roads, or gates that need to be open before the delivery truck arrives. The driver needs clearance to back in and the trailer needs reasonably level ground. Note your surface and access conditions on the form and RHC will confirm the placement approach before delivery day.',
+    status: 'check',
   },
   {
     label: 'Events at Portland Parks facilities require a permit.',
     body: 'Events held at Tom McCall Waterfront Park, Washington Park, and other Portland Parks and Recreation facilities require a Special Event Permit that includes a sanitation plan. A compliant restroom trailer satisfies that requirement. Events that proceed without a required permit are subject to shutdown. Note your venue type on the form and RHC will flag what applies before the truck rolls.',
+    status: 'required',
   },
   {
     label: 'Large events on Multnomah County property may require a county permit.',
     body: 'Events held on county-owned land outside Portland city limits with 100 or more attendees typically require a Special Event Permit through Multnomah County. The county review includes a sanitation check, and a compliant trailer satisfies that requirement. For private property events under 100 guests, no permit is required. Note your headcount and property type on the form.',
+    status: 'check',
   },
 ]
 
@@ -128,8 +132,8 @@ export default function RestroomTrailerPortland() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Luxury Restroom Trailers · Portland, OR &amp; Willamette Valley</span>
               </div>
@@ -137,11 +141,8 @@ export default function RestroomTrailerPortland() {
                 Restroom Trailer Rental in <span className="underline accent">Portland, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                The most common complaint about Portland restroom trailer vendors is not the equipment. It is the vendor. A delivery window given as a four-hour guess. A price that changed between the quote and the invoice. A unit that looked nothing like the listing. RHC runs differently. You get a confirmed arrival time, exact specs published before you book, and a locked price that does not change between approval and event day.
+                The most common Portland complaint is not the equipment. It is the vendor. Wrong delivery window, changed price, unit that looked nothing like the listing. RHC: confirmed arrival time, published specs, locked price from quote to event day.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -164,9 +165,37 @@ export default function RestroomTrailerPortland() {
                 <div className="meta-value">72 hrs standard · May–Sept books 2–3 weeks out</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PORTLAND VENUE GUIDE */}
       <section id="before-you-book">
@@ -181,17 +210,9 @@ export default function RestroomTrailerPortland() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {venueGuide.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${item.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{item.label}</strong>{' '}
+                  <strong>{item.label}</strong>{' '}
                   {item.body}
                 </p>
               </div>

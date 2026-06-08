@@ -82,63 +82,99 @@ export default function Home() {
     <main id="main">
       <Helmet>
         <title>Portable Toilet &amp; Site Equipment Rental in Oregon &amp; Washington | RHC Site Services</title>
-        <meta name="description" content="Porta potty, restroom trailer, temporary fencing, storage container, shower trailer, and roll-off dumpster rentals across Oregon and Washington. Hard delivery windows. No surprise fees." />
+        <meta name="description" content="Porta potty, restroom trailer, shower trailer, temporary fencing, and storage container rentals across Oregon and Washington. Hard delivery windows. No surprise fees." />
         <link rel="canonical" href="https://rhcsiteservices.com/" />
       </Helmet>
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+      {/* ── HERO + STAT STRIP (fills full viewport below nav) ───────────── */}
+      <div className="hero-viewport">
       <section className="hero hero--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-grid">
-            <div>
-              <div className="hero-eyebrow-row">
-                <span className="eyebrow">For GCs, PMs &amp; Event Organizers in Oregon &amp; Washington</span>
-              </div>
-              <h1 className="h-xl">
-                The equipment you ordered. Placed <span className="underline accent">exactly</span> where you need it. On-site before your crew clocks in.
-              </h1>
-              <p className="hero-sub body-lg">
-                Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services dispatches clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
-              </p>
-
-              <ul className="triggers" role="list">
-                <li>
-                  <div className="trig-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
-                      <path d="M4 7h16M4 12h16M4 17h10" /><circle cx="19" cy="17" r="2.5" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="trig-title">No Broker Lag</div>
-                    <div className="trig-body">Every piece of equipment on your site is vetted, inspected, and dispatched from a single point of accountability. No excuse chains.</div>
-                  </div>
-                </li>
-                <li>
-                  <div className="trig-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
-                      <circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="trig-title">Same-Day Response</div>
-                    <div className="trig-body">Guaranteed quote in your inbox before 5:00 PM today.</div>
-                  </div>
-                </li>
-                <li>
-                  <div className="trig-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
-                      <rect x="4" y="4" width="16" height="16" /><path d="M8 9h8M8 13h8M8 17h5" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="trig-title">Zero Surprise Fees</div>
-                    <div className="trig-body">The price on your quote is the exact number on your invoice.</div>
-                  </div>
-                </li>
-              </ul>
+          <div className="hero-text">
+            <div className="hero-eyebrow-row">
+              <span className="eyebrow">For GCs, PMs &amp; Event Organizers in Oregon &amp; Washington</span>
             </div>
+            <h1 className="h-xl">
+              The equipment you ordered. Placed <span className="underline accent">exactly</span> where you need it. On-site before your crew clocks in.
+            </h1>
+            <p className="hero-sub body-lg">
+              Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services dispatches clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
+            </p>
 
-            <LeadForm id="quote" variant="hero" />
+            <ul className="triggers" role="list">
+              <li>
+                <div className="trig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
+                    <path d="M4 7h16M4 12h16M4 17h10" /><circle cx="19" cy="17" r="2.5" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="trig-title">No Broker Lag</div>
+                  <div className="trig-body">Every piece of equipment on your site is vetted, inspected, and dispatched from a single point of accountability. No excuse chains.</div>
+                </div>
+              </li>
+              <li>
+                <div className="trig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
+                    <circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="trig-title">Same-Day Response</div>
+                  <div className="trig-body">Guaranteed quote in your inbox before 5:00 PM today.</div>
+                </div>
+              </li>
+              <li>
+                <div className="trig-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square">
+                    <rect x="4" y="4" width="16" height="16" /><path d="M8 9h8M8 13h8M8 17h5" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="trig-title">Zero Surprise Fees</div>
+                  <div className="trig-body">The price on your quote is the exact number on your invoice.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── STAT STRIP ───────────────────────────────────────────────────── */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>{/* end hero-viewport */}
+
+      {/* ── QUOTE FORM (just below the fold) ─────────────────────────────── */}
+      <section className="hero-quote" id="quote">
+        <div className="container">
+          <div className="hero-quote-grid">
+            <div>
+              <h2 className="h-md">Get a Same-Day Quote</h2>
+              <p>Tell us your service, location, and dates. We respond the same business day — no obligation.</p>
+            </div>
+            <LeadForm variant="hero" />
           </div>
         </div>
       </section>
@@ -151,7 +187,7 @@ export default function Home() {
               <div className="eyebrow">02 / The Fleet</div>
               <h2 className="h-lg">Stop managing five different sub-contractors just to break ground.</h2>
             </div>
-            <p>Chasing down separate vendors for fences, toilets, dumpsters, and storage is a logistical nightmare. When one vendor shows up late, your entire critical path gets derailed while your subcontractors sit around billing you $85/hour for dead time. RHC eliminates the friction. <strong style={{ color: 'var(--on-surface)', fontWeight: 600 }}>One contract, one point of contact, one coordinated drop-off.</strong></p>
+            <p>Chasing down separate vendors for fences, toilets, trailers, and storage is a logistical nightmare. When one vendor shows up late, your entire critical path gets derailed while your subcontractors sit around billing you $85/hour for dead time. RHC eliminates the friction. <strong style={{ color: 'var(--on-surface)', fontWeight: 600 }}>One contract, one point of contact, one coordinated drop-off.</strong></p>
           </div>
 
           <div className="services">
@@ -250,7 +286,7 @@ export default function Home() {
               <div className="service-body">
                 <div className="mono-num">06 / Bundle</div>
                 <h3>Need everything on one truck schedule?</h3>
-                <p style={{ color: 'var(--on-surface-variant)', fontSize: '15px', margin: 0 }}>Tell dispatch the full scope of your job. We'll coordinate the drop-off sequence so your fence, toilets, container, and dumpster arrive in the order your crew actually needs them.</p>
+                <p style={{ color: 'var(--on-surface-variant)', fontSize: '15px', margin: 0 }}>Tell dispatch the full scope of your job. We'll coordinate the drop-off sequence so your fence, toilets, and containers arrive in the order your crew actually needs them.</p>
                 <span className="service-link" style={{ color: 'var(--secondary)' }}>Request a Bundle Quote <span className="arrow">→</span></span>
               </div>
             </a>

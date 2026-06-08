@@ -70,8 +70,8 @@ export default function PortableToilets() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Portable Sanitation · Oregon &amp; Washington</span>
               </div>
@@ -79,11 +79,8 @@ export default function PortableToilets() {
                 Portable Toilet Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Clean, inspected units delivered on a hard arrival window — not a ten-hour "sometime today" range. Porta potty and portable restroom rentals for construction sites, job sites, and events from Portland to Seattle. Zero communication surprises. No hidden fees on the back end.
+                Clean, inspected units delivered on a hard arrival window. Porta potty and portable restroom rentals for construction sites, job sites, and events across Oregon and Washington.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get a Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -103,12 +100,40 @@ export default function PortableToilets() {
               </div>
               <div className="meta-row">
                 <div className="meta-label">Lead Time</div>
-                <div className="meta-value">48 hrs standard · next-day in core areas</div>
+                <div className="meta-value">48 hrs · next-day in core areas</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get a Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* UNIT TYPES */}
       <section id="unit-types">
@@ -130,6 +155,21 @@ export default function PortableToilets() {
                 <div className="mono-num">01 / Standard</div>
                 <h3>Standard Portable Toilet</h3>
                 <p>The go-to unit for construction sites and active job sites. Single-occupancy, ventilated, with hand sanitizer and high-capacity tank for heavy daily use. OSHA-compliant — your site passes inspection and your crew always has a working sanitation option.</p>
+                <div style={{ paddingTop: '16px', borderTop: '1px solid var(--outline-variant)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {[
+                    { label: 'Dimensions', value: '44" W × 48" D × 90" H' },
+                    { label: 'Tank Capacity', value: '60–70 gal (approx. 150 uses per service)' },
+                    { label: 'Hand Sanitizer', value: 'Dispenser included, standard' },
+                    { label: 'Ventilation', value: 'Roof vent + translucent roof panel' },
+                    { label: 'Occupancy', value: 'Single-occupancy' },
+                    { label: 'OSHA Rating', value: '1 unit per 10 workers, serviced weekly' },
+                  ].map(spec => (
+                    <div key={spec.label} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--on-surface-variant)' }}>{spec.label}</span>
+                      <span style={{ fontSize: '13px', color: 'var(--on-surface)', lineHeight: '1.5' }}>{spec.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </article>
 
@@ -141,6 +181,21 @@ export default function PortableToilets() {
                 <div className="mono-num">02 / ADA</div>
                 <h3>ADA-Compliant Portable Toilet</h3>
                 <p>Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair accessibility. Required — not optional — for any public event or job site where workers or guests with mobility limitations are present. Don't wait until an inspector flags it.</p>
+                <div style={{ paddingTop: '16px', borderTop: '1px solid var(--outline-variant)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {[
+                    { label: 'Dimensions', value: '60" W × 60" D × 90" H' },
+                    { label: 'Interior Turning Radius', value: '60" clearance (full wheelchair access)' },
+                    { label: 'Door Opening', value: '32" clear width, outswing' },
+                    { label: 'Grab Bars', value: 'Rear wall + lateral side wall' },
+                    { label: 'Floor', value: 'Anti-slip textured surface' },
+                    { label: 'Compliance', value: 'ADA Title II & Title III compliant' },
+                  ].map(spec => (
+                    <div key={spec.label} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--on-surface-variant)' }}>{spec.label}</span>
+                      <span style={{ fontSize: '13px', color: 'var(--on-surface)', lineHeight: '1.5' }}>{spec.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </article>
           </div>

@@ -7,18 +7,22 @@ const bookingGuide = [
   {
     label: 'Peak season runs May through October. Book early.',
     body: "Bend's outdoor event calendar is dense between Memorial Day and mid-October. Restroom trailer availability in Central Oregon is limited, and this window fills 2 to 4 weeks out during the summer months. If your event falls between June and October, submit a quote request the moment your venue and date are confirmed, not when you start finalizing other details. Wait too long and the dates you need will not be available.",
+    status: 'check',
   },
   {
     label: 'Power is required. Most venues have it. Remote ones do not.',
     body: 'A 2-stall trailer requires one dedicated 110V / 20-amp circuit. A 4-stall requires two to three circuits. Many Central Oregon outdoor event venues, ranch properties, and unimproved sites do not have an accessible power source nearby. A trailer without power means no climate control, no interior lighting, and no flushing. If your venue lacks a dedicated circuit, note it on the quote form. RHC provides a generator and includes it in your quote.',
+    status: 'required',
   },
   {
     label: 'Terrain and access matter for outdoor placements.',
     body: "The delivery truck needs clearance to back in before setup, and the trailer needs reasonably level ground. Many Bend-area ranch properties, vineyard event spaces, and High Desert sites have soft, uneven, or unprepared terrain. A driver who arrives to find the site inaccessible either cannot complete delivery or risks damaging your venue's turf. Note your surface conditions and site access on the form and RHC will confirm the placement approach before delivery day.",
+    status: 'check',
   },
   {
     label: 'Large events in Deschutes County may require a permit.',
     body: 'Events held on unincorporated Deschutes County property with 100 or more attendees typically require a Special Event Permit through the county. The permit review includes a sanitation check, and a compliant restroom trailer satisfies that requirement. Events that proceed without a required permit are subject to shutdown mid-event. For private land events under 100 guests, no permit is required. Note your headcount and property type on the form and RHC will flag what applies before the truck rolls.',
+    status: 'check',
   },
 ]
 
@@ -124,8 +128,8 @@ export default function RestroomTrailerBend() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Luxury Restroom Trailers · Bend, OR &amp; Central Oregon</span>
               </div>
@@ -133,11 +137,8 @@ export default function RestroomTrailerBend() {
                 Restroom Trailer Rental in <span className="underline accent">Bend, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Central Oregon's outdoor event season runs May through October. Every year in that window the same three failures happen to someone: the trailer arrives in hour five of a four-hour delivery window, it looks nothing like the listing, or the final invoice has charges that were not in the original quote. RHC was built around those three failures. You get a confirmed arrival time, exact dimensions and specs published before you book, and a locked price that does not change between approval and event day.
+                Central Oregon's outdoor event season runs May through October. Every year the same failures hit someone: a five-hour delivery window, a trailer that looks nothing like the listing, or an invoice with unexpected charges. RHC fixes all three. Confirmed arrival time, published specs, locked price.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -160,9 +161,37 @@ export default function RestroomTrailerBend() {
                 <div className="meta-value">72 hrs min · June–Oct books 2–4 weeks out</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* BEFORE YOU BOOK */}
       <section id="before-you-book">
@@ -177,17 +206,9 @@ export default function RestroomTrailerBend() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {bookingGuide.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${item.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{item.label}</strong>{' '}
+                  <strong>{item.label}</strong>{' '}
                   {item.body}
                 </p>
               </div>

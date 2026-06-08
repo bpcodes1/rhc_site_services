@@ -7,22 +7,27 @@ const venueGuide = [
   {
     label: 'Power is required. Urban Seattle venues usually have it. Woodinville and rural Eastside properties often do not.',
     body: "A 2-stall trailer requires one dedicated 110V / 20-amp circuit. A 4-stall requires two to three. South Lake Union event spaces, hotel outdoor terraces in Bellevue, and established venue properties in Seattle typically have accessible power nearby. Woodinville wine country estates, Snohomish County ranch properties, and waterfront sites on the Puget Sound vary significantly. A trailer without power means no climate control, no interior lighting, and no flushing. Note your venue's power situation on the form and RHC will confirm the approach, including generator provision if needed, before delivery day.",
+    status: 'required',
   },
   {
     label: 'Woodinville estates, rural King County properties, and Snohomish County venues require advance planning.',
     body: 'Many Woodinville wine country properties and Snohomish County ranch estates have gravel access roads, soft terrain, or gates that need to be open before the delivery truck arrives. The driver needs clearance to back in and the trailer needs reasonably level ground. Note your surface and access conditions on the form and RHC will confirm the placement approach before delivery day.',
+    status: 'check',
   },
   {
     label: 'Events at Seattle Parks facilities require a Special Event Permit.',
     body: 'Any event at a City of Seattle park, including Gas Works Park, Cal Anderson Park, or Seattle Center grounds, requires a Special Event Permit from the Seattle Special Events Committee with a reviewed sanitation plan. A compliant restroom trailer satisfies that requirement. Events that proceed without a required permit are subject to shutdown. Note your venue type on the form and RHC will flag what applies before the truck rolls.',
+    status: 'required',
   },
   {
     label: "Seattle's All-Gender law (SMC 14.07.010) applies to event restroom units.",
     body: "Under Seattle Municipal Code 14.07.010, all single-occupant restrooms at public events and places of public accommodation must be designated all-gender. Vendors advertising separate men's and women's sections, including configurations with urinals assigned to a men's section, create enforcement exposure under the Seattle Office for Civil Rights. RHC confirms all-gender compliance before delivery. Note your event type on the form.",
+    status: 'check',
   },
   {
     label: 'Events with food service: King County heated handwashing required.',
     body: 'Under King County Board of Health guidelines enforcing WAC 246-215, events with food trucks, catering, or any food service must provide handwashing facilities with hot and cold running water within 200 feet of food service areas. Standard sanitizer dispensers do not satisfy this requirement. A restroom trailer with running water satisfies it. Note whether your event includes food service on the form and RHC will confirm the right configuration.',
+    status: 'required',
   },
 ]
 
@@ -138,8 +143,8 @@ export default function RestroomTrailerSeattle() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Luxury Restroom Trailers · Seattle, WA &amp; King County</span>
               </div>
@@ -147,11 +152,8 @@ export default function RestroomTrailerSeattle() {
                 Restroom Trailer Rental in <span className="underline accent">Seattle, WA</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                The best outdoor events in Seattle are the ones where guests remember the venue, the ceremony, and the food. Nobody thought about the bathrooms. Getting there requires a vendor who treats your event as a single accountable job, not a volume transaction with no local follow-through. The most common failure is not the equipment. It is the vendor. Vendors who operate across multiple markets have no incentive to confirm Seattle-specific venue logistics, no reason to lock a price before their own provider confirms a cost, and no local accountability when delivery day comes. A trailer confirmed at booking that never shows up. A quoted price that looks different on the final invoice. RHC runs differently. You get a confirmed arrival window, Seattle venue logistics reviewed before the truck rolls, and a locked price that does not change between approval and event day.
+                The best Seattle events are the ones where nobody thought about the bathrooms. Getting there requires a vendor who treats your event as a single accountable job. Confirmed arrival window, venue logistics reviewed before the truck rolls, locked price from approval to event day.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -174,9 +176,37 @@ export default function RestroomTrailerSeattle() {
                 <div className="meta-value">72 hrs standard · May–Sept books 2–3 weeks out</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* VENUE GUIDE */}
       <section id="before-you-book">
@@ -191,17 +221,9 @@ export default function RestroomTrailerSeattle() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {venueGuide.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${item.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{item.label}</strong>{' '}
+                  <strong>{item.label}</strong>{' '}
                   {item.body}
                 </p>
               </div>

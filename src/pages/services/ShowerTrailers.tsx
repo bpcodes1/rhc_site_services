@@ -204,8 +204,8 @@ export default function ShowerTrailers() {
       {/* LEAN HERO */}
       <section className="hero-lean">
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Shower Trailer Rentals · Oregon &amp; Washington</span>
               </div>
@@ -213,11 +213,8 @@ export default function ShowerTrailers() {
                 Shower Trailer Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Your shower problem is solved before the work starts. Hot water, AC, and heat standard on every unit. Confirmed clean before delivery. Five configurations, 2 to 8 stalls. No minimum rental. Same-day quote.
+                Your shower problem is solved before the work starts. Hot water, AC, and heat standard on every unit. Five configurations, 2 to 8 stalls. No minimum rental.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get a Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -256,9 +253,37 @@ export default function ShowerTrailers() {
                 <div className="meta-value">24-48 hrs from payment</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get a Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* UNIT CONFIGURATIONS */}
       <section id="configurations">
