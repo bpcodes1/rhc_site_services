@@ -54,8 +54,8 @@ Portland, OR:
 
 Seattle, WA:
 - `/porta-potty-rental-seattle-wa` ✓ BUILT
-- `/restroom-trailer-rental-seattle-wa` — TODO (placeholder exists)
-- `/temporary-fencing-rental-seattle-wa` — TODO (placeholder exists)
+- `/restroom-trailer-rental-seattle-wa` ✓ BUILT
+- `/temporary-fencing-rental-seattle-wa` ✓ BUILT
 
 ## Service Areas (8 cities)
 Salem OR | Portland OR (HQ) | Eugene OR | Bend OR | Gresham OR | Tacoma WA | Vancouver WA | Seattle WA
