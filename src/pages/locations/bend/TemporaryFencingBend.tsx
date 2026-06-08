@@ -7,22 +7,27 @@ const permitRules = [
   {
     label: 'Active job site on private property: no standalone fence permit required.',
     body: "A temporary fence placed entirely within your parcel during an active construction project does not require a separate permit from the City of Bend. Perimeter fencing is addressed under the site's primary Building Permit issued through the Bend Permit Center. What the fence does need to meet is Oregon OSHA's perimeter security standard, with 6 feet as the accepted minimum height for sites where unauthorized entry poses a safety hazard. Every fence system arranged through RHC meets that standard.",
+    status: 'clear',
   },
   {
     label: 'Fence encroaching on a public sidewalk or street: permit required.',
     body: 'Any temporary fence that occupies public right-of-way, including a sidewalk, parking lane, or alley, requires a Right-of-Way Encroachment Permit from the City of Bend Community Development Department. Applications go through the Bend Online Permit Center or in person at City Hall, 710 NW Wall St. A fence placed in public right-of-way without authorization is subject to immediate removal and a municipal code violation. Note your placement boundaries on the quote form and RHC will flag whether this applies before delivery.',
+    status: 'required',
   },
   {
     label: 'Bend HOA communities: check before you book.',
     body: 'Bend has a high concentration of HOA neighborhoods. Most CC&Rs restrict temporary structures including fencing and require removal within 30 to 90 days regardless of the project timeline. Some require the fence to be screened from street view. Verify your HOA bylaws before confirming a delivery date.',
+    status: 'check',
   },
   {
     label: 'Event fencing on City of Bend public land or parks: permit required.',
     body: 'Temporary fencing placed on City of Bend public property, parks, or plazas as part of an event requires a Special Event Permit through the City of Bend Parks and Recreation Department. The application includes a site plan showing the fence layout. Events that proceed without a required permit are subject to shutdown. Submit your event location on the quote form and RHC will flag what applies.',
+    status: 'required',
   },
   {
     label: 'Events in unincorporated Deschutes County: county permit may apply.',
     body: 'Outdoor events held on rural or unincorporated Deschutes County property may require a Special Event Permit through the county depending on size and nature. The permit review can include a site plan and perimeter fencing layout. Note your property type and headcount on the form and RHC will flag what applies before the truck rolls.',
+    status: 'check',
   },
 ]
 
@@ -125,8 +130,8 @@ export default function TemporaryFencingBend() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Temporary Fencing · Bend, OR &amp; Central Oregon</span>
               </div>
@@ -134,11 +139,8 @@ export default function TemporaryFencingBend() {
                 Temporary Fencing Rental in <span className="underline accent">Bend, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Nearly every 1-star review of a temporary fence company in Central Oregon lands on the same two complaints: the final invoice did not match the quote, and the vendor stopped returning calls after the initial inquiry. RHC locks the price you approved from quote to final bill, confirms every booking before the truck is scheduled, and walks through every Bend permit requirement before the truck rolls.
+                Nearly every 1-star fence review in Central Oregon says the same thing: the invoice did not match the quote, and the vendor went silent after booking. RHC locks your price from approval to final invoice and reviews Bend permit requirements before the truck rolls.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -161,9 +163,37 @@ export default function TemporaryFencingBend() {
                 <div className="meta-value">48 hrs standard · next-day in Bend</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PERMIT GUIDE */}
       <section id="permit-guide">
@@ -178,17 +208,9 @@ export default function TemporaryFencingBend() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {permitRules.map((rule, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${rule.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{rule.label}</strong>{' '}
+                  <strong>{rule.label}</strong>{' '}
                   {rule.body}
                 </p>
               </div>

@@ -9,10 +9,10 @@ import restroomTrailerImg from '../assets/restroom-trailers/restroom-trailer1.we
 import fencePerimeterImg from '../assets/temporary-fencing/fence2.webp'
 import conexContainerImg from '../assets/storage-containers/conex_container.webp'
 import showerSuiteImg from '../assets/shower-trailers/shower-trailer1.webp'
-import step01Img from '../assets/general/request.png'
-import step02Img from '../assets/general/scheduling.png'
-import step03Img from '../assets/general/delivery.png'
-import step04Img from '../assets/general/pickup.png'
+import step01Img from '../assets/general/request.webp'
+import step02Img from '../assets/general/scheduling.webp'
+import step03Img from '../assets/general/delivery.webp'
+import step04Img from '../assets/general/pickup.webp'
 
 const GEO_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'
 
@@ -82,7 +82,7 @@ export default function Home() {
     <main id="main">
       <Helmet>
         <title>Portable Toilet &amp; Site Equipment Rental in Oregon &amp; Washington | RHC Site Services</title>
-        <meta name="description" content="Porta potty, restroom trailer, temporary fencing, storage container, shower trailer, and roll-off dumpster rentals across Oregon and Washington. Hard delivery windows. No surprise fees." />
+        <meta name="description" content="Porta potty, restroom trailer, shower trailer, temporary fencing, and storage container rentals across Oregon and Washington. Hard delivery windows. No surprise fees." />
         <link rel="canonical" href="https://rhcsiteservices.com/" />
       </Helmet>
 
@@ -187,7 +187,7 @@ export default function Home() {
               <div className="eyebrow">02 / The Fleet</div>
               <h2 className="h-lg">Stop managing five different sub-contractors just to break ground.</h2>
             </div>
-            <p>Chasing down separate vendors for fences, toilets, dumpsters, and storage is a logistical nightmare. When one vendor shows up late, your entire critical path gets derailed while your subcontractors sit around billing you $85/hour for dead time. RHC eliminates the friction. <strong style={{ color: 'var(--on-surface)', fontWeight: 600 }}>One contract, one point of contact, one coordinated drop-off.</strong></p>
+            <p>Chasing down separate vendors for fences, toilets, trailers, and storage is a logistical nightmare. When one vendor shows up late, your entire critical path gets derailed while your subcontractors sit around billing you $85/hour for dead time. RHC eliminates the friction. <strong style={{ color: 'var(--on-surface)', fontWeight: 600 }}>One contract, one point of contact, one coordinated drop-off.</strong></p>
           </div>
 
           <div className="services">
@@ -286,7 +286,7 @@ export default function Home() {
               <div className="service-body">
                 <div className="mono-num">06 / Bundle</div>
                 <h3>Need everything on one truck schedule?</h3>
-                <p style={{ color: 'var(--on-surface-variant)', fontSize: '15px', margin: 0 }}>Tell dispatch the full scope of your job. We'll coordinate the drop-off sequence so your fence, toilets, container, and dumpster arrive in the order your crew actually needs them.</p>
+                <p style={{ color: 'var(--on-surface-variant)', fontSize: '15px', margin: 0 }}>Tell dispatch the full scope of your job. We'll coordinate the drop-off sequence so your fence, toilets, and containers arrive in the order your crew actually needs them.</p>
                 <span className="service-link" style={{ color: 'var(--secondary)' }}>Request a Bundle Quote <span className="arrow">→</span></span>
               </div>
             </a>

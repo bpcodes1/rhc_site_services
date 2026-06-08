@@ -7,22 +7,27 @@ const permitRules = [
   {
     label: 'Private property: no permit required.',
     body: "A unit placed on your own driveway, yard, or active job site does not require a standalone permit from the City of Bend. For construction projects, sanitation placement is covered under the site's primary Building Permit issued by the Bend Permit Center.",
+    status: 'clear',
   },
   {
     label: 'Public street or sidewalk: permit required.',
     body: 'Any unit placed in a public parking lane, alleyway, or sidewalk requires a Right-of-Way Permit or Street Use Permit from the City of Bend Community Development Department. Applications go through the Bend Online Permit Center or in person at City Hall, 710 NW Wall St. A unit placed without authorization is subject to immediate removal by the city and a municipal code violation fine. On a construction timeline, that disruption costs more than the permit.',
+    status: 'required',
   },
   {
     label: 'HOA communities: check before you book.',
     body: 'Bend has a high concentration of HOA neighborhoods. Most require portable units to be screened from street view and removed within 14 to 30 days, even if the city has no objection. Verify your HOA bylaws before confirming a delivery date.',
+    status: 'check',
   },
   {
     label: 'Unincorporated Deschutes County events.',
     body: 'Festivals, outdoor gatherings, and mass events held outside Bend city limits fall under Deschutes County Code 8.16. The county reviews toilet-to-attendee ratios and ADA unit requirements as part of the Special Event Permit application. Your unit count needs to be ready before you apply.',
+    status: 'check',
   },
   {
     label: 'Oregon state law on all rentals.',
     body: "Under OAR 340-071-0330, every portable toilet placed in Oregon must be serviced by a state-licensed sewage disposal contractor, and that contractor's name must be displayed on the exterior of the unit. This is how you verify your rental is legally compliant from day one.",
+    status: 'check',
   },
 ]
 
@@ -121,8 +126,8 @@ export default function PortaPottyBend() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Portable Sanitation · Bend, OR &amp; Central Oregon</span>
               </div>
@@ -130,11 +135,8 @@ export default function PortaPottyBend() {
                 Porta Potty Rental in <span className="underline accent">Bend, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                In Central Oregon, the complaint is always the same: a six-hour delivery window that becomes a full-day wait, and no call when the truck runs late. RHC gives you a confirmed arrival time and flags permit requirements before delivery day. Your crew stays on site. Your project stays on schedule.
+                In Central Oregon, the complaint is always the same: a six-hour delivery window that becomes a full-day wait with no call when the truck runs late. RHC gives you a confirmed arrival time and flags permit requirements before delivery day. Your crew stays on schedule.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -157,9 +159,37 @@ export default function PortaPottyBend() {
                 <div className="meta-value">48 hrs standard · next-day in Bend</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PERMIT GUIDE */}
       <section id="permit-guide">
@@ -174,17 +204,9 @@ export default function PortaPottyBend() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {permitRules.map((rule, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${rule.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{rule.label}</strong>{' '}
+                  <strong>{rule.label}</strong>{' '}
                   {rule.body}
                 </p>
               </div>

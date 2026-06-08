@@ -53,13 +53,12 @@ export default function LeadForm({ id, variant = 'hero', defaultService = '' }: 
             <label htmlFor={`${id}-service`}>What does your site need?</label>
             <select id={`${id}-service`} required defaultValue={defaultService}>
               <option value="" disabled>Choose equipment…</option>
-              <option value="Complete site bundle (Toilets, Fencing, Dumpsters, etc.)">Complete site bundle (Toilets, Fencing, Dumpsters, etc.)</option>
+              <option value="Complete site bundle (Toilets, Fencing, Storage, etc.)">Complete site bundle (Toilets, Fencing, Storage, etc.)</option>
               <option value="Standard, Deluxe, or ADA Portable Toilets">Standard, Deluxe, or ADA Portable Toilets</option>
               <option value="High-End Luxury Restroom or Shower Trailers">High-End Luxury Restroom or Shower Trailers</option>
               <option value="Temporary Fencing (Panel Stands or Driven Posts)">Temporary Fencing (Panel Stands or Driven Posts)</option>
               <option value="10ft Steel Storage Container">10ft Steel Storage Container</option>
               <option value="20ft or 40ft Steel Storage Containers">20ft or 40ft Steel Storage Containers</option>
-              <option value="Roll-Off Dumpsters (Construction Debris / Cleanouts)">Roll-Off Dumpsters (Construction Debris / Cleanouts)</option>
             </select>
           </div>
           <div className="field-row">
@@ -79,7 +78,7 @@ export default function LeadForm({ id, variant = 'hero', defaultService = '' }: 
                 (access restrictions, mud conditions, etc.)
               </span>
             </label>
-            <textarea id={`${id}-notes`} rows={2} placeholder="e.g. 2 portable toilets, chain-link fencing, 4-stall shower trailer, 20yd dumpster…" />
+            <textarea id={`${id}-notes`} rows={2} placeholder="e.g. 2 portable toilets, chain-link fencing, 4-stall shower trailer, 20ft storage container…" />
           </div>
           <button type="submit" className="btn btn-primary">{buttonText}</button>
           <p className="lead-fine">

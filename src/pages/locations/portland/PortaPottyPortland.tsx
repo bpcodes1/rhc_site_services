@@ -7,22 +7,27 @@ const permitRules = [
   {
     label: 'Private property: no permit required.',
     body: "Placing a unit on your own driveway, yard, or active job site does not require a standalone permit from the City of Portland. For construction projects, sanitation placement is covered under the site's primary building permit issued through the Bureau of Development Services (BDS). The unit goes where your site plan designates.",
+    status: 'clear',
   },
   {
     label: 'Public street or sidewalk: PBOT permit required.',
     body: 'Any unit placed in a public parking lane, alleyway, or sidewalk requires a Right-of-Way Use Permit from the Portland Bureau of Transportation (PBOT). A unit placed in the public right-of-way without authorization is subject to immediate removal and a code violation notice. On a construction timeline, that disruption costs more than the permit. Note your placement location on the quote form and RHC will flag this before the truck rolls.',
+    status: 'required',
   },
   {
     label: 'HOA communities: check before you book.',
     body: "Portland's inner eastside, westside, and suburban neighborhoods have a high concentration of HOA communities. Most require portable units to be screened from street view and removed within a defined window, even when the city has no objection. Verify your HOA rules before confirming a delivery date.",
+    status: 'check',
   },
   {
     label: 'Events outside Portland city limits: Multnomah County permit may apply.',
     body: 'Festivals, markets, and gatherings held on county-owned land or in unincorporated Multnomah County outside Portland city limits may require a Special Event Permit from Multnomah County. The county reviews sanitation plans as part of that application. Your unit count needs to be confirmed before you apply.',
+    status: 'check',
   },
   {
     label: 'Oregon state law on all rentals.',
     body: "Under OAR 340-071-0330, every portable toilet placed in Oregon must be serviced by a state-licensed sewage disposal contractor, and that contractor's name must be displayed on the exterior of the unit. This is how you verify legal compliance before your rental starts, without making a single call.",
+    status: 'check',
   },
 ]
 
@@ -138,8 +143,8 @@ export default function PortaPottyPortland() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Portable Sanitation · Portland, OR &amp; Metro Area</span>
               </div>
@@ -147,11 +152,8 @@ export default function PortaPottyPortland() {
                 Porta Potty Rental in <span className="underline accent">Portland, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Your crew shows up at 7. The unit was supposed to be there at 8. By 9, you have left three voicemails. In Portland, that is not a worst-case scenario. It is Tuesday. RHC gives you a hard arrival time, PBOT permit guidance before delivery day, and one number that gets answered.
+                Your crew shows up at 7. The unit was supposed to be there at 8. By 9 you have left three voicemails. In Portland, that is Tuesday. RHC gives you a hard arrival time, PBOT permit guidance before delivery day, and one number that gets answered.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -174,9 +176,37 @@ export default function PortaPottyPortland() {
                 <div className="meta-value">48 hrs standard · next-day in Portland</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PERMIT GUIDE */}
       <section id="permit-guide">
@@ -191,17 +221,9 @@ export default function PortaPottyPortland() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {permitRules.map((rule, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${rule.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{rule.label}</strong>{' '}
+                  <strong>{rule.label}</strong>{' '}
                   {rule.body}
                 </p>
               </div>

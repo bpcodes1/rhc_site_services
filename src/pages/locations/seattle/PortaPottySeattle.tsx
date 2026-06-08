@@ -7,26 +7,32 @@ const permitRules = [
   {
     label: 'Unit on private property: no permit required.',
     body: 'A portable toilet placed entirely on your own job site, driveway, or private lot does not require a standalone city permit. Most residential remodels and commercial construction sites with private staging areas fall here. Washington L&I sanitation standards under WAC 296-155-140 still apply on any active construction site regardless of permit status.',
+    status: 'clear',
   },
   {
     label: 'Unit in a public parking lane or sidewalk: SDOT Street Use Permit required.',
     body: 'Any portable toilet placed in a public parking lane or sidewalk requires a permit from the Seattle Department of Transportation. SDOT classifies portable toilet placements under its ROW Maintenance – Simple Review category, the same classification as dumpsters and storage containers. Apply through the Seattle Services Portal under "Permits – Street Use." Processing takes 3 to 5 business days. Fees include an hourly plan review charge plus an Occupation/Use Fee based on the square footage of public space blocked multiplied by rental duration. If your placement is in a metered parking zone in Downtown Seattle or Capitol Hill, SDOT adds a Lost Paid Parking fee to the permit cost. Note your placement location on the quote form and RHC will flag whether a permit applies before delivery day.',
+    status: 'required',
   },
   {
     label: 'Events on Seattle Parks property: Special Event Permit required.',
     body: 'Any event at a City of Seattle park, including Gas Works Park, Cal Anderson Park, or Seattle Center grounds, requires a Special Event Permit from the Seattle Special Events Committee. Sanitation plans, unit count, and placement are reviewed as part of the application. The committee requires a minimum of 5% ADA-accessible units at all permitted events, with a minimum of one ADA unit regardless of total count. Submit your event location on the quote form and RHC will flag what applies before you apply.',
+    status: 'required',
   },
   {
     label: 'Seattle All-Gender law (SMC 14.07.010): applies to all event units.',
     body: 'Under Seattle Municipal Code 14.07.010, all single-occupant restrooms at public events and places of public accommodation must be designated all-gender. Units with traditional "Men" and "Women" signage are not compliant. Enforcement is handled by the Seattle Office for Civil Rights. Event planners who book gendered units are exposing their organization to an enforcement action. RHC delivers gender-neutral units as standard. Market-standard portable units ship with universal iconography, no special order required. This applies to your entire unit order.',
+    status: 'check',
   },
   {
     label: 'Events with food service: King County heated handwashing required.',
     body: 'Under King County Board of Health guidelines enforcing WAC 246-215, events with food trucks, catering booths, or any food service must provide handwashing sinks with hot and cold running water within 200 feet of food service areas. Standard hand sanitizer and cold-water dispensers do not satisfy this requirement. A full restroom trailer is not required. A heated standalone handwashing station paired with standard portable units satisfies the code. Note whether your event includes food service on the form and RHC will confirm the right configuration.',
+    status: 'required',
   },
   {
     label: 'Washington waste hauler licensing: enforced by King County.',
     body: 'In Washington, liquid waste hauling is regulated at the county level. For Seattle jobs, your pumping contractor must hold a King County Liquid Waste Hauler Permit issued by Public Health – Seattle & King County and be authorized by the King County Industrial Waste Program to discharge at county treatment facilities. This is how you verify your vendor is legally authorized to service your site before the first pump-out date.',
+    status: 'check',
   },
 ]
 
@@ -162,8 +168,8 @@ export default function PortaPottySeattle() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Portable Toilet Rental · Seattle, WA &amp; King County</span>
               </div>
@@ -171,11 +177,8 @@ export default function PortaPottySeattle() {
                 Porta Potty Rental in <span className="underline accent">Seattle, WA</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Seattle contractors and event organizers run into the same problem: a vendor who sends the wrong unit count for a Washington job site, then goes silent between booking and delivery day. Washington L&I requires more units per crew than Oregon, and most vendors quote the Oregon standard by default. RHC quotes against the actual Washington table, flags SDOT permit requirements before the truck rolls, and confirms every booking with a hard delivery window. Your site is compliant before the first worker arrives.
+                Most vendors quote the Oregon standard on Washington jobs. Washington L&I requires more units per crew, and the difference shows up on inspection day. RHC quotes against the actual Washington table, flags SDOT permit requirements, and confirms every booking with a hard delivery window.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -198,9 +201,37 @@ export default function PortaPottySeattle() {
                 <div className="meta-value">Confirmed window at booking</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PERMIT GUIDE */}
       <section id="permit-guide">
@@ -215,17 +246,9 @@ export default function PortaPottySeattle() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {permitRules.map((rule, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${rule.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{rule.label}</strong>{' '}
+                  <strong>{rule.label}</strong>{' '}
                   {rule.body}
                 </p>
               </div>

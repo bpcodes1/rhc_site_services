@@ -107,6 +107,13 @@ button { font-family: inherit; cursor: pointer; }
 @keyframes btn-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(167,58,0,.45); } 65% { box-shadow: 0 0 0 10px rgba(167,58,0,0); } }
 .btn--pulse { animation: btn-pulse 2.2s ease-out infinite; }
 .btn--pulse:hover { animation-play-state: paused; }
+.permit-rule { padding: 18px 22px; border-radius: 0 var(--r-lg) var(--r-lg) 0; }
+.permit-rule--clear { background: rgba(31,138,91,.06); border-left: 3px solid #1f8a5b; }
+.permit-rule--clear strong { color: #1f8a5b; }
+.permit-rule--required { background: rgba(167,58,0,.06); border-left: 3px solid var(--secondary); }
+.permit-rule--required strong { color: var(--secondary); }
+.permit-rule--check { background: var(--surface-low); border-left: 3px solid var(--primary); }
+.permit-rule--check strong { color: var(--primary); }
 .btn-dark { background: var(--primary); color: var(--on-primary); }
 .btn-dark:hover { background: #0d1c2f; }
 .btn-ghost { background: transparent; color: var(--on-surface); border-color: rgba(17,28,45,.35); }
@@ -583,7 +590,7 @@ section { padding: 80px 0; border-bottom: 1px solid var(--outline-variant); }
 
 .service-cta { background: var(--surface-low); }
 .service-cta:hover { background: var(--surface-container); }
-.service-cta .service-photo { aspect-ratio: 1; }
+.service-cta .service-photo { aspect-ratio: 4 / 3; }
 .cta-placeholder {
   background-color: var(--inverse-surface);
   background-image: repeating-linear-gradient(135deg, rgba(253,101,30,.08) 0 1px, transparent 1px 14px);

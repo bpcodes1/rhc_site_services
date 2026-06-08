@@ -34,7 +34,6 @@ const services = [
   { label: 'Shower Trailers', to: '/shower-trailers' },
   { label: 'Temporary Fencing', to: '/temporary-fencing' },
   { label: 'Storage Containers', to: '/storage-containers' },
-  { label: 'Roll-Off Dumpsters', to: '/roll-off-dumpsters' },
 ]
 
 const Chevron = ({ open }: { open: boolean }) => (
@@ -67,7 +66,7 @@ export default function Footer() {
                 <small>Site Services</small>
               </span>
             </Link>
-            <p>Headquartered in Portland, Oregon. Dispatching portable toilets, restroom &amp; shower trailers, fencing, storage, and dumpsters across the Pacific Northwest.</p>
+            <p>Headquartered in Portland, Oregon. Dispatching portable toilets, restroom and shower trailers, fencing, and storage containers across the Pacific Northwest.</p>
           </div>
 
           <div>

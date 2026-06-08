@@ -7,18 +7,22 @@ const permitRules = [
   {
     label: 'Fence stays on private property: no permit required.',
     body: 'A temporary fence placed entirely within your property line, job site, or private lot does not require a standalone permit. This covers most residential remodels, parking lot perimeters, and multifamily renovation zones. No application, no fees, no waiting period. Oregon OSHA perimeter security standards still apply on any site where unauthorized entry poses a safety hazard.',
+    status: 'clear',
   },
   {
     label: 'Fence extends onto a public sidewalk, parking lane, or travel lane: PBOT TSUP required.',
     body: 'Any temporary fence that enters the public right-of-way requires a Temporary Street Use Permit (TSUP) from the Portland Bureau of Transportation. This is common on tight urban builds in the Pearl District, Old Town, and along dense downtown corridors. PBOT typically issues permits within 5 to 10 business days. Fees are calculated by square footage of fenced right-of-way per week, with higher rates in metered zones like downtown Portland. An insurance processing fee is added to the permit cost. Note your site footprint on the quote form and RHC will flag whether a TSUP applies before installation day.',
+    status: 'required',
   },
   {
     label: 'Events on Portland Parks land: Portland Parks & Recreation Special Event Permit required.',
     body: 'Temporary fencing placed within Portland Parks jurisdiction, including Tom McCall Waterfront Park and other city parks, requires a Special Event Permit from Portland Parks & Recreation. Timeline and fees vary by event size and park location. Apply through Portland Parks & Recreation before scheduling your fence delivery. Submit your event location on the quote form and RHC will flag what applies.',
+    status: 'required',
   },
   {
     label: 'HOA and private residential communities: check your CC&Rs first.',
     body: 'Portland metro HOA communities typically limit temporary fencing to 30 to 90 days under their CC&Rs. Some require screening from street view. Most standard renovation timelines fall within the permitted window. Confirm with your HOA board before booking. If your project timeline is tight against the CC&R limit, note it on the form.',
+    status: 'check',
   },
 ]
 
@@ -132,8 +136,8 @@ export default function TemporaryFencingPortland() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Temporary Fencing · Portland, OR &amp; Metro Area</span>
               </div>
@@ -141,11 +145,8 @@ export default function TemporaryFencingPortland() {
                 Temporary Fencing Rental in <span className="underline accent">Portland, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Portland construction sites and events run on tight schedules. A vendor who goes quiet between the quote and delivery day is not just an inconvenience. It is a permit window at risk or an event day without a perimeter. RHC confirms every booking with a hard arrival window, reviews your site footprint for PBOT permit requirements before the truck rolls, and locks the price from quote to final invoice.
+                A vendor who goes quiet between quote and delivery day puts your permit window or event perimeter at risk. RHC confirms every booking with a hard arrival window, reviews PBOT permit requirements before the truck rolls, and locks the price from quote to final invoice.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -168,9 +169,37 @@ export default function TemporaryFencingPortland() {
                 <div className="meta-value">Confirmed window at booking</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PERMIT GUIDE */}
       <section id="permit-guide">
@@ -185,17 +214,9 @@ export default function TemporaryFencingPortland() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {permitRules.map((rule, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${rule.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{rule.label}</strong>{' '}
+                  <strong>{rule.label}</strong>{' '}
                   {rule.body}
                 </p>
               </div>

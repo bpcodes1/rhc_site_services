@@ -7,22 +7,27 @@ const permitRules = [
   {
     label: 'Fence stays on private property: no permit required.',
     body: 'A temporary fence placed entirely within your property line, job site, or private lot with no sidewalk, alley, or ROW contact does not require a city permit. This covers interior job sites, private event venues, and residential projects set back from the street. WA L&I DOSH site safety standards still apply on any active construction site.',
+    status: 'clear',
   },
   {
     label: 'Fence in or over public right-of-way: SDOT Street Use Permit required.',
     body: 'Any fencing that occupies or overhangs public right-of-way, including sidewalks, parking lanes, and alleys, requires a Street Use Permit from the Seattle Department of Transportation. Processing runs 3 to 5 business days through the Seattle Services Portal. Downtown and Capitol Hill metered zones may incur a Lost Paid Parking (LPP) fee. RHC reviews your site address at booking and flags ROW contact before delivery is scheduled, not after.',
+    status: 'required',
   },
   {
     label: 'Events at Seattle Parks facilities: Special Event Permit required.',
     body: 'Fencing at Gas Works Park, Cal Anderson, Seattle Center, Myrtle Edwards Park, or any Seattle Parks and Recreation facility requires a Special Event Permit from Seattle Parks and Recreation. Fencing footprint and anchor method are reviewed as part of the application. RHC confirms Seattle Parks permit status before scheduling delivery to any public venue.',
+    status: 'required',
   },
   {
     label: 'Construction sites in Washington State: WA L&I DOSH compliance required.',
     body: "Washington State's Division of Occupational Safety and Health (DOSH), administered by WA L&I, governs construction site safety fencing standards under WAC 296-155. Panels sourced for Seattle construction sites meet DOSH requirements. Non-compliant fencing is citable and a DOSH inspection trigger. RHC confirms your panel and installation configuration meets WA L&I standards at the time of quote.",
+    status: 'required',
   },
   {
     label: 'Projects outside Seattle city limits: King County rules apply.',
     body: 'For projects in unincorporated King County outside Seattle city limits, permit requirements are governed by King County rather than SDOT. RHC confirms your project jurisdiction at the time of quote and identifies the correct permitting authority before delivery is scheduled.',
+    status: 'check',
   },
 ]
 
@@ -125,8 +130,8 @@ export default function TemporaryFencingSeattle() {
       {/* LEAN HERO */}
       <section className="hero-lean hero-lean--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
-          <div className="hero-lean-grid">
-            <div>
+          <div className="hero-lean-grid hero-lean-grid--split">
+            <div className="hero-lean-text">
               <div className="hero-eyebrow-row">
                 <span className="eyebrow">Temporary Fencing · Seattle, WA &amp; King County</span>
               </div>
@@ -134,11 +139,8 @@ export default function TemporaryFencingSeattle() {
                 Temporary Fencing Rental in <span className="underline accent">Seattle, WA</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                The fence is up before your crew arrives. The inspector walks the perimeter and keeps moving. In Seattle, that requires confirming SDOT permit status before a delivery is scheduled. Most vendors working across multiple markets skip this step. RHC makes it the first one.
+                The fence is up before your crew arrives. The inspector walks the perimeter and keeps moving. In Seattle, that requires confirming SDOT permit status before a delivery is scheduled. Most vendors skip this step. RHC makes it the first one.
               </p>
-              <div className="hero-lean-actions">
-                <a href="#quote" className="btn btn-primary">Get My Same-Day Quote →</a>
-              </div>
             </div>
 
             <aside className="hero-lean-meta" aria-label="At a glance">
@@ -165,9 +167,37 @@ export default function TemporaryFencingSeattle() {
                 <div className="meta-value">Confirmed window at booking</div>
               </div>
             </aside>
+
+            <div className="hero-lean-actions">
+              <a href="#quote" className="btn btn-primary btn--pulse">Get My Same-Day Quote →</a>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* STAT STRIP */}
+      <div className="stat-strip">
+        <div className="container">
+          <div className="stat-strip-inner">
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">48<em>hr</em></div>
+              <div className="stat-strip-label">Standard delivery window</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">6</div>
+              <div className="stat-strip-label">Equipment categories, one contact</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">8</div>
+              <div className="stat-strip-label">Cities across OR &amp; WA</div>
+            </div>
+            <div className="stat-strip-item">
+              <div className="stat-strip-num">$0</div>
+              <div className="stat-strip-label">Hidden fees. Ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* PERMIT GUIDE */}
       <section id="permit-guide">
@@ -186,17 +216,9 @@ export default function TemporaryFencingSeattle() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {permitRules.map((rule, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: '18px 22px',
-                  background: 'var(--surface-low)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 var(--r-lg) var(--r-lg) 0',
-                }}
-              >
+              <div key={i} className={`permit-rule permit-rule--${rule.status}`}>
                 <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
-                  <strong style={{ color: 'var(--primary)' }}>{rule.label}</strong>{' '}
+                  <strong>{rule.label}</strong>{' '}
                   {rule.body}
                 </p>
               </div>

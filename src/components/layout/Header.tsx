@@ -37,8 +37,7 @@ export default function Header() {
     pathname.startsWith('/restroom-trailers') ||
     pathname.startsWith('/temporary-fencing') ||
     pathname.startsWith('/storage-containers') ||
-    pathname.startsWith('/shower-trailers') ||
-    pathname.startsWith('/roll-off-dumpsters')
+    pathname.startsWith('/shower-trailers')
 
   const isHome = pathname === '/'
   const servicesHref = isHome ? '#services' : '/#services'

@@ -15,7 +15,6 @@ import RestroomTrailers from './pages/services/RestroomTrailers'
 import TemporaryFencing from './pages/services/TemporaryFencing'
 import StorageContainers from './pages/services/StorageContainers'
 import ShowerTrailers from './pages/services/ShowerTrailers'
-import RollOffDumpsters from './pages/services/RollOffDumpsters'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import FAQ from './pages/FAQ'
@@ -47,7 +46,6 @@ function App() {
           <Route path="temporary-fencing" element={<TemporaryFencing />} />
           <Route path="storage-containers" element={<StorageContainers />} />
           <Route path="shower-trailers" element={<ShowerTrailers />} />
-          <Route path="roll-off-dumpsters" element={<RollOffDumpsters />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="faq" element={<FAQ />} />

@@ -311,7 +311,7 @@ export default function TemporaryFencing() {
             <div className="why-item">
               <div className="why-num">02</div>
               <h3>One Number Covers Your Whole Site</h3>
-              <p>Temporary fencing, portable toilets, roll-off dumpsters, and storage containers. One call to RHC coordinates the full drop-off sequence. You do not manage separate vendors for each category.</p>
+              <p>Temporary fencing, portable toilets, storage containers, and shower trailers. One call to RHC coordinates the full drop-off sequence. You do not manage separate vendors for each category.</p>
             </div>
             <div className="why-item">
               <div className="why-num">03</div>
