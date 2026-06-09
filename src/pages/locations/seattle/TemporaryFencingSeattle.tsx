@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
+import fencePanelsImg from '../../../assets/temporary-fencing/fence.webp'
+import chainFencingImg from '../../../assets/temporary-fencing/chain_fencing.webp'
 
 const permitRules = [
   {
@@ -37,12 +39,14 @@ const fenceTypes = [
     name: 'Panel Fencing (Freestanding)',
     specs: '12.5 ft W × 6.5 ft H · 80 lb rubber bases · water-filled base upgrade available',
     body: 'Steel panels on weighted bases with no ground penetration. Standard for Seattle events, paved urban job sites, and any site where surface damage is not permitted. Fully portable and reconfigurable as your perimeter shifts. Standard 80 lb rubber bases handle most applications. For Puget Sound waterfront sites, exposed ridgelines, and high-traffic event footprints, water-filled base upgrade is available. Once filled, each base weighs approximately 600 lbs. Available with privacy windscreens.',
+    image: fencePanelsImg,
   },
   {
     num: '02',
     name: 'Post-Driven Chain Link',
     specs: '6 ft standard · 8 ft available for high-security sites',
     body: 'Posts driven directly into soil or asphalt for maximum structural stability. The right system for long-duration Seattle construction sites where wind resistance and security are the priority. More resistant to sustained lateral load than panel fencing on bases. Best for Puget Sound waterfront sites, sloped terrain, and long-term commercial construction in SoDo, South Lake Union, and Capitol Hill.',
+    image: chainFencingImg,
   },
 ]
 
@@ -247,50 +251,51 @@ export default function TemporaryFencingSeattle() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '640px', margin: '0 auto' }}>
             {fenceTypes.map((type) => (
               <div
                 key={type.num}
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '40px 1fr',
-                  gap: '20px',
-                  alignItems: 'start',
-                  padding: '24px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>
-                  {type.num}
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img src={type.image} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
-                <div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-head)',
-                      fontSize: '18px',
-                      fontWeight: 600,
-                      margin: '0 0 4px',
-                      letterSpacing: '-0.01em',
-                    }}
-                  >
-                    {type.name}
-                  </h3>
-                  <div
-                    className="mono"
-                    style={{
-                      fontSize: '12px',
-                      color: 'var(--secondary)',
-                      letterSpacing: '0.04em',
-                      marginBottom: '8px',
-                    }}
-                  >
-                    {type.specs}
+                <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
+                  <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>
+                    {type.num}
                   </div>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
-                    {type.body}
-                  </p>
+                  <div>
+                    <h3
+                      style={{
+                        fontFamily: 'var(--font-head)',
+                        fontSize: '18px',
+                        fontWeight: 600,
+                        margin: '0 0 4px',
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      {type.name}
+                    </h3>
+                    <div
+                      className="mono"
+                      style={{
+                        fontSize: '12px',
+                        color: 'var(--secondary)',
+                        letterSpacing: '0.04em',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      {type.specs}
+                    </div>
+                    <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
+                      {type.body}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -299,7 +304,7 @@ export default function TemporaryFencingSeattle() {
           <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
             Add-ons available: privacy windscreens · water-filled base upgrade (approx. 600 lbs filled) · man gates (4 ft W × 7 ft H) · vehicle gates
           </p>
-          <p style={{ marginTop: '12px', fontSize: '14px' }}>
+          <p style={{ marginTop: '12px', fontSize: '14px', textAlign: 'center' }}>
             <Link to="/temporary-fencing#fence-types" style={{ color: 'var(--secondary)', fontWeight: 600 }}>
               See full specifications and configurations on the main Temporary Fencing page →
             </Link>

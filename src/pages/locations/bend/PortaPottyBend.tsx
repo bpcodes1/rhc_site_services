@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
+import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
+import deluxPortableImg from '../../../assets/portable-toilets/delux_portable.webp'
+import adaPortableImg from '../../../assets/portable-toilets/ada_portable.webp'
 
 const permitRules = [
   {
@@ -36,16 +39,19 @@ const units = [
     num: '01',
     name: 'Standard Portable Toilet',
     body: 'Single-occupancy, ventilated, with hand sanitizer and a high-capacity tank built for daily construction use. The go-to for OSHA-compliant sanitation on Central Oregon job sites.',
+    image: portaPottyImg,
   },
   {
     num: '02',
     name: 'Deluxe Portable Toilet',
     body: 'Everything in the standard unit plus a fresh-water hand-wash station with soap. Right for client-facing job sites, residential remodels where the homeowner is present, and events where guests expect something above minimum.',
+    image: deluxPortableImg,
   },
   {
     num: '03',
     name: 'ADA-Compliant Unit',
     body: 'Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required for any public event or job site where workers or guests with mobility limitations are present. Deschutes County Special Event Permit applications include a review of ADA unit ratios.',
+    image: adaPortableImg,
   },
 ]
 
@@ -230,35 +236,36 @@ export default function PortaPottyBend() {
             <p>Three unit types cover the full range of Central Oregon job sites, outdoor events, and residential projects.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
             {units.map((unit) => (
               <div
                 key={unit.num}
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '40px 1fr',
-                  gap: '20px',
-                  alignItems: 'start',
-                  padding: '24px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{unit.num}</div>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 8px', letterSpacing: '-0.01em' }}>
-                    {unit.name}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
-                    {unit.body}
-                  </p>
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img src={unit.image} alt={unit.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
+                  <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{unit.num}</div>
+                  <div>
+                    <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 8px', letterSpacing: '-0.01em' }}>
+                      {unit.name}
+                    </h3>
+                    <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
+                      {unit.body}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
+          <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)', textAlign: 'center' }}>
             <Link to="/portable-toilets#sizing-guide" style={{ color: 'var(--secondary)', fontWeight: 600 }}>
               See the full sizing guide and OSHA compliance tables on the main Portable Toilets page →
             </Link>

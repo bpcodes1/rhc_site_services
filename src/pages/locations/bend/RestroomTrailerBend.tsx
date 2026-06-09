@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
+import trailer2StallImg from '../../../assets/restroom-trailers/2stall_portable.webp'
+import trailer4StallImg from '../../../assets/restroom-trailers/4stall_portable.webp'
+import trailerADAImg from '../../../assets/restroom-trailers/restroom-trailer2.webp'
 
 const bookingGuide = [
   {
@@ -32,18 +35,21 @@ const trailerOptions = [
     name: '2-Stall Luxury Restroom Trailer',
     bestFor: 'Up to 150 guests · Outdoor weddings, private gatherings, and shorter events',
     body: 'The standard choice for Bend-area ranch weddings and vineyard receptions. Climate-controlled, porcelain flush, running hot and cold water, and vanity mirrors. The onboard freshwater tank handles a standard 4-to-6 hour event without a water hookup.',
+    image: trailer2StallImg,
   },
   {
     num: '02',
     name: '4-Stall Luxury Restroom Trailer',
     bestFor: '150–300 guests · Festivals, estate weddings, and corporate retreats',
     body: 'The right configuration for larger receptions, High Desert festivals, and corporate events at Central Oregon resort properties. Same interior amenities as the 2-stall with expanded tank capacity for higher guest counts and longer event durations.',
+    image: trailer4StallImg,
   },
   {
     num: '03',
     name: 'ADA + 2-Stall Restroom Trailer',
     bestFor: 'Any event requiring ADA-compliant access',
     body: 'The ramp deploys to 19 feet wide. Confirm your site has the clearance before booking. This is the spec most coordinators misestimate. Required at any event where ADA access is a condition of the venue permit or Deschutes County Special Event Permit.',
+    image: trailerADAImg,
   },
 ]
 
@@ -232,38 +238,39 @@ export default function RestroomTrailerBend() {
             <p>Three configurations cover almost every Central Oregon event and permanent placement. Exact specs, tank capacities, and power requirements are published on the main Restroom Trailers page.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
             {trailerOptions.map((option) => (
               <div
                 key={option.num}
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '40px 1fr',
-                  gap: '20px',
-                  alignItems: 'start',
-                  padding: '24px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{option.num}</div>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 4px', letterSpacing: '-0.01em' }}>
-                    {option.name}
-                  </h3>
-                  <p style={{ margin: '0 0 10px', fontSize: '13px', color: 'var(--secondary)', fontFamily: 'var(--font-mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                    {option.bestFor}
-                  </p>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
-                    {option.body}
-                  </p>
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img src={option.image} alt={option.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
+                  <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{option.num}</div>
+                  <div>
+                    <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 4px', letterSpacing: '-0.01em' }}>
+                      {option.name}
+                    </h3>
+                    <p style={{ margin: '0 0 10px', fontSize: '13px', color: 'var(--secondary)', fontFamily: 'var(--font-mono)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                      {option.bestFor}
+                    </p>
+                    <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
+                      {option.body}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
+          <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)', textAlign: 'center' }}>
             <Link to="/restroom-trailers#trailer-types" style={{ color: 'var(--secondary)', fontWeight: 600 }}>
               See full specs, exact footprints, and tank capacities on the main Restroom Trailers page →
             </Link>
