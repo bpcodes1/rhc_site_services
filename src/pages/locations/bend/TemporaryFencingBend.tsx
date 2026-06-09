@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
+import fencePanelsImg from '../../../assets/temporary-fencing/fence.webp'
+import chainFencingImg from '../../../assets/temporary-fencing/chain_fencing.webp'
+import barricadeImg from '../../../assets/temporary-fencing/fence2.webp'
 
 const permitRules = [
   {
@@ -36,16 +39,19 @@ const fenceTypes = [
     num: '01',
     name: 'Panel Fencing (Freestanding)',
     body: 'Steel panels on weighted bases. No ground penetration required, fully portable, and reconfigurable without tools. The right system for events, short-term construction perimeters, and any site where ground disturbance is not permitted. Panels install and remove cleanly with no surface damage. Add windscreens for site screening or event aesthetics.',
+    image: fencePanelsImg,
   },
   {
     num: '02',
     name: 'Post-Driven Chain Link',
     body: 'Posts driven into the ground for maximum structural stability. The right system for long-duration construction sites, high-traffic perimeters, and locations where the High Desert wind is a persistent factor. More resistant to lateral load than panel fencing on bases. Requires ground penetration, so not suitable for paved or hardscaped surfaces.',
+    image: chainFencingImg,
   },
   {
     num: '03',
     name: 'Barricades',
     body: 'Pedestrian crowd control and traffic direction for events, construction zones, and public right-of-way work. Lightweight, stackable, and configurable. Used alone for low-level perimeters or as a secondary barrier inside a panel or chain link fence line.',
+    image: barricadeImg,
   },
 ]
 
@@ -234,29 +240,30 @@ export default function TemporaryFencingBend() {
             <p>Two primary systems cover the full range of Central Oregon construction sites and events. The right choice depends on your surface conditions, rental duration, and whether the fence needs to hold up to sustained High Desert wind.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
             {fenceTypes.map((type) => (
               <div
                 key={type.num}
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '40px 1fr',
-                  gap: '20px',
-                  alignItems: 'start',
-                  padding: '24px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{type.num}</div>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 8px', letterSpacing: '-0.01em' }}>
-                    {type.name}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
-                    {type.body}
-                  </p>
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img src={type.image} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
+                  <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{type.num}</div>
+                  <div>
+                    <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 8px', letterSpacing: '-0.01em' }}>
+                      {type.name}
+                    </h3>
+                    <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
+                      {type.body}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -265,7 +272,7 @@ export default function TemporaryFencingBend() {
           <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
             Add-ons available: windscreens and privacy screens · vehicle and pedestrian access gates
           </p>
-          <p style={{ marginTop: '12px', fontSize: '14px' }}>
+          <p style={{ marginTop: '12px', fontSize: '14px', textAlign: 'center' }}>
             <Link to="/temporary-fencing#fence-types" style={{ color: 'var(--secondary)', fontWeight: 600 }}>
               See full specs and configurations on the main Temporary Fencing page →
             </Link>

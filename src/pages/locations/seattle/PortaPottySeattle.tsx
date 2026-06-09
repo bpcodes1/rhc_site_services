@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
+import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
+import deluxPortableImg from '../../../assets/portable-toilets/delux_portable.webp'
+import adaPortableImg from '../../../assets/portable-toilets/ada_portable.webp'
+import highRiseImg from '../../../assets/portable-toilets/porta-potty2.webp'
 
 const permitRules = [
   {
@@ -41,21 +45,25 @@ const units = [
     num: '01',
     name: 'Standard Portable Toilet',
     body: "Single-occupancy, ventilated, with hand sanitizer and a high-capacity tank built for daily construction use. The baseline unit for WA L&I-compliant sanitation on Seattle job sites. Under WAC 296-155-140, one unit covers up to 10 workers. A crew of 11 to 25 requires 2 units. Washington's threshold is stricter than Oregon's, and most estimators quote the wrong table. Standard units are all-gender compliant as delivered.",
+    image: portaPottyImg,
   },
   {
     num: '02',
     name: 'Deluxe Portable Toilet',
     body: 'Everything in the standard unit plus a fresh-water handwash station with soap. Right for residential remodels with homeowners on site, client-facing job sites, and events where guests expect more than hand sanitizer.',
+    image: deluxPortableImg,
   },
   {
     num: '03',
     name: 'ADA-Compliant Unit',
     body: 'Wider footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required by the Seattle Special Events Committee at all permitted events: minimum 5% of total units, minimum one unit. Required on any job site with workers or visitors with mobility limitations under ADA and WA L&I standards. Not optional.',
+    image: adaPortableImg,
   },
   {
     num: '04',
     name: 'High-Rise / Crane-Liftable Unit',
     body: 'Reinforced structure, crane-lift rated, and designed to fit a standard freight elevator footprint. South Lake Union, Belltown, and downtown Seattle commercial high-rise construction requires units that reach active floors by crane or freight elevator. Standard units cannot access upper floors on high-rise projects. When your site is above grade, this is the unit that gets there.',
+    image: highRiseImg,
   },
 ]
 
@@ -272,35 +280,36 @@ export default function PortaPottySeattle() {
             <p>Four unit types cover the full range of Seattle construction sites, downtown high-rises, outdoor events, and residential projects.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px' }}>
             {units.map((unit) => (
               <div
                 key={unit.num}
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '40px 1fr',
-                  gap: '20px',
-                  alignItems: 'start',
-                  padding: '24px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{unit.num}</div>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 8px', letterSpacing: '-0.01em' }}>
-                    {unit.name}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
-                    {unit.body}
-                  </p>
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img src={unit.image} alt={unit.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
+                  <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{unit.num}</div>
+                  <div>
+                    <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 8px', letterSpacing: '-0.01em' }}>
+                      {unit.name}
+                    </h3>
+                    <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
+                      {unit.body}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
+          <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)', textAlign: 'center' }}>
             <Link to="/portable-toilets#sizing-guide" style={{ color: 'var(--secondary)', fontWeight: 600 }}>
               See the full sizing guide and compliance tables on the main Portable Toilets page →
             </Link>

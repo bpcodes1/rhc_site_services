@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/portland/portland_hero.webp'
+import fencePanelsImg from '../../../assets/temporary-fencing/fence.webp'
+import chainFencingImg from '../../../assets/temporary-fencing/chain_fencing.webp'
+import barricadeImg from '../../../assets/temporary-fencing/fence2.webp'
 
 const permitRules = [
   {
@@ -32,18 +35,21 @@ const fenceTypes = [
     name: 'Panel Fencing (Freestanding)',
     specs: '12.5 ft W x 6.5 ft H · 80 lb concrete bases',
     body: 'Steel panels on weighted bases with no ground penetration. The standard for Portland events, paved urban job sites, and any location where surface damage is not permitted. Fully portable and reconfigurable as your perimeter shifts. Panels install and remove cleanly on concrete, asphalt, and manicured venue lawns. Available with privacy windscreens and sponsor banner attachment points.',
+    image: fencePanelsImg,
   },
   {
     num: '02',
     name: 'Post-Driven Chain Link',
     specs: '6 ft standard · 8 ft available for high-security sites',
     body: 'Posts driven directly into soil or asphalt for maximum structural stability. The right system for long-duration Portland construction sites where security is the priority. More resistant to sustained lateral load than panel fencing on bases. Barbed wire top rail available for high-security urban sites. Not suitable for paved or hardscaped surfaces.',
+    image: chainFencingImg,
   },
   {
     num: '03',
     name: 'Pedestrian Barricades',
     specs: 'Water-filled · stackable · interlocking',
     body: 'Crowd control and traffic channeling for Portland events and roadwork sites. Interlocking configuration holds position in PNW wind conditions. Used alone for low-level perimeters or as a secondary barrier inside a panel or chain link fence line.',
+    image: barricadeImg,
   },
 ]
 
@@ -240,32 +246,33 @@ export default function TemporaryFencingPortland() {
             <p>Two primary systems cover the full range of Portland construction sites and events. The right choice depends on your surface, rental duration, and site security requirements.</p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
             {fenceTypes.map((type) => (
               <div
                 key={type.num}
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '40px 1fr',
-                  gap: '20px',
-                  alignItems: 'start',
-                  padding: '24px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{type.num}</div>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 4px', letterSpacing: '-0.01em' }}>
-                    {type.name}
-                  </h3>
-                  <div className="mono" style={{ fontSize: '12px', color: 'var(--secondary)', letterSpacing: '0.04em', marginBottom: '8px' }}>
-                    {type.specs}
+                <div style={{ height: '220px', overflow: 'hidden' }}>
+                  <img src={type.image} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
+                  <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{type.num}</div>
+                  <div>
+                    <h3 style={{ fontFamily: 'var(--font-head)', fontSize: '18px', fontWeight: 600, margin: '0 0 4px', letterSpacing: '-0.01em' }}>
+                      {type.name}
+                    </h3>
+                    <div className="mono" style={{ fontSize: '12px', color: 'var(--secondary)', letterSpacing: '0.04em', marginBottom: '8px' }}>
+                      {type.specs}
+                    </div>
+                    <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
+                      {type.body}
+                    </p>
                   </div>
-                  <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.65', color: 'var(--on-surface-variant)' }}>
-                    {type.body}
-                  </p>
                 </div>
               </div>
             ))}
@@ -274,7 +281,7 @@ export default function TemporaryFencingPortland() {
           <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
             Add-ons available: privacy windscreens · man gates (4 ft W x 7 ft H) · vehicle gates · barbed wire top rail · sandbag ballast
           </p>
-          <p style={{ marginTop: '12px', fontSize: '14px' }}>
+          <p style={{ marginTop: '12px', fontSize: '14px', textAlign: 'center' }}>
             <Link to="/temporary-fencing#fence-types" style={{ color: 'var(--secondary)', fontWeight: 600 }}>
               See full specs and configurations on the main Temporary Fencing page →
             </Link>
