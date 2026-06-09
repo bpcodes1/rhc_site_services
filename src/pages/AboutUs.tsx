@@ -17,8 +17,6 @@ const cities = [
 ]
 
 // TODO: Add address.streetAddress + address.postalCode once P.O. Box is confirmed
-// TODO: Replace sameAs[0] with direct Google Business Profile Maps URL (https://www.google.com/maps/place/...)
-// TODO: Add Facebook page URL to sameAs array once page is cleaned up
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -38,6 +36,10 @@ const orgSchema = {
   areaServed: [
     'Portland, OR', 'Salem, OR', 'Eugene, OR', 'Bend, OR',
     'Gresham, OR', 'Vancouver, WA', 'Tacoma, WA', 'Seattle, WA',
+  ],
+  sameAs: [
+    'https://www.google.com/maps/place/RHC+Site+Services/@45.0449079,-122.9588222,17z/data=!3m1!4b1!4m6!3m5!1s0x54955723f4080829:0x49107ebcd4c6f6fe!8m2!3d45.0449041!4d-122.9562473!16s%2Fg%2F11s4_f91yz?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D',
+    'https://www.facebook.com/RHCSiteServices/',
   ],
 }
 

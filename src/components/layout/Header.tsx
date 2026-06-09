@@ -51,6 +51,13 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openCity, setOpenCity] = useState<string | null>(null)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const onServicePage = pathname.startsWith('/portable-toilets') ||
     pathname.startsWith('/restroom-trailers') ||
@@ -73,7 +80,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="nav-wrap">
+      <div className={`nav-wrap${scrolled ? ' nav-wrap--scrolled' : ''}`}>
         <div className="container nav">
           <Link to="/" className="brand" aria-label="RHC Site Services home">
             <span className="brand-mark" aria-hidden="true"></span>

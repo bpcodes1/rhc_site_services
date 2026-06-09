@@ -40,6 +40,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { overflow-x: hidden; }
 html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   color: var(--on-surface);
@@ -99,11 +100,15 @@ button { font-family: inherit; cursor: pointer; }
   text-transform: uppercase;
   border-radius: var(--r);
   border: 1px solid transparent;
-  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
   white-space: nowrap;
 }
 .btn-primary { background: var(--secondary); color: var(--on-secondary); }
-.btn-primary:hover { background: #8d3000; }
+.btn-primary:hover {
+  background: #8d3000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(167, 58, 0, 0.28);
+}
 @keyframes btn-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(167,58,0,.45); } 65% { box-shadow: 0 0 0 10px rgba(167,58,0,0); } }
 .btn--pulse { animation: btn-pulse 2.2s ease-out infinite; }
 .btn--pulse:hover { animation-play-state: paused; }
@@ -122,7 +127,8 @@ button { font-family: inherit; cursor: pointer; }
 .btn-ghost-light:hover { background: rgba(236,241,255,.08); border-color: var(--inverse-on-surface); }
 
 /* ---------- NAV ---------- */
-.nav-wrap { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--surface); border-bottom: 1px solid var(--outline-variant); }
+.nav-wrap { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--surface); border-bottom: 1px solid var(--outline-variant); transition: box-shadow .25s ease, border-color .25s ease; }
+.nav-wrap--scrolled { box-shadow: 0 2px 16px rgba(17, 28, 45, 0.08); border-bottom-color: transparent; }
 #main { padding-top: 65px; }
 #quote { scroll-margin-top: 90px; }
 .nav {
@@ -431,13 +437,14 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 14px;
   color: var(--on-surface);
   border-radius: 0;
-  transition: border-color .18s ease;
+  transition: border-color .2s ease, box-shadow .2s ease;
   resize: vertical;
 }
 .field textarea { min-height: 36px; line-height: 1.5; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none;
   border-bottom-color: var(--secondary);
+  box-shadow: 0 1px 0 0 var(--secondary);
 }
 .lead-form textarea { width: 100%; min-width: 0; }
 
