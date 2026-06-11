@@ -88,7 +88,7 @@ export default function Home() {
 
       {/* ── HERO + STAT STRIP (fills full viewport below nav) ───────────── */}
       <div className="hero-viewport">
-      <section className="hero hero--image" id="quote" style={{ backgroundImage: `url(${heroImg})` }}>
+      <section className="hero hero--image" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="container">
           <div className="hero-grid">
           <div className="hero-text">
@@ -680,7 +680,7 @@ export default function Home() {
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
-      <section className="final-cta" id="contact">
+      <section className="final-cta" id="quote">
         <div className="stripe" aria-hidden="true"></div>
         <div className="container">
           <div className="final-cta-grid">
