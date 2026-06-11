@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/portland/portland_hero.webp'
 import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
-import deluxPortableImg from '../../../assets/portable-toilets/delux_portable.webp'
 import adaPortableImg from '../../../assets/portable-toilets/ada_portable.webp'
 import highRiseImg from '../../../assets/portable-toilets/porta-potty2.webp'
 
@@ -44,18 +43,12 @@ const units = [
   },
   {
     num: '02',
-    name: 'Deluxe Portable Toilet',
-    body: 'Everything in the standard unit plus a fresh-water hand-wash station with soap. Right for client-facing job sites, residential remodels where the homeowner is present, and events where guests expect more than the minimum.',
-    image: deluxPortableImg,
-  },
-  {
-    num: '03',
     name: 'ADA-Compliant Unit',
     body: 'Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required for any public event in Portland or job site where workers or guests with mobility limitations are present. Oregon OSHA and ADA compliance require this. Not optional.',
     image: adaPortableImg,
   },
   {
-    num: '04',
+    num: '03',
     name: 'High-Rise Portable Toilet',
     body: 'Half-height units designed to fit standard freight elevators for downtown Portland and Pearl District commercial construction. Full-size units cannot access upper floors on active high-rise projects. When your site is above grade, this is the unit that gets there. The floor super does not stop work to solve a sanitation problem. The project stays on schedule.',
     image: highRiseImg,
@@ -255,11 +248,13 @@ export default function PortaPottyPortland() {
             <p>Four unit types cover the full range of Portland construction sites, downtown high-rises, outdoor events, and residential projects.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
             {units.map((unit) => (
               <div
                 key={unit.num}
                 style={{
+                  flex: '1 1 280px',
+                  maxWidth: '380px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',

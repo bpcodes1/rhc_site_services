@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
-  base: '/rhc_site_services/',
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/rhc_site_services/',
   plugins: [
     react(),
     tailwindcss(),
@@ -11,4 +11,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react-simple-maps', 'prop-types'],
   },
-})
+}))

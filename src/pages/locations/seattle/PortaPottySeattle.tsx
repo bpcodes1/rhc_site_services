@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
 import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
-import deluxPortableImg from '../../../assets/portable-toilets/delux_portable.webp'
 import adaPortableImg from '../../../assets/portable-toilets/ada_portable.webp'
 import highRiseImg from '../../../assets/portable-toilets/porta-potty2.webp'
 
@@ -49,18 +48,12 @@ const units = [
   },
   {
     num: '02',
-    name: 'Deluxe Portable Toilet',
-    body: 'Everything in the standard unit plus a fresh-water handwash station with soap. Right for residential remodels with homeowners on site, client-facing job sites, and events where guests expect more than hand sanitizer.',
-    image: deluxPortableImg,
-  },
-  {
-    num: '03',
     name: 'ADA-Compliant Unit',
     body: 'Wider footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required by the Seattle Special Events Committee at all permitted events: minimum 5% of total units, minimum one unit. Required on any job site with workers or visitors with mobility limitations under ADA and WA L&I standards. Not optional.',
     image: adaPortableImg,
   },
   {
-    num: '04',
+    num: '03',
     name: 'High-Rise / Crane-Liftable Unit',
     body: 'Reinforced structure, crane-lift rated, and designed to fit a standard freight elevator footprint. South Lake Union, Belltown, and downtown Seattle commercial high-rise construction requires units that reach active floors by crane or freight elevator. Standard units cannot access upper floors on high-rise projects. When your site is above grade, this is the unit that gets there.',
     image: highRiseImg,
@@ -280,11 +273,13 @@ export default function PortaPottySeattle() {
             <p>Four unit types cover the full range of Seattle construction sites, downtown high-rises, outdoor events, and residential projects.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
             {units.map((unit) => (
               <div
                 key={unit.num}
                 style={{
+                  flex: '1 1 280px',
+                  maxWidth: '380px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',

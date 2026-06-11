@@ -36,7 +36,7 @@ import TemporaryFencingSeattle from './pages/locations/seattle/TemporaryFencingS
 
 function App() {
   return (
-    <BrowserRouter basename="/rhc_site_services">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>

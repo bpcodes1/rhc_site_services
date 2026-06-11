@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
 import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
-import deluxPortableImg from '../../../assets/portable-toilets/delux_portable.webp'
 import adaPortableImg from '../../../assets/portable-toilets/ada_portable.webp'
 
 const permitRules = [
@@ -43,12 +42,6 @@ const units = [
   },
   {
     num: '02',
-    name: 'Deluxe Portable Toilet',
-    body: 'Everything in the standard unit plus a fresh-water hand-wash station with soap. Right for client-facing job sites, residential remodels where the homeowner is present, and events where guests expect something above minimum.',
-    image: deluxPortableImg,
-  },
-  {
-    num: '03',
     name: 'ADA-Compliant Unit',
     body: 'Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required for any public event or job site where workers or guests with mobility limitations are present. Deschutes County Special Event Permit applications include a review of ADA unit ratios.',
     image: adaPortableImg,
@@ -236,11 +229,13 @@ export default function PortaPottyBend() {
             <p>Three unit types cover the full range of Central Oregon job sites, outdoor events, and residential projects.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
             {units.map((unit) => (
               <div
                 key={unit.num}
                 style={{
+                  flex: '1 1 280px',
+                  maxWidth: '380px',
                   background: 'var(--surface)',
                   borderRadius: 'var(--r-lg)',
                   border: '1px solid var(--outline-variant)',
