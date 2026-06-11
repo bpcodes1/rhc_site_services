@@ -24,7 +24,7 @@ Key tokens:
 - HQ: Portland, OR (Portland is the `is-hq` city in city grids)
 - Phone: 503-607-7412
 - Email for forms: Enrique has this — connect to Formspree before launch (TODO in LeadForm.tsx)
-- Pricing on site by exception only. Roll-Off Dumpsters: $350–$850 range published (confirmed by Rafa). Shower Trailers: $2,000–$6,000 range referenced in FAQ answer only (not in hero or CTA). All other services: form-only with explanation of pricing variables. Restroom Trailers previously had a $900–$1,200 range but it was removed — range too wide, amplifies price anxiety.
+- Pricing on site by exception only. Shower Trailers: $2,000–$6,000 range referenced in FAQ answer only (not in hero or CTA). All other services: form-only with explanation of pricing variables. Restroom Trailers previously had a $900–$1,200 range but it was removed — range too wide, amplifies price anxiety.
 - Primary CTA is always the lead form. Phone number ONLY at the very bottom of the page (final CTA section). Never in the hero.
 
 ## Pages Build Status
@@ -36,10 +36,10 @@ Key tokens:
 - Temporary Fencing `/temporary-fencing` ✓ BUILT
 - Shower Trailers `/shower-trailers` ✓ BUILT
 - Storage Containers `/storage-containers` ✓ BUILT
-- Roll-Off Dumpsters `/roll-off-dumpsters` ✓ BUILT
-- About Us `/about-us` — TODO (placeholder exists)
-- Contact Us `/contact-us` — TODO (placeholder exists)
-- FAQ `/faq` — TODO (placeholder exists)
+- Roll-Off Dumpsters `/roll-off-dumpsters` — OUT OF SCOPE. Page file exists but is not linked anywhere (not in nav, not in footer). Do not add it to nav or treat it as a live page.
+- About Us `/about-us` ✓ BUILT (2026-06-05) — 5 launch TODOs remain: P.O. Box for schema, job site photo, Rafa photo, client story for section 05, testimonial in final CTA
+- Contact Us `/contact-us` ✓ BUILT (2026-06-08) — no open TODOs
+- FAQ `/faq` — DROPPED. Confirmed by Enrique 2026-06-09. Rationale: duplicate of per-page FAQs. Placeholder file and route still exist but are not linked anywhere. Do not build.
 
 ### Location Pages
 Bend, OR:
@@ -69,7 +69,7 @@ Salem OR | Portland OR (HQ) | Eugene OR | Bend OR | Gresham OR | Tacoma WA | Van
 5. **No "national company" comparisons in hero sections.** The Why RHC section may reference national competitors (they're named as "national corporations with 275+ locations" etc.) but hero and use cases sections do not compare to named or unnamed national companies.
 6. **No middleman language.** Never say "we broker," "we're a middleman," or "no middlemen." Never claim fleet ownership either ("our inventory," "our trucks," "we own every unit"). Correct framing: "confirmed clean before it arrives," "delivered and installed by RHC," "one accountable team."
 7. **"Or call PNW dispatch"** in final CTA phone label → **"Or call RHC directly"**
-8. **No pricing on site** except where already confirmed: Roll-Off Dumpsters ($350–$850 published), Shower Trailers ($2,000–$6,000 in FAQ answer only). All other services use "fill out the form" approach. Restroom Trailers range was removed — do not reinstate without Rafa approval.
+8. **No pricing on site** except where already confirmed: Shower Trailers ($2,000–$6,000 in FAQ answer only). All other services use "fill out the form" approach. Restroom Trailers range was removed — do not reinstate without Rafa approval.
 9. **Specs must be published** for each service page. No competitor does this. It's the primary Prove It mechanism (Wiebe) and the main ranking differentiator (Kyle Roof).
 10. **Dream outcome must be stated** for each audience on service pages (Hormozi). Not the vehicle (fence delivered) but the destination (site is compliant and crew never touched a panel).
 
@@ -131,6 +131,13 @@ Full JSON profiles stored in `.claude/expert-profiles/`. Load them at the Brutal
 - **Alex Hormozi** (`alex-hormozi.json`) — Offer engineering. Value Equation: Dream Outcome × Perceived Likelihood / Time Delay × Effort. Dream outcome = destination not vehicle.
 - **Clayton Christensen** (`clayton-christensen.json`) — Differentiation. Jobs to Be Done, Four Forces of Progress (push/pull/anxiety/habit), circumstance segmentation, struggling moment lens.
 
+## Pre-Launch Global TODOs
+These are open across the whole site and do not belong to a single page:
+1. **Formspree** — `LeadForm.tsx` has a TODO comment to wire up `https://formspree.io/f/{id}`. Enrique has the email address. Do not launch before this is connected.
+2. **Footer legal links** — Privacy, Terms, Accessibility in `Footer.tsx` are placeholder `#` links. Need real pages or removal before launch.
+3. **About Us launch TODOs** — P.O. Box (for schema `streetAddress`/`postalCode`), job site photo (`src/assets/general/about_jobsite.webp`), Rafa personal photo, client story for Section 05, testimonial in final CTA.
+4. **FAQ route cleanup** — `/faq` placeholder and route in App.tsx still exist but are unlinked and not being built. Can be deleted before launch if desired, but not blocking.
+
 ## Key Decisions Made (do not re-litigate unless Enrique raises them)
 - **Oregon Portable Toilets LLC (Rafa's dad)** — logo trust bar on site. Pending Rafa's approval. Hold.
 - **Custom printed windscreens** — excluded. Not every provider carries it.
@@ -139,12 +146,15 @@ Full JSON profiles stored in `.claude/expert-profiles/`. Load them at the Brutal
 - **Shower Trailers** — separate service from Restroom Trailers. Has its own page.
 - **Blog** — dropped for now. Launching focused, add later.
 - **react-helmet-async** — installed, HelmetProvider wraps app in main.tsx.
+- **FAQ as standalone page** — DROPPED. Confirmed by Enrique 2026-06-09. Removed from Footer nav. Placeholder file/route still exist but are dead weight.
+- **Contact Us nav placement** — Contact is NOT in the Header nav. It lives in the Footer "Company" column. This is intentional.
+- **Roll-Off Dumpsters** — OUT OF SCOPE. Removed from site. Do not add to nav, footer, or service lists. Page file exists at `src/pages/services/RollOffDumpsters.tsx` but is orphaned.
 
 ## Rafa's Requirements
 - No pricing on site except confirmed exceptions: Roll-Off Dumpsters ($350–$850), Shower Trailers ($2,000–$6,000 in FAQ only)
 - Phone number is LAST RESORT — bottom of page only
 - Primary CTA is always the form
-- Site covers 6 services: Portable Toilets, Restroom Trailers, Temporary Fencing, Storage Containers, Shower Trailers, Roll-Off Dumpsters
+- Site covers 5 services: Portable Toilets, Restroom Trailers, Temporary Fencing, Storage Containers, Shower Trailers
 - Targeting Oregon cities + a few Washington cities. Expanding to nationwide later.
 - Photos: 50/50 client-provided and stock. Use `placeholder` div with `ph-tag` until real photos arrive.
 
@@ -156,7 +166,6 @@ Full JSON profiles stored in `.claude/expert-profiles/`. Load them at the Brutal
 | Temporary Fencing | Form only — no starting range |
 | Shower Trailers | $2,000–$6,000 range referenced in FAQ answer only; form-only CTA |
 | Storage Containers | Form only — no starting range |
-| Roll-Off Dumpsters | $350–$850 range published (hero sidebar, FAQ, final CTA copy) |
 
 ## Writing Voice (for any client-facing copy outside the website)
 See `/Users/enriquep/ai-fundamentals/module-outputs/module-06-writing/Self-writing-profile.json` and `self-writing-skill.md` for Enrique's personal writing voice (used for sales scripts and outreach, not website copy).

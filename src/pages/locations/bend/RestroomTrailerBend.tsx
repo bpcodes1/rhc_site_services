@@ -4,7 +4,8 @@ import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
 import trailer2StallImg from '../../../assets/restroom-trailers/2stall_portable.webp'
 import trailer4StallImg from '../../../assets/restroom-trailers/4stall_portable.webp'
-import trailerADAImg from '../../../assets/restroom-trailers/restroom-trailer2.webp'
+import trailerLargeImg from '../../../assets/restroom-trailers/restroom-trailer1.webp'
+import trailerXLImg from '../../../assets/restroom-trailers/restroom-trailer2.webp'
 
 const bookingGuide = [
   {
@@ -32,31 +33,38 @@ const bookingGuide = [
 const trailerOptions = [
   {
     num: '01',
-    name: '2-Stall Luxury Restroom Trailer',
-    bestFor: 'Up to 150 guests · Outdoor weddings, private gatherings, and shorter events',
-    body: 'The standard choice for Bend-area ranch weddings and vineyard receptions. Climate-controlled, porcelain flush, running hot and cold water, and vanity mirrors. The onboard freshwater tank handles a standard 4-to-6 hour event without a water hookup.',
+    name: '2-Stall and 3-Stall Configurations',
+    bestFor: 'Up to 150 guests (2-stall) · Ranch weddings, vineyard receptions, and private outdoor events',
+    body: 'The standard choice for Bend-area ranch weddings and vineyard receptions. Standard 2-stall configurations accommodate up to 150 guests for events running 4 to 6 hours. Climate-controlled, porcelain flush, running hot and cold water, and vanity mirrors. For guest counts between the 2-stall and 4-stall ranges, a 3-stall configuration is available.',
     image: trailer2StallImg,
   },
   {
     num: '02',
-    name: '4-Stall Luxury Restroom Trailer',
+    name: '4-Stall and 5-Stall Configurations',
     bestFor: '150–300 guests · Festivals, estate weddings, and corporate retreats',
-    body: 'The right configuration for larger receptions, High Desert festivals, and corporate events at Central Oregon resort properties. Same interior amenities as the 2-stall with expanded tank capacity for higher guest counts and longer event durations.',
+    body: 'The right configuration for larger receptions, High Desert festivals, and corporate events at Central Oregon resort properties. Standard 4-stall configurations accommodate up to 300 guests. Same interior amenities as the 2-stall with expanded tank capacity for higher guest counts and longer event durations. A 5-stall configuration is available for guest counts between the 4-stall and 6-stall range.',
     image: trailer4StallImg,
   },
   {
     num: '03',
-    name: 'ADA + 2-Stall Restroom Trailer',
-    bestFor: 'Any event requiring ADA-compliant access',
-    body: 'The ramp deploys to 19 feet wide. Confirm your site has the clearance before booking. This is the spec most coordinators misestimate. Required at any event where ADA access is a condition of the venue permit or Deschutes County Special Event Permit.',
-    image: trailerADAImg,
+    name: '6-Stall, 7-Stall, and 8-Stall Configurations',
+    bestFor: '~350 guests (6-stall) to ~500 guests (8-stall) · Large Central Oregon festivals and multi-day productions',
+    body: 'High-capacity configurations for major Bend-area outdoor events with extended runtimes. Standard 6-stall configurations accommodate approximately 350 guests for events lasting up to 10 hours. Standard 8-stall configurations accommodate approximately 500 guests for events running 6 to 7 hours. A 7-stall configuration is available for guest counts between those two anchors.',
+    image: trailerLargeImg,
+  },
+  {
+    num: '04',
+    name: '9-Stall and 10-Stall Configurations',
+    bestFor: 'Up to ~700 guests (10-stall) · Major festivals, large corporate outdoor events, multi-day productions',
+    body: 'Maximum-capacity configurations for large-scale Central Oregon events. Standard 10-stall configurations accommodate approximately 700 guests for events running 6 to 8 hours. A 9-stall configuration is available for guest counts between the 8-stall and 10-stall range. RHC reviews your site footprint, power access, and event timeline before confirming the configuration.',
+    image: trailerXLImg,
   },
 ]
 
 const faqs = [
   {
     q: 'How much does it cost to rent a restroom trailer in Bend, OR?',
-    a: 'Pricing depends on five things: trailer configuration (2-stall, 4-stall, or ADA), event duration, delivery distance within Central Oregon, whether a generator is needed, and whether mid-event servicing is required. There is no single number that covers all those variables without either overstating or understating your actual cost. What RHC does is put together an all-in quote for your specific event within 24 hours. Submit your trailer size, headcount, date, and location on the form and you get a confirmed number back the same day. Delivery, setup, and post-event pump-out included.',
+    a: 'Pricing depends on five things: trailer configuration (stall count from 2 to 10), event duration, delivery distance within Central Oregon, whether a generator is needed, and whether mid-event servicing is required. There is no single number that covers all those variables without either overstating or understating your actual cost. What RHC does is put together an all-in quote for your specific event within 24 hours. Submit your trailer size, headcount, date, and location on the form and you get a confirmed number back the same day. Delivery, setup, and post-event pump-out included.',
   },
   {
     q: 'My wedding coordinator already has a restroom trailer vendor she recommends. Should I still get a quote from RHC?',
@@ -156,7 +164,7 @@ export default function RestroomTrailerBend() {
               </div>
               <div className="meta-row">
                 <div className="meta-label">Trailer Types</div>
-                <div className="meta-value">2-Stall · 4-Stall · ADA + 2</div>
+                <div className="meta-value">2-Stall through 10-Stall · ADA on all configurations</div>
               </div>
               <div className="meta-row">
                 <div className="meta-label">Coverage</div>
@@ -233,12 +241,12 @@ export default function RestroomTrailerBend() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">02 / Trailer Options</div>
-              <h2 className="h-lg">2-Stall, 4-Stall, and ADA configurations for Bend events and long-term sites.</h2>
+              <h2 className="h-lg">2-Stall through 10-Stall configurations for Bend events and long-term sites.</h2>
             </div>
-            <p>Three configurations cover almost every Central Oregon event and permanent placement. Exact specs, tank capacities, and power requirements are published on the main Restroom Trailers page.</p>
+            <p>RHC configures restroom trailers from 2 to 10 stalls for Central Oregon events. Every stall count in between is available. ADA configurations exist on all sizes. Exact specs, tank capacities, and power requirements are published on the main Restroom Trailers page.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px', maxWidth: '960px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px' }}>
             {trailerOptions.map((option) => (
               <div
                 key={option.num}
@@ -268,6 +276,21 @@ export default function RestroomTrailerBend() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div
+            style={{
+              marginTop: '20px',
+              padding: '18px 22px',
+              background: 'var(--surface)',
+              borderLeft: '3px solid var(--primary)',
+              borderRadius: '0 var(--r-lg) var(--r-lg) 0',
+            }}
+          >
+            <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
+              <strong style={{ color: 'var(--primary)' }}>ADA configurations are available on every stall count from 2 to 10.</strong>{' '}
+              Standard ADA restroom trailers in the Pacific Northwest typically require up to 19 feet of ramp clearance. Confirm your site clearance with RHC at booking. Required at any event where ADA access is a condition of the venue permit or Deschutes County Special Event Permit.
+            </p>
           </div>
 
           <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--on-surface-variant)', textAlign: 'center' }}>

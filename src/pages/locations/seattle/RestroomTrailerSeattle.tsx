@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: 'Are luxury restroom trailers ADA compliant in Seattle?',
-    a: 'ADA configurations are available on every stall count from 2 to 10. The ramp deploys to 19 feet wide. Confirm your site has that clearance before booking, as this is the spec most coordinators underestimate. ADA access is required at any Seattle event where it is a condition of the Seattle Special Events Committee permit or your venue contract. Note your accessibility requirements on the form and RHC will confirm the right unit.',
+    a: 'ADA configurations are available on every stall count from 2 to 10. Standard ADA restroom trailers in the Pacific Northwest typically require up to 19 feet of ramp clearance. Confirm your site clearance with RHC at booking, as this is the requirement most coordinators underestimate. ADA access is required at any Seattle event where it is a condition of the Seattle Special Events Committee permit or your venue contract. Note your accessibility requirements on the form and RHC will confirm the right unit.',
   },
   {
     q: "Do restroom trailers meet Seattle's All-Gender law?",
@@ -298,7 +298,7 @@ export default function RestroomTrailerSeattle() {
           >
             <p style={{ margin: 0, fontSize: '15px', lineHeight: '1.7', color: 'var(--on-surface)' }}>
               <strong style={{ color: 'var(--primary)' }}>ADA configurations are available on every stall count from 2 to 10.</strong>{' '}
-              The ramp deploys to 19 feet wide. Confirm your site has that clearance before booking. Required at any event where ADA access is a condition of the Seattle Special Events Committee permit or your venue contract.
+              Standard ADA restroom trailers in the Pacific Northwest typically require up to 19 feet of ramp clearance. Confirm your site clearance with RHC at booking. Required at any event where ADA access is a condition of the Seattle Special Events Committee permit or your venue contract.
             </p>
           </div>
 

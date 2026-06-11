@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import LeadForm from '../components/LeadForm'
 
-// TODO: import aboutImg from '../assets/general/about_jobsite.webp'
-//       Add job site photo to src/assets/general/ and uncomment import + img block in Origin section
+import aboutImg from '../assets/general/about-jobsite.jpg'
 
 const cities = [
   { name: 'Salem',     state: 'OR', hq: false },
@@ -16,7 +15,6 @@ const cities = [
   { name: 'Seattle',   state: 'WA', hq: false },
 ]
 
-// TODO: Add address.streetAddress + address.postalCode once P.O. Box is confirmed
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -27,8 +25,10 @@ const orgSchema = {
   telephone: '+15036077412',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Portland',
+    streetAddress: 'PO Box 9088',
+    addressLocality: 'Brooks',
     addressRegion: 'OR',
+    postalCode: '97305',
     addressCountry: 'US',
   },
   founder: { '@type': 'Person', name: 'Rafael Hernandez' },
@@ -50,7 +50,7 @@ export default function AboutUs() {
         <title>About RHC Site Services | Portland, OR | Since 2016</title>
         <meta
           name="description"
-          content="RHC Site Services is run by Rafael Hernandez out of Portland, OR. Learn what he personally stands behind on every rental and why he started the company in 2016."
+          content="RHC Site Services is run by Rafa out of Portland, OR. Learn what he personally stands behind on every rental and why he started the company in 2016."
         />
         <link rel="canonical" href="https://bpcodes1.github.io/rhc_site_services/about-us" />
         <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
@@ -101,39 +101,33 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* TODO: Switch to two-column grid once job site photo is added.
-              Replace the div below with:
-              <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.15fr) minmax(0,0.85fr)', gap: '64px', alignItems: 'start' }}>
-              and uncomment the <img> block at the end.
-          */}
-          <div style={{ maxWidth: '72ch', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <p className="body-lg">
-              Rafael Hernandez was born and raised in Salem, Oregon. Before starting RHC, he worked
-              inside his father's portable sanitation business, Oregon Portable Toilets LLC, one of
-              the original providers serving the Portland metro and Willamette Valley.
-            </p>
-            <p className="body-lg">
-              That background is not a footnote. It means Rafa understands how this industry works
-              at the operational level. What a properly prepped unit looks like. What a real
-              delivery window actually requires. Where providers cut corners when no one is watching
-              closely.
-            </p>
-            <p className="body-lg">
-              He has been working in this business since before RHC existed. When he started the
-              company in 2016, it was not to enter a new industry. It was to fix the part of it he
-              kept watching fail.
-            </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: '48px', alignItems: 'start' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <p className="body-lg">
+                Rafa was born and raised in Salem, Oregon. Before starting RHC, he worked inside his
+                father's portable sanitation business, Oregon Portable Toilets LLC, one of the
+                original providers serving the Portland metro and Willamette Valley.
+              </p>
+              <p className="body-lg">
+                That background is not a footnote. It means Rafa understands how this industry works
+                at the operational level. What a properly prepped unit looks like. What a real
+                delivery window actually requires. Where providers cut corners when no one is watching
+                closely.
+              </p>
+              <p className="body-lg">
+                He has been working in this business since before RHC existed. When he started the
+                company in 2016, it was not to enter a new industry. It was to fix the part of it he
+                kept watching fail.
+              </p>
+            </div>
+            <div style={{ borderRadius: '8px', overflow: 'hidden', height: '500px' }}>
+              <img
+                src={aboutImg}
+                alt="Portable toilets deployed on an Oregon job site"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center bottom' }}
+              />
+            </div>
           </div>
-
-          {/* TODO: Uncomment when job site photo is provided (import at top of file)
-          <div style={{ borderRadius: '8px', overflow: 'hidden', maxHeight: '440px' }}>
-            <img
-              src={aboutImg}
-              alt="RHC job site delivery in Portland, OR"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          </div>
-          */}
         </div>
       </section>
 
@@ -251,48 +245,12 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* 05 — CLIENT STORY PLACEHOLDER */}
-      {/* TODO: Populate with a real situation from Rafa (circumstance, what happened, resolution).
-          No client names needed. Remove this entire section if Rafa has nothing to share. */}
-      <section>
-        <div className="container">
-          <div className="section-head" style={{ marginBottom: '32px' }}>
-            <div className="head-lead">
-              <div className="eyebrow">05 / From the Field</div>
-              <h2 className="h-lg">A Job That Stuck With Him.</h2>
-            </div>
-          </div>
-          <div className="quote-card" style={{ maxWidth: '680px' }}>
-            <div className="quote-mark" aria-hidden="true">&ldquo;</div>
-            <blockquote>
-              <p style={{ margin: 0 }}>
-                [PLACEHOLDER — Waiting on a specific situation from Rafa: the circumstance, what
-                happened, how it resolved. No names needed. Remove this section before launch if
-                no story is confirmed.]
-              </p>
-              <footer
-                style={{
-                  marginTop: '16px',
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '11px',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  color: 'var(--on-surface-variant)',
-                }}
-              >
-                Rafael Hernandez · RHC Site Services
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* 06 — SERVICE AREAS */}
+      {/* 05 — SERVICE AREAS */}
       <section style={{ background: 'var(--surface-low)' }} id="service-area">
         <div className="container">
           <div className="section-head">
             <div className="head-lead">
-              <div className="eyebrow">06 / Service Areas</div>
+              <div className="eyebrow">05 / Service Areas</div>
               <h2 className="h-lg">Based in Portland. Serving Oregon and Washington.</h2>
             </div>
             <p>
@@ -342,7 +300,7 @@ export default function AboutUs() {
           <div className="final-cta-grid">
             <div>
               <div className="eyebrow" style={{ color: 'var(--secondary-fixed-dim)' }}>
-                07 / Get Started
+                06 / Get Started
               </div>
               <h2 className="h-lg" style={{ marginTop: '24px' }}>
                 Ready to work with RHC?
