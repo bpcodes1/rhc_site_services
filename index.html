@@ -24,7 +24,7 @@
       // Restore path encoded by 404.html for SPA routing on GitHub Pages
       (function () {
         var p = new URLSearchParams(window.location.search).get('p');
-        if (p) window.history.replaceState(null, '', decodeURIComponent(p));
+        if (p) window.history.replaceState(null, '', '%BASE_URL%'.replace(/\/$/, '') + decodeURIComponent(p));
       })();
     </script>
   </head>
