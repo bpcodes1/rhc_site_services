@@ -1,0 +1,54 @@
+{
+  "hash": "4d74edbc",
+  "configHash": "8d0eed3b",
+  "lockfileHash": "4eeae0b3",
+  "browserHash": "9408ecdb",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "a91a995a",
+      "needsInterop": true
+    },
+    "react-helmet-async": {
+      "src": "../../node_modules/react-helmet-async/lib/index.esm.js",
+      "file": "react-helmet-async.js",
+      "fileHash": "68267c97",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "04f6b878",
+      "needsInterop": false
+    },
+    "react-simple-maps": {
+      "src": "../../node_modules/react-simple-maps/dist/index.umd.js",
+      "file": "react-simple-maps.js",
+      "fileHash": "9217131c",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9e7f56cb",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "78901bd0",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-BRYbbeEC": {
+      "file": "react-BRYbbeEC.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-DtO-HYpl": {
+      "file": "react-dom-DtO-HYpl.js",
+      "isDynamicEntry": false
+    }
+  }
+}
