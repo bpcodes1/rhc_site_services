@@ -65,7 +65,7 @@ export default function TemporaryFencing() {
       <Helmet>
         <title>Temporary Fencing Rental Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="Panel fencing and post-driven chain link for construction sites and events across Oregon and Washington. Published specs, OSHA-compliant panels, same-day quotes." />
-        <link rel="canonical" href="https://rhcsiteservices.com/temporary-fencing" />
+        <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing" />
       </Helmet>
 
       {/* BREADCRUMB */}

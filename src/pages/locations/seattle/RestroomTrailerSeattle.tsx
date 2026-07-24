@@ -132,7 +132,7 @@ export default function RestroomTrailerSeattle() {
       <Helmet>
         <title>Restroom Trailer Rental Seattle WA | RHC Site Services</title>
         <meta name="description" content="Luxury restroom trailer rentals for Seattle events and King County venues. Confirmed arrival windows, all-gender compliant, generator provision for off-grid sites. Same-day quotes from RHC." />
-        <link rel="canonical" href="https://rhcsiteservices.com/restroom-trailer-rental-seattle-wa" />
+        <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailer-rental-seattle-wa" />
       </Helmet>
 
       {/* BREADCRUMB */}

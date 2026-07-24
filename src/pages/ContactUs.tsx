@@ -29,9 +29,9 @@ const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact RHC Site Services',
-  url: 'https://rhcsiteservices.com/contact-us',
+  url: 'https://rhcsiteservice.com/contact-us',
   description:
-    'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, storage containers, and roll-off dumpsters across Oregon and Washington.',
+    'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, and storage containers across Oregon and Washington.',
   mainEntity: {
     '@type': 'LocalBusiness',
     name: 'RHC Site Services',
@@ -83,7 +83,7 @@ export default function ContactUs() {
           name="description"
           content="Contact RHC Site Services in Portland, OR. Same-day quotes on portable toilets, restroom trailers, temporary fencing, storage containers, and more across Oregon and Washington. Phone, email, or form."
         />
-        <link rel="canonical" href="https://rhcsiteservices.com/contact-us" />
+        <link rel="canonical" href="https://rhcsiteservice.com/contact-us" />
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

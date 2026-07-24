@@ -150,7 +150,7 @@ export default function PortaPottySeattle() {
       <Helmet>
         <title>Porta Potty Rental Seattle WA | RHC Site Services</title>
         <meta name="description" content="Portable toilet rentals for Seattle construction sites and events. WA L&I compliant unit counts, SDOT permit guidance, same-day quotes. Serving King County." />
-        <link rel="canonical" href="https://rhcsiteservices.com/porta-potty-rental-seattle-wa" />
+        <link rel="canonical" href="https://rhcsiteservice.com/porta-potty-rental-seattle-wa" />
       </Helmet>
 
       {/* BREADCRUMB */}

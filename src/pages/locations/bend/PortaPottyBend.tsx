@@ -106,7 +106,7 @@ export default function PortaPottyBend() {
       <Helmet>
         <title>Porta Potty Rental in Bend, OR | RHC Site Services</title>
         <meta name="description" content="Portable toilet rentals for Bend job sites and events on a hard arrival window. Local permit guidance included. Same-day quotes from RHC." />
-        <link rel="canonical" href="https://rhcsiteservices.com/porta-potty-rental-bend-or" />
+        <link rel="canonical" href="https://rhcsiteservice.com/porta-potty-rental-bend-or" />
       </Helmet>
 
       {/* BREADCRUMB */}

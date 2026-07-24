@@ -187,7 +187,7 @@ export default function ShowerTrailers() {
       <Helmet>
         <title>Shower Trailer Rentals in Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="2 to 8-stall shower trailer rentals across Oregon and Washington. Hot water standard on every unit. No minimums. Same-day quote." />
-        <link rel="canonical" href="https://rhcsiteservices.com/shower-trailers" />
+        <link rel="canonical" href="https://rhcsiteservice.com/shower-trailers" />
       </Helmet>
 
       {/* BREADCRUMB */}

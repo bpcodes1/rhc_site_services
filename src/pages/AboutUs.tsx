@@ -20,8 +20,8 @@ const orgSchema = {
   '@type': 'LocalBusiness',
   name: 'RHC Site Services',
   description:
-    'Portable toilet, restroom trailer, temporary fencing, shower trailer, storage container, and roll-off dumpster rentals across Oregon and Washington. Based in Portland, OR.',
-  url: 'https://bpcodes1.github.io/rhc_site_services/',
+    'Portable toilet, restroom trailer, temporary fencing, shower trailer, and storage container rentals across Oregon and Washington. Based in Portland, OR.',
+  url: 'https://rhcsiteservice.com/',
   telephone: '+15036077412',
   address: {
     '@type': 'PostalAddress',
@@ -52,7 +52,7 @@ export default function AboutUs() {
           name="description"
           content="RHC Site Services is run by Rafa out of Portland, OR. Learn what he personally stands behind on every rental and why he started the company in 2016."
         />
-        <link rel="canonical" href="https://bpcodes1.github.io/rhc_site_services/about-us" />
+        <link rel="canonical" href="https://rhcsiteservice.com/about-us" />
         <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
       </Helmet>
 

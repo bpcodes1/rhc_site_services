@@ -125,7 +125,7 @@ export default function PortaPottyPortland() {
       <Helmet>
         <title>Porta Potty Rental in Portland, OR | RHC Site Services</title>
         <meta name="description" content="Portable toilet rentals for Portland job sites and events on a confirmed delivery window. PBOT permit guidance included. Same-day quotes from RHC." />
-        <link rel="canonical" href="https://rhcsiteservices.com/porta-potty-rental-portland-or" />
+        <link rel="canonical" href="https://rhcsiteservice.com/porta-potty-rental-portland-or" />
       </Helmet>
 
       {/* BREADCRUMB */}

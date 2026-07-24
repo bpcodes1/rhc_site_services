@@ -115,7 +115,7 @@ export default function TemporaryFencingSeattle() {
           name="description"
           content="Temporary fencing rental for Seattle job sites, events, and residential renovations. RHC confirms SDOT permit status before every delivery and provides a written installation window. Same-day quote."
         />
-        <link rel="canonical" href="https://rhcsiteservices.com/temporary-fencing-rental-seattle-wa" />
+        <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing-rental-seattle-wa" />
       </Helmet>
 
       {/* BREADCRUMB */}
