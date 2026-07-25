@@ -94,7 +94,7 @@ all copy stays Oregon/Washington-scoped to protect local SEO.
    (P.O. Box, Google Maps URL, and Facebook URL: done as of 2026-07.)
 3. Google Search Console: register rhcsiteservice.com, submit
    public/sitemap.xml. Not started as of 2026-07-24.
-4. Bryan: unpublish GitHub Pages site (see Domain Situation above).
+4. DONE 2026-07-25: Bryan unpublished the GitHub Pages site (github.io now 404).
 5. Optional cleanup: delete src/pages/FAQ.tsx and its route.
 6. DONE 2026-07-24: Contact page now shows info@rhcsiteservices.com (the inbox
    Rafa designated for inquiries) in schema, mailto link, and displayed text.
