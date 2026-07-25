@@ -14,9 +14,7 @@ at any moment. SEO items are queued below with triage status.
 
 ## Framework Queue (triaged 2026-07-25)
 
-1. Cyrus Shepard expert framework: AUDIT NOW. Expert lens complementary to
-   Roof (quality/brand/effort signals vs. math); directly covers Roof's
-   E-E-A-T and AI-era gaps. Paste next.
+1. Cyrus Shepard expert framework: AUDITED 2026-07-25 (see Audit 2 below).
 2. Core GEO playbook + GEO Content Optimizer: AUDIT NOW, EXECUTE LATER.
    Covers the AI Overviews MISSING row. Execution is gated on prerendering:
    AI crawlers cannot read this client-side React site yet, so GEO rewrites
@@ -102,6 +100,83 @@ Authority tier is unmeasurable until Google Search Console exists and has
 ~3 months of click data. GSC setup is therefore the prerequisite for every
 tier-based decision. Until data exists: treat the domain as tier zero and
 follow Avalanche (within-tier accumulation) as the default strategy.
+
+---
+
+## Audit 2: Cyrus Shepard (audited 2026-07-25)
+
+Core thesis: Google's ML classifies sites into winner/loser buckets using
+brand legitimacy, demonstrated experience, content effort, and user
+satisfaction, not keyword completeness. Seven frameworks: Reverse-Engineering
+Outliers, E-E-A-T + Content Effort, Page Quality Scorecard, Three Clicks,
+Brand Authority Insulation, Internal Linking Architecture, Show Your Work /
+Reduce the User's Work. Note: Shepard runs Zyppy, whose title-tag studies the
+baseline already cites, shared source, so overlaps are expected.
+
+### Coverage vs. baseline
+
+| Baseline item | Verdict | Notes |
+|---|---|---|
+| E-E-A-T proof (photos, people, reviews on page) | COVERED+ | Quantifies it: stock images r=-0.403, first-person experience r=+0.383, contact info r=+0.288. Hardens the About Us TODOs |
+| Title best practices | COVERED+ | Adds over-optimization signals: 3+ adjectives r=-0.420, numbers r=-0.297, rewrite triggers |
+| Internal linking | COVERED+ | Adds 10+ internal links baseline, Selective Link Priority (first text link's anchor is what counts), post-HCU warning against aggressive anchor variety |
+| Location-page uniqueness | PARTIAL | "Could anyone create this by researching the internet?" is the exact test city pages must pass; no location-specific mechanics |
+| Reviews | PARTIAL | Independent reputation search method; no GBP/compliance mechanics |
+| First-100-words / direct answers | PARTIAL | "Reduce the User's Work" says the same thing for humans that GEO research says for AI engines |
+| Word count myths | COVERED | contentEffort is ML-assessed labor, explicitly not word count |
+| GBP / map pack / proximity | MISSING | Google-organic only, local pack not modeled |
+| JS rendering / prerendering | MISSING | |
+| www duplicate / domain consolidation / GSC setup | MISSING | |
+| AI Overviews / GEO | MISSING | Profile admits AI/LLM discoverability is out of scope |
+| CWV specifics / fonts / code-splitting | MISSING | Mobile UX yes; performance mechanics no |
+
+### What the framework ADDS beyond baseline + Roof
+
+1. Quantified on-page UX winner/loser signals: no ads (RHC has zero, its
+   biggest protection), original vs stock images, first-person experience
+   language, visible contact info, clear mobile logo, no mega menus, no push
+   notifications. Additive effects: stacked negatives compound.
+2. Brand authority as the #1 update insulator: branded anchor text % from
+   unique domains and brand search volume. Reframes future link building:
+   prefer brand-name anchors (PR, podcasts, sponsorships) over keyword
+   anchors for external links.
+3. Three Click framework: earn the SERP click (title/meta with specific
+   outcome language, +7% traffic when content delivers), hold engagement,
+   satisfy so the user never returns to Google. Meta-description craft was
+   absent from baseline and Roof.
+4. contentEffort (from the Google API leak): an LLM estimates labor invested.
+   Validates the published-specs and permit-guide strategy as machine-visible
+   effort.
+5. Mobile-only evaluation: quality raters judge 100% on mobile. Action: run a
+   mobile UX pass on all 17 pages (logo, contact info, scannability).
+6. Date discipline: do not touch dates without substantive updates (winners
+   averaged 774 days untouched; fake freshness correlates with losers).
+
+### Conflicts (with Roof and with baseline)
+
+1. Roof's math vs Shepard's anti-SEO: Roof says match competitor term counts;
+   Shepard says visible optimization stacking gets penalized. Resolution:
+   calibrate to competitor norms (Roof's own over-optimization diagnostic
+   agrees) and keep titles/anchors natural, no adjective/number stuffing.
+2. Anchor variety: baseline said "varied commercial anchors"; Shepard's
+   post-HCU data flipped excessive variety negative. Resolution: moderate,
+   natural variation; first text link carries the strategic anchor.
+3. Roof's "Lorem Ipsum with correct math outranked content" vs Shepard's
+   contentEffort: temporal decay, Shepard's data is post-HCU and newer. For
+   RHC both are satisfied anyway (real specs + correct math).
+
+### Red flags for RHC per Shepard's decision rules
+
+1. STRUCTURAL: new domain with ~zero brand authority, the strongest
+   winner/loser predictor is the one RHC lacks. Mitigations: GBP + citations
+   + branded-anchor links + (pending approval) the Oregon Portable Toilets
+   LLC link; Rafa's 2016-founded business history is real, make it visible.
+2. Photo plan is 50/50 client/stock: stock images correlate with losers
+   (r=-0.403). Bias originals onto heroes and city pages; keep stock only in
+   generic decorative slots (reinforces baseline Pillar 2 item 8).
+3. Mobile audit never performed; raters evaluate exclusively on mobile.
+4. Positive flags worth keeping: zero ads, zero push notifications, service
+   business model (lowest vulnerability class), no mega menus.
 
 ---
 
