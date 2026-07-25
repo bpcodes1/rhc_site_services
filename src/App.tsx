@@ -18,6 +18,7 @@ import ShowerTrailers from './pages/services/ShowerTrailers'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import FAQ from './pages/FAQ'
+import NotFound from './pages/NotFound'
 
 // Location pages — Bend, OR
 import PortaPottyBend from './pages/locations/bend/PortaPottyBend'
@@ -58,6 +59,7 @@ function App() {
           <Route path="porta-potty-rental-seattle-wa" element={<PortaPottySeattle />} />
           <Route path="restroom-trailer-rental-seattle-wa" element={<RestroomTrailerSeattle />} />
           <Route path="temporary-fencing-rental-seattle-wa" element={<TemporaryFencingSeattle />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

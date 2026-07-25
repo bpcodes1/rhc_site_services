@@ -155,7 +155,7 @@ export default function StorageContainers() {
       <Helmet>
         <title>Storage Container Rentals in Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="Steel shipping container rentals across Oregon and Washington. 10ft, 20ft, and 40ft storage containers for construction, moving, and renovation. No hidden fees. Same-day quote." />
-        <link rel="canonical" href="https://rhcsiteservices.com/storage-containers" />
+        <link rel="canonical" href="https://rhcsiteservice.com/storage-containers" />
       </Helmet>
 
       {/* BREADCRUMB */}

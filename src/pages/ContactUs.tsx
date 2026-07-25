@@ -29,14 +29,14 @@ const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact RHC Site Services',
-  url: 'https://rhcsiteservices.com/contact-us',
+  url: 'https://rhcsiteservice.com/contact-us',
   description:
-    'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, storage containers, and roll-off dumpsters across Oregon and Washington.',
+    'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, and storage containers across Oregon and Washington.',
   mainEntity: {
     '@type': 'LocalBusiness',
     name: 'RHC Site Services',
     telephone: '+15036077412',
-    email: 'Rafaelh@rhcsiteservices.com',
+    email: 'info@rhcsiteservices.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Portland',
@@ -83,7 +83,7 @@ export default function ContactUs() {
           name="description"
           content="Contact RHC Site Services in Portland, OR. Same-day quotes on portable toilets, restroom trailers, temporary fencing, storage containers, and more across Oregon and Washington. Phone, email, or form."
         />
-        <link rel="canonical" href="https://rhcsiteservices.com/contact-us" />
+        <link rel="canonical" href="https://rhcsiteservice.com/contact-us" />
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
@@ -262,7 +262,7 @@ export default function ContactUs() {
                   Email
                 </div>
                 <a
-                  href="mailto:Rafaelh@rhcsiteservices.com"
+                  href="mailto:info@rhcsiteservices.com"
                   style={{
                     fontSize: '15px',
                     fontWeight: 600,
@@ -273,7 +273,7 @@ export default function ContactUs() {
                     wordBreak: 'break-all',
                   }}
                 >
-                  Rafaelh@rhcsiteservices.com
+                  info@rhcsiteservices.com
                 </a>
               </div>
               <p style={{ margin: 0, fontSize: '14px', color: 'var(--on-surface-variant)', lineHeight: '1.65' }}>

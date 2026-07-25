@@ -123,7 +123,7 @@ export default function TemporaryFencingPortland() {
       <Helmet>
         <title>Temporary Fencing Rental Portland OR | RHC Site Services</title>
         <meta name="description" content="Panel fencing and post-driven chain link for Portland construction sites, events, and multifamily properties. PBOT permit guidance, published specs, same-day quotes." />
-        <link rel="canonical" href="https://rhcsiteservices.com/temporary-fencing-rental-portland-or" />
+        <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing-rental-portland-or" />
       </Helmet>
 
       {/* BREADCRUMB */}

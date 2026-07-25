@@ -117,7 +117,7 @@ export default function TemporaryFencingBend() {
       <Helmet>
         <title>Temporary Fencing Rental in Bend, OR | RHC Site Services</title>
         <meta name="description" content="Panel and post-driven temporary fencing for Bend job sites and events. Hard arrival windows, permit guidance included, locked pricing. Same-day quotes from RHC." />
-        <link rel="canonical" href="https://rhcsiteservices.com/temporary-fencing-rental-bend-or" />
+        <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing-rental-bend-or" />
       </Helmet>
 
       {/* BREADCRUMB */}

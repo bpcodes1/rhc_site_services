@@ -123,7 +123,7 @@ export default function RestroomTrailerBend() {
       <Helmet>
         <title>Restroom Trailer Rental in Bend, OR | RHC Site Services</title>
         <meta name="description" content="Luxury restroom trailer rentals for Bend outdoor events and long-term sites. Hard arrival windows, published specs, and all-in quotes from RHC. Central Oregon coverage." />
-        <link rel="canonical" href="https://rhcsiteservices.com/restroom-trailer-rental-bend-or" />
+        <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailer-rental-bend-or" />
       </Helmet>
 
       {/* BREADCRUMB */}
