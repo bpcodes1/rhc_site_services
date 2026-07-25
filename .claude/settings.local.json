@@ -3,7 +3,10 @@
     "allow": [
       "Bash(cd /c/businessProjects/rhc_site_services && git fetch origin && git checkout origin/main -- . 2>&1 || git pull origin main 2>&1)",
       "Bash(head:*)",
-      "Bash(cd \"C:/businessProjects/rhc_site_services\" && npm run build 2>&1)"
+      "Bash(cd \"C:/businessProjects/rhc_site_services\" && npm run build 2>&1)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(npm run *)"
     ]
   }
 }
