@@ -8,6 +8,37 @@ the framework ADDS beyond the baseline, and any conflicts between the two.
 The map of MISSING items across all audited frameworks = what we must execute
 from the baseline alone.
 
+Enrique holds a vault of frameworks (SEO, sales, audience growth, persuasive
+copy, code review, deep research) from a community group, pasteable on request
+at any moment. SEO items are queued below with triage status.
+
+## Framework Queue (triaged 2026-07-25)
+
+1. Cyrus Shepard expert framework: AUDIT NOW. Expert lens complementary to
+   Roof (quality/brand/effort signals vs. math); directly covers Roof's
+   E-E-A-T and AI-era gaps. Paste next.
+2. Core GEO playbook + GEO Content Optimizer: AUDIT NOW, EXECUTE LATER.
+   Covers the AI Overviews MISSING row. Execution is gated on prerendering:
+   AI crawlers cannot read this client-side React site yet, so GEO rewrites
+   before prerendering would optimize pages AI engines cannot see. Treat the
+   +30-40% visibility claims as directional (lab-derived), not guarantees.
+3. AEO Answer-Gap Desk: LATER (~90 days after GSC exists). Monitoring loop
+   that requires Search Console data plus paid tools (DataForSEO, Firecrawl);
+   nothing to monitor until the site has impressions.
+4. OpenClaw SEO Autoblog: NOT NOW, likely NOT FOR THIS SITE. Conflicts with
+   project decisions (blog dropped for launch) and with research: scaled
+   templated AI content is the exact pattern that triggers doorway/scaled-
+   content classification. Publishing targets (WordPress/Ghost) do not match
+   this React static site. Revisit only if a quality-controlled blog is
+   deliberately reintroduced at Phase 2+.
+5. SEO Article Generator: LATER, minor. Possible drafting aid for the 5
+   remaining city pages, but the existing 5-step page process (research,
+   review mining, Brutal Framework Analysis) already exceeds it.
+6. Community "where to start" advice (GEO audit first): OVERRIDDEN for this
+   site. That sequence assumes an indexed content library. RHC is not in
+   Google's index yet; Phase 0 foundations (www redirect, GSC, GBP, trust
+   pages, prerendering) come first, then GEO.
+
 ---
 
 ## Audit 1: Kyle Roof (audited 2026-07-24)
