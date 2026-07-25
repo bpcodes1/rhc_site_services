@@ -96,8 +96,8 @@ all copy stays Oregon/Washington-scoped to protect local SEO.
    public/sitemap.xml. Not started as of 2026-07-24.
 4. Bryan: unpublish GitHub Pages site (see Domain Situation above).
 5. Optional cleanup: delete src/pages/FAQ.tsx and its route.
-6. Contact page shows Rafaelh@rhcsiteservices.com; Rafa directs inquiries to
-   info@rhcsiteservices.com. Confirm with Rafa which address the page should show.
+6. DONE 2026-07-24: Contact page now shows info@rhcsiteservices.com (the inbox
+   Rafa designated for inquiries) in schema, mailto link, and displayed text.
 
 ## Other References
 

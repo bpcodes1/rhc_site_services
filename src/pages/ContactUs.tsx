@@ -36,7 +36,7 @@ const contactSchema = {
     '@type': 'LocalBusiness',
     name: 'RHC Site Services',
     telephone: '+15036077412',
-    email: 'Rafaelh@rhcsiteservices.com',
+    email: 'info@rhcsiteservices.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Portland',
@@ -262,7 +262,7 @@ export default function ContactUs() {
                   Email
                 </div>
                 <a
-                  href="mailto:Rafaelh@rhcsiteservices.com"
+                  href="mailto:info@rhcsiteservices.com"
                   style={{
                     fontSize: '15px',
                     fontWeight: 600,
@@ -273,7 +273,7 @@ export default function ContactUs() {
                     wordBreak: 'break-all',
                   }}
                 >
-                  Rafaelh@rhcsiteservices.com
+                  info@rhcsiteservices.com
                 </a>
               </div>
               <p style={{ margin: 0, fontSize: '14px', color: 'var(--on-surface-variant)', lineHeight: '1.65' }}>
