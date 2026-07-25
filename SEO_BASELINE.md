@@ -5,34 +5,49 @@ site (local lead-gen, service-area business, new domain, client-side React SPA).
 Use it to audit any SEO framework (e.g., Kyle Roof) by marking each item below
 as: COVERED / PARTIAL / MISSING in that framework.
 
-Sources: Pillars 2 and 3 come from fresh web research (Google Search Central,
-Whitespark 2026 Local Search Ranking Factors, Sterling Sky field tests, Zyppy,
-Rankability, BrightLocal, Search Engine Journal/Land). Pillar 1 comes from
-hands-on verification of this site done 2026-07-24, not fresh research; re-run
-research on it if deeper sourcing is wanted.
+Sources: all three pillars come from fresh web research (Google Search Central,
+Vercel/MERJ JS-rendering study, Cloudflare Pages docs, Whitespark 2026 Local
+Search Ranking Factors, Sterling Sky field tests, Zyppy, Rankability,
+BrightLocal, Search Engine Journal/Land), cross-checked against hands-on
+verification of this site done 2026-07-24.
 
 Status keys: [DONE] on this site already. [TODO] open action. [RAFA] needs Rafa.
 
-## Pillar 1: Technical SEO (hands-on verified)
+## Pillar 1: Technical SEO (researched)
 
-- [DONE] Unique title, meta description, canonical per page (react-helmet-async).
-- [DONE] Canonicals point to https://rhcsiteservice.com sitewide.
-- [DONE] sitemap.xml (17 URLs) and robots.txt live.
-- [DONE] 404 page with noindex (SPA serves it with HTTP 200; accepted mitigation).
-- [DONE] http -> https 301 redirect.
-- [TODO] www serves the site with no redirect. Add a 301 www -> apex redirect
-  rule in the Cloudflare dashboard (duplicate-host risk; canonicals mitigate).
-- [TODO] Unpublish GitHub Pages duplicate (Bryan).
-- [TODO] Google Search Console: create a Domain property (DNS verification via
-  Cloudflare), submit sitemap.xml, monitor Page Indexing report monthly.
-- [TODO] Validate schema on all pages with Google's Rich Results Test.
-- [WATCH] Site is client-side rendered. Google renders JS but with delay, and a
-  new zero-authority domain gets limited render budget. If GSC shows pages
-  "Crawled - not indexed" for weeks, consider prerendering (vite prerender
-  plugin or SSG) so HTML arrives complete. Decide from GSC data, not upfront.
-- [WATCH] Single ~830KB JS bundle (~213KB gzipped). Fine for now; route-level
-  code splitting is the first fix if Core Web Vitals (LCP/INP) test poorly.
-  Test at pagespeed.web.dev once indexed.
+Already right on this site:
+- [DONE] Unique title, description, canonical per page; canonicals on the apex
+  domain sitewide; sitemap.xml (17 canonical URLs) and robots.txt live (robots
+  allows /assets/, required for Google to render a JS site).
+- [DONE] http -> https 301. 404 page with noindex (the accepted SPA fallback).
+- [DONE] Zero third-party scripts (the top INP killer on small sites); keep it so.
+
+Actions, ranked by impact:
+1. [TODO] 301 www -> apex via a Cloudflare Redirect Rule (www DNS record must be
+   proxied). A live full-site duplicate on a zero-authority domain is the one
+   confirmed harmful defect. Ten-minute fix in the Cloudflare dashboard.
+2. [TODO] Prerender all 17 routes at build time (vite-react-ssg is the
+   lightest fit for Vite + react-router). Google renders JS reliably (100% in
+   the Vercel/MERJ study) but a new zero-backlink domain gets slow, patchy CSR
+   indexing (documented case: 20 of 198 SPA pages indexed after 6 months), and
+   social/AI crawlers never run JS, so link previews and AI-search visibility
+   only work with static HTML. After prerendering: remove the catch-all
+   _redirects rule and ship 404.html so unknown URLs return real HTTP 404s.
+3. [TODO] Google Search Console: Domain property (Cloudflare DNS TXT record),
+   submit sitemap.xml, then Request Indexing for all 17 URLs. Monitor Page
+   Indexing for "Crawled - currently not indexed" (classic new-domain symptom)
+   and use URL Inspection "View crawled page" to confirm rendering per page.
+4. [TODO] Unpublish GitHub Pages duplicate (Bryan). Verify the *.pages.dev
+   preview URL sends X-Robots-Tag: noindex (curl -I).
+5. [TODO] Schema: add BreadcrumbList to service and location pages (still shows
+   in SERPs); one canonical LocalBusiness block with areaServed (8 cities) and
+   NAP exactly matching the future GBP. Keep existing FAQPage markup but stop
+   adding it to new pages (rich result deprecated May 2026). Validate every
+   page with the Rich Results Test; it executes JS so it doubles as a render check.
+6. [TODO] Speed (CWV 2026 = LCP, CLS, INP; a tie-breaker signal but a
+   conversion win now): self-host the three Google Fonts with font-display:
+   swap and preload, route-split the ~830KB bundle with React.lazy, and set
+   explicit dimensions on hero/placeholder images to protect CLS.
 
 ## Pillar 2: On-Page and Content SEO (researched)
 
@@ -110,12 +125,14 @@ Actions, ranked by impact:
 
 ## Top Priorities Across All Pillars
 
-1. Google Business Profile fixed and fully populated (needs Rafa: real address).
-2. Review drip started and About Us E-E-A-T TODOs closed.
-3. Google Search Console property + sitemap submitted; watch indexing of the
-   17 pages (drives the prerendering decision).
-4. Internal-link cluster wired + first-100-words page openings.
-5. Domain consolidation via 301s when old-domain access is recovered.
+1. 301 www -> apex redirect in Cloudflare (ten minutes; only confirmed defect).
+2. Google Business Profile fixed and fully populated (needs Rafa: real address).
+3. Google Search Console Domain property + sitemap + Request Indexing all 17
+   URLs; watch the Page Indexing report.
+4. Prerender the 17 routes (vite-react-ssg), then serve real 404s.
+5. Review drip started and About Us E-E-A-T TODOs closed.
+6. Internal-link cluster wired + first-100-words page openings.
+7. Domain consolidation via page-level 301s when old-domain access is recovered.
 
 ## Known Corrections vs. Research Output
 
