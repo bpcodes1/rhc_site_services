@@ -59,6 +59,10 @@ in App.tsx and public/sitemap.xml; keep the catch-all NotFound route last.
 decisions, and launch TODOs live in DECISIONS.md. Do not re-litigate decisions
 recorded there unless Enrique raises them.
 
+For any SEO work, read SEO_BASELINE.md (research reference and priorities) and
+SEO_FRAMEWORK_AUDITS.md (framework audit map and queue) first. SEO_GLOSSARY.md
+holds plain-English term explanations for Enrique.
+
 ## Reminders
 
 - No em dashes. No "dispatch". Phone only in the final CTA section.
