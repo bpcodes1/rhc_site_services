@@ -63,6 +63,16 @@ For any SEO work, read SEO_BASELINE.md (research reference and priorities) and
 SEO_FRAMEWORK_AUDITS.md (framework audit map and queue) first. SEO_GLOSSARY.md
 holds plain-English term explanations for Enrique.
 
+## Working With Enrique
+
+- Explain new technical concepts in plain English at a 5th-grade reading
+  level; use analogies. Confirm understanding before building on a concept.
+- Challenge his reasoning when it is weak and say why. He expects pushback
+  and treats it as a feature, never rubber-stamp.
+- One question or decision at a time; lock it before moving to the next.
+- Zero assumptions: if a fact is not stated or verifiable, ask or verify.
+- He and Bryan both push to this repo. Pull before working.
+
 ## Reminders
 
 - No em dashes. No "dispatch". Phone only in the final CTA section.
