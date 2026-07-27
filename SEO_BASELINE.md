@@ -23,9 +23,9 @@ Already right on this site:
 - [DONE] Zero third-party scripts (the top INP killer on small sites); keep it so.
 
 Actions, ranked by impact:
-1. [TODO] 301 www -> apex via a Cloudflare Redirect Rule (www DNS record must be
-   proxied). A live full-site duplicate on a zero-authority domain is the one
-   confirmed harmful defect. Ten-minute fix in the Cloudflare dashboard.
+1. [DONE 2026-07-27] 301 www -> apex via Cloudflare Redirect Rule ("Redirect
+   from WWW to root" template, preserve query string). Verified: www root and
+   deep paths 301 to matching apex URLs, query strings preserved.
 2. [TODO] Prerender all 17 routes at build time (vite-react-ssg is the
    lightest fit for Vite + react-router). Google renders JS reliably (100% in
    the Vercel/MERJ study) but a new zero-backlink domain gets slow, patchy CSR
@@ -37,8 +37,9 @@ Actions, ranked by impact:
    submit sitemap.xml, then Request Indexing for all 17 URLs. Monitor Page
    Indexing for "Crawled - currently not indexed" (classic new-domain symptom)
    and use URL Inspection "View crawled page" to confirm rendering per page.
-4. [TODO] Unpublish GitHub Pages duplicate (Bryan). Verify the *.pages.dev
-   preview URL sends X-Robots-Tag: noindex (curl -I).
+4. [DONE 2026-07-27] GitHub Pages duplicate unpublished (Bryan). pages.dev did
+   NOT send noindex by default (verified by curl); fixed via host-scoped rule in
+   public/_headers (X-Robots-Tag: noindex on rhc-site-services.pages.dev only).
 5. [TODO] Schema: add BreadcrumbList to service and location pages (still shows
    in SERPs); one canonical LocalBusiness block with areaServed (8 cities) and
    NAP exactly matching the future GBP. Keep existing FAQPage markup but stop
