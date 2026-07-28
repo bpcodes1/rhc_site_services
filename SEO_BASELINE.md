@@ -26,7 +26,7 @@ Actions, ranked by impact:
 1. [DONE 2026-07-27] 301 www -> apex via Cloudflare Redirect Rule ("Redirect
    from WWW to root" template, preserve query string). Verified: www root and
    deep paths 301 to matching apex URLs, query strings preserved.
-2. [TODO] Prerender all 17 routes at build time. NOTE 2026-07-27: vite-react-ssg
+2. [DONE 2026-07-27] Prerendered all 17 routes + real 404s. NOTE: vite-react-ssg
    (the original pick) is NOT usable, it imports react-router-dom/server.js,
    a subpath React Router 7 removed; its README now redirects v7 users
    elsewhere. Puppeteer-based prerendering is also out: Cloudflare Pages build
