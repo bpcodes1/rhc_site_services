@@ -26,8 +26,15 @@ Actions, ranked by impact:
 1. [DONE 2026-07-27] 301 www -> apex via Cloudflare Redirect Rule ("Redirect
    from WWW to root" template, preserve query string). Verified: www root and
    deep paths 301 to matching apex URLs, query strings preserved.
-2. [TODO] Prerender all 17 routes at build time (vite-react-ssg is the
-   lightest fit for Vite + react-router). Google renders JS reliably (100% in
+2. [TODO] Prerender all 17 routes at build time. NOTE 2026-07-27: vite-react-ssg
+   (the original pick) is NOT usable, it imports react-router-dom/server.js,
+   a subpath React Router 7 removed; its README now redirects v7 users
+   elsewhere. Puppeteer-based prerendering is also out: Cloudflare Pages build
+   images lack Chromium's shared libraries and forbid apt/root. Replacement is
+   a 60-line prerender.mjs plus src/entry-server.tsx that renders each route to
+   a string in plain Node (React 19 hoists head tags, react-helmet-async v3 is
+   a passthrough), needing no browser and no framework migration.
+   Google renders JS reliably (100% in
    the Vercel/MERJ study) but a new zero-backlink domain gets slow, patchy CSR
    indexing (documented case: 20 of 198 SPA pages indexed after 6 months), and
    social/AI crawlers never run JS, so link previews and AI-search visibility

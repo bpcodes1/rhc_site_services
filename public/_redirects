@@ -1,1 +1,3 @@
-/* /index.html 200
+# Every route is prerendered to its own HTML file, so the SPA catch-all
+# (/* /index.html 200) is gone. Without it, unknown URLs fall through to
+# dist/404.html and return a real HTTP 404 instead of a soft 200.

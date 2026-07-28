@@ -81,6 +81,8 @@ const faqs = [
   },
 ]
 
+// Kept for the testimonial slots below; uncomment when real reviews are added.
+/*
 const testimonialStyle = {
   blockquote: {
     margin: '20px 0 0' as const,
@@ -105,6 +107,7 @@ const testimonialStyle = {
     textTransform: 'uppercase' as const,
   },
 }
+*/
 
 export default function TemporaryFencingSeattle() {
   return (
@@ -446,13 +449,14 @@ export default function TemporaryFencingSeattle() {
                 Parks venue, Special Event Permit status is confirmed before the delivery window is set.
                 This step happens before scheduling, not after a problem surfaces on installation day.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — flagged the SDOT permit before delivery / no surprises on
-                  site / handled the complexity]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 01" paragraph about SDOT permit review before every delivery
+                  Intended review theme: flagged the SDOT permit before delivery / no surprises on site / handled the complexity
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -465,13 +469,14 @@ export default function TemporaryFencingSeattle() {
                 the quote is the number on the invoice. No fuel surcharges. No line items added after
                 installation.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — invoice matched the quote / showed up on time / no surprise
-                  charges]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 02" paragraph about the written delivery window and fixed quote
+                  Intended review theme: invoice matched the quote / showed up on time / no surprise charges
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -485,13 +490,14 @@ export default function TemporaryFencingSeattle() {
                 filled. All panels sourced for Seattle construction sites meet WA L&amp;I DOSH standards
                 under WAC 296-155.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — equipment was solid / no issues in wind / looked
-                  professional on site]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 03" paragraph about equipment matched to Seattle conditions
+                  Intended review theme: equipment was solid / no issues in wind / looked professional on site
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
           </div>
         </div>
@@ -547,32 +553,33 @@ export default function TemporaryFencingSeattle() {
                 <span>No commitment. Quote back the same day.</span>
               </div>
 
-              <blockquote
-                style={{
-                  margin: '20px 0',
-                  padding: '14px 18px',
-                  background: 'rgba(255,255,255,0.07)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 4px 4px 0',
-                }}
-              >
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  [Testimonial placeholder — easy booking / quote came back same day / fence arrived on
-                  time / would use RHC again]
-                </p>
-                <footer
-                  style={{
-                    marginTop: '8px',
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '11px',
-                    color: 'var(--secondary-fixed-dim)',
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "No commitment. Quote back the same day." final-trigger block in the Get Started section
+                  Intended review theme: easy booking / quote came back same day / fence arrived on time / would use RHC again
+                  Restore with:
+                  <blockquote
+                    style={{
+                      margin: '20px 0',
+                      padding: '14px 18px',
+                      background: 'rgba(255,255,255,0.07)',
+                      borderLeft: '3px solid var(--secondary)',
+                      borderRadius: '0 4px 4px 0',
+                    }}
+                  >
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer
+                      style={{
+                        marginTop: '8px',
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '11px',
+                        color: 'var(--secondary-fixed-dim)',
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>

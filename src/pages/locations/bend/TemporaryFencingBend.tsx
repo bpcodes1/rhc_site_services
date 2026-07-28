@@ -86,6 +86,8 @@ const faqs = [
   },
 ]
 
+// Kept for the testimonial slots below; uncomment when real reviews are added.
+/*
 const testimonialStyle = {
   blockquote: {
     margin: '20px 0 0' as const,
@@ -110,6 +112,7 @@ const testimonialStyle = {
     textTransform: 'uppercase' as const,
   },
 }
+*/
 
 export default function TemporaryFencingBend() {
   return (
@@ -359,12 +362,14 @@ export default function TemporaryFencingBend() {
               <p>
                 A construction timeline in Central Oregon does not have slack for a vendor who goes quiet between the quote and delivery day. RHC confirms every booking before the truck is scheduled, gives you a hard arrival window, and if anything changes before delivery, you hear from RHC before that window, not after you have been waiting on site. That is not a goal. It is how every rental is managed.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — vendor followed through / confirmed before delivery / showed up on time]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 01" paragraph about confirmed bookings and hard delivery windows
+                  Intended review theme: vendor followed through / confirmed before delivery / showed up on time
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -373,12 +378,14 @@ export default function TemporaryFencingBend() {
               <p>
                 No fuel surcharges added at pickup. No damage fees on the back-end invoice for normal wear. The number you approve on day one is the number on your final bill. The only variable after that is rental duration if your project runs longer than quoted, and that conversation happens before pickup, not after.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — invoice matched the quote exactly / no surprise charges / would book again]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 02" paragraph about the price you approve being the price you pay
+                  Intended review theme: invoice matched the quote exactly / no surprise charges / would book again
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -387,12 +394,14 @@ export default function TemporaryFencingBend() {
               <p>
                 No competitor in this market publishes permit requirements for Bend fence placements. Most vendors hand you the fence and leave the permit question to you. RHC flags Right-of-Way requirements, HOA restrictions, and event permit conditions before the truck rolls. The permit situation is resolved before delivery day, not the morning of.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — flagged the permit before delivery / handled the complexity / no surprises on site]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 03" paragraph about permit knowledge before delivery day
+                  Intended review theme: flagged the permit before delivery / handled the complexity / no surprises on site
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
           </div>
         </div>
@@ -441,14 +450,16 @@ export default function TemporaryFencingBend() {
                 <span>No commitment. Fast response.</span>
               </div>
 
-              <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  [Testimonial placeholder — easy booking / quote came back same day / fence arrived on time / would use RHC again]
-                </p>
-                <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "No commitment. Fast response." final-trigger block in the Get Started section
+                  Intended review theme: easy booking / quote came back same day / fence arrived on time / would use RHC again
+                  Restore with:
+                  <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>

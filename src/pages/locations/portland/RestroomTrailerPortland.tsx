@@ -96,6 +96,8 @@ const faqs = [
   },
 ]
 
+// Kept for the testimonial slots below; uncomment when real reviews are added.
+/*
 const testimonialStyle = {
   blockquote: {
     margin: '20px 0 0' as const,
@@ -120,6 +122,7 @@ const testimonialStyle = {
     textTransform: 'uppercase' as const,
   },
 }
+*/
 
 export default function RestroomTrailerPortland() {
   return (
@@ -390,12 +393,14 @@ export default function RestroomTrailerPortland() {
               <p>
                 A winery reception in the Willamette Valley or a backyard wedding in Portland does not have slack for a vendor that shows up whenever the truck gets there. RHC gives you a confirmed delivery window, positioned before your venue coordinator does the final walkthrough. If anything changes before it, you hear from RHC before that window, not after you have been standing at the venue waiting.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — arrived on time / positioned exactly where we marked / coordinator never had to think about it / smooth from start to finish]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 01" paragraph about confirmed arrival windows
+                  Intended review theme: arrived on time / positioned exactly where we marked / coordinator never had to think about it / smooth from start to finish
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -404,12 +409,14 @@ export default function RestroomTrailerPortland() {
               <p>
                 No fuel surcharge added the week before your event. No generator fee that appeared after the fact. Your quote covers delivery, leveling, setup, and post-event pump-out and removal. That number does not change between the day you approve it and the day the final invoice arrives, unless your event duration changes, and that conversation happens before pickup, not after. The most straightforward rental you will handle all event season.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — invoice matched the quote exactly / no surprise charges / easiest vendor to work with]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 02" paragraph about the quote you approve being the bill you pay
+                  Intended review theme: invoice matched the quote exactly / no surprise charges / easiest vendor to work with
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -418,12 +425,14 @@ export default function RestroomTrailerPortland() {
               <p>
                 The most common complaint about restroom trailer vendors is that what showed up looked nothing like what was advertised. RHC publishes exact exterior dimensions, tank capacities, ADA ramp deployment widths, and power requirements on the main service page before you fill out a form. What arrives at your venue is what you confirmed when you booked. Clean, air-conditioned, stocked, and ready before the first guest arrives. Not something you usually say about portable restrooms.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — unit matched the listing / clean and air conditioned / guests noticed and complimented / would book again]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 03" paragraph about exact specs published before you book
+                  Intended review theme: unit matched the listing / clean and air conditioned / guests noticed and complimented / would book again
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
           </div>
         </div>
@@ -472,14 +481,16 @@ export default function RestroomTrailerPortland() {
                 <span>No commitment. Fast response.</span>
               </div>
 
-              <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  [Testimonial placeholder — easy booking / quote came back same day / trailer was clean and exactly as described / guests loved it / would book again]
-                </p>
-                <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "No commitment. Fast response." final-trigger block in the Get Started section
+                  Intended review theme: easy booking / quote came back same day / trailer was clean and exactly as described / guests loved it / would book again
+                  Restore with:
+                  <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>

@@ -124,6 +124,8 @@ const faqs = [
   },
 ]
 
+// Kept for the testimonial slots below; uncomment when real reviews are added.
+/*
 const testimonialStyle = {
   blockquote: {
     margin: '20px 0 0' as const,
@@ -148,6 +150,7 @@ const testimonialStyle = {
     textTransform: 'uppercase' as const,
   },
 }
+*/
 
 export default function StorageContainers() {
   return (
@@ -429,12 +432,14 @@ export default function StorageContainers() {
               <p>The most common complaint across national portable storage companies is not late delivery. It is billing. Quoted one number, charged another. Fuel surcharges added without disclosure. Extra months billed without notice. Deposits held against fees buried in the fine print and never mentioned on the call.</p>
               <p style={{ marginTop: '12px' }}>Before any delivery is confirmed, you receive a written quote with three line items: the 28-day rental rate, the flat delivery fee, and the flat pickup fee. You approve that number. Nothing is added after. If your project runs long and you need another 28-day cycle, that is confirmed with you before the billing period rolls, not discovered afterward on a statement.</p>
               {/* TESTIMONIAL PLACEHOLDER — 5-star Google review referencing transparent pricing or no hidden fees */}
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — transparent pricing / no hidden fees]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 01" paragraph about the written quote with three line items (The Price You Are Quoted Is the Price You Pay)
+                  Intended review theme: transparent pricing / no hidden fees
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -443,12 +448,14 @@ export default function StorageContainers() {
               <p>The second most common complaint from national providers: the container did not show up. Reserved weeks in advance, called multiple times, eventually told the driver simply did not complete the delivery. Moving day is not negotiable. Job site start dates are not negotiable.</p>
               <p style={{ marginTop: '12px' }}>The delivery window on your confirmation is set before it is sent. Not a twelve-hour range. Not a "sometime that day." A committed window that RHC is accountable to. If anything changes before your scheduled delivery, you hear from RHC before your window closes, not after you have been waiting. Pickup works the same way: one call, container off-site within 48-72 hours, confirmed before you hang up.</p>
               {/* TESTIMONIAL PLACEHOLDER — 5-star Google review referencing on-time delivery or reliable communication */}
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — on-time delivery / reliable communication]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 02" paragraph about committed delivery windows (Delivery Happens When It Is Scheduled)
+                  Intended review theme: on-time delivery / reliable communication
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -457,12 +464,14 @@ export default function StorageContainers() {
               <p>Every regional competitor will tell you their containers are clean and their doors work. Most cannot tell you the condition of the specific unit until it comes off the truck. The most common job site complaint in container rentals: the box arrived beat up, the puck lock enclosure was not in place, and the doors were hard to open and close.</p>
               <p style={{ marginTop: '12px' }}>RHC sources containers to WWT standard. Doors function. The lockbox is in place. The unit arrives ready to load, not ready to argue about.</p>
               {/* TESTIMONIAL PLACEHOLDER — 5-star Google review referencing container condition on arrival */}
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — container condition on arrival]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 03" paragraph about container condition on arrival (The Container Arrives Ready to Use)
+                  Intended review theme: container condition on arrival
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
           </div>
         </div>
@@ -534,14 +543,16 @@ export default function StorageContainers() {
               <p>Fill out the form and RHC comes back with a real quote for your job site, move, or renovation. Container size, delivery fee, and pickup cost all included in the first response. No hidden charges added after.</p>
 
               {/* TESTIMONIAL PLACEHOLDER — 5-star Google review referencing smooth delivery, communication, or overall experience */}
-              <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  [Testimonial placeholder — smooth delivery / communication / overall experience]
-                </p>
-                <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the final CTA intro paragraph about filling out the form and getting a real quote
+                  Intended review theme: smooth delivery / communication / overall experience
+                  Restore with:
+                  <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>
@@ -562,7 +573,7 @@ export default function StorageContainers() {
               />
               <div className="final-trigger" style={{ marginTop: '12px' }}>
                 <span className="final-trigger-dot" aria-hidden="true"></span>
-                <span>Flat quote — rental, delivery, and pickup included. No changes after approval. No minimums. No contracts.</span>
+                <span>Flat quote: rental, delivery, and pickup included. No changes after approval. No minimums. No contracts.</span>
               </div>
             </div>
           </div>

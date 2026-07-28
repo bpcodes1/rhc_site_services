@@ -153,7 +153,7 @@ export default function TemporaryFencing() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">01 / Fence Types</div>
-              <h2 className="h-lg">Panel fencing vs. post-driven chain link — which one does your site need?</h2>
+              <h2 className="h-lg">Panel fencing vs. post-driven chain link: Which one does your site need?</h2>
             </div>
             <p>The right fence depends on your surface, timeline, and security requirements. Both types are delivered and installed by RHC. Your crew does not touch a panel.</p>
           </div>
@@ -344,7 +344,7 @@ export default function TemporaryFencing() {
 
           <div className="area-foot" style={{ marginTop: '24px' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
-            <p><strong>Don't see your city listed?</strong> Fill out the form — we're actively expanding and may still be able to serve your location.</p>
+            <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
           </div>
         </div>
       </section>

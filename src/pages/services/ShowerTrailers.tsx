@@ -156,7 +156,8 @@ const faqs = [
   },
 ]
 
-const testimonialStyle = {
+// Kept for the testimonial slots below; uncomment when real reviews are added.
+/* const testimonialStyle = {
   blockquote: {
     margin: '20px 0 0' as const,
     padding: '14px 18px',
@@ -179,7 +180,7 @@ const testimonialStyle = {
     letterSpacing: '0.08em',
     textTransform: 'uppercase' as const,
   },
-}
+} */
 
 export default function ShowerTrailers() {
   return (
@@ -446,7 +447,7 @@ export default function ShowerTrailers() {
               <div className="eyebrow">04 / Why RHC</div>
               <h2 className="h-lg">Why RHC for Shower Trailer Rentals</h2>
             </div>
-            <p>In business for 15+ years, serving 10+ cities across Oregon and Washington and expanding. The dominant players in portable sanitation are national corporations with 275 or more locations. When there is a problem, you call a 1-800 number and wait to be transferred. RHC operates differently.</p>
+            <p>Run by Rafa, who has worked in portable sanitation across Oregon and Washington since 2016. The dominant players are national corporations with 275 or more locations. When there is a problem, you call a 1-800 number and wait to be transferred. RHC operates differently.</p>
           </div>
 
           <div className="why-grid">
@@ -460,24 +461,28 @@ export default function ShowerTrailers() {
               <div className="why-num">02</div>
               <h3>One Team. Every Detail. Start to Finish.</h3>
               <p>National corporations with 275 or more locations process your rental through a chain of handoffs. A sales rep, a coordinator, a regional subcontractor, and a delivery driver who has never spoken to anyone on your team. When something is wrong, there is no one accountable. There is a ticket number. RHC coordinates every detail from quote to pickup. If something is off, you reach the same people who booked you.</p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  "I've had the best experience ever with this company. They have been servicing a remote job site for months. They always do a great job. Couldn't have had a better experience. Highly recommend."
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: closing the "why-item 02" paragraph about one accountable team.
+                  Intended review theme: long-running service on a remote job site, consistent quality.
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
               <div className="why-num">03</div>
               <h3>Clean Is Confirmed, Not Assumed</h3>
               <p>The most common complaint in portable sanitation reviews across the Pacific Northwest: the unit arrived in a condition that did not match what was described online. RHC confirms unit condition before delivery so you are not the one discovering the problem on your first deployment day. Weekly pump-out service is standard, not an add-on you negotiate after something goes wrong. You should not have to wonder whether your unit was cleaned. You should know.</p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  "The driver that comes to our place is AMAZING.. always super helpful and patient.. makes sure to let my husband really rinse the tank..and that REALLY helps with everything. The gal on the phone is always very nice and they usually get out to us THE SAME DAY as we call!"
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: closing the "why-item 03" paragraph about confirmed cleanliness.
+                  Intended review theme: helpful driver, responsive phone contact, same-day turnaround.
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
           </div>
         </div>
@@ -548,14 +553,16 @@ export default function ShowerTrailers() {
               </h2>
               <p>Fill out the form and we come back with a real quote for your deployment. No commitment. No phone tag.</p>
 
-              <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  "This company is excellent in customer service. They work with our schedule, and usually are able to come out in the same day as we call. We really appreciate their good values!"
-                </p>
-                <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: in the final CTA, between the "no phone tag" line and the phone link.
+                  Intended review theme: customer service worked around the client's schedule, same-day response.
+                  Restore with:
+                  <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>

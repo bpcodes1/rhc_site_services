@@ -23,7 +23,7 @@ const trailerTiers = [
     num: '01 / 2–3 Stall',
     name: '2-Stall and 3-Stall Configurations',
     bestFor: 'Up to 150 guests (2-stall) · Winery weddings, private outdoor events, estate receptions',
-    description: 'The entry-level luxury configuration for intimate Oregon and Washington outdoor events. Standard 2-stall configurations accommodate up to 150 guests for events running 4 to 6 hours. Climate-controlled, porcelain flushing toilets, running hot and cold water, vanity mirrors, and interior lighting. For guest counts between the 2-stall and 4-stall ranges, a 3-stall configuration is available — note your headcount and duration on the form.',
+    description: 'The entry-level luxury configuration for intimate Oregon and Washington outdoor events. Standard 2-stall configurations accommodate up to 150 guests for events running 4 to 6 hours. Climate-controlled, porcelain flushing toilets, running hot and cold water, vanity mirrors, and interior lighting. For guest counts between the 2-stall and 4-stall ranges, a 3-stall configuration is available. Note your headcount and duration on the form.',
     specs: [
       { label: 'Exterior (L × W × H)', value: "12' long (15' w/ tongue) × 6' wide (9' w/ stairs) × 10'6\" high" },
       { label: 'Freshwater tank', value: '105–125 gal (or connect to a garden hose for unlimited supply)' },
@@ -91,11 +91,11 @@ const trailerTiers = [
 const faqs = [
   {
     q: "What's the difference between a porta potty and a restroom trailer?",
-    a: "A standard portable toilet is a single plastic unit with an open waste tank — basic sanitation capacity for worksites and casual outdoor use. A restroom trailer — also called a bathroom trailer — is a climate-controlled, multi-stall unit with porcelain flushing toilets, running hot and cold water, vanity mirrors, and a completely sealed waste system. Guests using a luxury restroom trailer routinely describe it as nicer than most indoor bathrooms they've been in.",
+    a: "A standard portable toilet is a single plastic unit with an open waste tank, basic sanitation capacity for worksites and casual outdoor use. A restroom trailer, also called a bathroom trailer, is a climate-controlled, multi-stall unit with porcelain flushing toilets, running hot and cold water, vanity mirrors, and a completely sealed waste system. Guests using a luxury restroom trailer routinely describe it as nicer than most indoor bathrooms they've been in.",
   },
   {
     q: 'How does a restroom trailer actually work?',
-    a: "The same way an RV or airplane lavatory does. Freshwater from an onboard holding tank — or a connected garden hose — feeds the faucets and flushing mechanism. Waste flushes into a completely sealed blackwater tank beneath the floor. No exposed waste, no odor. When the event ends, RHC pumps and sanitizes the unit during pickup.",
+    a: "The same way an RV or airplane lavatory does. Freshwater from an onboard holding tank, or a connected garden hose, feeds the faucets and flushing mechanism. Waste flushes into a completely sealed blackwater tank beneath the floor. No exposed waste, no odor. When the event ends, RHC pumps and sanitizes the unit during pickup.",
   },
   {
     q: 'How much does it cost to rent a luxury restroom trailer in Oregon?',
@@ -107,15 +107,15 @@ const faqs = [
   },
   {
     q: 'Do restroom trailers need a water hookup?',
-    a: "A garden hose connection is ideal but not required. All trailers come with onboard freshwater holding tanks — no hookup needed for remote venues. For a standard 4-to-6 hour event, the onboard tank is sufficient without refilling.",
+    a: "A garden hose connection is ideal but not required. All trailers come with onboard freshwater holding tanks. No hookup needed for remote venues. For a standard 4-to-6 hour event, the onboard tank is sufficient without refilling.",
   },
   {
     q: 'Do restroom trailers need electricity?',
-    a: "Yes. A 2-stall requires one dedicated 110V / 20-amp circuit. A 4-stall requires two to three. Configurations from 6 stalls and above require two to three circuits, with dual A/C units on 8-stall and larger requiring multiple circuits to run simultaneously. If your venue has no power, RHC provides a quiet generator — note it in the form and it will be included in your quote.",
+    a: "Yes. A 2-stall requires one dedicated 110V / 20-amp circuit. A 4-stall requires two to three. Configurations from 6 stalls and above require two to three circuits, with dual A/C units on 8-stall and larger requiring multiple circuits to run simultaneously. If your venue has no power, RHC provides a quiet generator. Note it in the form and it will be included in your quote.",
   },
   {
     q: 'Do restroom trailers have air conditioning and heat?',
-    a: "Yes — all units are fully climate-controlled. Oregon summers can run hot and fall events along the coast run cold and damp. Your guests stay comfortable either way.",
+    a: "Yes, all units are fully climate-controlled. Oregon summers can run hot and fall events along the coast run cold and damp. Your guests stay comfortable either way.",
   },
   {
     q: 'Do restroom trailers smell?',
@@ -123,11 +123,11 @@ const faqs = [
   },
   {
     q: 'Can a restroom trailer be placed on grass or dirt?',
-    a: "Yes. The trailer needs relatively level ground. The driver will assess terrain and confirm safe placement before delivery — mention soft or uneven ground when you book so the approach can be planned without causing turf damage.",
+    a: "Yes. The trailer needs relatively level ground. The driver will assess terrain and confirm safe placement before delivery. Mention soft or uneven ground when you book so the approach can be planned without causing turf damage.",
   },
   {
     q: 'Can a restroom trailer fit inside a tent?',
-    a: "Generally yes, if the tent is a high-clearance marquee style without a floor and the delivery truck has enough clearance to back in before the walls are secured. The AC unit also needs airflow — a fully enclosed tent without ventilation won't work. Describe your tent setup in the notes field and we'll confirm before booking.",
+    a: "Generally yes, if the tent is a high-clearance marquee style without a floor and the delivery truck has enough clearance to back in before the walls are secured. The AC unit also needs airflow. A fully enclosed tent without ventilation won't work. Describe your tent setup in the notes field and we'll confirm before booking.",
   },
   {
     q: 'Do I have to clean the trailer before pickup?',
@@ -135,7 +135,7 @@ const faqs = [
   },
   {
     q: 'How far in advance should I book?',
-    a: "At least 72 hours to guarantee availability. June through October fills fast — if your event is within the next two weeks, call RHC directly rather than using the form.",
+    a: "At least 72 hours to guarantee availability. June through October fills fast. If your event is within the next two weeks, call RHC directly rather than using the form.",
   },
 ]
 
@@ -144,7 +144,7 @@ export default function RestroomTrailers() {
     <main id="main">
       <Helmet>
         <title>Restroom Trailer Rental Oregon &amp; Washington | RHC Site Services</title>
-        <meta name="description" content="Luxury restroom trailers from 2 to 10 stalls — published specs, confirmed delivery windows, and climate control for events across Oregon and Washington. Same-day quotes from RHC." />
+        <meta name="description" content="Luxury restroom trailers from 2 to 10 stalls: published specs, confirmed delivery windows, and climate control for events across Oregon and Washington. Same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailers" />
       </Helmet>
 
@@ -233,9 +233,9 @@ export default function RestroomTrailers() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">01 / Trailer Types</div>
-              <h2 className="h-lg">2-Stall through 10-Stall — What's the right restroom trailer configuration for your event?</h2>
+              <h2 className="h-lg">2-Stall through 10-Stall: What's the right restroom trailer configuration for your event?</h2>
             </div>
-            <p>Every stall count from 2 to 10 is available. ADA configurations exist on all sizes. The four tiers below anchor around confirmed guest counts — if your event falls between tiers, note your headcount and duration on the form and RHC will confirm the right configuration. Every trailer is climate-controlled with porcelain flushing toilets, running hot and cold water, vanity mirrors, and interior lighting.</p>
+            <p>Every stall count from 2 to 10 is available. ADA configurations exist on all sizes. The four tiers below anchor around confirmed guest counts. If your event falls between tiers, note your headcount and duration on the form and RHC will confirm the right configuration. Every trailer is climate-controlled with porcelain flushing toilets, running hot and cold water, vanity mirrors, and interior lighting.</p>
           </div>
 
           <div className="units">
@@ -357,7 +357,7 @@ export default function RestroomTrailers() {
           </table>
 
           <p style={{ marginTop: '24px', fontSize: '14px', color: 'var(--on-surface-variant)' }}>
-            Intermediate stall counts (3, 5, 7, 9) are available for guest counts between these anchors. For events with an open bar or runtimes beyond the ranges above, move up one stall count or note it on the form — RHC will include mid-event servicing in your quote.
+            Intermediate stall counts (3, 5, 7, 9) are available for guest counts between these anchors. For events with an open bar or runtimes beyond the ranges above, move up one stall count or note it on the form. RHC will include mid-event servicing in your quote.
           </p>
         </div>
       </section>
@@ -370,7 +370,7 @@ export default function RestroomTrailers() {
               <div className="eyebrow">03 / Use Cases</div>
               <h2 className="h-lg">Built for weddings, festivals, and every outdoor event in the Pacific Northwest.</h2>
             </div>
-            <p>From a 2-stall trailer at a Willamette Valley winery to a 4-stall unit at a 300-person festival — the same operational standard applies across every job.</p>
+            <p>From a 2-stall trailer at a Willamette Valley winery to a 4-stall unit at a 300-person festival, the same operational standard applies across every job.</p>
           </div>
 
           <div className="use-cases">
@@ -382,7 +382,7 @@ export default function RestroomTrailers() {
             <div className="use-case">
               <div className="use-num">02 / Festivals</div>
               <h3>Festivals &amp; Large-Scale Outdoor Events</h3>
-              <p>A 4-stall unit for 250 people, staged for traffic flow, serviced mid-event if your run time exceeds tank capacity. And if you need temporary fencing and standard portable toilets for the same event, one call to RHC covers all of it — you don't manage a second or third vendor.</p>
+              <p>A 4-stall unit for 250 people, staged for traffic flow, serviced mid-event if your run time exceeds tank capacity. And if you need temporary fencing and standard portable toilets for the same event, one call to RHC covers all of it. You don't manage a second or third vendor.</p>
             </div>
             <div className="use-case">
               <div className="use-num">03 / Vineyard</div>
@@ -404,7 +404,7 @@ export default function RestroomTrailers() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">04 / The RHC Standard</div>
-              <h2 className="h-lg">The three failures we built RHC to fix — for events.</h2>
+              <h2 className="h-lg">The three failures we built RHC to fix, for events.</h2>
             </div>
             <p>Every 1-star review of a restroom trailer company reads the same way. The equipment looked nothing like the website. The price changed after the agreement. The driver left the trailer where the truck stopped, not where the coordinator asked.</p>
           </div>
@@ -413,7 +413,7 @@ export default function RestroomTrailers() {
             <div className="why-item">
               <div className="why-num">01</div>
               <h3>We Publish Our Specs</h3>
-              <p>Exact exterior dimensions, tank capacities, and power requirements — all listed on this page before you fill out a single form. The most common 1-star review in this industry reads some version of "what showed up looked nothing like what was advertised." We fix that before you book.</p>
+              <p>Exact exterior dimensions, tank capacities, and power requirements, all listed on this page before you fill out a single form. The most common 1-star review in this industry reads some version of "what showed up looked nothing like what was advertised." We fix that before you book.</p>
             </div>
             <div className="why-item">
               <div className="why-num">02</div>
@@ -422,8 +422,8 @@ export default function RestroomTrailers() {
             </div>
             <div className="why-item">
               <div className="why-num">03</div>
-              <h3>Positioned Where You Mark It — Gone Before Guests Arrive</h3>
-              <p>The driver will assess your terrain and confirm placement with your coordinator before delivery. Setup happens before your event starts. Removal happens after — no vendor is ever visible during your event.</p>
+              <h3>Positioned Where You Mark It, Gone Before Guests Arrive</h3>
+              <p>The driver will assess your terrain and confirm placement with your coordinator before delivery. Setup happens before your event starts. Removal happens after. No vendor is ever visible during your event.</p>
             </div>
           </div>
         </div>
@@ -437,7 +437,7 @@ export default function RestroomTrailers() {
               <div className="eyebrow">05 / Coverage</div>
               <h2 className="h-lg">Where we deliver restroom trailers.</h2>
             </div>
-            <p>Based in Portland, we deliver across Oregon and Washington. Standard turnaround is 48 hours — next-day available in our core service areas.</p>
+            <p>Based in Portland, we deliver across Oregon and Washington. Standard turnaround is 48 hours. Next-day available in our core service areas.</p>
           </div>
 
           <div className="city-tags">
@@ -451,7 +451,7 @@ export default function RestroomTrailers() {
 
           <div className="area-foot" style={{ marginTop: '24px' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
-            <p><strong>Don't see your city listed?</strong> Fill out the form — we're actively expanding and may still be able to serve your location.</p>
+            <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
           </div>
         </div>
       </section>
@@ -492,7 +492,7 @@ export default function RestroomTrailers() {
               <h2 className="h-lg" style={{ marginTop: '24px' }}>
                 Ready to lock in<br />your restroom trailer?
               </h2>
-              <p>Submit your event details and we'll have a hard quote back to you the same day — trailer specs, delivery window, and all-in pricing confirmed before you sign anything.</p>
+              <p>Submit your event details and we'll have a hard quote back to you the same day: trailer specs, delivery window, and all-in pricing confirmed before you sign anything.</p>
 
               <div className="final-trigger">
                 <span className="final-trigger-dot" aria-hidden="true"></span>

@@ -47,10 +47,10 @@ export default function AboutUs() {
   return (
     <main id="main">
       <Helmet>
-        <title>About RHC Site Services | Portland, OR | Since 2016</title>
+        <title>About RHC Site Services | Portland, OR | Run by Rafa</title>
         <meta
           name="description"
-          content="RHC Site Services is run by Rafa out of Portland, OR. Learn what he personally stands behind on every rental and why he started the company in 2016."
+          content="Portable toilet and site equipment rentals run by Rafa out of Portland, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/about-us" />
         <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
@@ -85,8 +85,8 @@ export default function AboutUs() {
               lineHeight: '1.6',
             }}
           >
-            RHC has operated across the Pacific Northwest since 2016, run by one person who has
-            worked in this industry long enough to know exactly where things go wrong.
+            RHC is run by Rafa, who has worked on Pacific Northwest job sites since 2016,
+            long enough to know exactly where things go wrong.
           </p>
         </div>
       </section>
@@ -193,7 +193,7 @@ export default function AboutUs() {
           <div className="section-head" style={{ marginBottom: '40px' }}>
             <div className="head-lead">
               <div className="eyebrow">04 / What Rafa Stands Behind</div>
-              <h2 className="h-lg">Two Things That Have Not Changed Since 2016.</h2>
+              <h2 className="h-lg">Two Things Rafa Has Not Changed Since 2016.</h2>
             </div>
           </div>
           <div
@@ -315,31 +315,33 @@ export default function AboutUs() {
                 <span>No commitment. Quote back the same day.</span>
               </div>
 
-              <blockquote
-                style={{
-                  margin: '20px 0',
-                  padding: '14px 18px',
-                  background: 'rgba(255,255,255,0.07)',
-                  borderLeft: '3px solid var(--secondary)',
-                  borderRadius: '0 4px 4px 0',
-                }}
-              >
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  [Testimonial placeholder — real review from Rafa's Google listing goes here]
-                </p>
-                <footer
-                  style={{
-                    marginTop: '8px',
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '11px',
-                    color: 'var(--secondary-fixed-dim)',
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "No commitment. Quote back the same day." final-trigger block in the Get Started section
+                  Intended review theme: real review from Rafa's Google listing goes here
+                  Restore with:
+                  <blockquote
+                    style={{
+                      margin: '20px 0',
+                      padding: '14px 18px',
+                      background: 'rgba(255,255,255,0.07)',
+                      borderLeft: '3px solid var(--secondary)',
+                      borderRadius: '0 4px 4px 0',
+                    }}
+                  >
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer
+                      style={{
+                        marginTop: '8px',
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '11px',
+                        color: 'var(--secondary-fixed-dim)',
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>

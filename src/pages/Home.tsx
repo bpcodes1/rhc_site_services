@@ -27,24 +27,6 @@ const mapCities: { name: string; coords: [number, number]; hq: boolean; anchor: 
   { name: 'Bend',          coords: [-121.3153, 44.0582], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
 ]
 
-const testimonials = [
-  {
-    quote: "We had a tight mobilization window on a mixed-use project in SE Portland. I've been burned by delivery delays before, so I asked for a hard arrival window and a backup contact. Got both. Equipment was staged exactly where our site manager marked it. First vendor in three years who didn't need a second call.",
-    name: 'Tom C.',
-    role: 'Project Superintendent · Commercial Site Mobilization · Portland, OR',
-  },
-  {
-    quote: "We run outdoor events at a property in the Willamette Valley and the trailer situation is always what I'm most stressed about. Last July we had 200 guests and nobody complained once — which is the highest compliment I can give. The units were immaculate, the service was quiet, and the generator didn't make a sound all night.",
-    name: 'Kristen M.',
-    role: 'Event Coordinator · Estate & Winery Events · Salem, OR',
-  },
-  {
-    quote: "We've used RHC on two jobs — a ground-up commercial build in Gresham and a site remediation in Tacoma. Both times the quote matched the invoice exactly. No environmental compliance fee tacked on the back end, no fuel surcharge I didn't approve. That's rarer than it should be in this industry.",
-    name: 'Mike A.',
-    role: 'Senior Estimator · Civil Infrastructure · Portland, OR',
-  },
-]
-
 const cityServices: Record<string, { label: string; to: string }[]> = {
   Portland: [
     { label: 'Porta Potty Rental', to: '/porta-potty-rental-portland-or' },
@@ -75,7 +57,6 @@ const homeCities = [
 ]
 
 export default function Home() {
-  const [tcIndex, setTcIndex] = useState(0)
   const [selectedCity, setSelectedCity] = useState<string | null>(null)
 
   return (
@@ -99,7 +80,7 @@ export default function Home() {
               The equipment you ordered. Placed <span className="underline accent">exactly</span> where you need it. On-site before your crew clocks in.
             </h1>
             <p className="hero-sub body-lg">
-              Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services dispatches clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
+              Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services delivers clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
             </p>
 
             <ul className="triggers" role="list">
@@ -110,8 +91,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <div className="trig-title">No Broker Lag</div>
-                  <div className="trig-body">Every piece of equipment on your site is vetted, inspected, and dispatched from a single point of accountability. No excuse chains.</div>
+                  <div className="trig-title">One Point of Contact</div>
+                  <div className="trig-body">Every piece of equipment on your site is vetted, inspected, and delivered by one accountable team. No excuse chains.</div>
                 </div>
               </li>
               <li>
@@ -197,7 +178,7 @@ export default function Home() {
                 </div>
                 <div className="svc-block svc-block-accent">
                   <div className="svc-label">The PNW Standard</div>
-                  <p>Locked down securely against high regional winds and serviced on a strict, unbreakable pump-and-sanitize schedule — even in freezing I-5 winter mud.</p>
+                  <p>Locked down securely against high regional winds and serviced on a strict, unbreakable pump-and-sanitize schedule, even in freezing I-5 winter mud.</p>
                 </div>
                 <span className="service-link">Spec a Unit <span className="arrow">→</span></span>
               </div>
@@ -265,7 +246,7 @@ export default function Home() {
                 </div>
                 <div className="svc-block svc-block-accent">
                   <div className="svc-label">The PNW Standard</div>
-                  <p>Reliable hot water and solid water pressure in any Pacific Northwest condition — from Cascade foothills to coastal festival grounds.</p>
+                  <p>Reliable hot water and solid water pressure in any Pacific Northwest condition, from Cascade foothills to coastal festival grounds.</p>
                 </div>
                 <span className="service-link">View Shower Suites <span className="arrow">→</span></span>
               </div>
@@ -281,7 +262,7 @@ export default function Home() {
               <div className="service-body">
                 <div className="mono-num">06 / Bundle</div>
                 <h3>Need everything on one truck schedule?</h3>
-                <p style={{ color: 'var(--on-surface-variant)', fontSize: '15px', margin: 0 }}>Tell dispatch the full scope of your job. We'll coordinate the drop-off sequence so your fence, toilets, and containers arrive in the order your crew actually needs them.</p>
+                <p style={{ color: 'var(--on-surface-variant)', fontSize: '15px', margin: 0 }}>Tell RHC the full scope of your job. We'll coordinate the drop-off sequence so your fence, toilets, and containers arrive in the order your crew actually needs them.</p>
                 <span className="service-link" style={{ color: 'var(--secondary)' }}>Request a Bundle Quote <span className="arrow">→</span></span>
               </div>
             </a>
@@ -297,7 +278,7 @@ export default function Home() {
               <div className="eyebrow">03 / Method</div>
               <h2 className="h-lg">Getting equipment on site is <span className="accent">simpler</span> than you think.</h2>
             </div>
-            <p>Four steps from quote to cleanup. One dispatcher handles the logistics so your crew doesn't have to babysit a vendor.</p>
+            <p>Four steps from quote to cleanup. One RHC contact handles the logistics so your crew doesn't have to babysit a vendor.</p>
           </div>
 
           <div className="steps">
@@ -308,7 +289,7 @@ export default function Home() {
               </div>
               <div className="step-right">
                 <h3>Tell us what you need</h3>
-                <p>Fill out our short form. Let us know your service, location, and dates — it takes less than 60 seconds.</p>
+                <p>Fill out our short form. Let us know your service, location, and dates. It takes less than 60 seconds.</p>
                 <img src={step01Img} alt="Submitting a quote request online" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
@@ -349,7 +330,7 @@ export default function Home() {
 
           <div className="how-cta">
             <a href="#quote" className="btn btn-primary">Start With a Free Quote →</a>
-            <span className="how-cta-note">No obligation · Same-day response from PNW dispatch.</span>
+            <span className="how-cta-note">No obligation · Same-day response from RHC.</span>
           </div>
         </div>
       </section>
@@ -381,14 +362,18 @@ export default function Home() {
                 </div>
                 <div className="lie-col lie-standard">
                   <div className="lie-label"><span className="strike"></span>The RHC Standard</div>
-                  <p>We give you <strong>hard, predictable arrival windows</strong>. If a delay occurs, you're notified immediately — <strong>no ghosting your crew, ever.</strong></p>
+                  <p>We give you <strong>hard, predictable arrival windows</strong>. If a delay occurs, you're notified immediately. <strong>No ghosting your crew, ever.</strong></p>
                 </div>
               </div>
-              <div className="lie-pullquote">
-                <div className="lie-pullquote-mark" aria-hidden="true">"</div>
-                <blockquote>They showed up before my crew did. I asked for a hard arrival window and a backup contact — got both. Equipment was staged exactly where our site manager marked it. First vendor in three years who didn't need a second call.</blockquote>
-                <div className="lie-pullquote-tag">Tom C. · Project Superintendent · Portland, OR</div>
-              </div>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: closing the "01 / delivery windows" lie-vs-standard block.
+                  Intended review theme: hard arrival window honored, equipment staged where marked, no second call needed.
+                  Restore with:
+                  <div className="lie-pullquote">
+                    <div className="lie-pullquote-mark" aria-hidden="true">"</div>
+                    <blockquote>REAL REVIEW TEXT HERE</blockquote>
+                    <div className="lie-pullquote-tag">NAME · ROLE · CITY</div>
+                  </div> */}
             </article>
 
             <article className="lie">
@@ -402,18 +387,22 @@ export default function Home() {
               <div className="lie-grid">
                 <div className="lie-col">
                   <div className="lie-label muted"><span className="strike"></span>What most operators do</div>
-                  <p>They draw you in with a low number, then hit you with surprise line items on the final invoice — mandatory "environmental compliance fees," unvouched fuel surcharges, delivery damage waivers. None of it disclosed upfront.</p>
+                  <p>They draw you in with a low number, then hit you with surprise line items on the final invoice: mandatory "environmental compliance fees," unvouched fuel surcharges, delivery damage waivers. None of it disclosed upfront.</p>
                 </div>
                 <div className="lie-col lie-standard">
                   <div className="lie-label"><span className="strike"></span>The RHC Standard</div>
                   <p><strong>The number you approve on day one is the number you pay when the job is done.</strong> No hidden fees. No surprise additions.</p>
                 </div>
               </div>
-              <div className="lie-pullquote">
-                <div className="lie-pullquote-mark" aria-hidden="true">"</div>
-                <blockquote>We've used RHC on two jobs now. Both times the quote matched the invoice exactly. No environmental compliance fee added on the back end, no fuel surcharge I didn't approve. That's rarer than it should be in this industry.</blockquote>
-                <div className="lie-pullquote-tag">Mike A. · Senior Estimator · Portland, OR</div>
-              </div>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: closing the "02 / quote matches invoice" lie-vs-standard block.
+                  Intended review theme: quoted number matched the final invoice, no back-end fees or surcharges.
+                  Restore with:
+                  <div className="lie-pullquote">
+                    <div className="lie-pullquote-mark" aria-hidden="true">"</div>
+                    <blockquote>REAL REVIEW TEXT HERE</blockquote>
+                    <div className="lie-pullquote-tag">NAME · ROLE · CITY</div>
+                  </div> */}
             </article>
 
             <article className="lie" style={{ borderBottom: 0 }}>
@@ -431,14 +420,18 @@ export default function Home() {
                 </div>
                 <div className="lie-col lie-standard">
                   <div className="lie-label"><span className="strike"></span>The RHC Standard</div>
-                  <p>Every unit is <strong>confirmed clean, sanitized, and fully operational</strong> before it arrives on your site — whether it's a standard unit on a commercial remodel or a multi-stall suite for a high-end event.</p>
+                  <p>Every unit is <strong>confirmed clean, sanitized, and fully operational</strong> before it arrives on your site, whether it's a standard unit on a commercial remodel or a multi-stall suite for a high-end event.</p>
                 </div>
               </div>
-              <div className="lie-pullquote">
-                <div className="lie-pullquote-mark" aria-hidden="true">"</div>
-                <blockquote>We had 200 guests and I genuinely forgot the restrooms were even out there — which is the highest compliment I can give. The units were immaculate, the service was quiet, and the generator didn't make a sound all night.</blockquote>
-                <div className="lie-pullquote-tag">Kristen M. · Event Coordinator · Salem, OR</div>
-              </div>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: closing the "03 / unit cleanliness" lie-vs-standard block.
+                  Intended review theme: units arrived immaculate, service was unobtrusive, event ran without a restroom complaint.
+                  Restore with:
+                  <div className="lie-pullquote">
+                    <div className="lie-pullquote-mark" aria-hidden="true">"</div>
+                    <blockquote>REAL REVIEW TEXT HERE</blockquote>
+                    <div className="lie-pullquote-tag">NAME · ROLE · CITY</div>
+                  </div> */}
             </article>
           </div>
         </div>
@@ -563,7 +556,7 @@ export default function Home() {
               )}
               <div className="area-foot">
                 <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
-                <p><strong>Don't see your city listed?</strong> Fill out the form — we're actively expanding and may still be able to serve your location.</p>
+                <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
               </div>
               <a href="#quote" className="btn btn-primary" style={{ marginTop: '24px' }}>Get a Quote for Your Location →</a>
             </div>
@@ -571,44 +564,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ─────────────────────────────────────────────────── */}
-      <section className="testimonials" id="reviews">
-        <div className="container">
-          <div className="section-head">
-            <div className="head-lead">
-              <div className="eyebrow">06 / Field Reports</div>
-              <h2 className="h-lg">Read the real reports from local foremen and event coordinators.</h2>
-            </div>
-            <p>We don't do vague, polished praise. Here is exactly what our regional PNW clients say when their crew morale, project timeline, or high-stakes event budget is directly on the line.</p>
-          </div>
+      {/* ── SECTION 06 SLOT: currently empty ──────────────────────────────
+          Position: between "05 / Coverage" (the service-area map) and
+          "07 / FAQ". This is the homepage's social-proof slot. In the
+          messaging hierarchy it answers "am I alone in caring, or do others
+          like me use this?", so whatever fills it has to answer that.
 
-          <div className="tc-carousel">
-            <div className="tc-divider" aria-hidden="true" />
-            <blockquote className="tc-quote">
-              &ldquo;{testimonials[tcIndex].quote}&rdquo;
-            </blockquote>
-            <div className="tc-author">
-              <strong>{testimonials[tcIndex].name}</strong>
-              <span>{testimonials[tcIndex].role}</span>
+          What was here: a section titled "06 / Field Reports" holding a
+          3-quote carousel with prev/next arrows. Removed 2026-07-27 because
+          the three quotes were fabricated, invented customers with invented
+          names and job titles, which is not something to restore.
+
+          Refill options, in order of preference:
+          1. Real customer reviews once Rafa's review drip produces them.
+             Restore the carousel markup below and the `testimonials` array
+             (quote / name / role) plus `const [tcIndex, setTcIndex] =
+             useState(0)` and the `useState` import, all removed with it.
+          2. Interim: Rafa's verified track record (years in the trade,
+             delivery volume, job sites served). Answers the same hierarchy
+             question through volume rather than quotes. Needs real numbers
+             from Rafa; do not invent any.
+
+          Carousel markup to restore:
+          <section className="testimonials" id="reviews">
+            <div className="container">
+              <div className="section-head">
+                <div className="head-lead">
+                  <div className="eyebrow">06 / Field Reports</div>
+                  <h2 className="h-lg">HEADLINE</h2>
+                </div>
+                <p>INTRO</p>
+              </div>
+              <div className="tc-carousel">
+                <div className="tc-divider" aria-hidden="true" />
+                <blockquote className="tc-quote">&ldquo;{testimonials[tcIndex].quote}&rdquo;</blockquote>
+                <div className="tc-author">
+                  <strong>{testimonials[tcIndex].name}</strong>
+                  <span>{testimonials[tcIndex].role}</span>
+                </div>
+                <div className="tc-divider" aria-hidden="true" />
+                <div className="tc-nav">
+                  <button className={`tc-arrow${tcIndex === 0 ? ' tc-arrow--off' : ''}`} onClick={() => setTcIndex(i => i - 1)} disabled={tcIndex === 0} aria-label="Previous testimonial">←</button>
+                  <button className={`tc-arrow${tcIndex === testimonials.length - 1 ? ' tc-arrow--off' : ''}`} onClick={() => setTcIndex(i => i + 1)} disabled={tcIndex === testimonials.length - 1} aria-label="Next testimonial">→</button>
+                </div>
+              </div>
             </div>
-            <div className="tc-divider" aria-hidden="true" />
-            <div className="tc-nav">
-              <button
-                className={`tc-arrow${tcIndex === 0 ? ' tc-arrow--off' : ''}`}
-                onClick={() => setTcIndex(i => i - 1)}
-                disabled={tcIndex === 0}
-                aria-label="Previous testimonial"
-              >←</button>
-              <button
-                className={`tc-arrow${tcIndex === testimonials.length - 1 ? ' tc-arrow--off' : ''}`}
-                onClick={() => setTcIndex(i => i + 1)}
-                disabled={tcIndex === testimonials.length - 1}
-                aria-label="Next testimonial"
-              >→</button>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          Nothing links to #reviews, so the anchor can stay retired until
+          this slot is refilled. The .testimonials and .tc-* styles are
+          untouched in src/rhc-design.css. ────────────────────────────── */}
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
       <section id="faq">
@@ -618,7 +623,7 @@ export default function Home() {
               <div className="eyebrow">07 / FAQ</div>
               <h2 className="h-lg">Questions we answer<br />before you have to ask.</h2>
             </div>
-            <p>The short version of everything dispatchers get asked at 6:45am on a Monday. Need something not here? Call dispatch or drop it in the quote form — a person will answer.</p>
+            <p>The short version of everything RHC gets asked at 6:45am on a Monday. Need something not here? Drop it in the quote form and a person will answer.</p>
           </div>
 
           <div className="faq-list">
@@ -628,7 +633,7 @@ export default function Home() {
                 <span className="faq-q">How fast can you actually deliver?</span>
                 <span className="faq-toggle" aria-hidden="true"></span>
               </summary>
-              <div className="faq-a">Standard turnaround is 48 hours from confirmed booking to on-site. In our core Pacific Northwest service areas (Salem, Portland, Bend, Seattle) we routinely book next-day. Same-day deliveries are case-by-case and only confirmed once a dispatcher has spoken with a driver — we will never promise a window we can't hit.</div>
+              <div className="faq-a">Standard turnaround is 48 hours from confirmed booking to on-site. In our core Pacific Northwest service areas (Salem, Portland, Bend, Seattle) we routinely book next-day. Same-day deliveries are case-by-case and confirmed only after RHC has verified the route. We will never promise a window we can't hit.</div>
             </details>
 
             <details className="faq-item">
@@ -643,10 +648,10 @@ export default function Home() {
             <details className="faq-item">
               <summary>
                 <span className="faq-num">Q.03</span>
-                <span className="faq-q">Are you the actual company that delivers, or a broker?</span>
+                <span className="faq-q">If something goes wrong on delivery day, who do I actually call?</span>
                 <span className="faq-toggle" aria-hidden="true"></span>
               </summary>
-              <div className="faq-a">Both, depending on the ZIP. In our core markets we deliver directly. Outside those areas we dispatch through a network of pre-vetted local partners — but you stay on one invoice, one phone number, and one accountability standard. If a partner misses, RHC eats the cost and makes it right. That's the difference between a broker and a service company that uses partners.</div>
+              <div className="faq-a">RHC. One number, one invoice, one person who already knows your site. Before delivery day you get three things in writing: what is arriving, exactly where it goes, and the window it arrives in. If any of that is wrong, you call RHC and RHC fixes it. You will not get a ticket number, and you will not be asked to sort out whose fault it was. Rafa has worked on Pacific Northwest job sites since 2016, and every job runs to the same standard, whether it is one unit on a driveway or a full site package.</div>
             </details>
 
             <details className="faq-item">
@@ -655,13 +660,13 @@ export default function Home() {
                 <span className="faq-q">Do you service residential remodels, or only commercial?</span>
                 <span className="faq-toggle" aria-hidden="true"></span>
               </summary>
-              <div className="faq-a">Both. A single porta potty for a 6-month backyard ADU build and a 10-stall restroom trailer for a 5,000-guest festival both go through the same dispatcher and the same operational standard. Smaller doesn't mean lower priority — it means a faster phone call.</div>
+              <div className="faq-a">Both. A single porta potty for a 6-month backyard ADU build and a 10-stall restroom trailer for a 5,000-guest festival both go through the same RHC team and the same operational standard. Smaller doesn't mean lower priority, it means a faster phone call.</div>
             </details>
 
             <details className="faq-item">
               <summary>
                 <span className="faq-num">Q.05</span>
-                <span className="faq-q">What's included in a rental — and what isn't?</span>
+                <span className="faq-q">What's included in a rental, and what isn't?</span>
                 <span className="faq-toggle" aria-hidden="true"></span>
               </summary>
               <div className="faq-a">Quote includes: delivery, equipment, scheduled servicing or swap-outs at the cadence you choose, and haul-back. Quote excludes: city or county permits (we'll tell you if you need one), and any damage outside normal wear. There are no "environmental fees," fuel surcharges, or back-end add-ons. If it's not on the quote, you won't see it on the invoice.</div>
@@ -673,7 +678,7 @@ export default function Home() {
                 <span className="faq-q">Can I extend my rental mid-job?</span>
                 <span className="faq-toggle" aria-hidden="true"></span>
               </summary>
-              <div className="faq-a">Yes. One call or one email to dispatch and we extend at the same daily/weekly/monthly rate on your original quote. We won't surprise-rate you because your project ran two weeks long.</div>
+              <div className="faq-a">Yes. One call or one email to RHC and we extend at the same daily, weekly, or monthly rate on your original quote. We won't surprise-rate you because your project ran two weeks long.</div>
             </details>
           </div>
         </div>
@@ -696,7 +701,7 @@ export default function Home() {
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>
-                  <div className="final-phone-label">Or call PNW dispatch</div>
+                  <div className="final-phone-label">Or call RHC</div>
                   <div className="final-phone-num">503&#8209;607&#8209;7412</div>
                 </div>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">

@@ -108,6 +108,8 @@ const faqs = [
   },
 ]
 
+// Kept for the testimonial slots below; uncomment when real reviews are added.
+/*
 const testimonialStyle = {
   blockquote: {
     margin: '20px 0 0' as const,
@@ -132,6 +134,7 @@ const testimonialStyle = {
     textTransform: 'uppercase' as const,
   },
 }
+*/
 
 const thStyle: React.CSSProperties = {
   padding: '10px 14px',
@@ -388,12 +391,14 @@ export default function PortaPottySeattle() {
               <p>
                 Seattle timelines do not have slack for a vendor who disappears between the quote and delivery day. Every RHC booking includes a three-step confirmation: site review, permit flag, and written delivery window. You receive all three before the job is booked. If anything changes before your window, you hear from RHC first, not after you have been waiting.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — vendor confirmed delivery window / arrived on time / no surprises on delivery day]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 01" paragraph about the three-step booking confirmation and written delivery window
+                  Intended review theme: vendor confirmed delivery window / arrived on time / no surprises on delivery day
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -433,12 +438,14 @@ export default function PortaPottySeattle() {
                 Source: WAC 296-155-140 (Washington L&I). Multi-shift sites require proportionally more units under both state standards.
               </p>
 
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — correct unit count from the start / no WA L&I issues / site stayed in compliance]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the WAC 296-155-140 source note under the unit-count comparison table in "why-item 02"
+                  Intended review theme: correct unit count from the start / no WA L&I issues / site stayed in compliance
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
 
             <div className="why-item">
@@ -447,12 +454,14 @@ export default function PortaPottySeattle() {
               <p>
                 Most vendors deliver units. They do not know whether your Capitol Hill job site needs an SDOT Street Use Permit before the unit goes in the parking lane, or whether your Gas Works Park event requires all-gender signage under SMC 14.07.010. RHC reviews your site footprint and event details at booking and tells you what applies before delivery day. No permit violations discovered on site. No enforcement notices after the event.
               </p>
-              <blockquote style={testimonialStyle.blockquote}>
-                <p style={testimonialStyle.text}>
-                  [Testimonial placeholder — flagged the SDOT permit / no surprises on delivery day / handled the Seattle compliance details]
-                </p>
-                <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "why-item 03" paragraph about Seattle compliance knowledge built into every quote
+                  Intended review theme: flagged the SDOT permit / no surprises on delivery day / handled the Seattle compliance details
+                  Restore with:
+                  <blockquote style={testimonialStyle.blockquote}>
+                    <p style={testimonialStyle.text}>REAL REVIEW TEXT HERE</p>
+                    <footer style={testimonialStyle.footer}>&#9733;&#9733;&#9733;&#9733;&#9733; · Google Review</footer>
+                  </blockquote> */}
             </div>
           </div>
         </div>
@@ -505,14 +514,16 @@ export default function PortaPottySeattle() {
                 The quote RHC sends is the number on your invoice. No fuel surcharges. No line items added after delivery.
               </p>
 
-              <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
-                <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>
-                  [Testimonial placeholder — easy booking / same-day quote / unit arrived on time / would use RHC again]
-                </p>
-                <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
-                </footer>
-              </blockquote>
+              {/* TESTIMONIAL SLOT (empty until Rafa has real reviews)
+                  Position: immediately after the "The quote RHC sends is the number on your invoice" paragraph in the Get Started section
+                  Intended review theme: easy booking / same-day quote / unit arrived on time / would use RHC again
+                  Restore with:
+                  <blockquote style={{ margin: '20px 0', padding: '14px 18px', background: 'rgba(255,255,255,0.07)', borderLeft: '3px solid var(--secondary)', borderRadius: '0 4px 4px 0' }}>
+                    <p style={{ fontSize: '14px', color: 'inherit', lineHeight: '1.65', fontStyle: 'italic', margin: 0 }}>REAL REVIEW TEXT HERE</p>
+                    <footer style={{ marginTop: '8px', fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary-fixed-dim)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      &#9733;&#9733;&#9733;&#9733;&#9733; · Google Review
+                    </footer>
+                  </blockquote> */}
 
               <a href="tel:+15036077412" className="final-phone">
                 <div>

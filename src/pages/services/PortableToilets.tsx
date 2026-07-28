@@ -19,7 +19,7 @@ const cities = [
 const faqs = [
   {
     q: 'How much does a portable toilet rental cost in Portland?',
-    a: "Honest answer: it depends on four variables — delivery location, number of units, service frequency, and rental duration. We don't post a generic number because doing so would force us to either pad it to cover edge cases or under-quote and bill the difference later. Both are exactly what we built RHC to avoid. Submit the form and we'll have a hard quote back to you the same day.",
+    a: "Honest answer: it depends on four variables: delivery location, number of units, service frequency, and rental duration. We don't post a generic number because doing so would force us to either pad it to cover edge cases or under-quote and bill the difference later. Both are exactly what we built RHC to avoid. Submit the form and we'll have a hard quote back to you the same day.",
   },
   {
     q: 'How many portable toilets do I need?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'Do I need a permit to place a porta potty in Portland?',
-    a: "Private property — driveway, yard, active job site — no permit required. Placement on a public street or sidewalk requires a PBOT permit. We'll flag this when we confirm your quote so it's not a surprise on delivery day.",
+    a: "Private property, driveway, yard, active job site: no permit required. Placement on a public street or sidewalk requires a PBOT permit. We'll flag this when we confirm your quote so it's not a surprise on delivery day.",
   },
   {
     q: 'How often does a portable toilet need to be serviced on a construction site?',
@@ -52,7 +52,7 @@ export default function PortableToilets() {
     <main id="main">
       <Helmet>
         <title>Portable Toilet Rentals in Oregon &amp; Washington | RHC Site Services</title>
-        <meta name="description" content="Hard delivery windows, no surprise fees, and inspected units — portable toilet and porta potty rentals for construction sites and events across Oregon and Washington." />
+        <meta name="description" content="Hard delivery windows, no surprise fees, and inspected units: portable toilet and porta potty rentals for construction sites and events across Oregon and Washington." />
         <link rel="canonical" href="https://rhcsiteservice.com/portable-toilets" />
       </Helmet>
 
@@ -141,7 +141,7 @@ export default function PortableToilets() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">01 / Unit Types</div>
-              <h2 className="h-lg">Standard and ADA — What's the right unit for your site?</h2>
+              <h2 className="h-lg">Standard and ADA: What's the right unit for your site?</h2>
             </div>
             <p>Three unit classes cover almost every construction site and event scenario in Oregon and Washington. Pick by use case, or call RHC and we'll spec it for you in under five minutes.</p>
           </div>
@@ -154,7 +154,7 @@ export default function PortableToilets() {
               <div className="unit-body">
                 <div className="mono-num">01 / Standard</div>
                 <h3>Standard Portable Toilet</h3>
-                <p>The go-to unit for construction sites and active job sites. Single-occupancy, ventilated, with hand sanitizer and high-capacity tank for heavy daily use. OSHA-compliant — your site passes inspection and your crew always has a working sanitation option.</p>
+                <p>The go-to unit for construction sites and active job sites. Single-occupancy, ventilated, with hand sanitizer and high-capacity tank for heavy daily use. OSHA-compliant: your site passes inspection and your crew always has a working sanitation option.</p>
                 <div style={{ paddingTop: '16px', borderTop: '1px solid var(--outline-variant)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {[
                     { label: 'Dimensions', value: '44" W × 48" D × 90" H' },
@@ -180,7 +180,7 @@ export default function PortableToilets() {
               <div className="unit-body">
                 <div className="mono-num">02 / ADA</div>
                 <h3>ADA-Compliant Portable Toilet</h3>
-                <p>Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair accessibility. Required — not optional — for any public event or job site where workers or guests with mobility limitations are present. Don't wait until an inspector flags it.</p>
+                <p>Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair accessibility. Required, not optional, for any public event or job site where workers or guests with mobility limitations are present. Don't wait until an inspector flags it.</p>
                 <div style={{ paddingTop: '16px', borderTop: '1px solid var(--outline-variant)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {[
                     { label: 'Dimensions', value: '60" W × 60" D × 90" H' },
@@ -210,7 +210,7 @@ export default function PortableToilets() {
               <div className="eyebrow">02 / Sizing Guide</div>
               <h2 className="h-lg">How many portable toilets does your site actually need?</h2>
             </div>
-            <p>The two variables that determine unit count are headcount and duration. Use the tables below as a starting point — then tell us your specifics in the quote form and we'll confirm the right number for your exact situation.</p>
+            <p>The two variables that determine unit count are headcount and duration. Use the tables below as a starting point, then tell us your specifics in the quote form and we'll confirm the right number for your exact situation.</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '48px' }}>
@@ -306,14 +306,14 @@ export default function PortableToilets() {
               <div className="eyebrow">03 / Use Cases</div>
               <h2 className="h-lg">Built for construction sites, outdoor events, and residential remodels.</h2>
             </div>
-            <p>From a single unit on a residential remodel to a 40-unit fleet for a large-scale commercial mobilization — the same operational standard applies across every job.</p>
+            <p>From a single unit on a residential remodel to a 40-unit fleet for a large-scale commercial mobilization, the same operational standard applies across every job.</p>
           </div>
 
           <div className="use-cases">
             <div className="use-case">
               <div className="use-num">01 / Construction</div>
               <h3>Construction &amp; Job Sites</h3>
-              <p>OSHA requires one unit per 20 workers. We deliver to active job sites, position units exactly where your site manager marks them, and service on the schedule your crew needs — including through winter mud season on the I-5 corridor.</p>
+              <p>OSHA requires one unit per 20 workers. We deliver to active job sites, position units exactly where your site manager marks them, and service on the schedule your crew needs, including through winter mud season on the I-5 corridor.</p>
             </div>
             <div className="use-case">
               <div className="use-num">02 / Events</div>
@@ -349,7 +349,7 @@ export default function PortableToilets() {
             <div className="why-item">
               <div className="why-num">01</div>
               <h3>Hard Arrival Windows</h3>
-              <p>When you call for an ETA and hear "one cannot be provided," your crew sits idle and your schedule bleeds. We give you a hard arrival window. If something changes on our end, you hear from us — not the other way around.</p>
+              <p>When you call for an ETA and hear "one cannot be provided," your crew sits idle and your schedule bleeds. We give you a hard arrival window. If something changes on our end, you hear from us, not the other way around.</p>
             </div>
             <div className="why-item">
               <div className="why-num">02</div>
@@ -373,7 +373,7 @@ export default function PortableToilets() {
               <div className="eyebrow">05 / Coverage</div>
               <h2 className="h-lg">Where we deliver portable toilets.</h2>
             </div>
-            <p>Based in Portland, we deliver across Oregon and Washington. Standard turnaround is 48 hours — next-day available in our core service areas.</p>
+            <p>Based in Portland, we deliver across Oregon and Washington. Standard turnaround is 48 hours. Next-day available in our core service areas.</p>
           </div>
 
           <div className="city-tags">
@@ -387,7 +387,7 @@ export default function PortableToilets() {
 
           <div className="area-foot" style={{ marginTop: '24px' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
-            <p><strong>Don't see your city listed?</strong> Fill out the form — we're actively expanding and may still be able to serve your location.</p>
+            <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
           </div>
         </div>
       </section>
@@ -428,7 +428,7 @@ export default function PortableToilets() {
               <h2 className="h-lg" style={{ marginTop: '24px' }}>
                 Ready to get a porta potty<br />on your site?
               </h2>
-              <p>Submit your request and RHC will get back to you the same day with a hard quote. No surprise fees, no broker lag.</p>
+              <p>Submit your request and RHC will get back to you the same day with a hard quote. No surprise fees, no waiting days for a callback.</p>
 
               <div className="final-trigger">
                 <span className="final-trigger-dot" aria-hidden="true"></span>
