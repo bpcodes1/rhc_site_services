@@ -11,7 +11,7 @@ Update this file whenever a task moves. Last updated 2026-07-28.
 | 1 | 301 www to apex redirect | DONE 2026-07-27 | |
 | 2 | Google Search Console Domain property + sitemap | DONE 2026-07-28 | |
 | 3 | Prerender 17 routes + real 404s | DONE 2026-07-27 | |
-| 4 | Request Indexing for all 17 URLs | IN PROGRESS 2026-07-28 | nobody |
+| 4 | Request Indexing for all 17 URLs | 11 of 17 done 2026-07-28 | daily quota |
 | 5 | Trust and legal pages | Not started | nobody |
 | 6 | Google Business Profile | Not started | Rafa (address) |
 
@@ -27,6 +27,38 @@ submitted as the FULL url `https://rhcsiteservice.com/sitemap.xml`; a Domain
 property rejects the bare `sitemap.xml` that URL-prefix properties accept.
 Property currently owned by Enrique's own Google account; add the RHC business
 account as an owner once Rafa provides that login.
+
+### Task 4 remaining: request indexing on these 6, quota permitting
+
+Done 2026-07-28 (11): homepage, all 5 service hubs, all 3 Portland pages,
+porta-potty-rental-seattle-wa, restroom-trailer-rental-seattle-wa.
+
+Still to do, in this order:
+
+1. https://rhcsiteservice.com/temporary-fencing-rental-seattle-wa
+2. https://rhcsiteservice.com/porta-potty-rental-bend-or
+3. https://rhcsiteservice.com/restroom-trailer-rental-bend-or
+4. https://rhcsiteservice.com/temporary-fencing-rental-bend-or
+5. https://rhcsiteservice.com/about-us
+6. https://rhcsiteservice.com/contact-us
+
+Method: paste into the URL Inspection bar, wait for the check, click Request
+Indexing. Do not bother viewing the crawled page first; every page changed in
+the 2026-07-27 deploy so all of them need re-crawling regardless. The daily
+quota resets roughly every 24 hours and there is no penalty for hitting it.
+
+Baseline observed 2026-07-28: homepage was already indexed with a last crawl of
+Jul 27 6:11 PM, hours before the deploy, so Google's stored copy still had the
+fabricated testimonials and old copy. Google-selected canonical was "Inspected
+URL", meaning Google agrees with our declared canonical. Coverage was patchy:
+/temporary-fencing had been crawled but /restroom-trailers was entirely unknown
+to Google, which is the exact CSR indexing symptom prerendering fixes.
+
+Also re-check the Sitemaps report. It read "Couldn't fetch" with an empty
+"Last read" on 2026-07-28, which is normal for a just-submitted sitemap. Verified
+independently that day: 200, content-type application/xml, valid XML, 17 URLs,
+fetchable by a Googlebot user-agent, robots.txt clean. Only investigate if it
+still says "Couldn't fetch" with an empty "Last read" after about 5 days.
 
 ## Waiting on Rafa
 
