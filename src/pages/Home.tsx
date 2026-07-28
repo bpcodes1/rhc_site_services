@@ -177,7 +177,7 @@ export default function Home() {
                   <p>We deliver immaculate, deep-scrubbed Standard, Deluxe, and ADA-compliant units that don't smell like a marketing afterthought.</p>
                 </div>
                 <div className="svc-block svc-block-accent">
-                  <div className="svc-label">The PNW Standard</div>
+                  <div className="svc-label">The RHC Standard</div>
                   <p>Locked down securely against high regional winds and serviced on a strict, unbreakable pump-and-sanitize schedule, even in freezing I-5 winter mud.</p>
                 </div>
                 <span className="service-link">Spec a Unit <span className="arrow">→</span></span>
@@ -194,7 +194,7 @@ export default function Home() {
                   <p>Climate-controlled, multi-stall bathroom and hot-water shower trailers with residential-grade porcelain flushing toilets and running water.</p>
                 </div>
                 <div className="svc-block svc-block-accent">
-                  <div className="svc-label">The PNW Standard</div>
+                  <div className="svc-label">The RHC Standard</div>
                   <p>Built for off-grid weddings and vineyard retreats. Equipped with onboard water tanks and whisper-quiet power generation that won't drown out speeches or music.</p>
                 </div>
                 <span className="service-link">View Trailers <span className="arrow">→</span></span>
@@ -211,7 +211,7 @@ export default function Home() {
                   <p>6×12 industrial-grade perimeter panels. You choose the mounting: heavily weighted standalone bases or post-driven directly into the soil.</p>
                 </div>
                 <div className="svc-block svc-block-accent">
-                  <div className="svc-label">The PNW Standard</div>
+                  <div className="svc-label">The RHC Standard</div>
                   <p>Delivered and installed perfectly straight to ensure strict city compliance and immediate site security from day one.</p>
                 </div>
                 <span className="service-link">Specify Job <span className="arrow">→</span></span>
@@ -228,7 +228,7 @@ export default function Home() {
                   <p>All-steel, dry, secure 20ft and 40ft ocean cargo sea-cans fitted with heavy-duty locking mechanisms.</p>
                 </div>
                 <div className="svc-block svc-block-accent">
-                  <div className="svc-label">The PNW Standard</div>
+                  <div className="svc-label">The RHC Standard</div>
                   <p>Keeps expensive tools, dry materials, and heavy equipment protected from torrential Pacific Northwest rain and overnight site theft.</p>
                 </div>
                 <span className="service-link">Size a Unit <span className="arrow">→</span></span>
@@ -245,7 +245,7 @@ export default function Home() {
                   <p>Hot-water shower trailers with private stalls, climate control, and onboard water tanks built for multi-day outdoor events and remote job sites.</p>
                 </div>
                 <div className="svc-block svc-block-accent">
-                  <div className="svc-label">The PNW Standard</div>
+                  <div className="svc-label">The RHC Standard</div>
                   <p>Reliable hot water and solid water pressure in any Pacific Northwest condition, from Cascade foothills to coastal festival grounds.</p>
                 </div>
                 <span className="service-link">View Shower Suites <span className="arrow">→</span></span>

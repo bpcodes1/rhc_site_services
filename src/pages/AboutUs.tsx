@@ -32,7 +32,6 @@ const orgSchema = {
     addressCountry: 'US',
   },
   founder: { '@type': 'Person', name: 'Rafael Hernandez' },
-  foundingDate: '2016',
   areaServed: [
     'Portland, OR', 'Salem, OR', 'Eugene, OR', 'Bend, OR',
     'Gresham, OR', 'Vancouver, WA', 'Tacoma, WA', 'Seattle, WA',
@@ -115,8 +114,8 @@ export default function AboutUs() {
                 closely.
               </p>
               <p className="body-lg">
-                He has been working in this business since before RHC existed. When he started the
-                company in 2016, it was not to enter a new industry. It was to fix the part of it he
+                He has been working in this business since 2016, well before RHC existed. When he
+                started RHC, it was not to enter a new industry. It was to fix the part of it he
                 kept watching fail.
               </p>
             </div>
@@ -156,7 +155,7 @@ export default function AboutUs() {
               order is not the person accountable for what shows up.
             </p>
             <p className="body-lg">
-              Rafa started RHC in 2016 to change that. One point of contact handles the job from
+              Rafa started RHC to change that. One point of contact handles the job from
               first call to final pickup. That person is accountable for the outcome.
             </p>
           </div>
