@@ -9,15 +9,24 @@ Update this file whenever a task moves. Last updated 2026-07-28.
 | # | Task | Status | Blocked on |
 |---|------|--------|-----------|
 | 1 | 301 www to apex redirect | DONE 2026-07-27 | |
-| 2 | Google Search Console Domain property + sitemap | IN PROGRESS 2026-07-28 | nobody |
+| 2 | Google Search Console Domain property + sitemap | DONE 2026-07-28 | |
 | 3 | Prerender 17 routes + real 404s | DONE 2026-07-27 | |
-| 4 | Request Indexing for all 17 URLs | Not started | needs task 2 |
+| 4 | Request Indexing for all 17 URLs | IN PROGRESS 2026-07-28 | nobody |
 | 5 | Trust and legal pages | Not started | nobody |
 | 6 | Google Business Profile | Not started | Rafa (address) |
 
 Extra, discovered mid-Phase 0 and completed: pages.dev duplicate was serving a
 full copy of the site with no noindex. Fixed with a host-scoped rule in
 public/_headers. Cloudflare does NOT add noindex to pages.dev automatically.
+
+GSC details (task 2, done 2026-07-28): Domain property for rhcsiteservice.com,
+verified by DNS TXT via Google's one-click Cloudflare authorization. The TXT
+record `google-site-verification=hUOgWBjxP9sSXcGxzfpdiL5zVvJaGjM2_3ZNcl6Qf-M`
+must never be deleted or verification and all history are lost. Sitemap
+submitted as the FULL url `https://rhcsiteservice.com/sitemap.xml`; a Domain
+property rejects the bare `sitemap.xml` that URL-prefix properties accept.
+Property currently owned by Enrique's own Google account; add the RHC business
+account as an owner once Rafa provides that login.
 
 ## Waiting on Rafa
 
