@@ -70,9 +70,13 @@ function write(outPath, html) {
   console.log(`  ${outPath.padEnd(52)} ${(html.length / 1024).toFixed(0)} kB`)
 }
 
+// Flat files, not <route>/index.html. Cloudflare Pages serves foo.html at
+// /foo, while foo/index.html only answers at /foo/ and 308s the bare path to
+// it. Our canonicals and sitemap.xml both declare the no-trailing-slash form,
+// so a directory layout would point every canonical at a redirecting URL.
 console.log(`\n[prerender] ${ROUTES.length} routes + 404`)
 for (const url of ROUTES) {
-  write(url === '/' ? 'dist/index.html' : `dist${url}/index.html`, buildPage(url))
+  write(url === '/' ? 'dist/index.html' : `dist${url}.html`, buildPage(url))
 }
 write('dist/404.html', buildPage(NOT_FOUND_URL))
 console.log('[prerender] done\n')
