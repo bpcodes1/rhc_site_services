@@ -59,9 +59,15 @@ in App.tsx and public/sitemap.xml; keep the catch-all NotFound route last.
 decisions, and launch TODOs live in DECISIONS.md. Do not re-litigate decisions
 recorded there unless Enrique raises them.
 
-For any SEO work, read SEO_BASELINE.md (research reference and priorities) and
-SEO_FRAMEWORK_AUDITS.md (framework audit map and queue) first. SEO_GLOSSARY.md
-holds plain-English term explanations for Enrique.
+For any SEO work, read SEO_STATUS.md first: it is the living tracker of what is
+done, what is next, who is blocking, decisions already locked, and build gotchas.
+Then SEO_BASELINE.md (research reference and priorities) and
+SEO_FRAMEWORK_AUDITS.md (framework audit map and queue). SEO_GLOSSARY.md holds
+plain-English term explanations for Enrique.
+
+Never publish a testimonial, review, statistic, or date that is not verified.
+The site had fabricated testimonials and false founding claims removed on
+2026-07-27; see SEO_STATUS.md. Empty proof beats invented proof.
 
 ## Working With Enrique
 
