@@ -55,7 +55,7 @@ in App.tsx and public/sitemap.xml; keep the catch-all NotFound route last.
 
 ## Status and History
 
-17 live pages: 3 core, 5 service, 9 location. Per-page build history, past
+19 live pages: 3 core, 5 service, 9 location, 2 legal. Per-page build history, past
 decisions, and launch TODOs live in DECISIONS.md. Do not re-litigate decisions
 recorded there unless Enrique raises them.
 

@@ -2,7 +2,7 @@
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-07-29.
+Update this file whenever a task moves. Last updated 2026-08-06.
 
 ## Phase 0: Foundations
 
@@ -12,7 +12,7 @@ Update this file whenever a task moves. Last updated 2026-07-29.
 | 2 | Google Search Console Domain property + sitemap | DONE 2026-07-28 | |
 | 3 | Prerender 17 routes + real 404s | DONE 2026-07-27 | |
 | 4 | Request Indexing for all 17 URLs | DONE 2026-07-29 (11 on 7-28, 6 on 7-29) | |
-| 5 | Trust and legal pages | IN PROGRESS 2026-07-29 | nobody |
+| 5 | Trust and legal pages | DONE 2026-08-06 | |
 | 6 | Google Business Profile | Not started | Rafa (address) |
 
 Extra, discovered mid-Phase 0 and completed: pages.dev duplicate was serving a
@@ -44,6 +44,39 @@ to Google, the exact CSR indexing symptom prerendering fixes.
 
 Watch over the next 1-2 weeks: Indexing > Pages, for how many of the 17 move to
 indexed and whether any land in "Crawled - currently not indexed".
+
+### Task 5 result (2026-08-06)
+
+/privacy-policy and /terms-of-service are live and prerendered. The site is now
+19 pages, not 17: update that count anywhere it is assumed. The footer had
+promised Privacy, Terms, and Accessibility on every page with all three pointing
+at href="#". The Accessibility link was REMOVED rather than pointed at a new
+page, because an accessibility statement is a promise about assistive-technology
+support that has never been audited here. Add it back only after a real audit.
+
+Confirmed facts used in both pages: legal entity is **RHC SITE SERVICES LLC**,
+mailing address PO Box 9088, Brooks, OR 97305, contact info@rhcsiteservices.com,
+governing law Oregon. Rafa also uses rhcportabletoilets@gmail.com, which is
+probably the account holding the Google Business Profile.
+
+The privacy policy names the three third parties a visitor's browser actually
+contacts: Cloudflare, Google Fonts, and jsDelivr (homepage map data). If the
+baseline's font self-hosting item is ever done, or the map data is bundled
+locally, update that list.
+
+### First real GSC data (2026-08-06, ~10 days after launch)
+
+0 clicks, 5 impressions, 0% CTR, average position 21.4, top query "rhtc" (a
+brand typo). Page Indexing report still said "Processing data" after 9 days,
+which is slow but not alarming for a property this small. Read: the site is
+technically correct and has zero authority. Nothing here indicates a defect in
+the prerendering work; it indicates the domain has no reputation yet, which only
+the old-domain 301 and real reviews will fix. Both sit with Rafa.
+
+Also verified externally on 2026-08-06: searching "RHC Site Services" surfaces
+the OLD domain rhcsiteservices.com, not the new one. The old site also still
+advertises roll-off dumpsters and office trailers, which are out of scope per
+CLAUDE.md rule 7. This is concrete evidence for the domain-consolidation ask.
 
 ## Waiting on Rafa
 
