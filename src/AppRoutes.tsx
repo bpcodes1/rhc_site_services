@@ -17,6 +17,8 @@ import StorageContainers from './pages/services/StorageContainers'
 import ShowerTrailers from './pages/services/ShowerTrailers'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfService from './pages/TermsOfService'
 import NotFound from './pages/NotFound'
 
 // Location pages, Bend, OR
@@ -48,6 +50,8 @@ export default function AppRoutes() {
           <Route path="shower-trailers" element={<ShowerTrailers />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-of-service" element={<TermsOfService />} />
           <Route path="porta-potty-rental-bend-or" element={<PortaPottyBend />} />
           <Route path="restroom-trailer-rental-bend-or" element={<RestroomTrailerBend />} />
           <Route path="temporary-fencing-rental-bend-or" element={<TemporaryFencingBend />} />

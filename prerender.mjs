@@ -20,6 +20,8 @@ const ROUTES = [
   '/shower-trailers',
   '/about-us',
   '/contact-us',
+  '/privacy-policy',
+  '/terms-of-service',
   '/porta-potty-rental-bend-or',
   '/restroom-trailer-rental-bend-or',
   '/temporary-fencing-rental-bend-or',

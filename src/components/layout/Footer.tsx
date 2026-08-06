@@ -129,10 +129,13 @@ export default function Footer() {
 
         <div className="legal">
           <div>© 2026 RHC Site Services · Portland, OR</div>
+          {/* Accessibility link removed 2026-08-06: an accessibility statement
+              is a promise about how the site performs for assistive tech, and
+              we have not audited it yet. Add the link back once that audit is
+              done and the page can say something true. */}
           <div className="legal-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Accessibility</a>
+            <Link to="/privacy-policy">Privacy</Link>
+            <Link to="/terms-of-service">Terms</Link>
           </div>
         </div>
       </div>
