@@ -254,7 +254,7 @@ landing pages. That is what those pages are for.
 
 ## Unblocked work, needs nobody
 
-Ranked. All of this can proceed while Rafa is unavailable.
+The subset of Phase 1 that can proceed while Rafa is unavailable. Ranked.
 
 1. **Citation pass** (baseline Pillar 3 item 4). Identical NAP across Bing
    Places, Apple Business Connect, Yelp, BBB, Facebook, Nextdoor, Data Axle,
@@ -275,6 +275,61 @@ Ranked. All of this can proceed while Rafa is unavailable.
    loaded. The homepage title is currently ~84 chars and Google will rewrite it.
 8. **Mobile UX pass** (Shepard audit): Googlebot crawls this site as smartphone
    and quality raters evaluate 100% on mobile. Never performed.
+
+## Phase 1: Authority and On-Page (PROPOSED 2026-08-07, not yet approved)
+
+Phase 1 had never been defined; only Phase 0 existed. This is a proposal built
+entirely from items already in SEO_BASELINE.md, not new strategy. Enrique should
+confirm or reorder it.
+
+The logic of the split: Phase 0 made the site technically readable and
+trustworthy. It did not give Google a reason to rank it. First GSC data on
+2026-08-06 proved that exactly: 5 impressions, 0 clicks, average position 21.4,
+a technically perfect site with zero authority. Phase 1 is about earning the
+authority, plus the on-page work that converts authority into rankings.
+
+Highest leverage first:
+
+1. **Domain consolidation** (Pillar 3 item 2). Page-level 301s from
+   rhcsiteservices.com, Change of Address in GSC, keep redirects permanent.
+   Worth ~90% of four years of accumulated signal, more than everything else in
+   this phase combined. NEEDS RAFA (Namecheap login). Preserve the Zoho MX
+   records or the lead form's email delivery silently breaks.
+2. **GBP video verification** (finishes Phase 0 task 6). NEEDS RAFA. Until this
+   happens, every profile edit staged on 2026-08-07 stays invisible.
+3. **Citation pass** (Pillar 3 item 4). Needs nobody. Agreed as the next task.
+4. **Review drip started** (Pillar 3 item 3). NEEDS RAFA. Slowest-compounding
+   item on the whole plan, so the start date matters more than the effort.
+5. **Internal-link cluster** (Pillar 2 item 3). Needs nobody.
+6. **BreadcrumbList schema** (Pillar 1 item 5). Needs nobody.
+7. **First-100-words openings** (Pillar 2 item 2). Needs nobody.
+8. **Title audit** (Pillar 2 item 5). Needs nobody. Homepage title is ~84 chars.
+9. **Speed / CWV** (Pillar 1 item 6). Needs nobody. Self-hosting fonts also
+   removes Google Fonts from the privacy policy's third-party list.
+10. **Mobile UX pass** (Shepard audit). Needs nobody. Never performed, and
+    Googlebot crawls this site as smartphone.
+11. **First 10-15 links** (Pillar 3 item 5): chambers of commerce, event
+    sponsorships, PSAI membership. Partly needs Rafa.
+12. **Monthly tracking routine** (Pillar 3 item 6). Start it during Phase 1 so
+    there is a baseline to measure Phase 2 against.
+
+Phase 1 exit condition: a meaningful share of the 19 pages indexed and holding
+positions, real reviews accumulating, and the old domain consolidated.
+
+## Phase 2: Expansion and AI Search (SKETCH)
+
+Do not start until Phase 1 has produced real GSC data to steer by.
+
+- **GEO playbook execution** (framework queue item 2). Gate lifted 2026-07-27
+  now that prerendering ships; still sequenced after Phase 1 because optimizing
+  for AI citation works better on pages that already rank.
+- **AEO Answer-Gap Desk** (framework queue item 3). Needs ~90 days of GSC data.
+- **"What changes the price" sections** (Pillar 2 item 4).
+- **Additional city pages**, one at a time with real local research, staying
+  under the ~15-20 total cap (Pillar 2 item 9). Currently 9.
+- **Real photos** replacing stock (Pillar 2 item 8). Needs Rafa.
+- **Blog**: still out of scope. Revisit only as a deliberate, quality-controlled
+  decision, never as scaled AI content.
 
 ## Next up after Phase 0
 
