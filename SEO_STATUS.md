@@ -330,8 +330,3 @@ Do not start until Phase 1 has produced real GSC data to steer by.
 - **Real photos** replacing stock (Pillar 2 item 8). Needs Rafa.
 - **Blog**: still out of scope. Revisit only as a deliberate, quality-controlled
   decision, never as scaled AI content.
-
-## Next up after Phase 0
-
-GEO playbook (framework queue item 2) was gated on prerendering and is now
-unblocked. AEO Answer-Gap Desk stays parked until GSC has ~90 days of data.
