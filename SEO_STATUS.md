@@ -2,7 +2,7 @@
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-06.
+Update this file whenever a task moves. Last updated 2026-08-07.
 
 ## Phase 0: Foundations
 
@@ -13,7 +13,7 @@ Update this file whenever a task moves. Last updated 2026-08-06.
 | 3 | Prerender 17 routes + real 404s | DONE 2026-07-27 | |
 | 4 | Request Indexing for all 17 URLs | DONE 2026-07-29 (11 on 7-28, 6 on 7-29) | |
 | 5 | Trust and legal pages | DONE 2026-08-06 | |
-| 6 | Google Business Profile | Not started | Rafa (address) |
+| 6 | Google Business Profile | IN PROGRESS 2026-08-07, manager access granted | address change only |
 
 Extra, discovered mid-Phase 0 and completed: pages.dev duplicate was serving a
 full copy of the site with no noindex. Fixed with a host-scoped rule in
@@ -78,11 +78,37 @@ the OLD domain rhcsiteservices.com, not the new one. The old site also still
 advertises roll-off dumpsters and office trailers, which are out of scope per
 CLAUDE.md rule 7. This is concrete evidence for the domain-consolidation ask.
 
+### GBP access granted 2026-08-07
+
+Enrique holds **Manager** access via the Request Access flow at
+business.google.com/add (relationship "Agency", agency name Be-Techplus,
+requesting account enriquepiedra2005@gmail.com). Owner account is
+rh...@gmail.com, almost certainly rhcportabletoilets@gmail.com. Rafa approved
+within a day once the request was accompanied by a short text explaining it.
+
+Facts the request screen revealed:
+- The listing is verified at a REAL street address, **8792 Portland Rd NE,
+  Brooks, OR 97305**, not the PO Box. No guideline violation to fix.
+  Same road and ZIP as Oregon Portable Toilets (10255 Portland Rd NE, Salem
+  97305) but a different street number.
+- The listing already has **1 review, rated 5.0**. Chase this down: if it is a
+  genuine RHC customer it is the first real testimonial available and belongs in
+  one of the 47 empty TESTIMONIAL SLOT positions.
+
+Manager access covers categories, services, service areas, hours, description,
+photos, posts, and review replies. It does NOT cover changing the verified
+address, which still needs Rafa and triggers re-verification.
+
+Rafa context as of 2026-08-07: working 16-hour days on Pacific Northwest
+wildfire response. Responsive to short, single-ask messages; do not batch
+requests or ask for anything requiring sustained attention right now.
+
 ## Waiting on Rafa
 
-High priority first. Everything here was blocking as of 2026-07-28.
+High priority first. Old domain access is DEFERRED by agreement 2026-08-07 until
+Rafa's workload eases; it is still the highest-value item when he is available.
 
-1. **Old domain access (highest leverage).** rhcsiteservices.com is still live,
+1. **Old domain access (highest leverage, deferred by agreement).** rhcsiteservices.com is still live,
    WordPress + Elementor, registrar/DNS/hosting all on Namecheap
    (dns1.namecheaphosting.com), email on Zoho. Need the Namecheap login. Page
    level 301s from it pass roughly 90% of four years of accumulated signal into
