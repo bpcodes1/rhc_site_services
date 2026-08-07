@@ -15,10 +15,10 @@ at any moment. SEO items are queued below with triage status.
 ## Framework Queue (triaged 2026-07-25)
 
 1. Cyrus Shepard expert framework: AUDITED 2026-07-25 (see Audit 2 below).
-2. Core GEO playbook + GEO Content Optimizer: AUDIT NOW, EXECUTE LATER.
-   Covers the AI Overviews MISSING row. Execution is gated on prerendering:
-   AI crawlers cannot read this client-side React site yet, so GEO rewrites
-   before prerendering would optimize pages AI engines cannot see. Treat the
+2. Core GEO playbook + GEO Content Optimizer: GATE LIFTED 2026-07-27.
+   Covers the AI Overviews MISSING row. Execution was gated on prerendering,
+   which is now done: all 19 routes ship real static HTML, so AI crawlers can
+   read the site. This is ready to audit and execute whenever Enrique pastes it. Treat the
    +30-40% visibility claims as directional (lab-derived), not guarantees.
 3. AEO Answer-Gap Desk: LATER (~90 days after GSC exists). Monitoring loop
    that requires Search Console data plus paid tools (DataForSEO, Firecrawl);

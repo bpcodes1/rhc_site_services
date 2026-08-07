@@ -17,7 +17,7 @@ Status keys: [DONE] on this site already. [TODO] open action. [RAFA] needs Rafa.
 
 Already right on this site:
 - [DONE] Unique title, description, canonical per page; canonicals on the apex
-  domain sitewide; sitemap.xml (17 canonical URLs) and robots.txt live (robots
+  domain sitewide; sitemap.xml (19 canonical URLs) and robots.txt live (robots
   allows /assets/, required for Google to render a JS site).
 - [DONE] http -> https 301. 404 page with noindex (the accepted SPA fallback).
 - [DONE] Zero third-party scripts (the top INP killer on small sites); keep it so.
@@ -40,10 +40,9 @@ Actions, ranked by impact:
    social/AI crawlers never run JS, so link previews and AI-search visibility
    only work with static HTML. After prerendering: remove the catch-all
    _redirects rule and ship 404.html so unknown URLs return real HTTP 404s.
-3. [TODO] Google Search Console: Domain property (Cloudflare DNS TXT record),
-   submit sitemap.xml, then Request Indexing for all 17 URLs. Monitor Page
-   Indexing for "Crawled - currently not indexed" (classic new-domain symptom)
-   and use URL Inspection "View crawled page" to confirm rendering per page.
+3. [DONE 2026-07-28/29] Google Search Console Domain property verified by DNS
+   TXT, sitemap submitted (Success, 19 URLs), Request Indexing done for every
+   URL. Keep monitoring Page Indexing for "Crawled - currently not indexed".
 4. [DONE 2026-07-27] GitHub Pages duplicate unpublished (Bryan). pages.dev did
    NOT send noindex by default (verified by curl); fixed via host-scoped rule in
    public/_headers (X-Robots-Tag: noindex on rhc-site-services.pages.dev only).
@@ -101,7 +100,11 @@ pack ranking; listed service areas do not extend ranking radius (Sterling Sky,
 8,186-business study). Never create fake GBPs in distant cities.
 
 Actions, ranked by impact:
-1. [RAFA] Google Business Profile fundamentals: verify at a REAL address (P.O.
+1. [STAGED 2026-08-07, needs Rafa's video verification] Google Business Profile.
+   Manager access obtained; website field, description, categories, service
+   areas, ~17 services, and attributes are all edited but invisible until Rafa
+   records the verification video. Full detail in SEO_STATUS.md. Original note:
+   verify at a REAL address (P.O.
    Boxes are not accepted; verify at a real location then hide it), primary
    category "Portable toilet supplier", fill the Services section exhaustively
    (a tested ranking mover), add secondary categories, set hours, list the 8

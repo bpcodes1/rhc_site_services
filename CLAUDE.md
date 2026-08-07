@@ -51,7 +51,14 @@ check (.github/workflows/build-check.yml). Preview visual changes with npm run d
 
 Pushing to enrique auto-deploys production (Cloudflare Pages). Treat every push as
 a production deploy. main is stale; all work happens on enrique. Register new pages
-in App.tsx and public/sitemap.xml; keep the catch-all NotFound route last.
+in THREE places: the Routes tree in src/AppRoutes.tsx, the ROUTES array in
+prerender.mjs, and public/sitemap.xml. Miss prerender.mjs and the page ships as an
+empty shell to crawlers. Keep the catch-all NotFound route last.
+
+Every route is prerendered to static HTML at build time by prerender.mjs plus
+src/entry-server.tsx. Read SEO_STATUS.md "Build gotchas" before touching that
+pipeline; the flat-file output and the missing title/description in index.html
+are both deliberate.
 
 ## Status and History
 

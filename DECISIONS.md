@@ -87,15 +87,29 @@ all copy stays Oregon/Washington-scoped to protect local SEO.
 
 ## Launch TODOs
 
-1. Footer legal links (Privacy, Terms, Accessibility) are placeholder "#" links
-   in Footer.tsx. Real pages or removal before launch.
+1. DONE 2026-08-06: Privacy Policy and Terms of Service built and wired into the
+   footer. The Accessibility link was removed rather than replaced, because that
+   statement is a promise about assistive-technology support nobody has audited.
+   Add it back only after a real audit.
 2. About Us: job site photo (src/assets/general/about_jobsite.webp), Rafa
-   personal photo, client story for section 05, testimonial in final CTA.
+   personal photo, client story for section 05. All need Rafa.
    (P.O. Box, Google Maps URL, and Facebook URL: done as of 2026-07.)
-3. Google Search Console: register rhcsiteservice.com, submit
-   public/sitemap.xml. Not started as of 2026-07-24.
+   The final-CTA testimonial is now a TESTIMONIAL SLOT comment; see below.
+3. DONE 2026-07-28: Google Search Console Domain property verified by DNS TXT,
+   sitemap submitted, indexing requested for all URLs. See SEO_STATUS.md.
 4. DONE 2026-07-25: Bryan unpublished the GitHub Pages site (github.io now 404).
-5. Optional cleanup: delete src/pages/FAQ.tsx and its route.
+5. DONE 2026-07-27: the /faq route was removed (Enrique's call, it 404s now).
+   src/pages/FAQ.tsx remains orphaned in the repo, unrouted and unbuilt, like
+   src/pages/services/RollOffDumpsters.tsx.
+7. NO FABRICATED PROOF, locked 2026-07-27. Every rendered testimonial was
+   removed sitewide: 41 visible "[Testimonial placeholder]" blocks plus 6
+   invented or borrowed quotes, replaced with 47 `TESTIMONIAL SLOT` comments
+   that record each position, its intended review theme, and paste-back markup.
+   False founding claims ("15+ years", "RHC has operated since 2016",
+   schema foundingDate) were corrected: 2016 attaches to Rafa's work history,
+   never to the brand. Grep `TESTIMONIAL SLOT` to find every empty slot.
+8. Site is prerendered as of 2026-07-27. See CLAUDE.md Deployment and
+   SEO_STATUS.md "Build gotchas" before adding pages or touching the build.
 6. DONE 2026-07-24: Contact page now shows info@rhcsiteservices.com (the inbox
    Rafa designated for inquiries) in schema, mailto link, and displayed text.
 

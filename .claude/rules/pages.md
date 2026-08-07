@@ -6,7 +6,12 @@ globs: ["src/pages/**/*.tsx"]
 All pages:
 - Helmet (react-helmet-async) with unique title, meta description, and canonical
   link: https://rhcsiteservice.com/{route}.
-- Register the route in App.tsx and add the URL to public/sitemap.xml.
+- Register a new page in THREE places or it will not ship correctly:
+  1. the `<Routes>` tree in src/AppRoutes.tsx (NOT App.tsx, which now only wraps
+     BrowserRouter around AppRoutes),
+  2. the ROUTES array in prerender.mjs, or the page never gets prerendered and
+     crawlers see an empty shell,
+  3. public/sitemap.xml.
 - Contact Us stays out of the Header nav; it lives in the Footer "Company" column.
 - Footer uses the site-footer className.
 - Nav marks Services active (is-active) on every service route.
