@@ -2,7 +2,40 @@
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-13.
+Update this file whenever a task moves. Last updated 2026-08-14.
+
+## PHASE 0 IS NOT FINISHED (as of 2026-08-14)
+
+Two open items. Neither blocks Phase 1 work; do not stall the queue waiting on
+them.
+
+- **Task 4 has a hole.** Indexing was requested for all URLs on 2026-07-28/29,
+  but `/privacy-policy` and `/terms-of-service` were created 2026-08-06, after
+  the fact, and have **never had indexing requested**. They are in the sitemap
+  so Google will find them eventually. Two minutes in GSC closes this.
+- **Task 6 (GBP) is staged, not live.** Rafa has still not recorded the video
+  verification as of 2026-08-14. Every profile edit stays invisible until he
+  does. He is working 16-hour days on wildfire response; this is a scheduling
+  reality, not neglect.
+
+Agreed approach: finish what needs nobody, leave the Rafa-gated items open, and
+keep moving. Phase 0 stays open in this file until both are closed so it does
+not silently get treated as complete.
+
+## The one Google review is FAKE. Do not use it. (confirmed 2026-08-14)
+
+The listing's single 5-star review, by "Muhammad Lhsan", references a **client
+project in Texas** and closes "If you're in need of site services in Texas,
+look no further." RHC serves Oregon and Washington only. It also describes a
+crew performing skilled workmanship, which is not porta potty delivery, and the
+language is generic throughout. Most likely another business of the same name
+in Texas, reviewed by mistake.
+
+It must never be used as a testimonial on the site. Enrique flagged it as
+probably fake before analysis and was correct. RHC therefore still has **zero
+usable reviews**, which is why the review drip remains the slowest-compounding
+item on the plan. Whether to report it to Google is Rafa's call: removing it
+takes the listing to zero reviews, and RHC did not create it.
 
 ## START HERE: agreed work queue (set 2026-08-13)
 
@@ -55,9 +88,9 @@ actually indexed, which is the real check-in metric.
 | 1 | 301 www to apex redirect | DONE 2026-07-27 | |
 | 2 | Google Search Console Domain property + sitemap | DONE 2026-07-28 | |
 | 3 | Prerender 17 routes + real 404s | DONE 2026-07-27 | |
-| 4 | Request Indexing for all 17 URLs | DONE 2026-07-29 (11 on 7-28, 6 on 7-29) | |
+| 4 | Request Indexing | 17 of 19 done 7-28/29; the 2 legal pages never requested | |
 | 5 | Trust and legal pages | DONE 2026-08-06 | |
-| 6 | Google Business Profile | STAGED 2026-08-07, all edits pending | Rafa (video verification) |
+| 6 | Google Business Profile | STAGED 2026-08-07, still not verified as of 8-14 | Rafa (video verification) |
 
 Extra, discovered mid-Phase 0 and completed: pages.dev duplicate was serving a
 full copy of the site with no noindex. Fixed with a host-scoped rule in
@@ -135,9 +168,9 @@ Facts the request screen revealed:
   Brooks, OR 97305**, not the PO Box. No guideline violation to fix.
   Same road and ZIP as Oregon Portable Toilets (10255 Portland Rd NE, Salem
   97305) but a different street number.
-- The listing already has **1 review, rated 5.0**. Chase this down: if it is a
-  genuine RHC customer it is the first real testimonial available and belongs in
-  one of the 47 empty TESTIMONIAL SLOT positions.
+- The listing already has **1 review, rated 5.0**. RESOLVED 2026-08-14: it is
+  FAKE and unusable, see the section near the top of this file. RHC still has
+  zero usable reviews.
 
 Manager access covers categories, services, service areas, hours, description,
 photos, posts, and review replies. It does NOT cover changing the verified
@@ -222,11 +255,9 @@ Rafa's workload eases; it is still the highest-value item when he is available.
    signage, done from his phone at the yard. Two minutes of his time, and it is
    not a desk task, which suits his current schedule. Unverified listings also
    rank worse and cannot properly reply to reviews.
-3. **Business hours.** Currently "Open 24 hours" and unverified. Enrique
-   suggested copying Oregon Portable Toilets' hours; rejected, because those
-   describe a different business and inferring them repeats the pattern of
-   filling fields with plausible unverified data. One-line question: "What hours
-   do you want on your Google listing? When can people actually reach you?"
+3. ANSWERED 2026-08-14: **business hours are 8:00am to 7:00pm, every day.**
+   Rafa confirmed. Set these on the GBP (they will publish with everything else
+   once he verifies) and replace the current "Open 24 hours".
 4. **Payment methods accepted**, for the GBP Payments attribute.
 5. **Does he offer handwashing stations directly?** Already listed on GBP on the
    reasoning above, but worth confirming, and it determines the site copy.
