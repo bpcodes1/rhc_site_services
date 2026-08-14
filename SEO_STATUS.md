@@ -2,7 +2,51 @@
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-07.
+Update this file whenever a task moves. Last updated 2026-08-13.
+
+## START HERE: agreed work queue (set 2026-08-13)
+
+Enrique approved this order and is willing to do his part on each. Work top
+down. Items 1-3 need nobody and can be executed immediately.
+
+| # | Task | Needs from Enrique |
+|---|------|--------------------|
+| 1 | Structured data on the 17 pages that have none | nothing |
+| 2 | Explicit width/height on all images (CLS) | nothing |
+| 3 | Self-host fonts + code-split the 797 KB bundle | nothing |
+| 4 | Title audit and rewrites | approval, page by page (copy) |
+| 5 | Contextual in-body internal links | anchor-text approval (copy) |
+| 6 | Citation pass | he does the submissions; prep the list for him |
+
+### Site audit measured 2026-08-13 (the numbers behind that order)
+
+- **Structured data: only 2 of 19 pages have any.** About Us and Contact Us
+  only. All 5 service pages, all 9 location pages, and the homepage have zero.
+  Largest concrete gap on the site. Also note **two separate LocalBusiness
+  blocks** exist across those two pages; the baseline calls for one canonical
+  block, so consolidate while adding BreadcrumbList.
+- **Titles: 10 of 19 outside the 51-60 target.** Homepage is 82 characters and
+  Google will rewrite it. Service pages run 63-68. The two legal pages are
+  short (34, 36) and matter least. The 9 location pages are mostly fine.
+- **Internal links: better than assumed.** All 9 city pages are linked from
+  every page through the header Service Areas menu, so nothing is orphaned.
+  What is missing is contextual in-body links, which carry more weight than
+  sitewide nav boilerplate. Real gap, but smaller than the baseline implies.
+- **JS bundle: 797 KB in a single chunk**, no code splitting. CSS is 56 KB.
+- **Fonts: the Google Fonts stylesheet is render-blocking from a third-party
+  domain.** Self-hosting improves LCP and removes Google from the privacy
+  policy's third-party list.
+- **Images: 23 of 23 sampled img tags have no width or height.** Direct CLS
+  risk, and CLS is one of the three Core Web Vitals.
+- **Mobile UX pass: never performed.** Googlebot crawls this site as smartphone
+  and quality raters evaluate on mobile only (Shepard audit).
+
+### Still to pull from Enrique
+
+Search Console **Performance at 28 days** and **Indexing > Pages**. Last read
+2026-08-06: 5 impressions, 0 clicks, position 21.4, and the Pages report was
+still "Processing data". By now Pages should show how many of the 19 are
+actually indexed, which is the real check-in metric.
 
 ## Phase 0: Foundations
 

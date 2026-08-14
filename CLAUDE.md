@@ -78,13 +78,9 @@ The site had fabricated testimonials and false founding claims removed on
 
 ## Working With Enrique
 
-- Explain new technical concepts in plain English at a 5th-grade reading
-  level; use analogies. Confirm understanding before building on a concept.
-- Challenge his reasoning when it is weak and say why. He expects pushback
-  and treats it as a feature, never rubber-stamp.
 - One question or decision at a time; lock it before moving to the next.
-- Zero assumptions: if a fact is not stated or verifiable, ask or verify.
-- He and Bryan both push to this repo. Pull before working.
+- Interaction rules, plain-English handling, and assumption discipline live in
+  ~/.claude/CLAUDE.md and load every session. Do not restate them here.
 
 ## Reminders
 

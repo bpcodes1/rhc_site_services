@@ -69,6 +69,15 @@ first ones handed over.
 - Soft 404: a missing page that pretends everything is OK instead of saying
   "not found." Confuses robots.
 
+**Breadcrumb** — the little trail of links showing where a page sits, like
+Home / Services / Porta Potty Rental. Google often shows it instead of the raw
+web address in search results, which makes the result easier to read.
+
+**CLS (Cumulative Layout Shift)** — measures how much a page jumps around
+while it loads. If you go to tap something and it moves because an image just
+appeared above it, that is CLS. Telling the browser each image's size up front
+prevents it. One of the three Core Web Vitals.
+
 ## Words about strategy
 
 - Authority tier: the level of competition your site can currently win at.
