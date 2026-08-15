@@ -33,16 +33,14 @@ in the 18 days since the property started collecting."
 - Realistic horizon for a new local domain is 3-6 months, and the two biggest
   levers (old-domain 301s, GBP verification) are both still unstarted.
 
-
-
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-14.
+Update this file whenever a task moves. Last updated 2026-08-15.
 
-## PHASE 0 IS NOT FINISHED (as of 2026-08-14)
+## PHASE 0: one item left, and it is Rafa (as of 2026-08-15)
 
-Two open items. Neither blocks Phase 1 work; do not stall the queue waiting on
-them.
+One open item. It does not block Phase 1 work; do not stall the queue waiting on
+it.
 
 - ~~Task 4 has a hole.~~ **CLOSED 2026-08-15.** Enrique requested indexing for
   `/privacy-policy` and `/terms-of-service`, which were created 2026-08-06 and
@@ -52,13 +50,14 @@ them.
   be the http and www variants a Domain property tracks, which is the www-to-
   apex redirect working as designed. NOT yet confirmed by opening that row.
 - **Task 6 (GBP) is staged, not live.** Rafa has still not recorded the video
-  verification as of 2026-08-14. Every profile edit stays invisible until he
-  does. He is working 16-hour days on wildfire response; this is a scheduling
+  verification as of 2026-08-15. Every profile edit stays invisible until he
+  does. This is now the ONLY thing standing between the site and a finished
+  Phase 0. He is working 16-hour days on wildfire response; this is a scheduling
   reality, not neglect.
 
-Agreed approach: finish what needs nobody, leave the Rafa-gated items open, and
-keep moving. Phase 0 stays open in this file until both are closed so it does
-not silently get treated as complete.
+Agreed approach: finish what needs nobody, leave the Rafa-gated item open, and
+keep moving. Phase 0 stays open in this file until it is closed so it does not
+silently get treated as complete.
 
 ## The one Google review is FAKE, and PLANTED. (provenance confirmed 2026-08-15)
 
@@ -117,6 +116,12 @@ kept for their reasoning, not their order.
 | 2 | Explicit width/height on all images (CLS) | nothing | DONE 2026-08-14 |
 | 3 | Self-host fonts (CLS/LCP) | nothing | DONE 2026-08-14 |
 | 3b | Code-split the 797 KB bundle | nothing | still open |
+| 4 | Title audit and rewrites | approval, page by page (copy) | DONE 2026-08-15 |
+| 5 | Contextual in-body internal links | anchor-text approval (copy) | |
+| 6 | Citation pass | he does the submissions; prep the list for him | |
+| 7 | Per-page social preview (og/twitter) tags | nothing | LAST, see below |
+
+Results and reasoning for each are below, in the order the tasks were done.
 
 ### Tasks 2 and 3 result (2026-08-14): CLS is now 0.00 sitewide
 
@@ -184,12 +189,10 @@ answers before being caught:
 - Chrome's `Page.addScriptToEvaluateOnNewDocument` ADDS a script per call. In a
   loop over URLs it stacks observers, so page N counts every shift N times.
   Inflated readings of 0.28 and 0.46 were artifacts of this, not real.
-| 4 | Title audit and rewrites | approval, page by page (copy) | DONE 2026-08-15 |
-| 5 | Contextual in-body internal links | anchor-text approval (copy) | |
-| 6 | Citation pass | he does the submissions; prep the list for him | |
-| 7 | Per-page social preview (og/twitter) tags | nothing | LAST, see below |
 
-Item 7 added 2026-08-14 and deliberately placed last by Enrique. Every page
+### Task 7 note (added 2026-08-14, deliberately placed LAST)
+
+Item 7 was added 2026-08-14 and deliberately placed last by Enrique. Every page
 currently inherits the homepage's Open Graph tags from index.html, so sharing
 any page in a text, WhatsApp, LinkedIn or Slack shows the homepage title,
 homepage description and a homepage web address. Verified on production the
