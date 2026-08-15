@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/portland/portland_hero.webp'
 import trailer2StallImg from '../../../assets/restroom-trailers/2stall_portable.webp'
@@ -124,6 +125,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Restroom Trailer Rental in Portland, OR',
+    description:
+      'Luxury restroom trailer rentals for Portland outdoor events and Willamette Valley venues. Confirmed arrival windows, locked pricing, and same-day quotes from RHC.',
+    path: '/restroom-trailer-rental-portland-or',
+    serviceType: 'Restroom trailer rental',
+    areaServed: ['Portland, OR'],
+  }),
+  breadcrumb([{ name: 'Restroom Trailers', path: '/restroom-trailers' }, { name: 'Portland, OR' }]),
+  faqPage(faqs),
+])
+
 export default function RestroomTrailerPortland() {
   return (
     <main id="main">
@@ -131,6 +146,7 @@ export default function RestroomTrailerPortland() {
         <title>Restroom Trailer Rental in Portland, OR | RHC Site Services</title>
         <meta name="description" content="Luxury restroom trailer rentals for Portland outdoor events and Willamette Valley venues. Confirmed arrival windows, locked pricing, and same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailer-rental-portland-or" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

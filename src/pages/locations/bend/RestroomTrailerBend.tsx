@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
 import trailer2StallImg from '../../../assets/restroom-trailers/2stall_portable.webp'
@@ -120,6 +121,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Restroom Trailer Rental in Bend, OR',
+    description:
+      'Luxury restroom trailer rentals for Bend outdoor events and long-term sites. Hard arrival windows, published specs, and all-in quotes from RHC. Central Oregon coverage.',
+    path: '/restroom-trailer-rental-bend-or',
+    serviceType: 'Restroom trailer rental',
+    areaServed: ['Bend, OR'],
+  }),
+  breadcrumb([{ name: 'Restroom Trailers', path: '/restroom-trailers' }, { name: 'Bend, OR' }]),
+  faqPage(faqs),
+])
+
 export default function RestroomTrailerBend() {
   return (
     <main id="main">
@@ -127,6 +142,7 @@ export default function RestroomTrailerBend() {
         <title>Restroom Trailer Rental in Bend, OR | RHC Site Services</title>
         <meta name="description" content="Luxury restroom trailer rentals for Bend outdoor events and long-term sites. Hard arrival windows, published specs, and all-in quotes from RHC. Central Oregon coverage." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailer-rental-bend-or" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

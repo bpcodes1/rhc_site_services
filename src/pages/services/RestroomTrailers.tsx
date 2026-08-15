@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../seo/schema'
 import LeadForm from '../../components/LeadForm'
 import heroImg from '../../assets/restroom-trailers/luxury_restroom_hero.webp'
 import restroom2StallImg from '../../assets/restroom-trailers/2stall_portable.webp'
@@ -139,6 +140,19 @@ const faqs = [
   },
 ]
 
+const schema = graph([
+  business,
+  service({
+    name: 'Restroom Trailer Rentals',
+    description:
+      'Luxury restroom trailers from 2 to 10 stalls: published specs, confirmed delivery windows, and climate control for events across Oregon and Washington. Same-day quotes from RHC.',
+    path: '/restroom-trailers',
+    serviceType: 'Restroom trailer rental',
+  }),
+  breadcrumb([{ name: 'Restroom Trailer Rentals' }]),
+  faqPage(faqs),
+])
+
 export default function RestroomTrailers() {
   return (
     <main id="main">
@@ -146,6 +160,7 @@ export default function RestroomTrailers() {
         <title>Restroom Trailer Rental Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="Luxury restroom trailers from 2 to 10 stalls: published specs, confirmed delivery windows, and climate control for events across Oregon and Washington. Same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailers" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

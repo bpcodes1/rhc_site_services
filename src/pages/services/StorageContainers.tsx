@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../seo/schema'
 import LeadForm from '../../components/LeadForm'
 import heroImg from '../../assets/storage-containers/container_hero.webp'
 import container10ftImg from '../../assets/storage-containers/container_10ft.webp'
@@ -152,6 +153,19 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Storage Container Rentals',
+    description:
+      'Steel shipping container rentals across Oregon and Washington. 10ft, 20ft, and 40ft storage containers for construction, moving, and renovation. No hidden fees. Same-day quote.',
+    path: '/storage-containers',
+    serviceType: 'Storage container rental',
+  }),
+  breadcrumb([{ name: 'Storage Container Rentals' }]),
+  faqPage(faqs),
+])
+
 export default function StorageContainers() {
   return (
     <main id="main">
@@ -159,6 +173,7 @@ export default function StorageContainers() {
         <title>Storage Container Rentals in Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="Steel shipping container rentals across Oregon and Washington. 10ft, 20ft, and 40ft storage containers for construction, moving, and renovation. No hidden fees. Same-day quote." />
         <link rel="canonical" href="https://rhcsiteservice.com/storage-containers" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

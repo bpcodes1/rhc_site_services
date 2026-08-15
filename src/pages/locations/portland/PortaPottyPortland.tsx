@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/portland/portland_hero.webp'
 import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
@@ -122,6 +123,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Porta Potty Rental in Portland, OR',
+    description:
+      'Portable toilet rentals for Portland job sites and events on a confirmed delivery window. PBOT permit guidance included. Same-day quotes from RHC.',
+    path: '/porta-potty-rental-portland-or',
+    serviceType: 'Portable toilet rental',
+    areaServed: ['Portland, OR'],
+  }),
+  breadcrumb([{ name: 'Portable Toilets', path: '/portable-toilets' }, { name: 'Portland, OR' }]),
+  faqPage(faqs),
+])
+
 export default function PortaPottyPortland() {
   return (
     <main id="main">
@@ -129,6 +144,7 @@ export default function PortaPottyPortland() {
         <title>Porta Potty Rental in Portland, OR | RHC Site Services</title>
         <meta name="description" content="Portable toilet rentals for Portland job sites and events on a confirmed delivery window. PBOT permit guidance included. Same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/porta-potty-rental-portland-or" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

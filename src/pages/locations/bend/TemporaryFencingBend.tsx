@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
 import fencePanelsImg from '../../../assets/temporary-fencing/fence.webp'
@@ -114,6 +115,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Temporary Fencing Rental in Bend, OR',
+    description:
+      'Panel and post-driven temporary fencing for Bend job sites and events. Hard arrival windows, permit guidance included, locked pricing. Same-day quotes from RHC.',
+    path: '/temporary-fencing-rental-bend-or',
+    serviceType: 'Temporary fence rental',
+    areaServed: ['Bend, OR'],
+  }),
+  breadcrumb([{ name: 'Temporary Fencing', path: '/temporary-fencing' }, { name: 'Bend, OR' }]),
+  faqPage(faqs),
+])
+
 export default function TemporaryFencingBend() {
   return (
     <main id="main">
@@ -121,6 +136,7 @@ export default function TemporaryFencingBend() {
         <title>Temporary Fencing Rental in Bend, OR | RHC Site Services</title>
         <meta name="description" content="Panel and post-driven temporary fencing for Bend job sites and events. Hard arrival windows, permit guidance included, locked pricing. Same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing-rental-bend-or" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

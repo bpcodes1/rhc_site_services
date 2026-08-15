@@ -1,7 +1,19 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, graph, webPage } from '../seo/schema'
 
 const EFFECTIVE = 'August 6, 2026'
+
+const schema = graph([
+  business,
+  webPage({
+    name: 'Privacy Policy',
+    description:
+      'How RHC Site Services handles the information you submit through the quote form, who processes it, and how to request a copy or deletion.',
+    path: '/privacy-policy',
+  }),
+  breadcrumb([{ name: 'Privacy Policy' }]),
+])
 
 export default function PrivacyPolicy() {
   return (
@@ -13,6 +25,7 @@ export default function PrivacyPolicy() {
           content="How RHC Site Services handles the information you submit through the quote form, who processes it, and how to request a copy or deletion."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/privacy-policy" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       <div className="crumbs-wrap">

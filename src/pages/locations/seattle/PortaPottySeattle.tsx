@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
 import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
@@ -147,6 +148,20 @@ const thStyle: React.CSSProperties = {
   borderBottom: '2px solid var(--outline-variant)',
 }
 
+const schema = graph([
+  business,
+  service({
+    name: 'Porta Potty Rental in Seattle, WA',
+    description:
+      'Portable toilet rentals for Seattle construction sites and events. WA L&I compliant unit counts, SDOT permit guidance, same-day quotes. Serving King County.',
+    path: '/porta-potty-rental-seattle-wa',
+    serviceType: 'Portable toilet rental',
+    areaServed: ['Seattle, WA'],
+  }),
+  breadcrumb([{ name: 'Portable Toilets', path: '/portable-toilets' }, { name: 'Seattle, WA' }]),
+  faqPage(faqs),
+])
+
 export default function PortaPottySeattle() {
   return (
     <main id="main">
@@ -154,6 +169,7 @@ export default function PortaPottySeattle() {
         <title>Porta Potty Rental Seattle WA | RHC Site Services</title>
         <meta name="description" content="Portable toilet rentals for Seattle construction sites and events. WA L&I compliant unit counts, SDOT permit guidance, same-day quotes. Serving King County." />
         <link rel="canonical" href="https://rhcsiteservice.com/porta-potty-rental-seattle-wa" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

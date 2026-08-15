@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { business, faqPage, graph } from '../seo/schema'
 import LeadForm from '../components/LeadForm'
 import heroImg from '../assets/general/hero.webp'
 import portaPottyRow from '../assets/portable-toilets/porta-potty2.webp'
@@ -56,6 +57,39 @@ const homeCities = [
   { name: 'Seattle',   state: 'WA', hq: false },
 ]
 
+// Lifted out of the JSX verbatim so the FAQ section and the FAQPage markup
+// below can never say different things. Every other page already works this way.
+const homeFaqs = [
+  {
+    q: 'How fast can you actually deliver?',
+    a: "Standard turnaround is 48 hours from confirmed booking to on-site. In our core Pacific Northwest service areas (Salem, Portland, Bend, Seattle) we routinely book next-day. Same-day deliveries are case-by-case and confirmed only after RHC has verified the route. We will never promise a window we can't hit.",
+  },
+  {
+    q: 'Why is there no pricing on your website?',
+    a: 'Because rental price depends on five variables most calculators ignore: ZIP, service frequency, duration, road access for our drivers, and any local permitting. Posting a generic price online would force us to either pad it (so we can absorb edge cases) or under-promise and bill the difference later. Both are the kind of behavior we built RHC to avoid. A hard quote in one business hour is better than a fake number in one click.',
+  },
+  {
+    q: 'If something goes wrong on delivery day, who do I actually call?',
+    a: 'RHC. One number, one invoice, one person who already knows your site. Before delivery day you get three things in writing: what is arriving, exactly where it goes, and the window it arrives in. If any of that is wrong, you call RHC and RHC fixes it. You will not get a ticket number, and you will not be asked to sort out whose fault it was. Rafa has worked on Pacific Northwest job sites since 2016, and every job runs to the same standard, whether it is one unit on a driveway or a full site package.',
+  },
+  {
+    q: 'Do you service residential remodels, or only commercial?',
+    a: "Both. A single porta potty for a 6-month backyard ADU build and a 10-stall restroom trailer for a 5,000-guest festival both go through the same RHC team and the same operational standard. Smaller doesn't mean lower priority, it means a faster phone call.",
+  },
+  {
+    q: "What's included in a rental, and what isn't?",
+    a: 'Quote includes: delivery, equipment, scheduled servicing or swap-outs at the cadence you choose, and haul-back. Quote excludes: city or county permits (we\'ll tell you if you need one), and any damage outside normal wear. There are no "environmental fees," fuel surcharges, or back-end add-ons. If it\'s not on the quote, you won\'t see it on the invoice.',
+  },
+  {
+    q: 'Can I extend my rental mid-job?',
+    a: "Yes. One call or one email to RHC and we extend at the same daily, weekly, or monthly rate on your original quote. We won't surprise-rate you because your project ran two weeks long.",
+  },
+]
+
+// The homepage carries the canonical business node; every other page emits the
+// identical one from the same constant.
+const schema = graph([business, faqPage(homeFaqs)])
+
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState<string | null>(null)
 
@@ -65,6 +99,7 @@ export default function Home() {
         <title>Portable Toilet &amp; Site Equipment Rental in Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="Porta potty, restroom trailer, shower trailer, temporary fencing, and storage container rentals across Oregon and Washington. Hard delivery windows. No surprise fees." />
         <link rel="canonical" href="https://rhcsiteservice.com/" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* ── HERO + STAT STRIP (fills full viewport below nav) ───────────── */}
@@ -627,59 +662,16 @@ export default function Home() {
           </div>
 
           <div className="faq-list">
-            <details className="faq-item" open>
-              <summary>
-                <span className="faq-num">Q.01</span>
-                <span className="faq-q">How fast can you actually deliver?</span>
-                <span className="faq-toggle" aria-hidden="true"></span>
-              </summary>
-              <div className="faq-a">Standard turnaround is 48 hours from confirmed booking to on-site. In our core Pacific Northwest service areas (Salem, Portland, Bend, Seattle) we routinely book next-day. Same-day deliveries are case-by-case and confirmed only after RHC has verified the route. We will never promise a window we can't hit.</div>
-            </details>
-
-            <details className="faq-item">
-              <summary>
-                <span className="faq-num">Q.02</span>
-                <span className="faq-q">Why is there no pricing on your website?</span>
-                <span className="faq-toggle" aria-hidden="true"></span>
-              </summary>
-              <div className="faq-a">Because rental price depends on five variables most calculators ignore: ZIP, service frequency, duration, road access for our drivers, and any local permitting. Posting a generic price online would force us to either pad it (so we can absorb edge cases) or under-promise and bill the difference later. Both are the kind of behavior we built RHC to avoid. A hard quote in one business hour is better than a fake number in one click.</div>
-            </details>
-
-            <details className="faq-item">
-              <summary>
-                <span className="faq-num">Q.03</span>
-                <span className="faq-q">If something goes wrong on delivery day, who do I actually call?</span>
-                <span className="faq-toggle" aria-hidden="true"></span>
-              </summary>
-              <div className="faq-a">RHC. One number, one invoice, one person who already knows your site. Before delivery day you get three things in writing: what is arriving, exactly where it goes, and the window it arrives in. If any of that is wrong, you call RHC and RHC fixes it. You will not get a ticket number, and you will not be asked to sort out whose fault it was. Rafa has worked on Pacific Northwest job sites since 2016, and every job runs to the same standard, whether it is one unit on a driveway or a full site package.</div>
-            </details>
-
-            <details className="faq-item">
-              <summary>
-                <span className="faq-num">Q.04</span>
-                <span className="faq-q">Do you service residential remodels, or only commercial?</span>
-                <span className="faq-toggle" aria-hidden="true"></span>
-              </summary>
-              <div className="faq-a">Both. A single porta potty for a 6-month backyard ADU build and a 10-stall restroom trailer for a 5,000-guest festival both go through the same RHC team and the same operational standard. Smaller doesn't mean lower priority, it means a faster phone call.</div>
-            </details>
-
-            <details className="faq-item">
-              <summary>
-                <span className="faq-num">Q.05</span>
-                <span className="faq-q">What's included in a rental, and what isn't?</span>
-                <span className="faq-toggle" aria-hidden="true"></span>
-              </summary>
-              <div className="faq-a">Quote includes: delivery, equipment, scheduled servicing or swap-outs at the cadence you choose, and haul-back. Quote excludes: city or county permits (we'll tell you if you need one), and any damage outside normal wear. There are no "environmental fees," fuel surcharges, or back-end add-ons. If it's not on the quote, you won't see it on the invoice.</div>
-            </details>
-
-            <details className="faq-item">
-              <summary>
-                <span className="faq-num">Q.06</span>
-                <span className="faq-q">Can I extend my rental mid-job?</span>
-                <span className="faq-toggle" aria-hidden="true"></span>
-              </summary>
-              <div className="faq-a">Yes. One call or one email to RHC and we extend at the same daily, weekly, or monthly rate on your original quote. We won't surprise-rate you because your project ran two weeks long.</div>
-            </details>
+            {homeFaqs.map((faq, i) => (
+              <details key={i} className="faq-item" open={i === 0}>
+                <summary>
+                  <span className="faq-num">Q.{String(i + 1).padStart(2, '0')}</span>
+                  <span className="faq-q">{faq.q}</span>
+                  <span className="faq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div className="faq-a">{faq.a}</div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
 import fencePanelsImg from '../../../assets/temporary-fencing/fence.webp'
@@ -109,6 +110,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Temporary Fencing Rental in Seattle, WA',
+    description:
+      'Temporary fencing rental for Seattle job sites, events, and residential renovations. RHC confirms SDOT permit status before every delivery and provides a written installation window. Same-day quote.',
+    path: '/temporary-fencing-rental-seattle-wa',
+    serviceType: 'Temporary fence rental',
+    areaServed: ['Seattle, WA'],
+  }),
+  breadcrumb([{ name: 'Temporary Fencing', path: '/temporary-fencing' }, { name: 'Seattle, WA' }]),
+  faqPage(faqs),
+])
+
 export default function TemporaryFencingSeattle() {
   return (
     <main id="main">
@@ -119,6 +134,7 @@ export default function TemporaryFencingSeattle() {
           content="Temporary fencing rental for Seattle job sites, events, and residential renovations. RHC confirms SDOT permit status before every delivery and provides a written installation window. Same-day quote."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing-rental-seattle-wa" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

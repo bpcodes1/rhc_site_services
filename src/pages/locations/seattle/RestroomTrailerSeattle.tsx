@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/seattle/seattle_hero.webp'
 import trailer2StallImg from '../../../assets/restroom-trailers/2stall_portable.webp'
@@ -129,6 +130,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Restroom Trailer Rental in Seattle, WA',
+    description:
+      'Luxury restroom trailer rentals for Seattle events and King County venues. Confirmed arrival windows, all-gender compliant, generator provision for off-grid sites. Same-day quotes from RHC.',
+    path: '/restroom-trailer-rental-seattle-wa',
+    serviceType: 'Restroom trailer rental',
+    areaServed: ['Seattle, WA'],
+  }),
+  breadcrumb([{ name: 'Restroom Trailers', path: '/restroom-trailers' }, { name: 'Seattle, WA' }]),
+  faqPage(faqs),
+])
+
 export default function RestroomTrailerSeattle() {
   return (
     <main id="main">
@@ -136,6 +151,7 @@ export default function RestroomTrailerSeattle() {
         <title>Restroom Trailer Rental Seattle WA | RHC Site Services</title>
         <meta name="description" content="Luxury restroom trailer rentals for Seattle events and King County venues. Confirmed arrival windows, all-gender compliant, generator provision for off-grid sites. Same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailer-rental-seattle-wa" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

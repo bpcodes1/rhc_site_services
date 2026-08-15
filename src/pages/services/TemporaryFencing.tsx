@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../seo/schema'
 import LeadForm from '../../components/LeadForm'
 import heroImg from '../../assets/temporary-fencing/fencing_hero.webp'
 import fencePanelsImg from '../../assets/temporary-fencing/fence.webp'
@@ -59,6 +60,19 @@ const faqs = [
   },
 ]
 
+const schema = graph([
+  business,
+  service({
+    name: 'Temporary Fencing Rentals',
+    description:
+      'Panel fencing and post-driven chain link for construction sites and events across Oregon and Washington. Published specs, OSHA-compliant panels, same-day quotes.',
+    path: '/temporary-fencing',
+    serviceType: 'Temporary fence rental',
+  }),
+  breadcrumb([{ name: 'Temporary Fencing Rentals' }]),
+  faqPage(faqs),
+])
+
 export default function TemporaryFencing() {
   return (
     <main id="main">
@@ -66,6 +80,7 @@ export default function TemporaryFencing() {
         <title>Temporary Fencing Rental Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="Panel fencing and post-driven chain link for construction sites and events across Oregon and Washington. Published specs, OSHA-compliant panels, same-day quotes." />
         <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

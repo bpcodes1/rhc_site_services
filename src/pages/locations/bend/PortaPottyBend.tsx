@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/bend/bend_hero.webp'
 import portaPottyImg from '../../../assets/portable-toilets/porta-potty1.webp'
@@ -103,6 +104,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Porta Potty Rental in Bend, OR',
+    description:
+      'Portable toilet rentals for Bend job sites and events on a hard arrival window. Local permit guidance included. Same-day quotes from RHC.',
+    path: '/porta-potty-rental-bend-or',
+    serviceType: 'Portable toilet rental',
+    areaServed: ['Bend, OR'],
+  }),
+  breadcrumb([{ name: 'Portable Toilets', path: '/portable-toilets' }, { name: 'Bend, OR' }]),
+  faqPage(faqs),
+])
+
 export default function PortaPottyBend() {
   return (
     <main id="main">
@@ -110,6 +125,7 @@ export default function PortaPottyBend() {
         <title>Porta Potty Rental in Bend, OR | RHC Site Services</title>
         <meta name="description" content="Portable toilet rentals for Bend job sites and events on a hard arrival window. Local permit guidance included. Same-day quotes from RHC." />
         <link rel="canonical" href="https://rhcsiteservice.com/porta-potty-rental-bend-or" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

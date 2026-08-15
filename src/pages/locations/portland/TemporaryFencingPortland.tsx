@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../../seo/schema'
 import LeadForm from '../../../components/LeadForm'
 import heroImg from '../../../assets/cities/portland/portland_hero.webp'
 import fencePanelsImg from '../../../assets/temporary-fencing/fence.webp'
@@ -120,6 +121,20 @@ const testimonialStyle = {
 }
 */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Temporary Fencing Rental in Portland, OR',
+    description:
+      'Panel fencing and post-driven chain link for Portland construction sites, events, and multifamily properties. PBOT permit guidance, published specs, same-day quotes.',
+    path: '/temporary-fencing-rental-portland-or',
+    serviceType: 'Temporary fence rental',
+    areaServed: ['Portland, OR'],
+  }),
+  breadcrumb([{ name: 'Temporary Fencing', path: '/temporary-fencing' }, { name: 'Portland, OR' }]),
+  faqPage(faqs),
+])
+
 export default function TemporaryFencingPortland() {
   return (
     <main id="main">
@@ -127,6 +142,7 @@ export default function TemporaryFencingPortland() {
         <title>Temporary Fencing Rental Portland OR | RHC Site Services</title>
         <meta name="description" content="Panel fencing and post-driven chain link for Portland construction sites, events, and multifamily properties. PBOT permit guidance, published specs, same-day quotes." />
         <link rel="canonical" href="https://rhcsiteservice.com/temporary-fencing-rental-portland-or" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { breadcrumb, business, faqPage, graph, service } from '../../seo/schema'
 import LeadForm from '../../components/LeadForm'
 import showerTrailerDeployedImg from '../../assets/shower-trailers/shower-trailer3.webp'
 import showerTrailerLargeImg from '../../assets/shower-trailers/shower-trailer1.webp'
@@ -182,6 +183,19 @@ const faqs = [
   },
 } */
 
+const schema = graph([
+  business,
+  service({
+    name: 'Shower Trailer Rentals',
+    description:
+      '2 to 8-stall shower trailer rentals across Oregon and Washington. Hot water standard on every unit. No minimums. Same-day quote.',
+    path: '/shower-trailers',
+    serviceType: 'Shower trailer rental',
+  }),
+  breadcrumb([{ name: 'Shower Trailer Rentals' }]),
+  faqPage(faqs),
+])
+
 export default function ShowerTrailers() {
   return (
     <main id="main">
@@ -189,6 +203,7 @@ export default function ShowerTrailers() {
         <title>Shower Trailer Rentals in Oregon &amp; Washington | RHC Site Services</title>
         <meta name="description" content="2 to 8-stall shower trailer rentals across Oregon and Washington. Hot water standard on every unit. No minimums. Same-day quote." />
         <link rel="canonical" href="https://rhcsiteservice.com/shower-trailers" />
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}
