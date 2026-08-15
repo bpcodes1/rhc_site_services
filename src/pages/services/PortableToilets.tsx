@@ -65,7 +65,7 @@ export default function PortableToilets() {
   return (
     <main id="main">
       <Helmet>
-        <title>Portable Toilet Rentals in Oregon &amp; Washington | RHC Site Services</title>
+        <title>Portable Toilet Rentals in Oregon &amp; Washington | RHC</title>
         <meta name="description" content="Hard delivery windows, no surprise fees, and inspected units: portable toilet and porta potty rentals for construction sites and events across Oregon and Washington." />
         <link rel="canonical" href="https://rhcsiteservice.com/portable-toilets" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>

@@ -119,7 +119,7 @@ answers before being caught:
 - Chrome's `Page.addScriptToEvaluateOnNewDocument` ADDS a script per call. In a
   loop over URLs it stacks observers, so page N counts every shift N times.
   Inflated readings of 0.28 and 0.46 were artifacts of this, not real.
-| 4 | Title audit and rewrites | approval, page by page (copy) | |
+| 4 | Title audit and rewrites | approval, page by page (copy) | DONE 2026-08-15 |
 | 5 | Contextual in-body internal links | anchor-text approval (copy) | |
 | 6 | Citation pass | he does the submissions; prep the list for him | |
 | 7 | Per-page social preview (og/twitter) tags | nothing | LAST, see below |
@@ -211,6 +211,51 @@ Search Console **Performance at 28 days** and **Indexing > Pages**. Last read
 2026-08-06: 5 impressions, 0 clicks, position 21.4, and the Pages report was
 still "Processing data". By now Pages should show how many of the 19 are
 actually indexed, which is the real check-in metric.
+
+### Task 4 result (2026-08-15): six titles, not nineteen
+
+Audited against the 51-60 target by reading the PRERENDERED html, so the audit
+covered what Google receives. 10 of 19 were off target, but only 6 were worth
+touching, and the cause was one systemic thing rather than 19 separate ones:
+`| RHC Site Services` costs 20 characters, a third of the budget, on a brand
+with essentially zero search volume (the only brand query in 28 days was
+"rhtc", a typo, at 1 impression).
+
+Decision locked by Enrique: short `| RHC` where length is the constraint, full
+name kept on the homepage, About and Contact. Applied to the homepage and the
+5 service pages only.
+
+| Page | Was | Now |
+|---|---|---|
+| / | 82 | 60 |
+| /portable-toilets | 66 | 52 |
+| /restroom-trailers | 63 | 53 |
+| /temporary-fencing | 64 | 53 |
+| /storage-containers | 68 | 54 |
+| /shower-trailers | 65 | 51 |
+
+**The 9 location pages and 2 legal pages were deliberately left alone.** They
+already fit at 49-59 WITH the full brand. Switching them to `| RHC` would have
+freed 14 characters they do not need and pushed them under target, and filling
+that space by stacking synonyms ("Porta Potty & Portable Toilet Rental in
+Bend") is the visible optimization Shepard's data ties to the losing bucket.
+Rewriting a working title to hit a number is motion, not improvement.
+
+Each service title is now EXACTLY its own H1 plus ` | RHC`. Title/H1 alignment
+is the documented defence against Google rewriting a title, and it rewrote ~76%
+of them in 2025.
+
+UNVERIFIABLE, stated plainly: whether "porta potty" or "portable toilet" draws
+more searches. There is no keyword tool here and GSC has 15 impressions total,
+so any volume figure would be invented. The homepage was therefore NOT pointed
+at "Porta Potty Rental", on a structural argument instead: /portable-toilets
+already targets that idea, and two pages competing for one query splits the
+signal. Revisit once GSC has real query data.
+
+STILL OPEN, not part of task 4: **11 of 19 meta descriptions exceed 160
+characters** and are being truncated mid-sentence in results. Contact Us is 199.
+That is the line under the title in Google, so it does real work on
+click-through. Needs Enrique's approval; it is copy.
 
 ## Phase 0: Foundations
 

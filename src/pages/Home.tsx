@@ -96,7 +96,7 @@ export default function Home() {
   return (
     <main id="main">
       <Helmet>
-        <title>Portable Toilet &amp; Site Equipment Rental in Oregon &amp; Washington | RHC Site Services</title>
+        <title>Portable Toilet &amp; Site Equipment Rental in Oregon &amp; WA | RHC</title>
         <meta name="description" content="Porta potty, restroom trailer, shower trailer, temporary fencing, and storage container rentals across Oregon and Washington. Hard delivery windows. No surprise fees." />
         <link rel="canonical" href="https://rhcsiteservice.com/" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
