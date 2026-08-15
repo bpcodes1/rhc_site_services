@@ -90,12 +90,14 @@ Why the provenance matters, beyond accuracy:
 It must never be used as a testimonial. RHC has **zero usable reviews**, which
 is why the review drip remains the slowest-compounding item on the plan.
 
-OPEN QUESTION this raises, and it touches the highest-value task on the plan:
-the same designer built the old domain's site. DECISIONS.md records that Rafa
-"lost access" to rhcsiteservices.com. If that access sits with the previous
-designer rather than being merely misplaced, the domain consolidation task
-(worth ~90% of four years of accumulated signal) may need registrar account
-recovery rather than a password from Rafa. Confirm before planning that work.
+ANSWERED 2026-08-15, and it is the good outcome: **Rafa holds the old domain's
+logins, they are merely misplaced.** The previous designer does NOT control
+rhcsiteservices.com. So domain consolidation stays a "Rafa digs out a password"
+task rather than a registrar account-recovery fight with an unhappy former
+vendor. That keeps the single highest-value item on the plan (~90% of four
+years of accumulated signal) on the easy path. The Zoho MX warning still
+stands: info@rhcsiteservices.com receives the lead form, so any migration must
+preserve those records or lead notifications silently stop.
 
 ## START HERE: agreed work queue (set 2026-08-13)
 
