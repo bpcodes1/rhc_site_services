@@ -49,8 +49,64 @@ kept for their reasoning, not their order.
 | # | Task | Needs from Enrique | Status |
 |---|------|--------------------|--------|
 | 1 | Structured data on the 17 pages that have none | nothing | DONE 2026-08-14 |
-| 2 | Explicit width/height on all images (CLS) | nothing | next |
-| 3 | Self-host fonts + code-split the 797 KB bundle | nothing | |
+| 2 | Explicit width/height on all images (CLS) | nothing | DONE 2026-08-14 |
+| 3 | Self-host fonts (CLS/LCP) | nothing | DONE 2026-08-14 |
+| 3b | Code-split the 797 KB bundle | nothing | still open |
+
+### Tasks 2 and 3 result (2026-08-14): CLS is now 0.00 sitewide
+
+Measured before and after with a real mobile viewport (390px, throttled to
+slow 3G, cache disabled), because Googlebot crawls this site as a smartphone.
+
+| Page | CLS before | CLS after |
+|---|---|---|
+| /storage-containers | 0.2964 **POOR** | 0.0000 |
+| /shower-trailers | 0.1056 | 0.0000 |
+| /portable-toilets | 0.0278 | 0.0087 |
+| / | 0.0187 | 0.0000 |
+
+All 19 routes now measure "good"; the worst is /about-us at 0.0255, against
+Google's 0.1 threshold.
+
+**The 2026-08-13 audit was wrong about the cause, and this matters for how we
+read future audits.** It said "23 of 23 sampled img tags have no width or
+height. Direct CLS risk." The first half was true and the conclusion did not
+follow. Blocking the font stylesheet took CLS to exactly 0.0000 while leaving
+every image untouched, which proved fonts caused 100% of it. Most images sit in
+containers that already reserve space via `aspect-ratio: 4 / 3`, so they never
+shifted. Counting a defect is not the same as measuring its effect.
+
+Images were not a total red herring: the four homepage step images had no
+reserving container and did shift once the font problem was fixed. They are
+fixed now, and every image carries explicit dimensions as insurance against a
+future CSS change removing an `aspect-ratio`.
+
+What was done:
+
+1. **Fonts self-hosted** from /fonts (9 woff2 files, latin subset, 220 KB
+   total, only fetched as used). The render-blocking third-party stylesheet and
+   its two preconnects are gone from index.html. Do not reintroduce them.
+2. **Metric-matched fallbacks** in src/fonts.css. Self-hosting alone only got
+   CLS about 60% down, because the fallback still occupied different space than
+   the real face. Archivo Narrow is condensed and sets at ~82% of Arial's
+   width, which is why headings moved most. Each fallback is Arial re-scaled
+   with size-adjust / ascent-override / descent-override so the swap moves
+   nothing. Those numbers were measured against 20,000 characters of this
+   site's own copy, not estimated; a short sample gives the wrong ratio.
+3. **Four faces preloaded** (Archivo Narrow 600/700, Public Sans 400/600).
+   Adding the second pair took the location pages from 0.10-0.24 to 0.0000.
+4. **Explicit width/height on all 26 images**, read from the files themselves.
+5. **Google Fonts removed from the privacy policy's third-party list**, which
+   the baseline flagged as a side benefit. Cloudflare and jsDelivr remain.
+
+Two measurement traps worth remembering, both of which produced confident wrong
+answers before being caught:
+
+- Measuring CLS with the HTTP cache enabled reports 0.0000 on genuinely broken
+  markup, because images arrive before first paint.
+- Chrome's `Page.addScriptToEvaluateOnNewDocument` ADDS a script per call. In a
+  loop over URLs it stacks observers, so page N counts every shift N times.
+  Inflated readings of 0.28 and 0.46 were artifacts of this, not real.
 | 4 | Title audit and rewrites | approval, page by page (copy) | |
 | 5 | Contextual in-body internal links | anchor-text approval (copy) | |
 | 6 | Citation pass | he does the submissions; prep the list for him | |

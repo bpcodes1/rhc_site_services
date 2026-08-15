@@ -58,10 +58,19 @@ Actions, ranked by impact:
      marked-up Q&A more. Enrique decided in favour of Pillar 2.
    Still open: validate with the Rich Results Test once deployed; it executes
    JS so it doubles as a render check.
-6. [TODO] Speed (CWV 2026 = LCP, CLS, INP; a tie-breaker signal but a
-   conversion win now): self-host the three Google Fonts with font-display:
-   swap and preload, route-split the ~830KB bundle with React.lazy, and set
-   explicit dimensions on hero/placeholder images to protect CLS.
+6. Speed (CWV 2026 = LCP, CLS, INP; a tie-breaker signal but a conversion win
+   now).
+   - [DONE 2026-08-14] Self-hosted the three Google Fonts with font-display:
+     swap and preload, plus metric-matched fallbacks. This was the whole CLS
+     problem: /storage-containers went from 0.2964 (POOR) to 0.0000, and all
+     19 routes now measure "good". Details in SEO_STATUS.md.
+   - [DONE 2026-08-14] Explicit dimensions on all 26 images. NOTE for future
+     audits: this item assumed missing dimensions caused the CLS. Measurement
+     showed fonts caused 100% of it and most images were already protected by
+     `aspect-ratio` in the CSS. Count defects, but measure effects before
+     ranking them.
+   - [TODO] Route-split the ~800KB bundle with React.lazy. Still open, and now
+     the only remaining speed item.
 
 ## Pillar 2: On-Page and Content SEO (researched)
 
