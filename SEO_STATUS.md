@@ -65,8 +65,8 @@ slow 3G, cache disabled), because Googlebot crawls this site as a smartphone.
 | /portable-toilets | 0.0278 | 0.0087 |
 | / | 0.0187 | 0.0000 |
 
-All 19 routes now measure "good"; the worst is /about-us at 0.0255, against
-Google's 0.1 threshold.
+All 19 routes now measure **0.0000**, verified live after deploy, against
+Google's 0.1 "good" threshold.
 
 **The 2026-08-13 audit was wrong about the cause, and this matters for how we
 read future audits.** It said "23 of 23 sampled img tags have no width or
@@ -83,9 +83,19 @@ future CSS change removing an `aspect-ratio`.
 
 What was done:
 
-1. **Fonts self-hosted** from /fonts (9 woff2 files, latin subset, 220 KB
-   total, only fetched as used). The render-blocking third-party stylesheet and
-   its two preconnects are gone from index.html. Do not reintroduce them.
+1. **Fonts self-hosted** from /fonts: THREE variable woff2 files, latin subset,
+   77 KB total, one per family covering every weight. The render-blocking
+   third-party stylesheet and its two preconnects are gone from index.html. Do
+   not reintroduce them.
+   This shipped wrong the first time and the fix is worth remembering. Google's
+   stylesheet lists the same file URL once per requested weight, because these
+   are variable fonts. Saving one file per weight produced 9 files of which
+   only 3 were unique, so a page using two weights of Public Sans downloaded
+   identical bytes twice under two URLs. The tell was that every Archivo Narrow
+   file was byte-for-byte 18724 bytes; identical sizes across different weights
+   is not a coincidence. Verified after consolidating that the weight axis still
+   works rather than assuming: the same string at 400/500/600/700 measures
+   575.6/587.0/599.4/611.8px, so the weights are genuinely distinct.
 2. **Metric-matched fallbacks** in src/fonts.css. Self-hosting alone only got
    CLS about 60% down, because the fallback still occupied different space than
    the real face. Archivo Narrow is condensed and sets at ~82% of Arial's
@@ -93,8 +103,10 @@ What was done:
    with size-adjust / ascent-override / descent-override so the swap moves
    nothing. Those numbers were measured against 20,000 characters of this
    site's own copy, not estimated; a short sample gives the wrong ratio.
-3. **Four faces preloaded** (Archivo Narrow 600/700, Public Sans 400/600).
-   Adding the second pair took the location pages from 0.10-0.24 to 0.0000.
+3. **Two files preloaded** (Archivo Narrow, Public Sans), which covers every
+   weight of both because they are variable. JetBrains Mono is not preloaded;
+   it only sets small labels. Preloading more faces, then halving them again by
+   consolidating, is what took the location pages from 0.10-0.24 to 0.0000.
 4. **Explicit width/height on all 26 images**, read from the files themselves.
 5. **Google Fonts removed from the privacy policy's third-party list**, which
    the baseline flagged as a side benefit. Cloudflare and jsDelivr remain.
