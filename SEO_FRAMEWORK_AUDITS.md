@@ -35,6 +35,60 @@ neither audited framework addresses how to fix it. **A framework on local SEO,
 GBP, citations, or link building is therefore the highest-value one to audit
 next**, ahead of everything in the queue below.
 
+## Asset inventory (catalogued 2026-08-15)
+
+Enrique's full SEO vault, by name. Recorded so neither of us forgets an asset
+exists at the moment it becomes relevant. **A catalogue is not a plan**: the
+trigger for pasting one is "we have hit the problem this solves", never "we
+have an asset we have not used yet". The community's GEO-first advice was
+already OVERRIDDEN once for exactly this reason (queue item 6 below).
+
+NOT all of these are expert frameworks; the vault mixes frameworks, CLIs, MCP
+servers, and how-to guides. Triage below is from NAMES ONLY except where noted,
+so treat it as a rough sort, not a verdict. A title reveals topic, not quality
+or risk: some local SEO material in circulation teaches tactics that get GBP
+listings suspended, which is not visible from a name.
+
+Observation worth keeping: **8 of 23 assets target AI search** (GEO/AEO). That
+reflects where the industry's attention is, not where this site's bottleneck
+is. As of 2026-08-15 the bottleneck is authority, not AI citation.
+
+### Want now (address a gap we have actually hit)
+
+| Asset | Type | Why now |
+|---|---|---|
+| Google Search Console MCP | MCP, free | Replaces Enrique screenshotting GSC and Claude reading images. 25k row pulls, regex filters, owned data only |
+| DataForSEO MCP | MCP, pay-as-you-go | Fixes a gap hit on 2026-08-15: keyword volume was UNVERIFIABLE, so the porta potty vs portable toilet question could not be settled. Also gives backlink data |
+| Ahrefs MCP | MCP, needs subscription | Strongest option for the authority bottleneck IF Enrique already pays for Ahrefs. UNCONFIRMED |
+| Bill Slawski | Expert JSON | May fill the hole Roof and Shepard share. Patent-derived work often covers local and entity mechanics practitioner frameworks skip. SCOPE UNCONFIRMED |
+
+### Trigger-gated (recorded with the condition, not just "later")
+
+| Asset | Paste when |
+|---|---|
+| AEO Answer Gap Loop / Answer Engine Gap Loop | ~90 days of GSC data, approx 2026-10-26. (Possibly the same asset listed twice; unconfirmed) |
+| GEO content optimizer / GEO AI search optimization | After pages hold real positions. Phase 2 rationale: AI-citation work lands better on pages that already rank |
+| SEO + GEO audit loop | Same gate as above |
+| AI Search Citation Monitor | Same gate as above |
+| botsee CLI (brand visibility across LLMs) | Arguably NOW, to establish a baseline. Cannot measure AI visibility improving without a start point, same logic as the timeline anchor in SEO_STATUS.md |
+| Is It Agent Ready CLI | Cheap validation of the 2026-08-14 structured data work |
+| surgegraph CLI (AEO audits/rewrites) | With the rest of the AEO batch |
+| Programmatic Page Quality Gate | If city pages expand past 9, against the ~15-20 cap |
+| Humblytics marketing/CRO skills | When there is traffic to convert. At 15 impressions, no |
+| Voice of Customer Mine | Next copy pass. The 5-step page process already does review mining by hand |
+| Source Paper Digest | UNKNOWN, name is not self-explanatory. Ask before triaging |
+| How to put SEO research on autopilot with AI agents | Process guide. Revisit if research volume justifies orchestration |
+
+### Not for this site (with the reason, so it is not re-litigated)
+
+| Asset | Why not |
+|---|---|
+| SEO Content Pipeline | Content scaling. 19 hand-built pages, no-blog decision, and scaled templated content is the documented doorway trigger |
+| SEO Article Generator | Same. Already queue item 5, LATER/minor |
+| Content Brief Backlog Loop | Same category |
+| Competitor Content Watch Loop | Monitoring for a content operation this site does not run |
+| Organic Social | Out of scope for the SEO plan |
+
 ## Framework Queue (triaged 2026-07-25)
 
 1. Cyrus Shepard expert framework: AUDITED 2026-07-25 (see Audit 2 below).
