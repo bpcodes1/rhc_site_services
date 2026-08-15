@@ -310,13 +310,20 @@ Audit Diagnostic Checklist, Patent Analysis Methodology.
 
 ### Red flags for RHC under Slawski's decision rules
 
-1. **ENTITY DISAMBIGUATION FAILURE, already happening.** His framework asks
-   whether content distinguishes the entity from others with a similar name.
-   RHC's single Google review is from a customer of a DIFFERENT business with
-   the same name in Texas (see SEO_STATUS.md). That is not a curiosity, it is a
-   textbook disambiguation failure occurring in the wild, and Slawski's rule
-   says penalize. Mitigations are his: richer sameAs links, unambiguous
-   entity context, consistent information across every property.
+1. ~~ENTITY DISAMBIGUATION FAILURE~~ **RETRACTED 2026-08-15, one day after
+   writing it.** This audit claimed RHC's fake Google review was a live entity
+   disambiguation failure, a customer of a same-named Texas business reviewing
+   the wrong listing. Enrique corrected it: the review was **planted by Rafa's
+   previous web designer**, who also ran his SEO. There is no Texas business
+   and no entity collision. The Texas wording is a sloppy fake.
+   Worth keeping as a worked example of the failure mode the shared CLAUDE.md
+   warns about. A framework supplies a category, the category fits the shape of
+   the evidence, and the fit feels like a finding. It was not. Nothing was
+   measured and no provenance was checked; the diagnosis was pattern-matching
+   dressed as diagnosis. **A framework can tell you what to look for. It cannot
+   tell you what happened.**
+   Slawski's entity-disambiguation guidance still applies to RHC on its merits
+   (thin sameAs, no knowledge panel), just not for this reason.
 2. **Thin sameAs.** Two links (Google Maps, Facebook). Slawski treats sameAs as
    the primary mechanism for connecting a page's entity to the knowledge graph.
 3. **No author or expertise markup.** The site has `founder: Person Rafael
@@ -347,10 +354,14 @@ Audit Diagnostic Checklist, Patent Analysis Methodology.
 ### Verdict
 
 Does NOT fill the local-pack hole, which is now MISSING in all three audited
-frameworks and remains the documented gap. It does something more useful: it
-supplies the entity model underneath the local and schema work already done,
-and it identifies a concrete live defect (the Texas entity collision) that no
-other framework caught.
+frameworks and remains the documented gap. What it does supply is the entity
+model underneath the local, schema and NAP work already shipped: it explains
+the mechanism those rules only asserted.
+
+Note the headline finding of this audit was RETRACTED within a day (see red
+flag 1). The framework is still worth having. The retraction is a caution about
+how it gets used: its categories are sharp enough to make a wrong diagnosis
+feel right.
 
 ---
 

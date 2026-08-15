@@ -57,20 +57,45 @@ Agreed approach: finish what needs nobody, leave the Rafa-gated items open, and
 keep moving. Phase 0 stays open in this file until both are closed so it does
 not silently get treated as complete.
 
-## The one Google review is FAKE. Do not use it. (confirmed 2026-08-14)
+## The one Google review is FAKE, and PLANTED. (provenance confirmed 2026-08-15)
 
-The listing's single 5-star review, by "Muhammad Lhsan", references a **client
-project in Texas** and closes "If you're in need of site services in Texas,
-look no further." RHC serves Oregon and Washington only. It also describes a
-crew performing skilled workmanship, which is not porta potty delivery, and the
-language is generic throughout. Most likely another business of the same name
-in Texas, reviewed by mistake.
+The listing's single 5-star review, by "Muhammad Lhsan", was **written by Rafa's
+previous web designer**, the same person who built the old rhcsiteservices.com
+WordPress site and ran his SEO before Enrique. Enrique confirmed this
+2026-08-15. The designer planted it to help the listing rank and win jobs. Rafa
+was unhappy with that work, saw no leads from it, and hired Enrique to rebuild
+the site and take over SEO.
 
-It must never be used as a testimonial on the site. Enrique flagged it as
-probably fake before analysis and was correct. RHC therefore still has **zero
-usable reviews**, which is why the review drip remains the slowest-compounding
-item on the plan. Whether to report it to Google is Rafa's call: removing it
-takes the listing to zero reviews, and RHC did not create it.
+CORRECTION, recorded so the wrong version does not get re-derived: an earlier
+entry here guessed it was "another business of the same name in Texas, reviewed
+by mistake", and the 2026-08-15 Slawski audit then classified it as an entity
+disambiguation failure. **Both were wrong.** The Texas reference ("If you're in
+need of site services in Texas, look no further") is simply a sloppy fake,
+probably recycled from a template or another of the designer's clients. There
+is no same-named Texas business involved and no entity collision.
+
+Why the provenance matters, beyond accuracy:
+
+- **It is a review procured on the business's behalf, by its own vendor.** That
+  is the exact conduct the FTC's Rule on Consumer Reviews and Testimonials
+  targets, and it violates Google's conflict-of-interest policy. Rafa did not
+  write it and did not want it, but it sits on his listing.
+- **The grounds for reporting it are now much stronger.** "Reviewer had a
+  conflict of interest, written by a paid vendor" is a named Google policy
+  violation. "It mentions Texas" was only circumstantial.
+- **Still Rafa's call**, and still takes the listing to zero reviews. But the
+  question changed from "is this worth cleaning up" to "is leaving a
+  vendor-planted review on the listing an acceptable risk".
+
+It must never be used as a testimonial. RHC has **zero usable reviews**, which
+is why the review drip remains the slowest-compounding item on the plan.
+
+OPEN QUESTION this raises, and it touches the highest-value task on the plan:
+the same designer built the old domain's site. DECISIONS.md records that Rafa
+"lost access" to rhcsiteservices.com. If that access sits with the previous
+designer rather than being merely misplaced, the domain consolidation task
+(worth ~90% of four years of accumulated signal) may need registrar account
+recovery rather than a password from Rafa. Confirm before planning that work.
 
 ## START HERE: agreed work queue (set 2026-08-13)
 
