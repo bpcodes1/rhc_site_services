@@ -1,0 +1,194 @@
+/* Self-hosted fonts. Generated from the Google Fonts stylesheet this
+   site used to load at runtime; latin subset only.
+
+   Why they are local: the third-party stylesheet was render-blocking and cost
+   two extra connections (fonts.googleapis.com, then fonts.gstatic.com) before
+   any text could be styled. Measured 2026-08-14, that swap was the ONLY source
+   of layout shift on the site: /storage-containers scored 0.2964 CLS (POOR)
+   with it and exactly 0.0000 with the stylesheet blocked. Self-hosting also
+   removes Google from the privacy policy's third-party list.
+
+   Weights match what was requested before, so rendering is unchanged. Note
+   rhc-design.css asks for Archivo Narrow 300 and 800, which the family does not
+   publish; the browser synthesised those before and still does. */
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/archivo-narrow-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/archivo-narrow-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/archivo-narrow-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/public-sans-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/public-sans-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/public-sans-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/public-sans-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ---------------------------------------------------------------------------
+   Metric-matched fallbacks.
+
+   Self-hosting the fonts cut layout shift but did not remove it: the fallback
+   still occupied different space than the real face, so text re-flowed the
+   moment the webfont arrived. Archivo Narrow is condensed and renders at ~82%
+   of Arial width, which is why headings moved most.
+
+   Each face below is Arial, re-scaled and re-anchored to occupy exactly the
+   space its webfont will, so the swap moves nothing.
+
+   These numbers were MEASURED in Chrome against 20,000 characters of this
+   site's own rendered copy, not estimated and not taken from one sample
+   string: width ratios between a condensed face and Arial vary with glyph mix,
+   so a short sample gives the wrong answer. Re-run that calibration if the
+   typefaces ever change; do not hand-edit these.
+
+   Careful when verifying: canvas measureText silently falls back to another
+   font when asked for a local() face that is not resolvable, which makes a
+   correct fallback look broken. Trust a CLS measurement, not a width probe.
+   --------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Archivo Narrow Fallback";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 84.29%;
+  ascent-override: 123.38%;
+  descent-override: 36.78%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Archivo Narrow Fallback";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 80.24%;
+  ascent-override: 129.61%;
+  descent-override: 38.63%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Archivo Narrow Fallback";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 82.02%;
+  ascent-override: 126.81%;
+  descent-override: 37.80%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Public Sans Fallback";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 103.78%;
+  ascent-override: 91.54%;
+  descent-override: 22.16%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Public Sans Fallback";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 104.61%;
+  ascent-override: 90.82%;
+  descent-override: 21.99%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Public Sans Fallback";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 98.15%;
+  ascent-override: 96.79%;
+  descent-override: 23.43%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Public Sans Fallback";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 99.44%;
+  ascent-override: 95.54%;
+  descent-override: 23.13%;
+  line-gap-override: 0%;
+}

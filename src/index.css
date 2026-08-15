@@ -1,2 +1,6 @@
 @import "tailwindcss";
+/* Must come before rhc-design.css so the faces are declared before anything
+   asks for them. These replaced the third-party Google Fonts stylesheet; see
+   the note at the top of fonts.css for the measurements behind that. */
+@import "./fonts.css";
 @import "./rhc-design.css";

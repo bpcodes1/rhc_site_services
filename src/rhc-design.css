@@ -20,8 +20,11 @@
   --secondary-fixed-dim: #ffb599;
   --on-secondary: #ffffff;
 
-  --font-head: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  /* The "... Fallback" entries are Arial re-scaled in fonts.css to occupy the
+     exact space of the real face, so the swap when the webfont loads moves
+     nothing. They must sit immediately after the real family. */
+  --font-head: "Archivo Narrow", "Archivo Narrow Fallback", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Public Sans", "Public Sans Fallback", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
 
   --r-sm: 0.125rem;

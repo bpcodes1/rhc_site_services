@@ -93,10 +93,6 @@ export default function PrivacyPolicy() {
                   their servers see the IP address of visitors as pages load.
                 </li>
                 <li>
-                  <strong>Google Fonts</strong> serves the typefaces used on these pages, which
-                  means Google receives your IP address when a page loads.
-                </li>
-                <li>
                   <strong>jsDelivr</strong> serves the map graphic on our homepage, which likewise
                   means your IP address reaches that service when the homepage loads.
                 </li>
