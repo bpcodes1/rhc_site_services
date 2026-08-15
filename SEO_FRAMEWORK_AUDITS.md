@@ -257,4 +257,101 @@ baseline already cites, shared source, so overlaps are expected.
 
 ---
 
+## Audit 3: Bill Slawski (audited 2026-08-15)
+
+Provenance: expert JSON from Enrique's vault, pasted 2026-08-15. Source given
+as SEO by the Sea (2005-2022) and Go Fish Digital. Patent-derived, not
+empirical. Active period ended 2022.
+
+Core thesis: findability = helping Google understand WHAT content is about
+(entities, not keyword strings), WHO the entity behind it is (knowledge graph
+presence), and whether it can be TRUSTED, on a crawlable foundation. Eight
+frameworks: Knowledge Graph Entity Optimization, Ontology-Based Categorization,
+Augmented Query, Phrase-Based Indexing, Reasonable Surfer, Trust Metrics, SEO
+Audit Diagnostic Checklist, Patent Analysis Methodology.
+
+### Coverage vs. baseline
+
+| Baseline item | Verdict | Notes |
+|---|---|---|
+| Schema / structured data | COVERED++ | Reframes it entirely: schema is not for rich results, it tells Google WHICH ENTITY the page is about and links it to the knowledge graph. Deepest treatment of the three audits |
+| Internal linking | COVERED+ | Reasonable Surfer weights link value by CLICK PROBABILITY: position, prominence, anchor quality. Independently confirms the 2026-08-13 finding that sitewide nav links are worth far less than contextual in-body links |
+| Trust / E-E-A-T | COVERED+ | Adds knowledge-based trust (factual accuracy vs benchmarks) and seed-site distance, mechanisms Shepard does not name |
+| PAA questions, attribute coverage | COVERED | Ontology framework: cover the attributes autocomplete and PAA show searchers expect |
+| Technical crawlability, canonicals, titles | COVERED | Audit Diagnostic Checklist. Shallower than Zyppy on titles specifically |
+| Content depth vs keyword stuffing | COVERED | Phrase-based indexing: natural co-occurring phrase diversity, explicitly not density |
+| NAP consistency | COVERED+ | Recast as "Consistency Across Properties": inconsistent entity information REDUCES knowledge graph confidence. Explains the mechanism our NAP rule only asserted |
+| **GBP / map pack / proximity** | **MISSING** | Third framework in a row. No local pack tactics anywhere |
+| **Link acquisition tactics** | **MISSING** | Reasonable Surfer explains link VALUE, not how to get links |
+| Reviews as ranking factor | MISSING | |
+| AI Overviews / GEO | MISSING **by self-admission** | "Pre-AI-era frameworks. Predates LLM deployment in search" |
+| CWV / speed mechanics | PARTIAL | "Slow page load, penalize". No INP/LCP/CLS specifics |
+
+### What it ADDS beyond baseline + Roof + Shepard
+
+1. **Entities as a first-class concern.** Neither Roof (term counts) nor
+   Shepard (quality signals) models entities. Slawski's "things, not strings"
+   frame is the missing layer under everything we have done with schema, NAP
+   and sameAs, and it explains WHY those matter rather than just asserting it.
+2. **Entity disambiguation**, which diagnoses a live problem we had already
+   observed but never classified. See the red flag below.
+3. **Augmented queries**: Google expands a query using entity attributes it
+   knows. No knowledge graph presence means no augmentation, so an unknown
+   entity is invisible to a whole class of queries it never gets matched to.
+4. **Knowledge-based trust**: factual accuracy checked against benchmarks. This
+   converts the no-fabricated-proof rule from an ethics and FTC position into a
+   RANKING mechanism, and it retroactively validates publishing verifiable
+   specifics (OSHA ratios, WAC codes, PBOT rules) over marketing adjectives.
+5. **Patent Confidence Hierarchy**, a general evidence-grading scale: single
+   patent = possible, continuation = likely active, 20+ related = strongly
+   supported, matches observable behaviour = confirmed. Useful well beyond
+   patents; it is the same discipline as the verification rules added to the
+   shared CLAUDE.md on 2026-08-14.
+
+### Red flags for RHC under Slawski's decision rules
+
+1. **ENTITY DISAMBIGUATION FAILURE, already happening.** His framework asks
+   whether content distinguishes the entity from others with a similar name.
+   RHC's single Google review is from a customer of a DIFFERENT business with
+   the same name in Texas (see SEO_STATUS.md). That is not a curiosity, it is a
+   textbook disambiguation failure occurring in the wild, and Slawski's rule
+   says penalize. Mitigations are his: richer sameAs links, unambiguous
+   entity context, consistent information across every property.
+2. **Thin sameAs.** Two links (Google Maps, Facebook). Slawski treats sameAs as
+   the primary mechanism for connecting a page's entity to the knowledge graph.
+3. **No author or expertise markup.** The site has `founder: Person Rafael
+   Hernandez` inside LocalBusiness and nothing else. His E-A-T rule penalizes
+   absent author identification. Rafa's since-2016 experience is real and
+   currently machine-invisible.
+4. **No knowledge graph presence at all.** RHC triggers no knowledge panel. His
+   own limitations section concedes this case: "Emerging entities with no
+   knowledge graph presence. Frameworks assume entity establishment is
+   achievable." So the framework diagnoses RHC accurately and then admits it is
+   weakest exactly here. GBP verification is the single largest lever on it,
+   and it is still blocked on Rafa.
+
+### Conflicts
+
+1. **Roof's term counts vs Slawski's phrase diversity.** Roof says match
+   competitor term counts; Slawski says meaningful co-occurring phrases arise
+   from comprehensive treatment and warns against density without diversity.
+   Same shape as the Roof/Shepard conflict already recorded, same resolution:
+   calibrate to competitor norms, keep the language natural.
+2. **Slawski's date vs our direction.** His frameworks predate LLM search by
+   his own admission, and were recorded on the day Enrique decided to lean
+   toward AI-citation as the faster route for this site. INFERENCE, flagged as
+   ours and not his: entity clarity should matter MORE for AI answer engines,
+   not less, because they resolve entities to decide who to cite. Unverified.
+   Treat as a hypothesis to test, not a conclusion.
+
+### Verdict
+
+Does NOT fill the local-pack hole, which is now MISSING in all three audited
+frameworks and remains the documented gap. It does something more useful: it
+supplies the entity model underneath the local and schema work already done,
+and it identifies a concrete live defect (the Texas entity collision) that no
+other framework caught.
+
+---
+
 (Next framework audits get appended below.)
