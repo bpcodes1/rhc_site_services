@@ -9,12 +9,11 @@
          styled. Measured 2026-08-14, its swap was the ONLY cause of layout
          shift on the site: /storage-containers scored 0.2964 CLS (POOR) with
          it and 0.0000 with it blocked. Do not reintroduce it.
-         These two faces carry the headline and body text in every hero, so
-         they are preloaded; the rest are fetched only if a page uses them. -->
-    <link rel="preload" href="/fonts/archivo-narrow-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/archivo-narrow-600.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/public-sans-600.woff2" as="font" type="font/woff2" crossorigin />
+         These are variable fonts: one file per family covers every weight, so
+         preloading two files covers all headline and body text. JetBrains Mono
+         is not preloaded because it only sets small labels. -->
+    <link rel="preload" href="/fonts/archivo-narrow.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Title and description tags are deliberately absent: each page declares
          its own and prerendering writes them into every built file. Defaults
