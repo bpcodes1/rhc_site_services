@@ -96,8 +96,19 @@ Actions, ranked by impact:
 4. [TODO] "What changes the price" section on every form-only pricing page.
    Satisfies cost-intent queries and AI Overviews without violating the
    no-pricing rule.
-5. [TODO] Title audit: 51-60 chars, keyword + city front-loaded, brand last,
-   aligned with H1 (Google rewrote ~76% of titles in 2025; alignment prevents it).
+5. [DONE 2026-08-15] Title audit: 51-60 chars, keyword + city front-loaded,
+   brand last, aligned with H1 (Google rewrote ~76% of titles in 2025;
+   alignment prevents it). Six titles rewritten; see SEO_STATUS.md.
+   Two corrections to this item's own wording, both found while executing it:
+   - **Google truncates by PIXEL WIDTH (~600px desktop), not character count.**
+     51-60 chars is only a proxy. Verified directly on 2026-08-15 by measuring
+     every title at Arial 20px: all 19 land between 306px and 559px, so all
+     fit. Measure pixels when a title is borderline; the old 82-char homepage
+     title was ~750px and was certainly being cut.
+   - The ~76% figure is carried from the original 2026-07-24 research and has
+     NOT been independently re-verified since. Treat it as directional. The
+     underlying title-tag research traces to Zyppy, which is Cyrus Shepard's
+     company, so it is the same source as Audit 2 rather than a second opinion.
 6. [KEEP] FAQPage schema. Google removed FAQ rich results for most sites
    (May 2026) but FAQ-marked pages are cited more in AI Overviews.
 7. [TODO] Question-format H2s and direct first-sentence answers in FAQs.

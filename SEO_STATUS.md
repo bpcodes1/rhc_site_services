@@ -1,5 +1,40 @@
 # SEO Execution Status
 
+## Timeline: when this started, so progress can be judged against elapsed time
+
+Dates verified from git history, not memory. Update the "days elapsed" column
+by counting from 2026-07-28, the day measurement actually began.
+
+| Date | Milestone | Why it is the anchor |
+|---|---|---|
+| 2026-05-19 | Repo created, site build began | Site age, not SEO age |
+| 2026-07-24 | SEO work started (baseline research) | **SEO age** counts from here |
+| 2026-07-27 | Prerendering shipped | The day the site became readable to crawlers |
+| 2026-07-28 | GSC verified, sitemap submitted | **Measurement age** counts from here |
+| 2026-07-28/29 | Indexing requested, 17 URLs | |
+| 2026-08-06 | First GSC data: 0 clicks, 5 impressions | |
+| 2026-08-15 | 1 click, 15 impressions, 17 of 19 indexed | Day 18 of measurement |
+
+**Read Search Console's date filter carefully.** Its default is "28 days",
+which is a REPORTING WINDOW, not our project age. On 2026-08-15 that window
+reached back to ~July 18, before the property existed, so a third of it was
+structurally empty. Quoting "15 impressions over 28 days" overstates the
+elapsed time and understates the rate. The honest phrasing is "15 impressions
+in the 18 days since the property started collecting."
+
+### Scorecard at day 18 of measurement
+
+- **Indexing: ahead of schedule.** 17 of 19 pages indexed in 18 days. The
+  baseline's documented failure case for a client-rendered React site is 20 of
+  198 pages indexed after SIX MONTHS. Prerendering is the reason.
+- **Rankings: as expected.** Position 21.5 is what a domain with zero backlinks
+  looks like. Nothing is broken.
+- **Traffic: nothing yet, also as expected.** 15 impressions, 1 click.
+- Realistic horizon for a new local domain is 3-6 months, and the two biggest
+  levers (old-domain 301s, GBP verification) are both still unstarted.
+
+
+
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
 Update this file whenever a task moves. Last updated 2026-08-14.

@@ -12,6 +12,29 @@ Enrique holds a vault of frameworks (SEO, sales, audience growth, persuasive
 copy, code review, deep research) from a community group, pasteable on request
 at any moment. SEO items are queued below with triage status.
 
+**Record provenance for every framework audited from here on**: who authored
+it, where it came from, and the date Enrique pasted it. The first two audits
+predate this rule and only carry the author's name. Without provenance we
+cannot weigh a framework's authority, tell whether two frameworks share a
+source (Shepard and the baseline both trace to Zyppy, which is his own
+company), or judge how stale its claims are.
+
+## The gap both audited frameworks share
+
+Roof and Shepard independently mark the SAME area MISSING, and it is exactly
+where the measured bottleneck now sits:
+
+| | Roof | Shepard |
+|---|---|---|
+| Google Business Profile / map pack / proximity | MISSING | MISSING |
+| Link building tactics | MISSING by admission | partial, brand anchors only |
+
+As of 2026-08-15 the site is 17 of 19 indexed and technically clean, sitting at
+average position 21.5 with zero backlinks. That is an authority problem, and
+neither audited framework addresses how to fix it. **A framework on local SEO,
+GBP, citations, or link building is therefore the highest-value one to audit
+next**, ahead of everything in the queue below.
+
 ## Framework Queue (triaged 2026-07-25)
 
 1. Cyrus Shepard expert framework: AUDITED 2026-07-25 (see Audit 2 below).
