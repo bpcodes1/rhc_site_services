@@ -176,7 +176,7 @@ export default function TemporaryFencing() {
           <div className="units">
             <article className="unit">
               <div className="unit-photo">
-                <img src={fencePanelsImg} alt="Freestanding panel fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={fencePanelsImg} width={1250} height={1250} alt="Freestanding panel fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">01 / Panel</div>
@@ -203,7 +203,7 @@ export default function TemporaryFencing() {
 
             <article className="unit">
               <div className="unit-photo">
-                <img src={chainFencingImg} alt="Post-driven chain link temporary fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={chainFencingImg} width={900} height={900} alt="Post-driven chain link temporary fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">02 / Post-Driven</div>

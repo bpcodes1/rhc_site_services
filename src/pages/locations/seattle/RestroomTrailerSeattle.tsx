@@ -43,6 +43,8 @@ const trailerTiers = [
     bestFor: 'Up to 150 guests (2-stall) · Woodinville intimate weddings, private Eastside outdoor events, small residential receptions',
     body: "The standard entry point for luxury restroom trailer rental in Seattle. Standard 2-stall configurations accommodate up to 150 guests for events running 4 to 6 hours. Climate-controlled, porcelain flush, running hot and cold water, and vanity mirrors. If your guest count or event duration sits between the 2-stall and 4-stall ranges, a 3-stall configuration is available. Note your headcount and event duration on the form and RHC will confirm the right fit. The unit your guests will still be talking about after the wedding.",
     image: trailer2StallImg,
+    w: 2048,
+    h: 2048,
   },
   {
     num: '02',
@@ -50,6 +52,8 @@ const trailerTiers = [
     bestFor: 'Up to 300 guests (4-stall) · Woodinville estate weddings, Seattle waterfront gatherings, mid-size outdoor events',
     body: 'Right for larger Eastside receptions and standard Seattle outdoor events. Standard 4-stall configurations accommodate up to 300 guests. If your headcount sits between the 4-stall and 6-stall ranges, a 5-stall configuration is available. Same interior finish and climate control as the 2-stall with expanded tank capacity. Getting the stall count wrong on a 250-guest event means a visible line that does not resolve. Getting it right means the trailer ran clean through the full event and nobody mentioned it.',
     image: trailer4StallImg,
+    w: 1800,
+    h: 982,
   },
   {
     num: '03',
@@ -57,6 +61,8 @@ const trailerTiers = [
     bestFor: '~350 guests (6-stall) to ~500 guests (8-stall) · Gas Works Park festivals, Seattle Center events, large estate receptions',
     body: "The right tier for major Seattle outdoor events with high traffic and extended runtimes. Standard 6-stall configurations in the Pacific Northwest accommodate approximately 350 guests for events lasting up to 10 hours. Standard 8-stall configurations accommodate approximately 500 guests for events running 6 to 7 hours. A 7-stall configuration is available for guest counts between those two anchors. For events with food service, the trailer's running water satisfies King County's heated handwashing requirement at the same time.",
     image: trailerLargeImg,
+    w: 1140,
+    h: 1140,
   },
   {
     num: '04',
@@ -64,6 +70,8 @@ const trailerTiers = [
     bestFor: 'Up to ~700 guests (10-stall) · Major Seattle festivals, large corporate events, multi-day productions',
     body: 'High-capacity configurations for large-scale Seattle events. Standard 10-stall configurations in the Pacific Northwest accommodate approximately 700 guests for events running 6 to 8 hours. A 9-stall configuration is available for guest counts between the 8-stall and 10-stall range. At this scale, a configuration that is one stall short under full event load is visible to every person in attendance. RHC reviews your site footprint, power access, and event timeline before confirming the configuration. Note all three on the form.',
     image: trailerXLImg,
+    w: 1024,
+    h: 1024,
   },
 ]
 
@@ -286,7 +294,7 @@ export default function RestroomTrailerSeattle() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={tier.image} alt={tier.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={tier.image} width={tier.w} height={tier.h} alt={tier.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{tier.num}</div>

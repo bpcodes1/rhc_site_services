@@ -46,18 +46,24 @@ const units = [
     name: 'Standard Portable Toilet',
     body: "Single-occupancy, ventilated, with hand sanitizer and a high-capacity tank built for daily construction use. The baseline unit for WA L&I-compliant sanitation on Seattle job sites. Under WAC 296-155-140, one unit covers up to 10 workers. A crew of 11 to 25 requires 2 units. Washington's threshold is stricter than Oregon's, and most estimators quote the wrong table. Standard units are all-gender compliant as delivered.",
     image: portaPottyImg,
+    w: 1195,
+    h: 896,
   },
   {
     num: '02',
     name: 'ADA-Compliant Unit',
     body: 'Wider footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required by the Seattle Special Events Committee at all permitted events: minimum 5% of total units, minimum one unit. Required on any job site with workers or visitors with mobility limitations under ADA and WA L&I standards. Not optional.',
     image: adaPortableImg,
+    w: 1200,
+    h: 896,
   },
   {
     num: '03',
     name: 'High-Rise / Crane-Liftable Unit',
     body: 'Reinforced structure, crane-lift rated, and designed to fit a standard freight elevator footprint. South Lake Union, Belltown, and downtown Seattle commercial high-rise construction requires units that reach active floors by crane or freight elevator. Standard units cannot access upper floors on high-rise projects. When your site is above grade, this is the unit that gets there.',
     image: highRiseImg,
+    w: 1800,
+    h: 847,
   },
 ]
 
@@ -306,7 +312,7 @@ export default function PortaPottySeattle() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={unit.image} alt={unit.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={unit.image} width={unit.w} height={unit.h} alt={unit.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{unit.num}</div>

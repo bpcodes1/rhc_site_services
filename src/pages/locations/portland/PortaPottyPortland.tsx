@@ -41,18 +41,24 @@ const units = [
     name: 'Standard Portable Toilet',
     body: 'Single-occupancy, ventilated, with hand sanitizer and a high-capacity tank built for daily construction use. The go-to for OSHA-compliant sanitation on Portland job sites, from multi-family residential builds in outer SE and NE to commercial work across the metro.',
     image: portaPottyImg,
+    w: 1195,
+    h: 896,
   },
   {
     num: '02',
     name: 'ADA-Compliant Unit',
     body: 'Larger footprint, interior grab bars, anti-slip flooring, and full wheelchair access. Required for any public event in Portland or job site where workers or guests with mobility limitations are present. Oregon OSHA and ADA compliance require this. Not optional.',
     image: adaPortableImg,
+    w: 1200,
+    h: 896,
   },
   {
     num: '03',
     name: 'High-Rise Portable Toilet',
     body: 'Half-height units designed to fit standard freight elevators for downtown Portland and Pearl District commercial construction. Full-size units cannot access upper floors on active high-rise projects. When your site is above grade, this is the unit that gets there. The floor super does not stop work to solve a sanitation problem. The project stays on schedule.',
     image: highRiseImg,
+    w: 1800,
+    h: 847,
   },
 ]
 
@@ -281,7 +287,7 @@ export default function PortaPottyPortland() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={unit.image} alt={unit.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={unit.image} width={unit.w} height={unit.h} alt={unit.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{unit.num}</div>

@@ -203,7 +203,7 @@ export default function Home() {
 
           <div className="services">
             <Link to="/portable-toilets" className="service">
-              <div className="service-photo"><img src={portaPottyRow} alt="Row of portable toilets" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
+              <div className="service-photo"><img src={portaPottyRow} width={1800} height={847} alt="Row of portable toilets" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">01 / Sanitation</div>
                 <h3>On-Time Portable Sanitation</h3>
@@ -220,7 +220,7 @@ export default function Home() {
             </Link>
 
             <Link to="/restroom-trailers" className="service">
-              <div className="service-photo"><img src={restroomTrailerImg} alt="Luxury restroom trailer" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
+              <div className="service-photo"><img src={restroomTrailerImg} width={1140} height={1140} alt="Luxury restroom trailer" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">02 / Event Grade</div>
                 <h3>Luxury Restroom &amp; Shower Suites</h3>
@@ -237,7 +237,7 @@ export default function Home() {
             </Link>
 
             <Link to="/temporary-fencing" className="service">
-              <div className="service-photo"><img src={fencePerimeterImg} alt="Chain-link perimeter fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
+              <div className="service-photo"><img src={fencePerimeterImg} width={500} height={500} alt="Chain-link perimeter fencing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">03 / Perimeter</div>
                 <h3>Heavy-Duty Temporary Fencing</h3>
@@ -254,7 +254,7 @@ export default function Home() {
             </Link>
 
             <Link to="/storage-containers" className="service">
-              <div className="service-photo"><img src={conexContainerImg} alt="40ft steel shipping container on job site" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
+              <div className="service-photo"><img src={conexContainerImg} width={800} height={800} alt="40ft steel shipping container on job site" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">04 / Secure Storage</div>
                 <h3>Weatherproof Steel Storage Containers</h3>
@@ -271,7 +271,7 @@ export default function Home() {
             </Link>
 
             <Link to="/shower-trailers" className="service">
-              <div className="service-photo"><img src={showerSuiteImg} alt="Luxury shower trailer deployed at outdoor event" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
+              <div className="service-photo"><img src={showerSuiteImg} width={1250} height={1250} alt="Luxury shower trailer deployed at outdoor event" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /></div>
               <div className="service-body">
                 <div className="mono-num">05 / Shower</div>
                 <h3>Luxury Shower Suites</h3>
@@ -325,7 +325,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>Tell us what you need</h3>
                 <p>Fill out our short form. Let us know your service, location, and dates. It takes less than 60 seconds.</p>
-                <img src={step01Img} alt="Submitting a quote request online" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
+                <img src={step01Img} width={1200} height={1200} alt="Submitting a quote request online" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
             <div className="step">
@@ -336,7 +336,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>We confirm &amp; schedule everything</h3>
                 <p>Our team reviews your request, confirms equipment availability for your location and dates, and handles all the logistics so you don't have to.</p>
-                <img src={step02Img} alt="Scheduling and confirming equipment delivery" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
+                <img src={step02Img} width={1200} height={1200} alt="Scheduling and confirming equipment delivery" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
             <div className="step">
@@ -347,7 +347,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>Equipment delivered on time</h3>
                 <p>Your equipment shows up when and where it needs to be. No chasing, no follow-up calls, no last-minute surprises.</p>
-                <img src={step03Img} alt="Equipment delivered on time to site" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
+                <img src={step03Img} width={900} height={900} alt="Equipment delivered on time to site" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
             <div className="step">
@@ -358,7 +358,7 @@ export default function Home() {
               <div className="step-right">
                 <h3>We handle the pickup</h3>
                 <p>When your rental period ends, our team comes back to remove the equipment and leave your site clean. You don't lift a finger.</p>
-                <img src={step04Img} alt="Equipment picked up and site cleared" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
+                <img src={step04Img} width={1200} height={654} alt="Equipment picked up and site cleared" style={{ width: '100%', display: 'block', borderRadius: '4px' }} />
               </div>
             </div>
           </div>

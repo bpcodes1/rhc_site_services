@@ -41,6 +41,8 @@ const fenceTypes = [
     specs: '12.5 ft W × 6.5 ft H · 80 lb rubber bases · water-filled base upgrade available',
     body: 'Steel panels on weighted bases with no ground penetration. Standard for Seattle events, paved urban job sites, and any site where surface damage is not permitted. Fully portable and reconfigurable as your perimeter shifts. Standard 80 lb rubber bases handle most applications. For Puget Sound waterfront sites, exposed ridgelines, and high-traffic event footprints, water-filled base upgrade is available. Once filled, each base weighs approximately 600 lbs. Available with privacy windscreens.',
     image: fencePanelsImg,
+    w: 1250,
+    h: 1250,
   },
   {
     num: '02',
@@ -48,6 +50,8 @@ const fenceTypes = [
     specs: '6 ft standard · 8 ft available for high-security sites',
     body: 'Posts driven directly into soil or asphalt for maximum structural stability. The right system for long-duration Seattle construction sites where wind resistance and security are the priority. More resistant to sustained lateral load than panel fencing on bases. Best for Puget Sound waterfront sites, sloped terrain, and long-term commercial construction in SoDo, South Lake Union, and Capitol Hill.',
     image: chainFencingImg,
+    w: 900,
+    h: 900,
   },
 ]
 
@@ -282,7 +286,7 @@ export default function TemporaryFencingSeattle() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={type.image} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={type.image} width={type.w} height={type.h} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>

@@ -34,6 +34,8 @@ const trailerTiers = [
     ],
     extraSpecs: undefined as undefined | { label: string; items: { label: string; value: string }[] },
     image: restroom2StallImg,
+    w: 2048,
+    h: 2048,
   },
   {
     num: '02 / 4–5 Stall',
@@ -49,6 +51,8 @@ const trailerTiers = [
     ],
     extraSpecs: undefined as undefined | { label: string; items: { label: string; value: string }[] },
     image: restroom4StallImg,
+    w: 1800,
+    h: 982,
   },
   {
     num: '03 / 6–8 Stall',
@@ -71,6 +75,8 @@ const trailerTiers = [
       ],
     },
     image: restroom6StallImg,
+    w: 1140,
+    h: 1140,
   },
   {
     num: '04 / 9–10 Stall',
@@ -86,6 +92,8 @@ const trailerTiers = [
     ],
     extraSpecs: undefined as undefined | { label: string; items: { label: string; value: string }[] },
     image: restroom10StallImg,
+    w: 1024,
+    h: 1024,
   },
 ]
 
@@ -257,7 +265,7 @@ export default function RestroomTrailers() {
             {trailerTiers.map((tier) => (
               <article key={tier.num} className="unit">
                 <div className="unit-photo">
-                  <img src={tier.image} alt={tier.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={tier.image} width={tier.w} height={tier.h} alt={tier.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div className="unit-body">
                   <div className="mono-num">{tier.num}</div>

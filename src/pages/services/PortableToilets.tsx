@@ -164,7 +164,7 @@ export default function PortableToilets() {
           <div className="units">
             <article className="unit">
               <div className="unit-photo">
-                <img src={portaPottyImg} alt="Standard portable toilet" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={portaPottyImg} width={1195} height={896} alt="Standard portable toilet" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">01 / Standard</div>
@@ -190,7 +190,7 @@ export default function PortableToilets() {
 
             <article className="unit">
               <div className="unit-photo">
-                <img src={adaPortableImg} alt="ADA-compliant accessible portable toilet" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block', background: '#f9f9ff' }} />
+                <img src={adaPortableImg} width={1200} height={896} alt="ADA-compliant accessible portable toilet" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block', background: '#f9f9ff' }} />
               </div>
               <div className="unit-body">
                 <div className="mono-num">02 / ADA</div>

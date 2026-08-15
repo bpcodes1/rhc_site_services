@@ -41,18 +41,24 @@ const fenceTypes = [
     name: 'Panel Fencing (Freestanding)',
     body: 'Steel panels on weighted bases. No ground penetration required, fully portable, and reconfigurable without tools. The right system for events, short-term construction perimeters, and any site where ground disturbance is not permitted. Panels install and remove cleanly with no surface damage. Add windscreens for site screening or event aesthetics.',
     image: fencePanelsImg,
+    w: 1250,
+    h: 1250,
   },
   {
     num: '02',
     name: 'Post-Driven Chain Link',
     body: 'Posts driven into the ground for maximum structural stability. The right system for long-duration construction sites, high-traffic perimeters, and locations where the High Desert wind is a persistent factor. More resistant to lateral load than panel fencing on bases. Requires ground penetration, so not suitable for paved or hardscaped surfaces.',
     image: chainFencingImg,
+    w: 900,
+    h: 900,
   },
   {
     num: '03',
     name: 'Barricades',
     body: 'Pedestrian crowd control and traffic direction for events, construction zones, and public right-of-way work. Lightweight, stackable, and configurable. Used alone for low-level perimeters or as a secondary barrier inside a panel or chain link fence line.',
     image: barricadeImg,
+    w: 500,
+    h: 500,
   },
 ]
 
@@ -271,7 +277,7 @@ export default function TemporaryFencingBend() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={type.image} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={type.image} width={type.w} height={type.h} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{type.num}</div>

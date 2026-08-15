@@ -38,6 +38,8 @@ const trailerOptions = [
     bestFor: 'Up to 150 guests (2-stall) · Backyard weddings, winery receptions, and private outdoor events',
     body: 'The standard entry point for Portland backyard weddings and Willamette Valley winery and vineyard receptions. Standard 2-stall configurations accommodate up to 150 guests for events running 4 to 6 hours. Climate-controlled, porcelain flush, running hot and cold water, and vanity mirrors. For guest counts between the 2-stall and 4-stall ranges, a 3-stall configuration is available.',
     image: trailer2StallImg,
+    w: 2048,
+    h: 2048,
   },
   {
     num: '02',
@@ -45,6 +47,8 @@ const trailerOptions = [
     bestFor: '150–300 guests · Outdoor festivals, estate weddings, and multi-day events',
     body: 'Right for larger Willamette Valley receptions, Portland Waterfront events, and gatherings at outdoor venues. Standard 4-stall configurations accommodate up to 300 guests. Same interior amenities as the 2-stall with expanded tank capacity for higher guest counts and longer event durations. A 5-stall configuration is available for guest counts between the 4-stall and 6-stall range.',
     image: trailer4StallImg,
+    w: 1800,
+    h: 982,
   },
   {
     num: '03',
@@ -52,6 +56,8 @@ const trailerOptions = [
     bestFor: '~350 guests (6-stall) to ~500 guests (8-stall) · Large Portland festivals, Waterfront events, multi-day productions',
     body: 'High-capacity configurations for major Portland outdoor events with extended runtimes. Standard 6-stall configurations accommodate approximately 350 guests for events lasting up to 10 hours. Standard 8-stall configurations accommodate approximately 500 guests for events running 6 to 7 hours. A 7-stall configuration is available for guest counts between those two anchors.',
     image: trailerLargeImg,
+    w: 1140,
+    h: 1140,
   },
   {
     num: '04',
@@ -59,6 +65,8 @@ const trailerOptions = [
     bestFor: 'Up to ~700 guests (10-stall) · Major Portland festivals, large corporate outdoor events, multi-day productions',
     body: 'Maximum-capacity configurations for large-scale Portland events. Standard 10-stall configurations accommodate approximately 700 guests for events running 6 to 8 hours. A 9-stall configuration is available for guest counts between the 8-stall and 10-stall range. RHC reviews your site footprint, power access, and event timeline before confirming the configuration.',
     image: trailerXLImg,
+    w: 1024,
+    h: 1024,
   },
 ]
 
@@ -281,7 +289,7 @@ export default function RestroomTrailerPortland() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={option.image} alt={option.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={option.image} width={option.w} height={option.h} alt={option.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{option.num}</div>

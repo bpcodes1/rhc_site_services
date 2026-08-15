@@ -23,6 +23,8 @@ const units = [
     num: '01',
     title: '10ft Storage Container',
     image: container10ftImg,
+    w: 1024,
+    h: 1024,
     tag: 'Best for tight residential driveways, single-room renovations, and small job sites with limited access.',
     specs: [
       { label: 'Exterior', value: "~10'L x 8'W x 8'6\"H" },
@@ -39,6 +41,8 @@ const units = [
     num: '02',
     title: '20ft Storage Container',
     image: container20ftImg,
+    w: 2048,
+    h: 2048,
     tag: 'The standard choice for construction tool storage, 3-4 room home moves, and full kitchen or living room renovation projects.',
     specs: [
       { label: 'Exterior', value: "~20'L x 8'W x 8'6\"H" },
@@ -57,6 +61,8 @@ const units = [
     num: '03',
     title: '40ft Storage Container',
     image: container40ftImg,
+    w: 900,
+    h: 900,
     tag: 'The heavy-duty option for large commercial sites, full-household relocations, and multi-trade job sites storing materials for the duration of a build.',
     specs: [
       { label: 'Exterior', value: "~40'L x 8'W x 8'6\"H standard, or 9'6\"H high cube" },
@@ -291,7 +297,7 @@ export default function StorageContainers() {
               <article key={unit.num} className="unit">
                 <div className="unit-photo">
                   {unit.image ? (
-                    <img src={unit.image} alt={unit.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={unit.image} width={unit.w} height={unit.h} alt={unit.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   ) : (
                     <div className={`placeholder${i % 2 !== 0 ? ' dark' : ''}`}>
                       <span className="ph-tag">Photo · {unit.title}</span>

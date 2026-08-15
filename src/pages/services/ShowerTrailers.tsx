@@ -24,6 +24,8 @@ const units = [
     num: '01',
     title: '2-Stall Shower Trailer',
     image: shower2Img,
+    w: 1200,
+    h: 1200,
     tag: 'Best for small VIP event camping, emergency rapid response, and small remodel sites.',
     specs: [
       { label: 'Fresh Water', value: '125-150 gal (unlimited with garden hose hookup)' },
@@ -39,6 +41,8 @@ const units = [
     num: '02',
     title: '3-Stall Shower Trailer',
     image: showerTrailerDeployedImg,
+    w: 1200,
+    h: 1200,
     tag: 'The standard choice for mid-sized outdoor weddings, agriculture camps, and smaller disaster deployments.',
     specs: [
       { label: 'Fresh Water', value: '125-150 gal (unlimited with garden hose hookup)' },
@@ -54,6 +58,8 @@ const units = [
     num: '03',
     title: '4-Stall Shower Trailer',
     image: shower4Img,
+    w: 1200,
+    h: 655,
     tag: 'The most versatile configuration for mid-size construction crews, weekend festivals, and multi-day events.',
     specs: [
       { label: 'Fresh Water', value: '150-200 gal (unlimited with garden hose hookup)' },
@@ -70,6 +76,8 @@ const units = [
     num: '04',
     title: '6-Stall Shower Trailer',
     image: shower6Img,
+    w: 1200,
+    h: 895,
     tag: 'The heavy-duty workhorse for commercial construction, large multi-day festivals, and high-volume workforce housing.',
     specs: [
       { label: 'Fresh Water', value: '200-300 gal (unlimited with garden hose hookup)' },
@@ -85,6 +93,8 @@ const units = [
     num: '05',
     title: '8-Stall Shower Trailer',
     image: showerTrailerLargeImg,
+    w: 1250,
+    h: 1250,
     tag: 'Built for FEMA and wildfire camps, military training deployments, and festivals with 10,000 or more guests.',
     specs: [
       { label: 'Fresh Water', value: '200-300 gal (unlimited with garden hose hookup)' },
@@ -321,7 +331,7 @@ export default function ShowerTrailers() {
               <article key={unit.num} className="unit">
                 <div className="unit-photo">
                   {unit.image ? (
-                    <img src={unit.image} alt={unit.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={unit.image} width={unit.w} height={unit.h} alt={unit.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   ) : (
                     <div className={`placeholder${i % 2 !== 0 ? ' dark' : ''}`}>
                       <span className="ph-tag">Photo · {unit.title}</span>

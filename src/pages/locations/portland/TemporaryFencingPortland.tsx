@@ -37,6 +37,8 @@ const fenceTypes = [
     specs: '12.5 ft W x 6.5 ft H · 80 lb concrete bases',
     body: 'Steel panels on weighted bases with no ground penetration. The standard for Portland events, paved urban job sites, and any location where surface damage is not permitted. Fully portable and reconfigurable as your perimeter shifts. Panels install and remove cleanly on concrete, asphalt, and manicured venue lawns. Available with privacy windscreens and sponsor banner attachment points.',
     image: fencePanelsImg,
+    w: 1250,
+    h: 1250,
   },
   {
     num: '02',
@@ -44,6 +46,8 @@ const fenceTypes = [
     specs: '6 ft standard · 8 ft available for high-security sites',
     body: 'Posts driven directly into soil or asphalt for maximum structural stability. The right system for long-duration Portland construction sites where security is the priority. More resistant to sustained lateral load than panel fencing on bases. Barbed wire top rail available for high-security urban sites. Not suitable for paved or hardscaped surfaces.',
     image: chainFencingImg,
+    w: 900,
+    h: 900,
   },
   {
     num: '03',
@@ -51,6 +55,8 @@ const fenceTypes = [
     specs: 'Water-filled · stackable · interlocking',
     body: 'Crowd control and traffic channeling for Portland events and roadwork sites. Interlocking configuration holds position in PNW wind conditions. Used alone for low-level perimeters or as a secondary barrier inside a panel or chain link fence line.',
     image: barricadeImg,
+    w: 500,
+    h: 500,
   },
 ]
 
@@ -277,7 +283,7 @@ export default function TemporaryFencingPortland() {
                 }}
               >
                 <div style={{ height: '220px', overflow: 'hidden' }}>
-                  <img src={type.image} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src={type.image} width={type.w} height={type.h} alt={type.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '40px 1fr', gap: '20px', alignItems: 'start', padding: '24px' }}>
                   <div className="mono" style={{ color: 'var(--secondary)', paddingTop: '2px' }}>{type.num}</div>
