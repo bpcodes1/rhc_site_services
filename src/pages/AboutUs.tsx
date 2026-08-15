@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { BUSINESS_ID, breadcrumb, business, graph } from '../seo/schema'
 import LeadForm from '../components/LeadForm'
 
 import aboutImg from '../assets/general/about-jobsite.jpg'
@@ -15,32 +16,19 @@ const cities = [
   { name: 'Seattle',   state: 'WA', hq: false },
 ]
 
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'RHC Site Services',
-  description:
-    'Portable toilet, restroom trailer, temporary fencing, shower trailer, and storage container rentals across Oregon and Washington. Based in Portland, OR.',
-  url: 'https://rhcsiteservice.com/',
-  telephone: '+15036077412',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'PO Box 9088',
-    addressLocality: 'Brooks',
-    addressRegion: 'OR',
-    postalCode: '97305',
-    addressCountry: 'US',
+const schema = graph([
+  business,
+  {
+    '@type': 'AboutPage',
+    '@id': 'https://rhcsiteservice.com/about-us#webpage',
+    name: 'About RHC Site Services',
+    description:
+      'Portable toilet and site equipment rentals run by Rafa out of Portland, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup.',
+    url: 'https://rhcsiteservice.com/about-us',
+    mainEntity: { '@id': BUSINESS_ID },
   },
-  founder: { '@type': 'Person', name: 'Rafael Hernandez' },
-  areaServed: [
-    'Portland, OR', 'Salem, OR', 'Eugene, OR', 'Bend, OR',
-    'Gresham, OR', 'Vancouver, WA', 'Tacoma, WA', 'Seattle, WA',
-  ],
-  sameAs: [
-    'https://www.google.com/maps/place/RHC+Site+Services/@45.0449079,-122.9588222,17z/data=!3m1!4b1!4m6!3m5!1s0x54955723f4080829:0x49107ebcd4c6f6fe!8m2!3d45.0449041!4d-122.9562473!16s%2Fg%2F11s4_f91yz?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D',
-    'https://www.facebook.com/RHCSiteServices/',
-  ],
-}
+  breadcrumb([{ name: 'About Us' }]),
+])
 
 export default function AboutUs() {
   return (
@@ -52,7 +40,7 @@ export default function AboutUs() {
           content="Portable toilet and site equipment rentals run by Rafa out of Portland, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/about-us" />
-        <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}
@@ -100,7 +88,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: '48px', alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))', gap: '48px', alignItems: 'center' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <p className="body-lg">
                 Rafa was born and raised in Salem, Oregon. Before starting RHC, he worked inside his
@@ -119,11 +107,25 @@ export default function AboutUs() {
                 kept watching fail.
               </p>
             </div>
-            <div style={{ borderRadius: '8px', overflow: 'hidden', height: '500px' }}>
+            {/* The source photo is 1200x1522. The box is deliberately 1200x1122,
+                which trims 400px of empty sky off the TOP and nothing else,
+                because the crop is anchored to the bottom. Do not trim more than
+                400: the Oregon Pioneer statue on the Capitol dome sits at roughly
+                y=500, and it is the detail that tells a visitor this job was in
+                Salem. The earlier fixed 500px height cropped far past it. */}
+            <div style={{ borderRadius: '8px', overflow: 'hidden', aspectRatio: '1200 / 1122' }}>
               <img
                 src={aboutImg}
-                alt="Portable toilets deployed on an Oregon job site"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center bottom' }}
+                alt="Portable toilets on a job site at the Oregon State Capitol in Salem, Oregon"
+                width={1200}
+                height={1522}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center bottom',
+                  display: 'block',
+                }}
               />
             </div>
           </div>

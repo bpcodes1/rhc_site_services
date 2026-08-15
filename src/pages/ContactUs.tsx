@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { BUSINESS_ID, breadcrumb, business, faqPage, graph } from '../seo/schema'
 import LeadForm from '../components/LeadForm'
 
 const faqs = [
@@ -25,54 +26,22 @@ const faqs = [
   },
 ]
 
-const contactSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ContactPage',
-  name: 'Contact RHC Site Services',
-  url: 'https://rhcsiteservice.com/contact-us',
-  description:
-    'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, and storage containers across Oregon and Washington.',
-  mainEntity: {
-    '@type': 'LocalBusiness',
-    name: 'RHC Site Services',
-    telephone: '+15036077412',
-    email: 'info@rhcsiteservices.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Portland',
-      addressRegion: 'OR',
-      addressCountry: 'US',
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '07:00',
-        closes: '18:00',
-      },
-    ],
-    areaServed: [
-      'Portland, OR',
-      'Salem, OR',
-      'Eugene, OR',
-      'Bend, OR',
-      'Gresham, OR',
-      'Vancouver, WA',
-      'Tacoma, WA',
-      'Seattle, WA',
-    ],
+// This page used to define a second LocalBusiness of its own, which disagreed
+// with the one on About Us about the address. Both now come from seo/schema.ts.
+const schema = graph([
+  business,
+  {
+    '@type': 'ContactPage',
+    '@id': 'https://rhcsiteservice.com/contact-us#webpage',
+    name: 'Contact RHC Site Services',
+    url: 'https://rhcsiteservice.com/contact-us',
+    description:
+      'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, and storage containers across Oregon and Washington.',
+    mainEntity: { '@id': BUSINESS_ID },
   },
-}
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
-    name: faq.q,
-    acceptedAnswer: { '@type': 'Answer', text: faq.a },
-  })),
-}
+  breadcrumb([{ name: 'Contact Us' }]),
+  faqPage(faqs),
+])
 
 export default function ContactUs() {
   return (
@@ -84,8 +53,7 @@ export default function ContactUs() {
           content="Contact RHC Site Services in Portland, OR. Same-day quotes on portable toilets, restroom trailers, temporary fencing, storage containers, and more across Oregon and Washington. Phone, email, or form."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/contact-us" />
-        <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
       {/* BREADCRUMB */}
@@ -341,11 +309,11 @@ export default function ContactUs() {
                     fontFamily: 'var(--font-head)',
                   }}
                 >
-                  Mon–Fri, 7 a.m.–6 p.m. PT
+                  Mon–Sun, 7 a.m.–6 p.m. PT
                 </div>
               </div>
               <p style={{ margin: 0, fontSize: '14px', color: 'var(--on-surface-variant)', lineHeight: '1.65' }}>
-                Same-day quotes for forms submitted before 3 p.m. Weekend requests answered the next business morning.
+                Same-day quotes for forms submitted before 3 p.m. Seven days a week, weekends included.
               </p>
             </div>
           </div>
