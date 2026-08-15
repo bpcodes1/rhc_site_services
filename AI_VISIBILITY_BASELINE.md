@@ -65,15 +65,89 @@ Per query, per engine:
 
 ## Results
 
-### Run 1 — 2026-08-15 (baseline)
+### Run 1 — 2026-08-15 (baseline), commercial queries
 
-PENDING. Enrique to run the 8 queries across the 3 engines.
+Run by Enrique across Google organic, Google AI Overviews, ChatGPT and Gemini.
+Sponsored results excluded. Some competitor names are voice-to-text and marked
+uncertain in his raw notes; they are recorded here as reported.
 
-Expected: zero RHC mentions on all 8. The value of run 1 is not the zero, it is
-the **cited-source list**, which becomes a target list for the citation pass
-(work queue task 6). If Perplexity answers query 1 by citing three directories,
-those three directories are where RHC needs to appear, and that is a
-better-evidenced target list than a generic citation checklist.
+**The prediction was wrong.** Claude predicted zero RHC mentions across all four
+commercial queries. RHC appeared in ChatGPT for query 4, ranked 6th.
+
+| Query | RHC appears? |
+|---|---|
+| 1. porta potty rental portland oregon | no (Google, ChatGPT, Gemini) |
+| 2. restroom trailer rental for a wedding near seattle | no |
+| 3. temporary fencing rental bend oregon | no |
+| 4. who delivers portable toilets in salem oregon | **YES, ChatGPT, 6th**. No in Google AI Overview or Gemini |
+
+ChatGPT's description of RHC: *"Based in Brooks and offers portable toilets,
+including standard and flushable units, with delivery in the Salem area."*
+
+**Attribution is NOT to this website, and saying otherwise would be a false
+win.** Checked against the source the same day:
+- "Brooks" appears on the site in exactly TWO places, the Privacy Policy and
+  Terms of Service, as PO Box 9088, Brooks, OR 97305.
+- **"Flushable" appears nowhere on the site.** That fact came from elsewhere,
+  most plausibly the old rhcsiteservices.com WordPress site, which is still
+  live and still describing the business, or the Google listing.
+
+So the mention is a blend of our legal pages, the old domain and directory
+data. What it proves is that RHC exists as a known entity to ChatGPT. It does
+not prove the new site earned it. It also strengthens the domain consolidation
+case: the old domain is actively feeding LLM understanding of this business.
+
+### THE STRATEGIC FINDING: machines think RHC is in Brooks, not Portland
+
+RHC surfaced for Salem and nowhere else. The site says otherwise:
+
+| Signal | Says |
+|---|---|
+| GBP, verified | 8792 Portland Rd NE, Brooks OR 97305 |
+| Privacy Policy + Terms | PO Box 9088, Brooks OR 97305 |
+| Map pin proximity | 8 mi Salem, 35 mi Portland |
+| Site copy, 6 places incl. sitewide footer | "Based in / Headquartered in Portland" |
+
+Positioning copy is not a location signal to a machine. Addresses are. Every
+machine-readable address RHC has points at Brooks, which is a Salem ZIP, and
+Salem is the one query where RHC appears.
+
+**There is no Salem page on this site.** There are three Seattle pages, which
+surface nowhere, and zero Salem pages, which is where RHC already surfaces.
+`src/assets/cities/salem/salem_hero.webp` already exists in the repo, so a
+Salem page was started and never built. Salem is also the only major service
+city where the map pack is winnable at all, since proximity is ~55% of pack
+ranking and the verified pin is 8 miles away.
+
+Recommendation, needs Enrique's decision: build the Salem location pages next,
+ahead of further Seattle or Bend work. This is evidence-led, not a hunch.
+
+### Cited-source target list (the real prize of run 1)
+
+Who the engines name instead of RHC, by frequency across the four queries:
+
+| Competitor | Where cited | Note |
+|---|---|---|
+| Honey Bucket | Google organic (PDX), Google AIO + ChatGPT (Salem) | Dominant incumbent |
+| American SaniCan | Google organic + ChatGPT (PDX), ChatGPT (Salem) | |
+| **Oregon Portable Toilets** | Gemini #1 (PDX), Google AIO + ChatGPT + Gemini (Salem) | **Rafa's father's company.** A link from them has been "pending Rafa approval" since July. AI engines already cite it |
+| National Rent A Fence | Google AIO + ChatGPT + Gemini (Bend fencing), Google organic (Seattle trailers) | Dominant in fencing |
+| **ZTERS** | Google AIO + Gemini (fencing), Gemini (Salem) | A national BROKER/aggregator, the same model RHC runs. Worth studying how a broker ranks |
+| Royal Restrooms | Google organic + ChatGPT + Gemini (Seattle) | Dominant for event restroom trailers |
+| Green Latrine | ChatGPT + Gemini (Seattle) | |
+| Willie Make-It | Google organic + ChatGPT (PDX) | |
+
+### Correction to SEO_BASELINE.md from measured data
+
+The baseline states AI Overviews "now front 80%+ of local service queries".
+Measured here: **Google generated an AI Overview for 2 of 4** commercial
+queries (fencing Bend, porta potty Salem) and NOT for porta potty Portland or
+restroom trailer Seattle. That is 50% on a sample of four. Too small to replace
+the figure, large enough to stop treating 80% as established.
+
+### Run 1, informational queries
+
+PENDING.
 
 ### Next run
 

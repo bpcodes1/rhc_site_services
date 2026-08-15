@@ -89,6 +89,13 @@ Actions, ranked by impact:
 2. [TODO] First-100-words rule: open each page by directly answering who/what/
    where. Directly-answering openings are 2.3x more likely to be cited by AI
    Overviews, which now front 80%+ of local service queries.
+   **The 80% figure is not holding up on measurement.** In the 2026-08-15 AI
+   visibility baseline, Google generated an AI Overview for 2 of 4 commercial
+   local queries: yes for fencing Bend and porta potty Salem, NO for porta
+   potty Portland and restroom trailer Seattle. Sample of four is too small to
+   replace the number, big enough to stop quoting 80% as established. The
+   underlying action is unaffected: directly answering the question is good for
+   AI engines and humans either way. See AI_VISIBILITY_BASELINE.md.
 3. [TODO] Internal-link cluster: each service hub links to its 3 city pages;
    each city page links back to its service hub, to sibling cities (same
    service), and to same-city pages (other services). Use varied commercial
