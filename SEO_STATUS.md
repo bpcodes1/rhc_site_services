@@ -42,14 +42,76 @@ takes the listing to zero reviews, and RHC did not create it.
 Enrique approved this order and is willing to do his part on each. Work top
 down. Items 1-3 need nobody and can be executed immediately.
 
-| # | Task | Needs from Enrique |
-|---|------|--------------------|
-| 1 | Structured data on the 17 pages that have none | nothing |
-| 2 | Explicit width/height on all images (CLS) | nothing |
-| 3 | Self-host fonts + code-split the 797 KB bundle | nothing |
-| 4 | Title audit and rewrites | approval, page by page (copy) |
-| 5 | Contextual in-body internal links | anchor-text approval (copy) |
-| 6 | Citation pass | he does the submissions; prep the list for him |
+This table is the authoritative order. The "Unblocked work" and "Phase 1" lists
+further down are the earlier, superseded rankings of the same items; they are
+kept for their reasoning, not their order.
+
+| # | Task | Needs from Enrique | Status |
+|---|------|--------------------|--------|
+| 1 | Structured data on the 17 pages that have none | nothing | DONE 2026-08-14 |
+| 2 | Explicit width/height on all images (CLS) | nothing | next |
+| 3 | Self-host fonts + code-split the 797 KB bundle | nothing | |
+| 4 | Title audit and rewrites | approval, page by page (copy) | |
+| 5 | Contextual in-body internal links | anchor-text approval (copy) | |
+| 6 | Citation pass | he does the submissions; prep the list for him | |
+| 7 | Per-page social preview (og/twitter) tags | nothing | LAST, see below |
+
+Item 7 added 2026-08-14 and deliberately placed last by Enrique. Every page
+currently inherits the homepage's Open Graph tags from index.html, so sharing
+any page in a text, WhatsApp, LinkedIn or Slack shows the homepage title,
+homepage description and a homepage web address. Verified on production the
+same day: /porta-potty-rental-seattle-wa has `<title>Porta Potty Rental
+Seattle WA</title>` but `og:title` "RHC Site Services" and `og:url` the
+homepage. It is a real, documented spec (ogp.me) honoured by Facebook,
+LinkedIn, iMessage, WhatsApp, Slack and Discord, but it is NOT a Google
+ranking factor and no audited framework lists it as an action. It affects how
+shared links look, which is polish, not a ranking mover. Ordered accordingly.
+
+### Task 1 result (2026-08-14)
+
+All 19 pages now emit one `@graph` JSON-LD block, verified present and
+parseable in the prerendered HTML, not just in the source. Everything derives
+from `src/seo/schema.ts`, which is the single source of truth: the two rival
+LocalBusiness blocks on About Us and Contact Us are gone, replaced by one
+canonical node every page emits identically.
+
+Decisions locked while building it, both Enrique's:
+
+- **No postal address in any block.** RHC is a service-area business whose GBP
+  is set to "No location; deliveries and home services only", so publishing an
+  address would contradict the listing. `areaServed` carries the location
+  signal instead. This also retires the old NAP conflict, where About Us said
+  PO Box 9088, Brooks and Contact Us said Portland.
+- **FAQPage markup on all 15 pages that have FAQs.** Google retired FAQ rich
+  results for most sites in May 2026, so this buys no SERP real estate. It was
+  added anyway because marked-up Q&A pairs are cited more by AI answer engines.
+  SEO_BASELINE.md argues both sides (Pillar 1 item 5 says stop adding it,
+  Pillar 2 item 6 says keep it); Pillar 2 wins.
+
+Per page: LocalBusiness everywhere, plus Service and BreadcrumbList and
+FAQPage on the 5 service and 9 location pages, WebPage and BreadcrumbList on
+the 2 legal pages, AboutPage / ContactPage on those two. No `aggregateRating`
+anywhere (disallowed for self-serving reviews since 2019, and RHC has none).
+No price or `priceRange` anywhere, per the form-only pricing rule.
+
+Three things fixed in passing:
+
+- **The About Us job site photo.** 3.0 MB and 1824px wide, rendering in a box
+  about 600px wide, so it shipped ~4x the pixels anyone could see and outweighed
+  the entire JS bundle. Now 462 KB at 1200px, an 85% cut. Its container was also
+  locked to `height: 500px`, which made the box landscape on desktop and cropped
+  the top off a portrait photo while looking fine on mobile, where the collapsed
+  column happens to match the photo's shape. The box now takes the photo's own
+  1200x1522 ratio, so nothing crops at any width, and the image carries explicit
+  width/height, which is the first piece of work-queue task 2.
+
+- **Business hours were wrong on the live site.** Contact Us displayed Mon-Fri
+  7am-6pm and promised weekend requests would wait for the next business
+  morning. Rafa's confirmed hours are seven days. Copy and schema now both say
+  Mon-Sun, 7 a.m.-6 p.m.
+- **The homepage FAQ was hardcoded JSX**, unlike every other page. Lifted into
+  a `homeFaqs` array so the visible section and the markup cannot drift.
+  Rendered output verified byte-identical to before the refactor.
 
 ### Site audit measured 2026-08-13 (the numbers behind that order)
 
@@ -58,6 +120,7 @@ down. Items 1-3 need nobody and can be executed immediately.
   Largest concrete gap on the site. Also note **two separate LocalBusiness
   blocks** exist across those two pages; the baseline calls for one canonical
   block, so consolidate while adding BreadcrumbList.
+  CLOSED 2026-08-14, see "Task 1 result" above.
 - **Titles: 10 of 19 outside the 51-60 target.** Homepage is 82 characters and
   Google will rewrite it. Service pages run 63-68. The two legal pages are
   short (34, 36) and matter least. The 9 location pages are mostly fine.
@@ -228,9 +291,9 @@ Oregon OSHA requirement, so the site establishes the requirement and never
 offers the solution. Add handwashing stations to the Portable Toilets page to
 close that loop.
 
-**Still unread: the 1 existing Google review (5.0).** Reading is not editing so
-it should work without verification. If it is a genuine RHC customer it is the
-first real testimonial available and belongs in a TESTIMONIAL SLOT.
+**The 1 existing Google review was read on 2026-08-14 and is FAKE.** See the
+section at the top of this file. It can never be used in a TESTIMONIAL SLOT,
+and RHC still has zero usable reviews.
 
 Rafa context as of 2026-08-07: working 16-hour days on Pacific Northwest
 wildfire response. Responsive to short, single-ask messages; do not batch
@@ -255,9 +318,11 @@ Rafa's workload eases; it is still the highest-value item when he is available.
    signage, done from his phone at the yard. Two minutes of his time, and it is
    not a desk task, which suits his current schedule. Unverified listings also
    rank worse and cannot properly reply to reviews.
-3. ANSWERED 2026-08-14: **business hours are 8:00am to 7:00pm, every day.**
-   Rafa confirmed. Set these on the GBP (they will publish with everything else
-   once he verifies) and replace the current "Open 24 hours".
+3. ANSWERED 2026-08-14: **business hours are 7:00am to 6:00pm, every day.**
+   Rafa confirmed. An earlier version of this line said 8:00am to 7:00pm; that
+   was a typo, corrected by Enrique the same day. Set 7-6 seven days on the GBP
+   (it publishes with everything else once he verifies) and replace the current
+   "Open 24 hours". The site now states the same hours in copy and in schema.
 4. **Payment methods accepted**, for the GBP Payments attribute.
 5. **Does he offer handwashing stations directly?** Already listed on GBP on the
    reasoning above, but worth confirming, and it determines the site copy.
@@ -329,6 +394,10 @@ landing pages. That is what those pages are for.
 
 ## Unblocked work, needs nobody
 
+SUPERSEDED as an ordering by the agreed work queue at the top of this file,
+which Enrique approved on 2026-08-13. Kept for the reasoning on each item.
+Item 4 (BreadcrumbList schema) is DONE as of 2026-08-14.
+
 The subset of Phase 1 that can proceed while Rafa is unavailable. Ranked.
 
 1. **Citation pass** (baseline Pillar 3 item 4). Identical NAP across Bing
@@ -351,11 +420,15 @@ The subset of Phase 1 that can proceed while Rafa is unavailable. Ranked.
 8. **Mobile UX pass** (Shepard audit): Googlebot crawls this site as smartphone
    and quality raters evaluate 100% on mobile. Never performed.
 
-## Phase 1: Authority and On-Page (PROPOSED 2026-08-07, not yet approved)
+## Phase 1: Authority and On-Page (defined 2026-08-07, reordered 2026-08-13)
 
-Phase 1 had never been defined; only Phase 0 existed. This is a proposal built
-entirely from items already in SEO_BASELINE.md, not new strategy. Enrique should
-confirm or reorder it.
+Phase 1 had never been defined; only Phase 0 existed. This was built entirely
+from items already in SEO_BASELINE.md, not new strategy.
+
+ORDERING SUPERSEDED: Enrique approved the six-item work queue at the top of
+this file on 2026-08-13, and that is what to work from. The list below stays as
+the full scope of the phase and the reasoning behind each item. Item 6
+(BreadcrumbList schema) is DONE as of 2026-08-14.
 
 The logic of the split: Phase 0 made the site technically readable and
 trustworthy. It did not give Google a reason to rank it. First GSC data on

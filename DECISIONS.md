@@ -91,16 +91,28 @@ all copy stays Oregon/Washington-scoped to protect local SEO.
    footer. The Accessibility link was removed rather than replaced, because that
    statement is a promise about assistive-technology support nobody has audited.
    Add it back only after a real audit.
-2. About Us: job site photo (src/assets/general/about_jobsite.webp), Rafa
-   personal photo, client story for section 05. All need Rafa.
-   (P.O. Box, Google Maps URL, and Facebook URL: done as of 2026-07.)
+2. About Us: Rafa personal photo and a client story for section 05. Both need
+   Rafa. (P.O. Box, Google Maps URL, and Facebook URL: done as of 2026-07.)
    The final-CTA testimonial is now a TESTIMONIAL SLOT comment; see below.
+   JOB SITE PHOTO IS DONE. It landed 2026-06-10 as
+   src/assets/general/about-jobsite.jpg (not the .webp this TODO originally
+   named, which is why it read as outstanding for two months). Enrique
+   confirmed 2026-08-14 that it is a REAL RHC photo supplied by Rafa, not
+   stock. That is a genuine asset: original photography correlates with
+   Google's winner bucket and stock with the loser bucket (Shepard, r=-0.403).
+   Optimised 2026-08-14: 3.0 MB / 1824px wide down to 462 KB / 1200px wide,
+   an 85% cut. NOT converted to WebP; this machine has no WebP encoder and
+   sips silently writes nothing despite reporting success, so it would need a
+   build dependency. Worth roughly another 25%; ask before adding one.
 3. DONE 2026-07-28: Google Search Console Domain property verified by DNS TXT,
    sitemap submitted, indexing requested for all URLs. See SEO_STATUS.md.
 4. DONE 2026-07-25: Bryan unpublished the GitHub Pages site (github.io now 404).
 5. DONE 2026-07-27: the /faq route was removed (Enrique's call, it 404s now).
-   src/pages/FAQ.tsx remains orphaned in the repo, unrouted and unbuilt, like
-   src/pages/services/RollOffDumpsters.tsx.
+   src/pages/FAQ.tsx remains orphaned in the repo, unrouted and unbuilt. It is
+   the only orphan left; RollOffDumpsters.tsx was deleted, per the decision
+   above (verified 2026-08-14).
+6. DONE 2026-07-24: Contact page now shows info@rhcsiteservices.com (the inbox
+   Rafa designated for inquiries) in schema, mailto link, and displayed text.
 7. NO FABRICATED PROOF, locked 2026-07-27. Every rendered testimonial was
    removed sitewide: 41 visible "[Testimonial placeholder]" blocks plus 6
    invented or borrowed quotes, replaced with 47 `TESTIMONIAL SLOT` comments
@@ -108,10 +120,13 @@ all copy stays Oregon/Washington-scoped to protect local SEO.
    False founding claims ("15+ years", "RHC has operated since 2016",
    schema foundingDate) were corrected: 2016 attaches to Rafa's work history,
    never to the brand. Grep `TESTIMONIAL SLOT` to find every empty slot.
+   Reconfirmed 2026-08-14: 47 slots present, zero testimonials rendering.
 8. Site is prerendered as of 2026-07-27. See CLAUDE.md Deployment and
    SEO_STATUS.md "Build gotchas" before adding pages or touching the build.
-6. DONE 2026-07-24: Contact page now shows info@rhcsiteservices.com (the inbox
-   Rafa designated for inquiries) in schema, mailto link, and displayed text.
+9. DONE 2026-08-14: all 19 pages carry JSON-LD, generated from src/seo/schema.ts.
+   That file is now the only place NAP, service areas, and hours are written.
+   Never hand-write a LocalBusiness block on a page again. See SEO_STATUS.md
+   "Task 1 result".
 
 ## Other References
 

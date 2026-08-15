@@ -35,6 +35,12 @@ Cloudflare Pages hosting, GitHub repo bpcodes1/rhc_site_services, branch enrique
 - Specs on service pages describe the Oregon/Washington market standard, not RHC
   stock. Write "standard sizes in the Portland metro area include...", never "we
   offer X sizes". Research the regional standard; do not wait on Rafa to confirm.
+- src/seo/schema.ts is the single source of truth for ALL structured data, and
+  the only place the business name, phone, service areas, and hours are written.
+  Every page imports from it and emits one @graph block. Never hand-write a
+  LocalBusiness block on a page; that is what produced two conflicting addresses.
+  The site publishes no postal address anywhere: RHC is a service-area business
+  whose Google listing hides its address.
 - LeadForm (src/components/LeadForm.tsx) is the primary CTA on every page. Pass
   the defaultService prop. Submissions go via Web3Forms to info@rhcsiteservices.com.
 - Service cities: Salem, Portland (HQ), Eugene, Bend, Gresham (OR); Tacoma,

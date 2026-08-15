@@ -46,11 +46,18 @@ Actions, ranked by impact:
 4. [DONE 2026-07-27] GitHub Pages duplicate unpublished (Bryan). pages.dev did
    NOT send noindex by default (verified by curl); fixed via host-scoped rule in
    public/_headers (X-Robots-Tag: noindex on rhc-site-services.pages.dev only).
-5. [TODO] Schema: add BreadcrumbList to service and location pages (still shows
-   in SERPs); one canonical LocalBusiness block with areaServed (8 cities) and
-   NAP exactly matching the future GBP. Keep existing FAQPage markup but stop
-   adding it to new pages (rich result deprecated May 2026). Validate every
-   page with the Rich Results Test; it executes JS so it doubles as a render check.
+5. [DONE 2026-08-14] Schema on all 19 pages, all from src/seo/schema.ts.
+   BreadcrumbList on every page below the homepage, one canonical LocalBusiness
+   node with areaServed (8 cities), Service on the 5 service and 9 location
+   pages. Resolved the two open questions in this item's original wording:
+   - NAP now carries NO postal address, because the GBP is a service-area
+     listing with the address hidden and publishing one would contradict it.
+   - FAQPage was ADDED to all 15 pages with FAQs rather than frozen. The
+     "stop adding it" advice here conflicted with Pillar 2 item 6 below, which
+     is the newer reasoning: rich results are gone but AI answer engines cite
+     marked-up Q&A more. Enrique decided in favour of Pillar 2.
+   Still open: validate with the Rich Results Test once deployed; it executes
+   JS so it doubles as a render check.
 6. [TODO] Speed (CWV 2026 = LCP, CLS, INP; a tie-breaker signal but a
    conversion win now): self-host the three Google Fonts with font-display:
    swap and preload, route-split the ~830KB bundle with React.lazy, and set
@@ -136,12 +143,18 @@ Actions, ranked by impact:
 
 ## Top Priorities Across All Pillars
 
-1. 301 www -> apex redirect in Cloudflare (ten minutes; only confirmed defect).
-2. Google Business Profile fixed and fully populated (needs Rafa: real address).
-3. Google Search Console Domain property + sitemap + Request Indexing all 17
-   URLs; watch the Page Indexing report.
-4. Prerender the 17 routes (vite-react-ssg), then serve real 404s.
-5. Review drip started and About Us E-E-A-T TODOs closed.
+Written 2026-07-24, when this was a 17-page site with nothing done. Kept as the
+original ranking; the live queue is in SEO_STATUS.md and the site is 19 pages.
+
+1. [DONE 2026-07-27] 301 www -> apex redirect in Cloudflare.
+2. Google Business Profile fixed and fully populated. STAGED 2026-08-07; every
+   edit is invisible until Rafa records the video verification.
+3. [DONE 2026-07-28/29] Google Search Console Domain property + sitemap +
+   Request Indexing. Note: the 2 legal pages, created later on 2026-08-06,
+   have still never had indexing requested.
+4. [DONE 2026-07-27] Prerender every route, then serve real 404s. Done with a
+   custom prerender.mjs, NOT vite-react-ssg, which item 2 above proves unusable.
+5. Review drip started and About Us E-E-A-T TODOs closed. Both need Rafa.
 6. Internal-link cluster wired + first-100-words page openings.
 7. Domain consolidation via page-level 301s when old-domain access is recovered.
 
