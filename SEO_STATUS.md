@@ -44,10 +44,13 @@ Update this file whenever a task moves. Last updated 2026-08-14.
 Two open items. Neither blocks Phase 1 work; do not stall the queue waiting on
 them.
 
-- **Task 4 has a hole.** Indexing was requested for all URLs on 2026-07-28/29,
-  but `/privacy-policy` and `/terms-of-service` were created 2026-08-06, after
-  the fact, and have **never had indexing requested**. They are in the sitemap
-  so Google will find them eventually. Two minutes in GSC closes this.
+- ~~Task 4 has a hole.~~ **CLOSED 2026-08-15.** Enrique requested indexing for
+  `/privacy-policy` and `/terms-of-service`, which were created 2026-08-06 and
+  had been missed by the original 2026-07-28/29 pass. All 19 URLs have now had
+  indexing requested. Watch Page Indexing over the next week or two: it read 17
+  indexed / 3 "page with redirect" on 2026-08-15, and those 3 are believed to
+  be the http and www variants a Domain property tracks, which is the www-to-
+  apex redirect working as designed. NOT yet confirmed by opening that row.
 - **Task 6 (GBP) is staged, not live.** Rafa has still not recorded the video
   verification as of 2026-08-14. Every profile edit stays invisible until he
   does. He is working 16-hour days on wildfire response; this is a scheduling
@@ -326,7 +329,7 @@ click-through. Needs Enrique's approval; it is copy.
 | 1 | 301 www to apex redirect | DONE 2026-07-27 | |
 | 2 | Google Search Console Domain property + sitemap | DONE 2026-07-28 | |
 | 3 | Prerender 17 routes + real 404s | DONE 2026-07-27 | |
-| 4 | Request Indexing | 17 of 19 done 7-28/29; the 2 legal pages never requested | |
+| 4 | Request Indexing | DONE 2026-08-15 (last 2 legal pages requested) | |
 | 5 | Trust and legal pages | DONE 2026-08-06 | |
 | 6 | Google Business Profile | STAGED 2026-08-07, still not verified as of 8-14 | Rafa (video verification) |
 
