@@ -101,27 +101,53 @@ years of accumulated signal) on the easy path. The Zoho MX warning still
 stands: info@rhcsiteservices.com receives the lead form, so any migration must
 preserve those records or lead notifications silently stop.
 
-## START HERE: agreed work queue (set 2026-08-13)
+## START HERE: current work queue (reordered 2026-08-15 on measured evidence)
 
-Enrique approved this order and is willing to do his part on each. Work top
-down. Items 1-3 need nobody and can be executed immediately.
+Work top down. The original order was set 2026-08-13 from an audit; it has been
+reordered twice since, both times because measurement contradicted an
+assumption. Reasoning for every completed item is in the result sections below.
 
-This table is the authoritative order. The "Unblocked work" and "Phase 1" lists
-further down are the earlier, superseded rankings of the same items; they are
-kept for their reasoning, not their order.
+### Done
 
-| # | Task | Needs from Enrique | Status |
-|---|------|--------------------|--------|
-| 1 | Structured data on the 17 pages that have none | nothing | DONE 2026-08-14 |
-| 2 | Explicit width/height on all images (CLS) | nothing | DONE 2026-08-14 |
-| 3 | Self-host fonts (CLS/LCP) | nothing | DONE 2026-08-14 |
-| 3b | Code-split the 797 KB bundle | nothing | still open |
-| 4 | Title audit and rewrites | approval, page by page (copy) | DONE 2026-08-15 |
-| 5 | Contextual in-body internal links | anchor-text approval (copy) | |
-| 6 | Citation pass | he does the submissions; prep the list for him | |
-| 7 | Per-page social preview (og/twitter) tags | nothing | LAST, see below |
+| # | Task | Result |
+|---|------|--------|
+| 1 | Structured data on all 19 pages | DONE 2026-08-14. One @graph per page, all from src/seo/schema.ts |
+| 2 | Explicit width/height on all images | DONE 2026-08-14. Insurance, not the CLS fix; see the result section |
+| 3 | Self-host fonts | DONE 2026-08-14. This WAS the CLS fix: 0.2964 to 0.0000 sitewide |
+| 4 | Title audit | DONE 2026-08-15. Six titles, not nineteen |
+| -- | Remove unverified Portland HQ claim | DONE 2026-08-15. Copy, map pin, hq badges, schema |
+| -- | Correct false OSHA one-per-20 claim | DONE 2026-08-15. Seven pages plus the project rule |
+| -- | AI visibility baseline, 8 queries x 3 engines | DONE 2026-08-15. See AI_VISIBILITY_BASELINE.md |
 
-Results and reasoning for each are below, in the order the tasks were done.
+### Next, in order
+
+| # | Task | Needs from Enrique | Why here |
+|---|------|--------------------|----------|
+| 5 | **First-100-words direct answers** on all 19 pages | copy approval, one page first to settle the pattern | HIGHEST VALUE as of 2026-08-15. It is the format AI engines cite, it is the ONLY channel not gated on authority or on Rafa, and it now sits on accurate regulatory content instead of contradictory content |
+| 6 | Entity fixes: expand sameAs, add Person markup for Rafa | nothing | Slawski. Serves AI citation and classic SEO. sameAs is currently 2 links |
+| 7 | Rewrite 11 meta descriptions over 160 chars | copy approval | Cheap, permanent. 11 of 19 truncate mid-sentence; Contact Us is 199 |
+| 8 | Contextual in-body internal links | anchor-text approval | Slawski's Reasonable Surfer independently confirms the 08-13 finding |
+| 9 | Citation pass, ~20 submissions | he does the submissions | The authority bottleneck. Target list now evidence-based, see baseline file |
+| 10 | Handwashing stations on the Portable Toilets page | nothing | GBP advertises it; the site never mentions it. Seattle and Portland pages establish the requirement and never offer the solution |
+| 11 | Mobile UX pass on all 19 pages | nothing | Shepard: raters evaluate 100% on mobile. Never performed |
+| 12 | Code-split the ~800 KB bundle | nothing | Last open speed item |
+| 13 | Per-page social preview (og/twitter) tags | nothing | LAST by Enrique's call. Real but not a ranking factor |
+
+### Decisions parked, with their trigger
+
+- **Salem location pages.** Evidence supports building them next among city
+  pages: RHC surfaced only for the Salem query, every machine-readable address
+  points to Brooks (a Salem ZIP), the pin is 8 mi from Salem against 35 from
+  Portland so it is the only city where the map pack is reachable, and
+  salem_hero.webp already sits unused in the repo. PARKED 2026-08-15 by Enrique:
+  the ChatGPT mention traces to the Google listing, which still points at the
+  OLD website, so the picture changes once the listing is verified and updated.
+  Revisit after GBP verification.
+- **"Portland, OR" in the About Us and Contact Us titles and eyebrows.** Left
+  deliberately when the HQ claim was removed. They read as market served rather
+  than headquarters, and rewriting them would redo the title work twice since
+  both would fall under the 51-char target. Revisit when Rafa answers where he
+  actually operates.
 
 ### Tasks 2 and 3 result (2026-08-14): CLS is now 0.00 sitewide
 

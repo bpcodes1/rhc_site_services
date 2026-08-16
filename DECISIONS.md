@@ -39,7 +39,12 @@ all copy stays Oregon/Washington-scoped to protect local SEO.
 - Contact Us lives in Footer "Company" column only, not the Header nav.
 - Blog: dropped for launch. Add later.
 - Custom printed windscreens: excluded (not every provider carries them).
-- Crowd control barricades: excluded from fencing page.
+- Crowd control barricades: excluded from the MAIN /temporary-fencing service
+  page only. The Bend and Portland location fencing pages DO carry a
+  "Pedestrian Barricades" type, and that is intentional, not drift (verified
+  2026-08-15). Worth knowing: "event barricade rental portland" earned a real
+  Google impression in the first 28 days of Search Console data, so the demand
+  is there and the location pages are the ones catching it.
 - Post-driven AND panel fencing: both included (middleman can source either).
 - Shower Trailers: separate service and page from Restroom Trailers.
 - Oregon Portable Toilets LLC (Rafa's dad) logo trust bar: pending Rafa. Hold.
