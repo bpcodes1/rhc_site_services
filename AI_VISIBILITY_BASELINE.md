@@ -145,9 +145,60 @@ queries (fencing Bend, porta potty Salem) and NOT for porta potty Portland or
 restroom trailer Seattle. That is 50% on a sample of four. Too small to replace
 the figure, large enough to stop treating 80% as established.
 
-### Run 1, informational queries
+### Run 1 — 2026-08-15, informational queries
 
-PENDING.
+**RHC cited zero times, by any engine, on all four.** The prediction that
+informational queries were "where a site with strong content can win first" was
+wrong as stated. The data explains why, and points at a real opening.
+
+| Query | Google AIO cited | ChatGPT cited | Gemini cited |
+|---|---|---|---|
+| 5. 100-person site unit count | United Rentals, Zebra Dumpsters, National Rent A Fence | **OSHA.gov only** | Luxury Restroom Trailer Rentals (GA), American On-Site |
+| 6. Portland street permit | Portland.gov, Floods Royal Flush, ASAP Marketplace | **Portland.gov only** | **Portland.gov only** |
+| 7. WA handwashing at food trucks | Seattle.gov, Washington.gov | **WA State Legislature only** | Washington.gov, Ozark River |
+| 8. OSHA toilets per worker | OSHA.gov, **ZTERS**, Cotton Logistics | **OSHA.gov only** | OSHA.gov, **ZTERS**, Rent-A-John |
+
+Three findings that change the plan:
+
+1. **ChatGPT cited ONLY government sources, all four queries, no exceptions.**
+   For regulatory questions it goes to primary sources. No portable toilet,
+   restroom trailer or sink company appeared in any ChatGPT answer. We cannot
+   out-rank OSHA.gov for "what does OSHA require", and should stop expecting to.
+2. **Google AI Overviews and Gemini DO cite commercial pages**, on three of four
+   each. So the channel exists, just not in ChatGPT.
+3. **None of the cited companies are local.** Georgia, North Carolina,
+   national. Informational queries are not geographic, which makes this **the
+   one channel where RHC's zero-authority problem does not gate us**. A broker
+   in Georgia gets cited for a generic OSHA question; so could one in Oregon.
+
+**Study ZTERS.** Cited by both Google and Gemini on query 8 via a dedicated
+resource page, `zters.com/blog/osha-rules-for-construction-portable-toilets`,
+and it appeared in the commercial run too. It is a national BROKER with the same
+model as RHC: no fleet, no yard. It is the closest thing to proof that this
+model can earn citations. Rent-A-John (porta potties, dumpsters, restroom
+trailers, fencing, not Oregon-based) is a second example.
+
+### What this run actually bought: a false claim on seven pages
+
+Running query 8 exposed that the site stated **"OSHA 1926.51 requires one
+toilet facility per 20 workers"** on seven pages. All three engines answered
+with the real tiers, citing OSHA.gov. Verified against the primary source: the
+regulation is tiered (20 or fewer = 1 facility; 20-199 = one seat AND one
+urinal per 40; 200+ = per 50) and Oregon adopts it verbatim via OAR
+437-003-0020. Corrected 2026-08-15; see the commit and .claude/rules/pages.md.
+
+That is the strategic point, not a side note. Slawski's knowledge-based trust
+checks factual accuracy against benchmarks, and here the benchmark is OSHA.gov,
+which every engine reads directly. **A page that contradicts OSHA.gov will
+never be cited beside it.** Being accurate is the precondition for competing at
+all on the highest-value informational query in this industry.
+
+### Next run
+
+After the first-100-words rewrite and the entity fixes ship, and no sooner than
+30 days, since LLM answers lag site changes considerably. Re-run all 8 queries
+verbatim. Watch specifically whether query 8 moves, now that the page agrees
+with the regulation instead of contradicting it.
 
 ### Next run
 
