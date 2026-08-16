@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'How many porta potties do I need for a Bend construction site?',
-    a: 'OSHA standard: one unit per 20 workers on a single-shift site, serviced at minimum once every seven days. Two-shift operations add 50 percent capacity and require twice-weekly service. Tell us your crew size and shift schedule on the form and we will confirm the right unit count.',
+    a: 'OSHA 1926.51 sets the legal minimum at one toilet seat and one urinal per 40 workers for sites of 20 to 199, and Oregon adopts the same numbers. Because standard portable units include no separate urinal, RHC quotes at one unit per 20 workers on a single-shift site, which puts a Bend crew comfortably above the floor rather than exactly on it. Service at minimum once every seven days. Two-shift operations add 50 percent capacity and require twice-weekly service. Tell us your crew size and shift schedule on the form and we will confirm the right unit count.',
   },
   {
     q: 'Is there a portable toilet rental service near me in Bend, OR?',
@@ -309,7 +309,7 @@ export default function PortaPottyBend() {
                 Central Oregon's construction market has been running hard for years. Multi-unit residential builds, resort development along the Cascades, and infrastructure work across Deschutes County mean active sites that need OSHA-compliant sanitation from mobilization day, not as an afterthought.
               </p>
               <p style={{ marginTop: '12px' }}>
-                One unit per 20 workers. Serviced at minimum once every seven days. Delivered on a hard arrival window so your crew is not standing around waiting. By inspection day, the box is checked, the site is compliant, and your crew has not left the property once to find a restroom.
+                One unit per 20 workers, which sits above the OSHA 1926.51 floor of one seat and one urinal per 40. Serviced at minimum once every seven days. Delivered on a hard arrival window so your crew is not standing around waiting. By inspection day, the box is checked, the site is compliant, and your crew has not left the property once to find a restroom.
               </p>
               <p style={{ marginTop: '16px', fontSize: '13px', color: 'var(--secondary)', fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}>
                 Your site passes the inspection. Your crew stayed on site and kept moving.

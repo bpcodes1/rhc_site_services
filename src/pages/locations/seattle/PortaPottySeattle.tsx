@@ -427,7 +427,7 @@ export default function PortaPottySeattle() {
               <div className="why-num">02</div>
               <h3>Unit Counts Quoted Against the Actual Washington L&amp;I Table.</h3>
               <p>
-                Most vendors in this market quote one unit per 20 workers, which is Oregon's standard. Washington uses a stricter tiered system under WAC 296-155-140. A crew of 12 requires 2 units in Washington. A crew of 30 requires 3. An under-toileted site is a WA L&I citation with no advance warning from the inspector. Every RHC quote for a Seattle construction site is checked against this table before it is sent.
+                Most vendors in this market quote one unit per 20 workers. That is a planning convention, not a legal ratio: federal OSHA 1926.51, which Oregon adopts, sets a tiered minimum of one seat and one urinal per 40 workers on sites of 20 to 199. Washington uses a stricter tiered system under WAC 296-155-140. A crew of 12 requires 2 units in Washington. A crew of 30 requires 3. An under-toileted site is a WA L&I citation with no advance warning from the inspector. Every RHC quote for a Seattle construction site is checked against this table before it is sent.
               </p>
 
               <div style={{ overflowX: 'auto', marginTop: '20px' }}>

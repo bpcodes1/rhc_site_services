@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: 'What are the OSHA requirements for portable toilets on construction sites in Oregon?',
-    a: 'OSHA 1926.51 requires a minimum of one toilet facility per 20 workers on construction sites, serviced at minimum once every seven days. Two-shift operations require proportionally more units and twice-weekly service. Oregon OSHA administers its own enforcement plan, consistent with the federal standard. Tell us your crew size and shift schedule on the form and we will confirm the right unit count for your site.',
+    a: 'OSHA 1926.51 sets a tiered minimum, not a flat ratio: one toilet facility for 20 or fewer workers, then one toilet seat and one urinal per 40 workers on sites of 20 to 199, and per 50 workers at 200 and above. Oregon OSHA runs its own enforcement plan but adopts these same numbers under OAR 437-003-0020. Note that the minimum counts a urinal separately, which standard portable units do not include, so RHC plans at one unit per 20 workers to land a crew comfortably above the floor. Service at minimum once every seven days, and two-shift operations need proportionally more units plus twice-weekly service. Tell us your crew size and shift schedule on the form and we will confirm the right unit count for your site.',
   },
   {
     q: 'Are handwashing stations required on Oregon construction sites?',
@@ -330,7 +330,7 @@ export default function PortaPottyPortland() {
                 Portland's construction market runs hard. Multi-family residential development in outer SE and NE, commercial high-rise work downtown, and infrastructure projects across Multnomah County mean active sites that need OSHA-compliant sanitation from mobilization day forward.
               </p>
               <p style={{ marginTop: '12px' }}>
-                OSHA 1926.51 requires one unit per 20 workers, serviced at minimum once every seven days. High-rise work downtown adds the constraint of freight elevator access for upper-floor work. Delivered on a confirmed arrival window so your crew is not waiting at the gate. By inspection day, the compliance box is checked and your crew never left the property once to find a restroom.
+                OSHA 1926.51 requires one toilet seat and one urinal per 40 workers on a site of 20 to 199, which RHC quotes above at one unit per 20 because standard units have no separate urinal. Service at minimum once every seven days. High-rise work downtown adds the constraint of freight elevator access for upper-floor work. Delivered on a confirmed arrival window so your crew is not waiting at the gate. By inspection day, the compliance box is checked and your crew never left the property once to find a restroom.
               </p>
               <p style={{ marginTop: '16px', fontSize: '13px', color: 'var(--secondary)', fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}>
                 The site superintendent signed off on OSHA compliance by 8 AM. The crew stayed on the floor and kept moving.

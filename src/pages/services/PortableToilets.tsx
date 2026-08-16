@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'How many portable toilets do I need?',
-    a: 'For construction sites: OSHA standard is one unit per 20 workers, serviced at least once every 7 days. For events: one unit per 50 guests for events under 4 hours. Add 15–25% capacity if alcohol is served or the event runs longer than 4 hours.',
+    a: 'For construction sites, OSHA 1926.51 sets the legal minimum: one toilet facility for 20 or fewer workers, then one toilet seat and one urinal per 40 workers up to 199. Oregon adopts the same numbers. RHC plans at one unit per 20 workers instead, because that minimum assumes a separate urinal that standard portable units do not have, and because a queue at 7am costs more than a second unit. Service at least once every 7 days either way. For events: one unit per 50 guests for events under 4 hours. Add 15–25% capacity if alcohol is served or the event runs longer than 4 hours.',
   },
   {
     q: 'Do I need a permit to place a porta potty in Portland?',
@@ -328,7 +328,7 @@ export default function PortableToilets() {
             <div className="use-case">
               <div className="use-num">01 / Construction</div>
               <h3>Construction &amp; Job Sites</h3>
-              <p>OSHA requires one unit per 20 workers. We deliver to active job sites, position units exactly where your site manager marks them, and service on the schedule your crew needs, including through winter mud season on the I-5 corridor.</p>
+              <p>OSHA 1926.51 sets the legal floor at one toilet seat and one urinal per 40 workers. RHC quotes at one unit per 20, since standard units carry no separate urinal. We deliver to active job sites, position units exactly where your site manager marks them, and service on the schedule your crew needs, including through winter mud season on the I-5 corridor.</p>
             </div>
             <div className="use-case">
               <div className="use-num">02 / Events</div>

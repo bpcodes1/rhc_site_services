@@ -29,4 +29,18 @@ Service pages (src/pages/services/):
 Location pages (src/pages/locations/):
 - Shorter than service pages. Copy the structure of the matching built city page
   (e.g., src/pages/locations/portland/PortaPottyPortland.tsx).
-- OSHA sanitation ratio is 1 toilet per 20 workers. Keep it consistent sitewide.
+- OSHA sanitation ratio: state the LEGAL MINIMUM and RHC's planning number
+  separately. They are not the same, and conflating them put a false claim on
+  seven pages until 2026-08-15.
+  - The law (29 CFR 1926.51(c), adopted by Oregon via OAR 437-003-0020) is
+    TIERED, not a flat ratio: 20 or fewer workers = 1 toilet facility;
+    20 to 199 = one toilet seat AND one urinal per 40 workers; 200+ = per 50.
+  - RHC PLANS at one unit per 20 workers. Say so as RHC's recommendation, never
+    as what OSHA requires. The justification is real and worth stating: the
+    legal minimum counts a urinal separately and standard portable units do not
+    have one.
+  - Washington is stricter and separate: WAC 296-155-140, tiered by crew size.
+    That table is already published on the Seattle page.
+  - Never write "OSHA requires one unit per 20 workers." It does not. The error
+    came from reading the table's first row, "20 or fewer employees = 1", as a
+    ratio. Verify against osha.gov before restating any regulation.
