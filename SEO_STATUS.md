@@ -493,12 +493,40 @@ Rafa's workload eases; it is still the highest-value item when he is available.
    mapped one to one instead of guessed.
    **WARNING: info@rhcsiteservices.com receives the lead form. Any migration
    must preserve the Zoho MX records or lead notifications silently stop.**
-2. **GBP video verification. THIS IS NOW THE TOP GBP BLOCKER.** All of the
-   2026-08-07 profile work is staged and invisible until Rafa records it.
-   Google asks for a short video walking the location showing equipment and any
-   signage, done from his phone at the yard. Two minutes of his time, and it is
-   not a desk task, which suits his current schedule. Unverified listings also
-   rank worse and cannot properly reply to reviews.
+2. **GBP video verification. THIS IS NOW THE ONLY THING BLOCKING PHASE 0.** All
+   of the 2026-08-07 profile work is staged and invisible until Rafa records it.
+   Unverified listings also rank worse and cannot properly reply to reviews.
+   Rafa confirmed he will do it once wildfire season tapers off (2026-08-15);
+   this is scheduling, not reluctance.
+
+   **RESEARCHED 2026-08-15 so Enrique does not have to look it up again when he
+   briefs Rafa.** The worry was that RHC has no warehouse or yard, being a pure
+   middleman with no fixed inventory. That is NOT a blocker.
+
+   What Google actually wants from a service-area business with no storefront:
+   - Register the address the business is actually worked from, verify there,
+     then hide it and set service areas. The listing is ALREADY set to "No
+     location; deliveries and home services only", so it stays hidden.
+   - Show an **office or admin area even when the business is service-area
+     only**, and a **computer or phone screen with invoicing, CRM or the
+     business email visible**. Branded vehicle, tools or equipment if any exist.
+   - Rafa's verification package therefore exists already: home office, the
+     inbox receiving lead-form submissions at info@rhcsiteservices.com,
+     whatever he invoices with, and his Oregon business registration.
+   - Video: minimum 30 seconds, aim 60-120. Recorded and uploaded from a phone
+     through the Business Profile app, not a desktop.
+
+   **The one real risk: the video must match the address on the listing.**
+   Google rejects or SUSPENDS profiles where the two disagree. So confirm the
+   address is right before he records; a failed attempt is worse than a delayed
+   one, and repeated failures raise suspension risk.
+
+   Address provenance, settled 2026-08-15: **Rafa supplied 8792 Portland Rd NE,
+   Brooks himself**, on the original sales call. It is not something the
+   previous designer invented, so there is no guideline violation to fix and no
+   reason to assume the address is wrong. Enrique expects he can verify there.
+   Sources: support.google.com/business/answer/14271705,
+   gmbapi.com/news/google-business-profile-video-verification-guide/
 3. ANSWERED 2026-08-14: **business hours are 7:00am to 6:00pm, every day.**
    Rafa confirmed. An earlier version of this line said 8:00am to 7:00pm; that
    was a typo, corrected by Enrique the same day. Set 7-6 seven days on the GBP
