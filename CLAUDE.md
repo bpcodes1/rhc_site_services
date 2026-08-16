@@ -43,8 +43,17 @@ Cloudflare Pages hosting, GitHub repo bpcodes1/rhc_site_services, branch enrique
   whose Google listing hides its address.
 - LeadForm (src/components/LeadForm.tsx) is the primary CTA on every page. Pass
   the defaultService prop. Submissions go via Web3Forms to info@rhcsiteservices.com.
-- Service cities: Salem, Portland (HQ), Eugene, Bend, Gresham (OR); Tacoma,
-  Vancouver, Seattle (WA). Portland gets the is-hq class. City links go to #quote.
+- Service cities: Salem, Portland, Eugene, Bend, Gresham (OR); Tacoma,
+  Vancouver, Seattle (WA). City links go to #quote.
+- **No city is marked HQ.** Portland carried the is-hq badge and a "Portland ·
+  HQ" map pin until 2026-08-15, alongside "Headquartered in Portland" in eight
+  places. Nothing verified it: the Google listing is verified in Brooks (an
+  address Rafa gave himself), his business registration is in Gresham, and his
+  father's company is in Salem on the same road, which is where the Portland
+  idea came from, since that road is called Portland Rd NE. Targeting Portland
+  is right and the three Portland location pages stay. Claiming to be based
+  there was an unverified fact about a client. Do not reinstate an HQ marker
+  until Rafa confirms where he actually operates.
 - New page copy follows the 5-step process in DECISIONS.md: research, copy draft,
   approval, Brutal Framework Analysis (.claude/expert-profiles/), build.
 

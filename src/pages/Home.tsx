@@ -21,7 +21,7 @@ const mapCities: { name: string; coords: [number, number]; hq: boolean; anchor: 
   { name: 'Seattle',       coords: [-122.3321, 47.6062], hq: false, anchor: 'middle', dx: 0,  dy: -10 },
   { name: 'Tacoma',        coords: [-122.4443, 47.2529], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
   { name: 'Vancouver',     coords: [-122.6615, 45.6387], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
-  { name: 'Portland · HQ', coords: [-122.6765, 45.46],   hq: true,  anchor: 'end',   dx: -8, dy: 4   },
+  { name: 'Portland',      coords: [-122.6765, 45.46],   hq: false, anchor: 'end',   dx: -8, dy: 4   },
   { name: 'Gresham',       coords: [-122.4302, 45.4984], hq: false, anchor: 'start',  dx: 8,  dy: 4   },
   { name: 'Salem',         coords: [-123.0351, 44.9429], hq: false, anchor: 'end',   dx: -8, dy: 4   },
   { name: 'Eugene',        coords: [-123.0868, 44.0521], hq: false, anchor: 'end',   dx: -8, dy: 4   },
@@ -48,7 +48,7 @@ const cityServices: Record<string, { label: string; to: string }[]> = {
 
 const homeCities = [
   { name: 'Salem',     state: 'OR', hq: false },
-  { name: 'Portland',  state: 'OR', hq: true  },
+  { name: 'Portland',  state: 'OR', hq: false },
   { name: 'Eugene',    state: 'OR', hq: false },
   { name: 'Bend',      state: 'OR', hq: false },
   { name: 'Gresham',   state: 'OR', hq: false },
@@ -480,7 +480,7 @@ export default function Home() {
               <div className="eyebrow">05 / Coverage</div>
               <h2 className="h-lg">Serving Oregon<br />and Washington.</h2>
             </div>
-            <p>Based in Portland, we deliver site services to construction sites, events, and projects across the Pacific Northwest.</p>
+            <p>We deliver site services to construction sites, events, and projects across the Pacific Northwest.</p>
           </div>
 
           <div className="areas">

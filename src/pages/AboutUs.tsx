@@ -7,7 +7,7 @@ import aboutImg from '../assets/general/about-jobsite.jpg'
 
 const cities = [
   { name: 'Salem',     state: 'OR', hq: false },
-  { name: 'Portland',  state: 'OR', hq: true  },
+  { name: 'Portland',  state: 'OR', hq: false },
   { name: 'Eugene',    state: 'OR', hq: false },
   { name: 'Bend',      state: 'OR', hq: false },
   { name: 'Gresham',   state: 'OR', hq: false },
@@ -23,7 +23,7 @@ const schema = graph([
     '@id': 'https://rhcsiteservice.com/about-us#webpage',
     name: 'About RHC Site Services',
     description:
-      'Portable toilet and site equipment rentals run by Rafa out of Portland, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup.',
+      'Portable toilet and site equipment rentals run by Rafa, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup.',
     url: 'https://rhcsiteservice.com/about-us',
     mainEntity: { '@id': BUSINESS_ID },
   },
@@ -37,7 +37,7 @@ export default function AboutUs() {
         <title>About RHC Site Services | Portland, OR | Run by Rafa</title>
         <meta
           name="description"
-          content="Portable toilet and site equipment rentals run by Rafa out of Portland, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup."
+          content="Portable toilet and site equipment rentals run by Rafa, on Pacific Northwest job sites since 2016. One accountable contact from quote to pickup."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/about-us" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
@@ -252,7 +252,7 @@ export default function AboutUs() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">05 / Service Areas</div>
-              <h2 className="h-lg">Based in Portland. Serving Oregon and Washington.</h2>
+              <h2 className="h-lg">Serving Oregon and Washington.</h2>
             </div>
             <p>
               RHC's primary service areas cover the Portland metro, the Willamette Valley, and the

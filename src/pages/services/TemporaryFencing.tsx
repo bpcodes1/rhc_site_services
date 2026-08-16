@@ -8,7 +8,7 @@ import chainFencingImg from '../../assets/temporary-fencing/chain_fencing.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
-  { name: 'Portland', state: 'OR', hq: true },
+  { name: 'Portland', state: 'OR', hq: false },
   { name: 'Eugene', state: 'OR', hq: false },
   { name: 'Bend', state: 'OR', hq: false },
   { name: 'Gresham', state: 'OR', hq: false },
@@ -345,7 +345,7 @@ export default function TemporaryFencing() {
               <div className="eyebrow">05 / Coverage</div>
               <h2 className="h-lg">Where we deliver temporary fencing.</h2>
             </div>
-            <p>Based in Portland, we install and remove temporary fencing across Oregon and Washington. Same-day quotes, installations typically coordinated within 48 hours of confirmed booking.</p>
+            <p>We install and remove temporary fencing across Oregon and Washington. Same-day quotes, installations typically coordinated within 48 hours of confirmed booking.</p>
           </div>
 
           <div className="city-tags">

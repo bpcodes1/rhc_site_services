@@ -9,7 +9,7 @@ import container40ftImg from '../../assets/storage-containers/steel_container.we
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
-  { name: 'Portland', state: 'OR', hq: true },
+  { name: 'Portland', state: 'OR', hq: false },
   { name: 'Eugene', state: 'OR', hq: false },
   { name: 'Bend', state: 'OR', hq: false },
   { name: 'Gresham', state: 'OR', hq: false },
@@ -506,7 +506,7 @@ export default function StorageContainers() {
               <div className="eyebrow">05 / Service Areas</div>
               <h2 className="h-lg">Storage Container Rentals Across Oregon and Washington</h2>
             </div>
-            <p>Based in Portland, RHC delivers and services storage containers across Oregon and Washington. Same-day quotes, units typically coordinated within 24-48 hours of confirmed booking.</p>
+            <p>RHC delivers and services storage containers across Oregon and Washington. Same-day quotes, units typically coordinated within 24-48 hours of confirmed booking.</p>
           </div>
 
           <div className="city-tags">

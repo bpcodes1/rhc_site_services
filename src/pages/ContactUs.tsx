@@ -36,7 +36,7 @@ const schema = graph([
     name: 'Contact RHC Site Services',
     url: 'https://rhcsiteservice.com/contact-us',
     description:
-      'Contact RHC Site Services in Portland, OR for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, and storage containers across Oregon and Washington.',
+      'Contact RHC Site Services for same-day quotes on portable toilets, restroom trailers, temporary fencing, shower trailers, and storage containers across Oregon and Washington.',
     mainEntity: { '@id': BUSINESS_ID },
   },
   breadcrumb([{ name: 'Contact Us' }]),
@@ -50,7 +50,7 @@ export default function ContactUs() {
         <title>Contact RHC Site Services | Portland, OR | Same-Day Quotes</title>
         <meta
           name="description"
-          content="Contact RHC Site Services in Portland, OR. Same-day quotes on portable toilets, restroom trailers, temporary fencing, storage containers, and more across Oregon and Washington. Phone, email, or form."
+          content="Contact RHC Site Services for same-day quotes on portable toilets, restroom trailers, temporary fencing, and storage containers across Oregon and Washington. Phone, email, or form."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/contact-us" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>

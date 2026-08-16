@@ -8,7 +8,7 @@ import adaPortableImg from '../../assets/portable-toilets/ada_portable.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
-  { name: 'Portland', state: 'OR', hq: true },
+  { name: 'Portland', state: 'OR', hq: false },
   { name: 'Eugene', state: 'OR', hq: false },
   { name: 'Bend', state: 'OR', hq: false },
   { name: 'Gresham', state: 'OR', hq: false },
@@ -388,7 +388,7 @@ export default function PortableToilets() {
               <div className="eyebrow">05 / Coverage</div>
               <h2 className="h-lg">Where we deliver portable toilets.</h2>
             </div>
-            <p>Based in Portland, we deliver across Oregon and Washington. Standard turnaround is 48 hours. Next-day available in our core service areas.</p>
+            <p>We deliver across Oregon and Washington. Standard turnaround is 48 hours. Next-day available in our core service areas.</p>
           </div>
 
           <div className="city-tags">

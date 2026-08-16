@@ -66,7 +66,7 @@ export default function Footer() {
                 <small>Site Services</small>
               </span>
             </Link>
-            <p>Headquartered in Portland, Oregon. Delivering portable toilets, restroom and shower trailers, fencing, and storage containers across the Pacific Northwest.</p>
+            <p>Delivering portable toilets, restroom and shower trailers, fencing, and storage containers across the Pacific Northwest.</p>
           </div>
 
           <div>
