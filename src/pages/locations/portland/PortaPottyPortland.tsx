@@ -178,7 +178,7 @@ export default function PortaPottyPortland() {
                 Porta Potty Rental in <span className="underline accent">Portland, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Your crew shows up at 7. The unit was supposed to be there at 8. By 9 you have left three voicemails. In Portland, that is Tuesday. RHC gives you a hard arrival time, PBOT permit guidance before delivery day, and one number that gets answered.
+                Your crew shows up at 7. The unit was supposed to be there at 8. By 9 you have left three voicemails. In Portland, that is Tuesday. RHC Site Services rents porta potties and portable toilets to construction sites and events across Portland, and gives you a hard arrival time, PBOT permit guidance before delivery day, and one number that gets answered.
               </p>
             </div>
 

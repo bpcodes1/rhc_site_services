@@ -239,7 +239,7 @@ export default function ShowerTrailers() {
                 Shower Trailer Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Your shower problem is solved before the work starts. Hot water, AC, and heat standard on every unit. Five configurations, 2 to 8 stalls. No minimum rental.
+                Your shower problem is solved before the work starts. RHC Site Services rents shower trailers to construction crews and event organizers across Oregon and Washington. Hot water, AC, and heat standard on every unit. Five configurations, 2 to 8 stalls. No minimum rental.
               </p>
             </div>
 

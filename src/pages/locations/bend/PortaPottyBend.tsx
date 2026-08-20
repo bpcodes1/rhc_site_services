@@ -157,7 +157,7 @@ export default function PortaPottyBend() {
                 Porta Potty Rental in <span className="underline accent">Bend, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                In Central Oregon, the complaint is always the same: a six-hour delivery window that becomes a full-day wait with no call when the truck runs late. RHC gives you a confirmed arrival time and flags permit requirements before delivery day. Your crew stays on schedule.
+                In Central Oregon, the complaint is always the same: a six-hour delivery window that becomes a full-day wait with no call when the truck runs late. RHC Site Services rents porta potties and portable toilets to construction sites and events across Bend and Central Oregon, gives you a confirmed arrival time, and flags permit requirements before delivery day. Your crew stays on schedule.
               </p>
             </div>
 

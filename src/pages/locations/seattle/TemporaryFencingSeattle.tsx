@@ -166,7 +166,7 @@ export default function TemporaryFencingSeattle() {
                 Temporary Fencing Rental in <span className="underline accent">Seattle, WA</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                The fence is up before your crew arrives. The inspector walks the perimeter and keeps moving. In Seattle, that requires confirming SDOT permit status before a delivery is scheduled. Most vendors skip this step. RHC makes it the first one.
+                The fence is up before your crew arrives. The inspector walks the perimeter and keeps moving. In Seattle, that requires confirming SDOT permit status before a delivery is scheduled. Most vendors skip this step. RHC Site Services rents temporary fencing to construction sites and events across Seattle and King County, and makes it the first one.
               </p>
             </div>
 

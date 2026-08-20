@@ -115,7 +115,7 @@ export default function Home() {
               The equipment you ordered. Placed <span className="underline accent">exactly</span> where you need it. On-site before your crew clocks in.
             </h1>
             <p className="hero-sub body-lg">
-              Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services delivers clean, inspection-verified equipment from Seattle to Bend with 100% transparent pricing and guaranteed, on-time mobilization.
+              Most site service companies ghost your delivery window, skip scheduled pumpings when it rains, and hit you with a surprise "environmental fee" on the final invoice. RHC Site Services rents clean, inspection-verified porta potties, restroom trailers, shower trailers, temporary fencing, and storage containers to construction sites and events from Seattle to Bend, with 100% transparent pricing and guaranteed, on-time mobilization.
             </p>
 
             <ul className="triggers" role="list">

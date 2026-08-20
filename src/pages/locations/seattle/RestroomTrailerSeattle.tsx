@@ -187,7 +187,7 @@ export default function RestroomTrailerSeattle() {
                 Restroom Trailer Rental in <span className="underline accent">Seattle, WA</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                The best Seattle events are the ones where nobody thought about the bathrooms. Getting there requires a vendor who treats your event as a single accountable job. Confirmed arrival window, venue logistics reviewed before the truck rolls, locked price from approval to event day.
+                The best Seattle events are the ones where nobody thought about the bathrooms. Getting there requires a vendor who treats your event as a single accountable job. RHC Site Services rents restroom trailers for weddings and events across Seattle and King County: confirmed arrival window, venue logistics reviewed before the truck rolls, locked price from approval to event day.
               </p>
             </div>
 

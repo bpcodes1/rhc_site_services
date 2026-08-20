@@ -106,7 +106,7 @@ export default function TemporaryFencing() {
                 Temporary Fencing Rental in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Panel fencing on weighted bases or post-driven chain link, delivered, installed, and removed by RHC. Same-day quotes. Coordinated within 48 hours of confirmed booking.
+                Panel fencing on weighted bases or post-driven chain link. RHC Site Services rents temporary fencing to construction sites and events across Oregon and Washington, delivered, installed, and removed by one accountable team. Coordinated within 48 hours of confirmed booking.
               </p>
             </div>
 

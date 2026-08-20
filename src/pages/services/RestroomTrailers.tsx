@@ -194,7 +194,7 @@ export default function RestroomTrailers() {
                 Restroom Trailer Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Climate-controlled, porcelain-flushing trailers delivered on time and positioned exactly where your venue marks them. 2 to 10 stalls. ADA available. Specs published.
+                Climate-controlled, porcelain-flushing trailers delivered on time and positioned exactly where your venue marks them. RHC Site Services rents restroom trailers for weddings, festivals, and corporate events across Oregon and Washington. 2 to 10 stalls. ADA available. Specs published.
               </p>
             </div>
 

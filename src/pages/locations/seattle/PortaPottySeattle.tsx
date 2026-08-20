@@ -203,7 +203,7 @@ export default function PortaPottySeattle() {
                 Porta Potty Rental in <span className="underline accent">Seattle, WA</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Most vendors quote the Oregon standard on Washington jobs. Washington L&I requires more units per crew, and the difference shows up on inspection day. RHC quotes against the actual Washington table, flags SDOT permit requirements, and confirms every booking with a hard delivery window.
+                Most vendors quote the Oregon standard on Washington jobs. Washington L&I requires more units per crew, and the difference shows up on inspection day. RHC Site Services rents porta potties and portable toilets to construction sites and events across Seattle and King County, quotes against the actual Washington table, flags SDOT permit requirements, and confirms every booking with a hard delivery window.
               </p>
             </div>
 

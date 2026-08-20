@@ -176,7 +176,7 @@ export default function TemporaryFencingPortland() {
                 Temporary Fencing Rental in <span className="underline accent">Portland, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                A vendor who goes quiet between quote and delivery day puts your permit window or event perimeter at risk. RHC confirms every booking with a hard arrival window, reviews PBOT permit requirements before the truck rolls, and locks the price from quote to final invoice.
+                A vendor who goes quiet between quote and delivery day puts your permit window or event perimeter at risk. RHC Site Services rents temporary fencing to construction sites and events across Portland, confirms every booking with a hard arrival window, reviews PBOT permit requirements before the truck rolls, and locks the price from quote to final invoice.
               </p>
             </div>
 

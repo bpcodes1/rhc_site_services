@@ -94,7 +94,7 @@ export default function PortableToilets() {
                 Portable Toilet Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Clean, inspected units delivered on a hard arrival window. Porta potty and portable restroom rentals for construction sites, job sites, and events across Oregon and Washington.
+                Clean, inspected units delivered on a hard arrival window. RHC Site Services rents porta potties and portable toilets to construction sites, job sites, and events across Oregon and Washington.
               </p>
             </div>
 

@@ -89,8 +89,7 @@ export default function ContactUs() {
                 maxWidth: '52ch',
               }}
             >
-              One person handles every request from first contact to final pickup. Fill out the form
-              for a same-day quote, or call RHC directly for urgent and active-job requests.
+              One person handles every request from first contact to final pickup. RHC Site Services rents porta potties, restroom trailers, shower trailers, temporary fencing, and storage containers across Oregon and Washington. Fill out the form for a same-day quote, or call directly for urgent and active-job requests.
             </p>
           </div>
         </div>

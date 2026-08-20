@@ -72,8 +72,7 @@ export default function AboutUs() {
               lineHeight: '1.6',
             }}
           >
-            RHC is run by Rafa, who has worked on Pacific Northwest job sites since 2016,
-            long enough to know exactly where things go wrong.
+            Rafa has worked on Pacific Northwest job sites since 2016, long enough to know exactly where things go wrong. RHC Site Services rents porta potties, restroom trailers, shower trailers, temporary fencing, and storage containers to construction sites and events across Oregon and Washington.
           </p>
         </div>
       </section>

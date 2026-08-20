@@ -178,7 +178,7 @@ export default function RestroomTrailerBend() {
                 Restroom Trailer Rental in <span className="underline accent">Bend, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Central Oregon's outdoor event season runs May through October. Every year the same failures hit someone: a five-hour delivery window, a trailer that looks nothing like the listing, or an invoice with unexpected charges. RHC fixes all three. Confirmed arrival time, published specs, locked price.
+                Central Oregon's outdoor event season runs May through October. Every year the same failures hit someone: a five-hour delivery window, a trailer that looks nothing like the listing, or an invoice with unexpected charges. RHC Site Services rents restroom trailers for weddings and events across Bend and Central Oregon, and fixes all three. Confirmed arrival time, published specs, locked price.
               </p>
             </div>
 

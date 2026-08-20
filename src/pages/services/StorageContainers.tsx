@@ -205,7 +205,7 @@ export default function StorageContainers() {
                 Storage Container Rentals in <span className="underline accent">Oregon &amp; Washington</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Solid Corten steel, watertight doors, confirmed clean before delivery. One transparent quote with no fuel surcharges or billing surprises. Construction, moving, and renovation rentals across Oregon and Washington.
+                Solid Corten steel, watertight doors, confirmed clean before delivery. RHC Site Services rents storage containers for construction, moving, and renovation projects across Oregon and Washington. One transparent quote with no fuel surcharges or billing surprises.
               </p>
             </div>
 

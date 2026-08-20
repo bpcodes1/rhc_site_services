@@ -170,7 +170,7 @@ export default function TemporaryFencingBend() {
                 Temporary Fencing Rental in <span className="underline accent">Bend, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                Nearly every 1-star fence review in Central Oregon says the same thing: the invoice did not match the quote, and the vendor went silent after booking. RHC locks your price from approval to final invoice and reviews Bend permit requirements before the truck rolls.
+                Nearly every 1-star fence review in Central Oregon says the same thing: the invoice did not match the quote, and the vendor went silent after booking. RHC Site Services rents temporary fencing to construction sites and events across Bend and Central Oregon, locks your price from approval to final invoice, and reviews Bend permit requirements before the truck rolls.
               </p>
             </div>
 

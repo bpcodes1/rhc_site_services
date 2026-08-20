@@ -182,7 +182,7 @@ export default function RestroomTrailerPortland() {
                 Restroom Trailer Rental in <span className="underline accent">Portland, OR</span>
               </h1>
               <p className="hero-lean-sub body-lg">
-                The most common Portland complaint is not the equipment. It is the vendor. Wrong delivery window, changed price, unit that looked nothing like the listing. RHC: confirmed arrival time, published specs, locked price from quote to event day.
+                The most common Portland complaint is not the equipment. It is the vendor. Wrong delivery window, changed price, unit that looked nothing like the listing. RHC Site Services rents restroom trailers for weddings and events across Portland: confirmed arrival time, published specs, locked price from quote to event day.
               </p>
             </div>
 
