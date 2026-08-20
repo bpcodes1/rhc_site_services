@@ -4,45 +4,50 @@ Lead-generation website for RHC Site Services, a portable toilet and site equipm
 rental company serving Oregon and Washington from Portland. Every page exists to
 drive one action: submitting the lead form.
 
+Shared rules for every client site are in `../CLAUDE.md` and load automatically.
+This file holds only what is true here.
+
 ## Critical Rules
 
-1. No em dashes anywhere in site copy. Use a comma or rewrite the sentence.
-2. Never write "dispatch". Use "RHC". The At a Glance sidebar label is "Availability".
-3. Phone number (503-607-7412) appears only in the final CTA section at the bottom
+1. Never write "dispatch". Use "RHC". The At a Glance sidebar label is "Availability".
+2. Phone number (503-607-7412) appears only in the final CTA section at the bottom
    of a page. Never in the hero, nav, or body copy.
-4. Never claim equipment ownership ("our fleet", "our inventory", "our trucks") and
+3. Never claim equipment ownership ("our fleet", "our inventory", "our trucks") and
    never reveal the middleman model ("we broker", "no middlemen"). Correct framing:
    "confirmed clean before it arrives", "delivered and installed by RHC", "one
    accountable team".
-5. No pricing on the site, with one exception: Shower Trailers $2,000-$6,000 inside
+4. No pricing on the site, with one exception: Shower Trailers $2,000-$6,000 inside
    that page's FAQ answer only. Every other service is form-only.
-6. The site domain is https://rhcsiteservice.com. Never use rhcsiteservices.com
+5. The site domain is https://rhcsiteservice.com. Never use rhcsiteservices.com
    (old WordPress domain) or bpcodes1.github.io in canonicals, schema, or OG tags.
    Email addresses ending in @rhcsiteservices.com are correct as-is; leave them.
-7. Roll-Off Dumpsters and a standalone FAQ page are out of scope. Never add them
+6. Roll-Off Dumpsters and a standalone FAQ page are out of scope. Never add them
    to nav, footer, service lists, or copy.
 
 ## Stack
 
-TypeScript, React, Vite, react-router-dom, react-helmet-async, Web3Forms,
-Cloudflare Pages hosting, GitHub repo bpcodes1/rhc_site_services, branch enrique.
+**pre-rendered** — every route is prerendered to static HTML at build time by
+`prerender.mjs` plus `src/entry-server.tsx`.
+
+TypeScript, React, Vite, react-router-dom, react-helmet-async, Web3Forms.
+Cloudflare Pages, GitHub repo bpcodes1/rhc_site_services, branch `enrique`.
 
 ## Architecture
 
-- src/rhc-design.css is the single source of truth for visuals. design.md holds
+- `src/rhc-design.css` is the single source of truth for visuals. `design.md` holds
   the design tokens. Read design.md before any copy, token, or visual work.
-- Before editing anything in src/pages/, read .claude/rules/pages.md.
+- Before editing anything in `src/pages/`, read `.claude/rules/pages.md`.
 - Specs on service pages describe the Oregon/Washington market standard, not RHC
   stock. Write "standard sizes in the Portland metro area include...", never "we
   offer X sizes". Research the regional standard; do not wait on Rafa to confirm.
-- src/seo/schema.ts is the single source of truth for ALL structured data, and
+- `src/seo/schema.ts` is the single source of truth for ALL structured data, and
   the only place the business name, phone, service areas, and hours are written.
   Every page imports from it and emits one @graph block. Never hand-write a
   LocalBusiness block on a page; that is what produced two conflicting addresses.
   The site publishes no postal address anywhere: RHC is a service-area business
   whose Google listing hides its address.
-- LeadForm (src/components/LeadForm.tsx) is the primary CTA on every page. Pass
-  the defaultService prop. Submissions go via Web3Forms to info@rhcsiteservices.com.
+- `LeadForm` (`src/components/LeadForm.tsx`) is the primary CTA on every page. Pass
+  the `defaultService` prop. Submissions go via Web3Forms to info@rhcsiteservices.com.
 - Service cities: Salem, Portland, Eugene, Bend, Gresham (OR); Tacoma,
   Vancouver, Seattle (WA). City links go to #quote.
 - **No city is marked HQ.** Portland carried the is-hq badge and a "Portland ·
@@ -55,25 +60,23 @@ Cloudflare Pages hosting, GitHub repo bpcodes1/rhc_site_services, branch enrique
   there was an unverified fact about a client. Do not reinstate an HQ marker
   until Rafa confirms where he actually operates.
 - New page copy follows the 5-step process in DECISIONS.md: research, copy draft,
-  approval, Brutal Framework Analysis (.claude/expert-profiles/), build.
+  approval, Brutal Framework Analysis (`.claude/expert-profiles/`), build.
 
 ## Verification
 
-No test framework. npm run build must pass before every push; CI runs the same
-check (.github/workflows/build-check.yml). Preview visual changes with npm run dev.
+No test framework. CI runs the same build check
+(`.github/workflows/build-check.yml`). Preview visual changes with `npm run dev`.
 
 ## Deployment
 
-Pushing to enrique auto-deploys production (Cloudflare Pages). Treat every push as
-a production deploy. main is stale; all work happens on enrique. Register new pages
-in THREE places: the Routes tree in src/AppRoutes.tsx, the ROUTES array in
-prerender.mjs, and public/sitemap.xml. Miss prerender.mjs and the page ships as an
-empty shell to crawlers. Keep the catch-all NotFound route last.
+Register new pages in THREE places: the Routes tree in `src/AppRoutes.tsx`, the
+ROUTES array in `prerender.mjs`, and `public/sitemap.xml`. Miss `prerender.mjs`
+and the page ships as an empty shell to crawlers. Keep the catch-all NotFound
+route last.
 
-Every route is prerendered to static HTML at build time by prerender.mjs plus
-src/entry-server.tsx. Read SEO_STATUS.md "Build gotchas" before touching that
-pipeline; the flat-file output and the missing title/description in index.html
-are both deliberate.
+Read SEO_STATUS.md "Build gotchas" before touching the prerender pipeline; the
+flat-file output and the missing title/description in `index.html` are both
+deliberate.
 
 ## Status and History
 
@@ -87,9 +90,8 @@ Then SEO_BASELINE.md (research reference and priorities) and
 SEO_FRAMEWORK_AUDITS.md (framework audit map and queue). SEO_GLOSSARY.md holds
 plain-English term explanations for Enrique.
 
-Never publish a testimonial, review, statistic, or date that is not verified.
-The site had fabricated testimonials and false founding claims removed on
-2026-07-27; see SEO_STATUS.md. Empty proof beats invented proof.
+This site had fabricated testimonials and false founding claims removed on
+2026-07-27; see SEO_STATUS.md.
 
 ## Working With Enrique
 
@@ -99,6 +101,6 @@ The site had fabricated testimonials and false founding claims removed on
 
 ## Reminders
 
-- No em dashes. No "dispatch". Phone only in the final CTA section.
+- No "dispatch". Phone only in the final CTA section.
 - Never claim ownership; never reveal the middleman model.
-- Domain is rhcsiteservice.com. Every push to enrique deploys production.
+- Domain is rhcsiteservice.com. Every push to `enrique` deploys production.
