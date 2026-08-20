@@ -166,7 +166,7 @@ export default function RestroomTrailers() {
     <main id="main">
       <Helmet>
         <title>Restroom Trailer Rentals in Oregon &amp; Washington | RHC</title>
-        <meta name="description" content="Luxury restroom trailers from 2 to 10 stalls: published specs, confirmed delivery windows, and climate control for events across Oregon and Washington. Same-day quotes from RHC." />
+        <meta name="description" content="Published specs, confirmed delivery windows, and climate control. Luxury restroom trailers from 2 to 10 stalls for events across Oregon and Washington." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailers" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>

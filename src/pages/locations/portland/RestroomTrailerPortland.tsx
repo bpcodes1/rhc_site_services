@@ -152,7 +152,7 @@ export default function RestroomTrailerPortland() {
     <main id="main">
       <Helmet>
         <title>Restroom Trailer Rental in Portland, OR | RHC Site Services</title>
-        <meta name="description" content="Luxury restroom trailer rentals for Portland outdoor events and Willamette Valley venues. Confirmed arrival windows, locked pricing, and same-day quotes from RHC." />
+        <meta name="description" content="Confirmed arrival windows and pricing locked from quote to event day. Luxury restroom trailer rentals for Portland events and Willamette Valley venues." />
         <link rel="canonical" href="https://rhcsiteservice.com/restroom-trailer-rental-portland-or" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>

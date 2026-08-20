@@ -50,7 +50,7 @@ export default function ContactUs() {
         <title>Contact RHC Site Services | Portland, OR | Same-Day Quotes</title>
         <meta
           name="description"
-          content="Contact RHC Site Services for same-day quotes on portable toilets, restroom trailers, temporary fencing, and storage containers across Oregon and Washington. Phone, email, or form."
+          content="One person handles your request from first contact to final pickup. Same-day quotes on every service across Oregon and Washington from RHC Site Services."
         />
         <link rel="canonical" href="https://rhcsiteservice.com/contact-us" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
