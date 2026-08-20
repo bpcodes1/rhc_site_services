@@ -19,6 +19,7 @@ export const SITE = 'https://rhcsiteservice.com'
 // Stable node ids so a page's Service can point at the business without
 // repeating it.
 export const BUSINESS_ID = `${SITE}/#business`
+export const PERSON_ID = `${SITE}/#rafa`
 
 export const NAP = {
   name: 'RHC Site Services',
@@ -55,6 +56,42 @@ const HOURS = [
   },
 ]
 
+// The stable Google Maps identifier for the listing, not a share link. The URL
+// previously used here carried session parameters (entry=ttu, g_ep=...) that
+// are generated per-share and are not a durable identifier for the entity.
+// The CID is the listing's permanent id, decoded from the hex in that URL
+// (0x49107ebcd4c6f6fe).
+const GOOGLE_MAPS_URL = 'https://maps.google.com/?cid=5264847313884870398'
+
+// Rafa expanded from a bare inline name into an addressable node. Slawski's
+// entity work is the reason: a name with no @id and no links is a string, not
+// an entity, and nothing connects the person to the business or to the page
+// that describes him.
+//
+// Deliberately NO jobTitle: "founder" is what the site already claims and the
+// About Us page supports. Owner vs founder is unconfirmed and guessing it would
+// publish an invented fact about a client.
+// Deliberately NO sameAs and NO image: Rafa has no confirmed public profile
+// (confirmed by Enrique 2026-08-20) and his photo is still an open About Us
+// TODO. Add both when they exist; an empty array is worse than the absent key.
+const founder = {
+  '@type': 'Person',
+  '@id': PERSON_ID,
+  name: 'Rafael Hernandez',
+  url: `${SITE}/about-us`,
+  worksFor: { '@id': BUSINESS_ID },
+  // Grounded in what the About Us page actually states: he worked inside his
+  // father's portable sanitation business and has been on Pacific Northwest
+  // job sites since 2016.
+  knowsAbout: [
+    'Portable sanitation',
+    'Portable toilet rental',
+    'Restroom trailer rental',
+    'Temporary fencing',
+    'Construction site logistics',
+  ],
+}
+
 // The one canonical LocalBusiness block. Every page emits this identical node,
 // so there is no second definition anywhere to drift out of sync.
 export const business = {
@@ -66,15 +103,25 @@ export const business = {
   email: NAP.email,
   description:
     'Portable toilet, restroom trailer, shower trailer, temporary fencing, and storage container rentals delivered across Oregon and Washington.',
+  // Already the og:image sitewide, 1200x630, and the only representative
+  // photo the site publishes. No `logo` key: there is no logo file in this
+  // repo, and public/favicon.svg is an unrelated purple mark that appears
+  // nowhere in the brand palette. Pointing `logo` at it would be worse than
+  // omitting it.
+  image: `${SITE}/preview.webp`,
+  // Reinforces the link between this site and the Google listing, using the
+  // same permanent id as sameAs rather than a second, different URL.
+  hasMap: GOOGLE_MAPS_URL,
   // 2016 attaches to Rafa's work history, never to the brand, so there is no
   // foundingDate here. See SEO_STATUS.md "Person vs brand".
-  founder: { '@type': 'Person', name: 'Rafael Hernandez' },
+  founder,
   areaServed: AREA_SERVED,
   openingHoursSpecification: HOURS,
-  sameAs: [
-    'https://www.google.com/maps/place/RHC+Site+Services/@45.0449079,-122.9588222,17z/data=!3m1!4b1!4m6!3m5!1s0x54955723f4080829:0x49107ebcd4c6f6fe!8m2!3d45.0449041!4d-122.9562473!16s%2Fg%2F11s4_f91yz?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D',
-    'https://www.facebook.com/RHCSiteServices/',
-  ],
+  // Only profiles confirmed to exist and to be controlled by RHC. Enrique
+  // confirmed 2026-08-20 that these two are the only ones. This list should
+  // grow after the citation pass (queue task 9) creates real listings; adding
+  // speculative URLs now would point the entity at pages that do not exist.
+  sameAs: [GOOGLE_MAPS_URL, 'https://www.facebook.com/RHCSiteServices/'],
 }
 
 type Crumb = { name: string; path?: string }
