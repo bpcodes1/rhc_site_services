@@ -193,14 +193,32 @@ which every engine reads directly. **A page that contradicts OSHA.gov will
 never be cited beside it.** Being accurate is the precondition for competing at
 all on the highest-value informational query in this industry.
 
-### Next run
+### Next run: not before 2026-09-19
 
-After the first-100-words rewrite and the entity fixes ship, and no sooner than
-30 days, since LLM answers lag site changes considerably. Re-run all 8 queries
-verbatim. Watch specifically whether query 8 moves, now that the page agrees
-with the regulation instead of contradicting it.
+**The first-100-words rewrite SHIPPED 2026-08-20**, on all 17 in-scope pages,
+verified live. That is the clock anchor. LLM answers lag site changes
+considerably, so a re-run before 30 days measures nothing and burns the
+comparability of the baseline.
 
-### Next run
+Re-run all 8 queries verbatim, same engines, same recording format.
 
-After the first-100-words rewrite and the entity fixes ship, and no sooner than
-30 days, since LLM answers lag site changes considerably.
+Two things to watch specifically:
+
+1. **Query 8 (OSHA toilets per worker).** The page now agrees with the
+   regulation instead of contradicting it, corrected 2026-08-15. Slawski's
+   knowledge-based trust check compares against a benchmark, and here the
+   benchmark is OSHA.gov, which every engine reads directly. A page that
+   contradicts OSHA.gov will never be cited beside it. This is the query where
+   accuracy was the precondition, so it is the cleanest test of whether the fix
+   bought anything.
+2. **Whether ANY engine now names what RHC rents and where.** Before this
+   rewrite, no page stated it in a liftable sentence. ChatGPT's one existing
+   mention described RHC using "flushable", a word that appears nowhere on the
+   site, so the description was assembled from the old domain and directory
+   data rather than from us. If a future description starts matching our actual
+   wording, that is attribution moving to this site, and it is the single
+   clearest signal this work did anything.
+
+Do not re-run early because something feels stalled. An undated or
+early-repeated result is worse than no result: it makes the next honest
+comparison impossible.

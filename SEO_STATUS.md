@@ -14,6 +14,7 @@ by counting from 2026-07-28, the day measurement actually began.
 | 2026-07-28/29 | Indexing requested, 17 URLs | |
 | 2026-08-06 | First GSC data: 0 clicks, 5 impressions | |
 | 2026-08-15 | 1 click, 15 impressions, 17 of 19 indexed | Day 18 of measurement |
+| 2026-08-20 | 1 click, 19 impressions, position 22.4 | Day 23. First-100-words rewrite shipped |
 
 **Read Search Console's date filter carefully.** Its default is "28 days",
 which is a REPORTING WINDOW, not our project age. On 2026-08-15 that window
@@ -35,7 +36,35 @@ in the 18 days since the property started collecting."
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-15.
+Update this file whenever a task moves. Last updated 2026-08-20.
+
+### Reading at day 23 (2026-08-20)
+
+1 click, 19 impressions, position 22.4. **The impression rate is exactly flat:**
+0.83/day at day 18, 0.83/day at day 23. Position moving 21.5 to 22.4 is noise at
+this volume, not a decline. Nothing shipped on 08-14/15 had time to register;
+the data ends 08-18.
+
+The finding worth acting on: **15 of 19 pages drew zero impressions.** The
+homepage carries 14 of the 19. Only four pages have been shown at all.
+
+Of the four queries GSC will display, three are narrow and specific, and each
+maps to real content, verified in the source:
+
+| Query | Clicks | Maps to |
+|---|---|---|
+| portable toilet cleaning service | **1** | homepage |
+| wac 246-215 | 0 | Seattle porta potty page's King County handwashing section |
+| event barricade rental portland | 0 | Portland fencing page's barricade section |
+| rhtc | 0 | brand typo |
+
+**That table accounts for 4 of 19 impressions.** The other 15 are suppressed by
+Google as too rare to display, so we are reading 21% of the picture. Do not
+treat the visible four as the whole.
+
+This is the same result the AI visibility run gave on 08-15, now showing up in
+ordinary Google: the narrow regulation-and-permit content is the only non-brand
+thing surfacing. Not the sales copy.
 
 ## PHASE 0: one item left, and it is Rafa (as of 2026-08-15)
 
@@ -118,12 +147,12 @@ assumption. Reasoning for every completed item is in the result sections below.
 | -- | Remove unverified Portland HQ claim | DONE 2026-08-15. Copy, map pin, hq badges, schema |
 | -- | Correct false OSHA one-per-20 claim | DONE 2026-08-15. Seven pages plus the project rule |
 | -- | AI visibility baseline, 8 queries x 3 engines | DONE 2026-08-15. See AI_VISIBILITY_BASELINE.md |
+| 5 | First-100-words direct answers | DONE 2026-08-20. 17 pages, verified live. See the result section |
 
 ### Next, in order
 
 | # | Task | Needs from Enrique | Why here |
 |---|------|--------------------|----------|
-| 5 | **First-100-words direct answers** on all 19 pages | copy approval, one page first to settle the pattern | HIGHEST VALUE as of 2026-08-15. It is the format AI engines cite, it is the ONLY channel not gated on authority or on Rafa, and it now sits on accurate regulatory content instead of contradictory content |
 | 6 | Entity fixes: expand sameAs, add Person markup for Rafa | nothing | Slawski. Serves AI citation and classic SEO. sameAs is currently 2 links |
 | 7 | Rewrite 11 meta descriptions over 160 chars | copy approval | Cheap, permanent. 11 of 19 truncate mid-sentence; Contact Us is 199 |
 | 8 | Contextual in-body internal links | anchor-text approval | Slawski's Reasonable Surfer independently confirms the 08-13 finding |
@@ -148,6 +177,76 @@ assumption. Reasoning for every completed item is in the result sections below.
   than headquarters, and rewriting them would redo the title work twice since
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
+
+### Task 5 result (2026-08-20): 17 pages answer who, what and where up front
+
+**The defect was never the headings.** Breadcrumb, eyebrow and H1 already carried
+the keyword and the city on every page. What was missing was a complete SENTENCE
+an answer engine could lift whole. Headings give a machine keywords; prose gives
+it something to quote.
+
+The clearest case was the Seattle porta potty page. Its 44-word opening paragraph
+contained no product noun and no city, and the only place name in it was
+"Oregon", on a Seattle page.
+
+**The pattern, settled on Seattle and applied to the other 16:** keep the existing
+mechanism or struggling-moment sentence FIRST, then fold "who rents what, where,
+for whom" into the sentence that already names RHC. **Answer second, not first.**
+
+That ordering is not a style preference, and it is the part worth not
+re-deriving wrongly. Putting the plain answer first failed three of the five
+framework profiles:
+
+- **Schwartz:** a visitor searching "porta potty rental seattle wa" is Solution
+  Aware. Spending sentence one telling them what a porta potty company does is a
+  wasted sentence, and in a Stage 3-4 saturated market a plainly phrased category
+  claim is the definition of stale.
+- **Hormozi:** "rents portable toilets to construction sites" states the vehicle,
+  not the destination. His named red flag is "a listing, not an offer."
+- **Christensen:** it segments by category instead of by the struggling moment.
+- **Roof** caught a fourth, separate problem: leading with "portable toilets"
+  pushed the exact term the URL, title and H1 all target out of the prime body
+  position. Not a volume claim, an internal consistency one. We still cannot
+  verify whether "porta potty" or "portable toilet" draws more searches.
+
+**Merging the answer into the existing RHC sentence LOWERED brand density rather
+than raising it.** Every page now names RHC once in its opening. Several carried
+two before. Wiebe's cap is one to two.
+
+About Us and Contact Us needed one further fix, worth recording because it will
+recur on any page whose H1 contains the brand: their eyebrow and H1 both already
+say "RHC Site Services", so an answer-first sentence stacked the same three words
+three times back to back. Both now lead with their original line and carry the
+answer second, like every other page.
+
+Verified in the PRERENDERED HTML and then again on the LIVE domain, not in the
+source: 19 of 19 routes return 200, and 17 of 17 in-scope pages carry who, what
+and where inside the first 100 words of `<main>`. Rendering checked at 375 and
+768 with real device metrics (`Emulation.setDeviceMetricsOverride`, not
+`--window-size`) on all three page templates and on the largest paragraph
+growth: no overflow, no collision, CTA visible at every width.
+
+The two legal pages are deliberately out of scope. A privacy policy does not need
+a direct-answer opening. Scope was 17 pages, not 19.
+
+Measurement note for the next AI run: **the first 100 words are counted from the
+start of `<main>`, not from the top of the HTML.** The header nav renders twice
+(desktop plus mobile drawer) and consumes 89 to 102 words before the H1 on every
+page. That looked alarming and is not, because `<main id="main">` ships on every
+page and is the standard boundary extractors use. Do not "fix" the nav on this
+reasoning.
+
+Two known gaps left open, both flagged and neither acted on:
+
+- **"Most vendors quote the Oregon standard on Washington jobs"** is a quantified
+  claim about third parties with no source. It fails Wiebe's Prove It sweep. It
+  predates this work, survives unchanged on the Seattle page, and cutting it
+  changes the hook itself, so it is a separate copy decision.
+- **The Seattle page's At a Glance sidebar and quote form both list "Deluxe"** as
+  a unit type. No Deluxe unit exists in that page's Available Units section or
+  anywhere else on the site. It sits inside the first 100 words. Either it is a
+  real offering never written up, or it claims something RHC does not offer.
+  Needs Rafa.
 
 ### Tasks 2 and 3 result (2026-08-14): CLS is now 0.00 sitewide
 
@@ -301,10 +400,20 @@ Three things fixed in passing:
 
 ### Still to pull from Enrique
 
-Search Console **Performance at 28 days** and **Indexing > Pages**. Last read
-2026-08-06: 5 impressions, 0 clicks, position 21.4, and the Pages report was
-still "Processing data". By now Pages should show how many of the 19 are
-actually indexed, which is the real check-in metric.
+Performance was read 2026-08-20 and is recorded at the top of this file. Three
+screens remain unread, and all three check whether work ALREADY SHIPPED
+registered with Google rather than asking for anything new:
+
+1. **Indexing > Pages.** The loose end from 08-15. It read 17 indexed and 3
+   "page with redirect", and nobody has opened that redirect row. The 3 are
+   BELIEVED to be the http and www variants a Domain property tracks, which is
+   the www-to-apex redirect working as designed. Not confirmed. If they are
+   something else, a real problem is sitting unnoticed.
+2. **Enhancements > Breadcrumbs.** That menu item exists in the sidebar only
+   because Google found the BreadcrumbList markup shipped 08-14. The count
+   confirms how much of it parsed.
+3. **Experience > Core Web Vitals.** Probably "not enough data" at this traffic,
+   but it is the only outside confirmation of the 08-14 font and CLS work.
 
 ### Task 4 result (2026-08-15): six titles, not nineteen
 
