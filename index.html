@@ -2,7 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!--
+      RHC's own R mark, taken from rhcsiteservices.com, on the brand navy.
+      The mark is white and silver, built for a dark background: measured at
+      1.19:1 against white, which is invisible. On #1d2b3e it measures 19:1
+      and reads clearly at 16px. Do not ship it on a light tile.
+      Sizes are multiples of 48, which is what Google asks for when it renders
+      a favicon beside a mobile search result.
+    -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <!-- Fonts are self-hosted from /fonts, declared in src/fonts.css. The
          Google Fonts stylesheet that used to live here was render-blocking and
          needed two extra third-party connections before any text could be
