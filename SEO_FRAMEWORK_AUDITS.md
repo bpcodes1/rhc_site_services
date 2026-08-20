@@ -71,7 +71,7 @@ is. As of 2026-08-15 the bottleneck is authority, not AI citation.
 | SEO + GEO audit loop | Same gate as above |
 | AI Search Citation Monitor | Same gate as above |
 | botsee CLI (brand visibility across LLMs) | Arguably NOW, to establish a baseline. Cannot measure AI visibility improving without a start point, same logic as the timeline anchor in SEO_STATUS.md |
-| Is It Agent Ready CLI | Cheap validation of the 2026-08-14 structured data work |
+| ~~Is It Agent Ready CLI~~ | **NOT FOR THIS SITE. Triaged wrongly from the name, corrected 2026-08-20.** It does not validate structured data or AI-search readiness. It checks whether an AI agent can programmatically TRANSACT with a site: 7 Protocol Discovery checks (MCP Server Card, WebMCP, Agent Skills, API Catalog, OAuth discovery, OAuth Protected Resource, Auth.md/ARD) and 4 Commerce checks (x402, MPP, UCP, ACP). RHC has no API, no login, and takes no payment online, so 11 of its 19 checks are structurally inapplicable and would all report red. The 3 that do apply were run by hand instead, see below. A free web scanner at isitagentready.com needs no install if anyone wants to see it anyway |
 | surgegraph CLI (AEO audits/rewrites) | With the rest of the AEO batch |
 | Programmatic Page Quality Gate | If city pages expand past 9, against the ~15-20 cap |
 | Humblytics marketing/CRO skills | When there is traffic to convert. At 15 impressions, no |

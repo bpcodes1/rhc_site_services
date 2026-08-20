@@ -179,6 +179,32 @@ assumption. Reasoning for every completed item is in the result sections below.
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
 
+### AI crawler access CONFIRMED unblocked (2026-08-20)
+
+Checked because the shared rules in `../CLAUDE.md` warn that "Cloudflare
+prepends a managed block that disallows AI crawlers. Check the dashboard, not
+the repo." **On this site it does not.** The live robots.txt is byte-identical
+to `public/robots.txt`: `User-agent: * / Allow: /` plus the sitemap line.
+
+robots.txt is only permission, and Cloudflare can also block bots at the
+network layer where robots.txt shows nothing. So each crawler was fetched
+directly against `/porta-potty-rental-seattle-wa`:
+
+GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended,
+meta-externalagent and Googlebot **all returned HTTP 200 with an identical
+53,035 bytes**. Nothing blocked, nothing served a degraded or truncated
+version.
+
+This matters for the 2026-09-19 AI re-run: a flat result there will mean the
+content did not earn a citation, NOT that the crawlers never saw the site.
+That ambiguity is now removed. Re-check this if the AI re-run comes back
+completely flat, since Cloudflare bot settings can change without a deploy.
+
+**`/llms.txt` returns 404.** Deliberately not added. Adoption is real but no
+major provider has confirmed using it, and Google has said it does not. It is
+cheap and harmless, so it is a fine low-priority experiment, but it should
+never be logged as a fix or expected to move anything.
+
 ### Task 7 result (2026-08-20): 0 of 19 descriptions over 160, was 11
 
 **Roof settles the premise, and it is the part worth not re-deriving.** His
