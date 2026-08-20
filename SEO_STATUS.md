@@ -149,12 +149,13 @@ assumption. Reasoning for every completed item is in the result sections below.
 | -- | AI visibility baseline, 8 queries x 3 engines | DONE 2026-08-15. See AI_VISIBILITY_BASELINE.md |
 | 5 | First-100-words direct answers | DONE 2026-08-20. 17 pages, verified live. See the result section |
 | 6 | Entity fixes: Person markup, sameAs | DONE 2026-08-20. Verified live on all 19. See the result section |
+| 7 | Rewrite 11 meta descriptions over 160 chars | DONE 2026-08-20. 0 of 19 now over. See the result section |
+| -- | Replace the placeholder favicon | DONE 2026-08-20. RHC's own R on brand navy, measured legible at 16px |
 
 ### Next, in order
 
 | # | Task | Needs from Enrique | Why here |
 |---|------|--------------------|----------|
-| 7 | Rewrite 11 meta descriptions over 160 chars | copy approval | Cheap, permanent. 11 of 19 truncate mid-sentence; Contact Us is 199 |
 | 8 | Contextual in-body internal links | anchor-text approval | Slawski's Reasonable Surfer independently confirms the 08-13 finding |
 | 9 | Citation pass, ~20 submissions | he does the submissions | The authority bottleneck. Target list now evidence-based, see baseline file |
 | 10 | Handwashing stations on the Portable Toilets page | nothing | GBP advertises it; the site never mentions it. Seattle and Portland pages establish the requirement and never offer the solution |
@@ -177,6 +178,57 @@ assumption. Reasoning for every completed item is in the result sections below.
   than headquarters, and rewriting them would redo the title work twice since
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
+
+### Task 7 result (2026-08-20): 0 of 19 descriptions over 160, was 11
+
+**Roof settles the premise, and it is the part worth not re-deriving.** His
+profile lists the weighted page sections and then states plainly: *"Meta
+description and meta keyword do not index."* The field carries **zero ranking
+weight**. It is a click-through play and nothing else.
+
+That matters because the first draft of this task was WRONG, and the instinct
+that produced it is the obvious one. Those drafts front-loaded product keywords
+in every description. The sole reason to front-load keywords is ranking, and
+Roof says there is no ranking here. Enrique caught it by asking whether the
+rewrites had actually been run past the frameworks. They had not.
+
+Three more frameworks convicted the same structure:
+
+- **Wiebe.** Her Supporting Frameworks name front-loading explicitly, and the
+  So What sweep asks whether a line gives what the reader GETS or what we HAVE.
+  Product list first, differentiator last, and **truncation cuts from the end**:
+  the only persuasive part sat exactly where it gets cut.
+- **Schwartz.** Someone scanning a results page is Solution or Product Aware,
+  comparing ten near-identical snippets. Stage 3-4 sophistication, where the
+  rule is to penalise an old claim phrased plainly. "Porta potty rentals for
+  construction sites and events" is what every competitor writes.
+- **Hormozi.** "No outcome communicated at all. Only product/service
+  description. The offer is a listing, not an offer."
+
+**Every description now leads with the mechanism and follows with the category.**
+This is the same conclusion task 5 reached by a different route, which is some
+evidence the principle is real rather than fitted to one case.
+
+The homepage was the only one where truncation damaged MEANING rather than
+clipping a tail: it ended "Hard delivery windows. No surprise", with "fees" cut.
+
+Two things deliberately not done:
+
+- **`Service.description` in the schema still holds the old text** on the pages
+  that duplicated it. Meta description and Service.description are different
+  fields with different jobs, and only the meta tag was approved for change. If
+  they should match, that is a separate decision.
+- **"OSHA-compliant panels"** is gone from the fencing description but **still
+  in that page's body**. OSHA does not certify fence panels; there is no such
+  product attribute. This is weaker than the 1-per-20 error, which stated a
+  wrong number as law, but it is the same family. Left open, not folded in
+  silently. "OSHA-compliant sanitation" on the porta potty pages IS defensible,
+  since 1926.51 does set job-site sanitation requirements.
+
+**Calibration, so this is not over-read later:** Google truncates by PIXEL
+WIDTH, roughly 920px desktop and 680px mobile, not by character count, and it
+rewrites descriptions most of the time regardless. 160 is a proxy. Worth doing
+because it is cheap and permanent, not because it moves rankings.
 
 ### Task 6 result (2026-08-20): Rafa is an entity, and the Google link is stable
 
@@ -222,21 +274,33 @@ caches per path, so routes go live at different times. The tell that it was
 stale rather than broken: the OLD build's founder had no `@id`, which is
 exactly what the check reported.
 
-### The favicon is not RHC's (found 2026-08-20, NOT fixed)
+### The favicon (found and FIXED 2026-08-20)
 
-`public/favicon.svg` is a single path filled `#863bff`. The brand palette is
-navy `#1d2b3e` and rust `#a73a00`, and that purple appears in **no other file
-on the site**. It is a leftover, not a brand asset.
+`public/favicon.svg` was a single path filled `#863bff`, a purple appearing in
+no other file on the site. Google renders favicons beside mobile search
+results, and this site is crawled as a smartphone, so RHC's only visual in a
+mobile result was an unrelated mark.
 
-This matters more than it looks. **Google displays favicons in mobile search
-results**, and Googlebot crawls this site as a smartphone. So the one piece of
-visual identity RHC gets in a mobile result is an unrelated purple mark. It is
-also visible in Search Console's own sidebar next to the property name.
+**The mark is RHC's own R, taken from rhcsiteservices.com**, which is Rafa's
+own site. Both assets live there and are worth knowing about:
+`wp-content/uploads/2024/09/icon-RHC.png` (the R) and
+`wp-content/uploads/2024/03/logo-2.png` (the full lockup, 637x235).
 
-There is no logo file in the repo at all; the header brand is CSS text. Fixing
-this means creating a logo, which is a design decision for Enrique, not an SEO
-task. Once a logo exists, add `logo` to the business node in `src/seo/schema.ts`
-alongside the existing `image`.
+**It could NOT be used as-is, and this is the part to remember.** The mark is
+white and silver, built for a dark background. Measured against a white browser
+tab it is **1.19:1**, where 3:1 is the floor for a graphic to be perceivable.
+Dropping it in unchanged would have traded a wrong-brand icon for a near-blank
+white square. On the brand navy it measures 19:1 at 32px. Verified legible at
+16px, not assumed.
+
+PNG rather than SVG: the source is raster, so an SVG wrapper adds ~45KB and no
+scaling benefit. Sizes are multiples of 48, which is what Google's favicon
+guidance asks for. `favicon.svg` was DELETED rather than left in place, because
+a stale icon file that is still referenced anywhere wins.
+
+**Still open:** the business node in `src/seo/schema.ts` has `image` but no
+`logo`. `logo-2.png` above is the full lockup and could serve, but it has the
+same white-on-white problem and would need the same treatment. Not urgent.
 
 ### Task 5 result (2026-08-20): 17 pages answer who, what and where up front
 
