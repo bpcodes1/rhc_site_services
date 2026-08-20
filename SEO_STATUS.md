@@ -148,12 +148,12 @@ assumption. Reasoning for every completed item is in the result sections below.
 | -- | Correct false OSHA one-per-20 claim | DONE 2026-08-15. Seven pages plus the project rule |
 | -- | AI visibility baseline, 8 queries x 3 engines | DONE 2026-08-15. See AI_VISIBILITY_BASELINE.md |
 | 5 | First-100-words direct answers | DONE 2026-08-20. 17 pages, verified live. See the result section |
+| 6 | Entity fixes: Person markup, sameAs | DONE 2026-08-20. Verified live on all 19. See the result section |
 
 ### Next, in order
 
 | # | Task | Needs from Enrique | Why here |
 |---|------|--------------------|----------|
-| 6 | Entity fixes: expand sameAs, add Person markup for Rafa | nothing | Slawski. Serves AI citation and classic SEO. sameAs is currently 2 links |
 | 7 | Rewrite 11 meta descriptions over 160 chars | copy approval | Cheap, permanent. 11 of 19 truncate mid-sentence; Contact Us is 199 |
 | 8 | Contextual in-body internal links | anchor-text approval | Slawski's Reasonable Surfer independently confirms the 08-13 finding |
 | 9 | Citation pass, ~20 submissions | he does the submissions | The authority bottleneck. Target list now evidence-based, see baseline file |
@@ -177,6 +177,66 @@ assumption. Reasoning for every completed item is in the result sections below.
   than headquarters, and rewriting them would redo the title work twice since
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
+
+### Task 6 result (2026-08-20): Rafa is an entity, and the Google link is stable
+
+**The Google Maps `sameAs` was a SHARE link, not an identifier.** It carried
+`entry=ttu` and `g_ep=EgoyMDI2MDYwMy4x...`, parameters generated per share that
+say nothing durable about the listing. Replaced with the CID form,
+`https://maps.google.com/?cid=5264847313884870398`, decoded from the hex
+embedded in that same URL (`0x49107ebcd4c6f6fe`). Verified it resolves.
+`hasMap` now points at that same permanent id rather than introducing a second
+different URL for one listing.
+
+**`founder` was a bare inline name.** A name with no `@id` and no links is a
+string, not an entity: nothing connected Rafa to the business or to the page
+describing him. He is now an addressable node with `@id`, a `url` pointing at
+About Us, and `worksFor` referencing the business. It stays INLINE inside
+`business` rather than becoming a separate graph node, which is why it shipped
+to all 19 pages with zero per-page edits. Do not "improve" this by lifting it
+into its own node; that would mean editing every page and gains nothing.
+
+`knowsAbout` is grounded in what About Us actually states. Not invented
+expertise.
+
+**Three keys are deliberately absent. Do not complete them by guessing:**
+
+- **`jobTitle`.** "Founder" is what the site already claims and About Us
+  supports. Owner vs founder is unconfirmed.
+- **Person `sameAs` and `image`.** Enrique confirmed 2026-08-20 that Rafa has
+  no public profile to link, and his photo is still an open About Us TODO. An
+  empty array is worse than an absent key.
+- **`logo`.** See the favicon finding below.
+
+**Business `sameAs` stays at two entries because two is what exists**, confirmed
+by Enrique 2026-08-20: the Google listing and Facebook. It should grow after the
+citation pass (task 9) creates real listings. **Tasks 6 and 9 are the same work
+seen twice**; expect to revisit `sameAs` once, after 9, and do not treat that as
+rework.
+
+Verified by parsing the JSON-LD on all 19 LIVE pages, not the source.
+
+Cache note, because it produced a false alarm: two pages reported the Person
+node missing on the first live check and were fine minutes later. Cloudflare
+caches per path, so routes go live at different times. The tell that it was
+stale rather than broken: the OLD build's founder had no `@id`, which is
+exactly what the check reported.
+
+### The favicon is not RHC's (found 2026-08-20, NOT fixed)
+
+`public/favicon.svg` is a single path filled `#863bff`. The brand palette is
+navy `#1d2b3e` and rust `#a73a00`, and that purple appears in **no other file
+on the site**. It is a leftover, not a brand asset.
+
+This matters more than it looks. **Google displays favicons in mobile search
+results**, and Googlebot crawls this site as a smartphone. So the one piece of
+visual identity RHC gets in a mobile result is an unrelated purple mark. It is
+also visible in Search Console's own sidebar next to the property name.
+
+There is no logo file in the repo at all; the header brand is CSS text. Fixing
+this means creating a logo, which is a design decision for Enrique, not an SEO
+task. Once a logo exists, add `logo` to the business node in `src/seo/schema.ts`
+alongside the existing `image`.
 
 ### Task 5 result (2026-08-20): 17 pages answer who, what and where up front
 
@@ -400,20 +460,36 @@ Three things fixed in passing:
 
 ### Still to pull from Enrique
 
-Performance was read 2026-08-20 and is recorded at the top of this file. Three
-screens remain unread, and all three check whether work ALREADY SHIPPED
-registered with Google rather than asking for anything new:
+All four screens were read 2026-08-20. Performance is recorded at the top of
+this file. The other three:
 
-1. **Indexing > Pages.** The loose end from 08-15. It read 17 indexed and 3
-   "page with redirect", and nobody has opened that redirect row. The 3 are
-   BELIEVED to be the http and www variants a Domain property tracks, which is
-   the www-to-apex redirect working as designed. Not confirmed. If they are
-   something else, a real problem is sitting unnoticed.
-2. **Enhancements > Breadcrumbs.** That menu item exists in the sidebar only
-   because Google found the BreadcrumbList markup shipped 08-14. The count
-   confirms how much of it parsed.
-3. **Experience > Core Web Vitals.** Probably "not enough data" at this traffic,
-   but it is the only outside confirmation of the 08-14 font and CLS work.
+**Indexing > Pages (data through 08-16): 18 indexed, up from 17.** All 3
+not-indexed sit under one reason, "Page with redirect", source Website.
+
+STILL NOT SETTLED, and it is one click. The variant theory holds
+arithmetically: a Domain property tracks exactly three non-canonical variants
+(http apex, http www, https www) and exactly three are reported. **But 18
+indexed against 19 real pages leaves one page unaccounted for.** Either one
+real page is still pending with no reason shown yet, or one of those three
+redirects is a real page, which would be a genuine problem. Opening the "Page
+with redirect" row lists the URLs and ends the question.
+
+Do NOT click "Validate Fix" on that row. "Validation: Not Started" is GSC's
+fix-verification workflow, started only after fixing something. An expected
+redirect needs no validation, and starting one on a non-problem just creates a
+failing validation record.
+
+**Enhancements > Breadcrumbs (08-18): 0 invalid, 1 valid.** The 0 is the
+confirmation that mattered: the BreadcrumbList markup shipped 08-14 parses.
+The 1 is low against the 16 pages carrying it, but the chart shows it only
+began registering 08-14 to 08-18, so Google is working through them. **Re-check
+around 2026-09-10. If it is still 1, that IS a signal.**
+
+**Experience > Core Web Vitals (08-18): "not enough usage data", both devices.**
+Exactly as predicted. CrUX needs real user traffic and there is none at 1 click
+in 23 days. The lab measurement of 0.0000 CLS stands as the only evidence,
+which is correct and sufficient. **This will stay empty until traffic exists.
+It is not a to-do and should not be chased.**
 
 ### Task 4 result (2026-08-15): six titles, not nineteen
 
