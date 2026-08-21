@@ -36,7 +36,7 @@ in the 18 days since the property started collecting."
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-20.
+Update this file whenever a task moves. Last updated 2026-08-21.
 
 ### Reading at day 23 (2026-08-20)
 
@@ -75,9 +75,10 @@ it.
   `/privacy-policy` and `/terms-of-service`, which were created 2026-08-06 and
   had been missed by the original 2026-07-28/29 pass. All 19 URLs have now had
   indexing requested. Watch Page Indexing over the next week or two: it read 17
-  indexed / 3 "page with redirect" on 2026-08-15, and those 3 are believed to
-  be the http and www variants a Domain property tracks, which is the www-to-
-  apex redirect working as designed. NOT yet confirmed by opening that row.
+  indexed / 3 "page with redirect" on 2026-08-15. **CONFIRMED 2026-08-21 via
+  the URL Inspection API**: those 3 are the http, http-www and https-www
+  variants, all returning "Page with redirect". Working as designed, nothing
+  to fix. See the Indexing > Pages section below.
 - **Task 6 (GBP) is staged, not live.** Rafa has still not recorded the video
   verification as of 2026-08-15. Every profile edit stays invisible until he
   does. This is now the ONLY thing standing between the site and a finished
@@ -434,11 +435,22 @@ Two known gaps left open, both flagged and neither acted on:
   claim about third parties with no source. It fails Wiebe's Prove It sweep. It
   predates this work, survives unchanged on the Seattle page, and cutting it
   changes the hook itself, so it is a separate copy decision.
-- **The Seattle page's At a Glance sidebar and quote form both list "Deluxe"** as
-  a unit type. No Deluxe unit exists in that page's Available Units section or
-  anywhere else on the site. It sits inside the first 100 words. Either it is a
-  real offering never written up, or it claims something RHC does not offer.
-  Needs Rafa.
+- **"Deluxe" is advertised sitewide and described nowhere.** CORRECTED
+  2026-08-21: an earlier note here called it a stray word on the Seattle page.
+  It is not. It appears in SIX files: the LeadForm dropdown, the homepage, and
+  the Bend, Portland and Seattle porta potty pages, including **H2 headings** on
+  Bend and Portland, and a Portland FAQ making a specific product claim, that
+  "Deluxe units include a built-in fresh-water handwash station."
+
+  **No page has a Deluxe product card.** Standard, ADA and High-Rise each have
+  one; Deluxe has none. So this is almost certainly a real tier missing its
+  write-up rather than a false claim, which is the opposite of the earlier read.
+
+  **This is the same gap as queue task 10.** Task 10 exists because the Google
+  listing advertises handwashing stations the site never mentions. The Portland
+  FAQ says Deluxe units carry a built-in handwash station. Writing the Deluxe
+  product card and closing the handwashing gap are one job, not two. Confirm the
+  spec with Rafa before publishing either.
 
 ### Tasks 2 and 3 result (2026-08-14): CLS is now 0.00 sitewide
 
@@ -638,9 +650,11 @@ Both were requested for indexing on 2026-08-15 per the Phase 0 notes, and
 privacy-policy was crawled that same day. The most likely explanation is that
 **the indexing request for /terms-of-service never actually submitted.**
 
-ACTION: re-request indexing for that one URL in Search Console. It cannot be
-done through the API; the Indexing API only covers job postings and
-livestreams, so this is a manual URL Inspection > Request Indexing in the UI.
+ACTION DONE 2026-08-21: Enrique re-requested indexing for that URL. It could
+not be done through the API; the Indexing API only covers job postings and
+livestreams. **Re-inspect it in about a week.** If it still reads "URL is
+unknown to Google", the cause is not a missed request and needs a real
+diagnosis.
 
 Worth noting how this was found: the Pages report says "18 indexed" and gives
 no way to see WHICH one is missing without clicking through. Per-URL inspection
@@ -698,10 +712,10 @@ at "Porta Potty Rental", on a structural argument instead: /portable-toilets
 already targets that idea, and two pages competing for one query splits the
 signal. Revisit once GSC has real query data.
 
-STILL OPEN, not part of task 4: **11 of 19 meta descriptions exceed 160
-characters** and are being truncated mid-sentence in results. Contact Us is 199.
-That is the line under the title in Google, so it does real work on
-click-through. Needs Enrique's approval; it is copy.
+~~STILL OPEN, not part of task 4: 11 of 19 meta descriptions exceed 160
+characters.~~ **CLOSED 2026-08-20 by task 7.** All 19 are now at or under 160.
+See the task 7 result section, and note Roof's finding there that meta
+descriptions do not index at all.
 
 ## Phase 0: Foundations
 
