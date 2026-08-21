@@ -556,18 +556,53 @@ this file. The other three:
 **Indexing > Pages (data through 08-16): 18 indexed, up from 17.** All 3
 not-indexed sit under one reason, "Page with redirect", source Website.
 
-STILL NOT SETTLED, and it is one click. The variant theory holds
-arithmetically: a Domain property tracks exactly three non-canonical variants
-(http apex, http www, https www) and exactly three are reported. **But 18
-indexed against 19 real pages leaves one page unaccounted for.** Either one
-real page is still pending with no reason shown yet, or one of those three
-redirects is a real page, which would be a genuine problem. Opening the "Page
-with redirect" row lists the URLs and ends the question.
+**SETTLED 2026-08-21 via the URL Inspection API, not by guessing.** All three
+were inspected directly and every one returns `coverageState: "Page with
+redirect"`:
+
+- `http://rhcsiteservice.com/`
+- `http://www.rhcsiteservice.com/`
+- `https://www.rhcsiteservice.com/`
+
+That is the entire Not Indexed bucket. They are the protocol and host variants
+a Domain property also tracks, and it is the www-to-apex redirect working as
+designed. **Nothing to fix. Close this permanently.**
 
 Do NOT click "Validate Fix" on that row. "Validation: Not Started" is GSC's
 fix-verification workflow, started only after fixing something. An expected
 redirect needs no validation, and starting one on a non-problem just creates a
 failing validation record.
+
+### /terms-of-service has NEVER been crawled (found 2026-08-21)
+
+The 18-against-19 gap resolved to one specific page. All 19 real URLs were
+inspected; 18 return `PASS / Submitted and indexed`. One does not:
+
+**`/terms-of-service` returns `URL is unknown to Google`, last crawl `never`.**
+
+It is not a technical fault. Checked and all identical to /privacy-policy,
+which IS indexed:
+
+| | /privacy-policy | /terms-of-service |
+|---|---|---|
+| In sitemap.xml | yes | yes |
+| Live HTTP | 200 | 200 |
+| Self-canonical | correct | correct |
+| robots meta / X-Robots-Tag | none | none |
+| Internal links | 1, sitewide footer | 1, sitewide footer |
+| Last crawl | 2026-08-15 | **never** |
+
+Both were requested for indexing on 2026-08-15 per the Phase 0 notes, and
+privacy-policy was crawled that same day. The most likely explanation is that
+**the indexing request for /terms-of-service never actually submitted.**
+
+ACTION: re-request indexing for that one URL in Search Console. It cannot be
+done through the API; the Indexing API only covers job postings and
+livestreams, so this is a manual URL Inspection > Request Indexing in the UI.
+
+Worth noting how this was found: the Pages report says "18 indexed" and gives
+no way to see WHICH one is missing without clicking through. Per-URL inspection
+answered it in about thirty seconds.
 
 **Enhancements > Breadcrumbs (08-18): 0 invalid, 1 valid.** The 0 is the
 confirmation that mattered: the BreadcrumbList markup shipped 08-14 parses.
@@ -885,6 +920,42 @@ landing pages. That is what those pages are for.
 - **Frameworks in use:** Joanna Wiebe (Seven Sweeps, VoC fidelity, Prove It,
   Zero Risk, Messaging Hierarchy) and Robert Cialdini (seven principles,
   detective / smuggler / bungler). Both pasted in full by Enrique.
+
+## Search Console MCP (set up 2026-08-21)
+
+Claude can now query Search Console directly instead of Enrique screenshotting
+it. Recorded because two details differ from the setup guide that came with the
+asset, and both cost a debugging round if re-derived wrongly.
+
+**The server is `AminForou/mcp-gsc`, NOT `ahonn/mcp-server-gsc`.** The asset's
+instructions name the ahonn one. It exposes a single tool, `search_analytics`.
+AminForou exposes 20 including `inspect_url_enhanced`, `batch_url_inspection`,
+`check_indexing_issues` and sitemap tools, which is what settled the redirect
+question above. It also has 1,386 stars against 260, an MIT license where the
+ahonn repo has none, and a more recent last commit.
+
+**The env vars are `GSC_CREDENTIALS_PATH` and `GSC_SKIP_OAUTH=true`**, not
+`GOOGLE_APPLICATION_CREDENTIALS` as the asset's instructions say. Without
+`GSC_SKIP_OAUTH` it tries to open a browser login instead of using the service
+account.
+
+Config, registered at user scope in `~/.claude.json`:
+
+    gscServer -> /opt/homebrew/bin/uvx mcp-search-console
+      GSC_CREDENTIALS_PATH=/Users/enriquep/.config/gsc/credentials.json
+      GSC_SKIP_OAUTH=true
+
+Service account `rhc-gsc-reader@rhc-seo-506217.iam.gserviceaccount.com`, granted
+**Full** (not Owner) on the property. Full is sufficient for URL Inspection,
+which Google's own docs never state; it was confirmed by testing. A Full user
+cannot add or remove other users, which is why it was chosen over Owner.
+
+The key lives at `~/.config/gsc/credentials.json`, `600`, folder `700`, outside
+every repo. **It is a password. Never commit it, never paste its contents.**
+
+WHAT THIS DOES NOT COVER: the Enhancements reports (Breadcrumbs) and Core Web
+Vitals are not in the Search Console API at all. CWV comes from the CrUX API,
+a separate service. Those two still need a screenshot.
 
 ## Build gotchas that will bite a future session
 
