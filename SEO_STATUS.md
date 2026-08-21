@@ -151,12 +151,13 @@ assumption. Reasoning for every completed item is in the result sections below.
 | 6 | Entity fixes: Person markup, sameAs | DONE 2026-08-20. Verified live on all 19. See the result section |
 | 7 | Rewrite 11 meta descriptions over 160 chars | DONE 2026-08-20. 0 of 19 now over. See the result section |
 | -- | Replace the placeholder favicon | DONE 2026-08-20. RHC's own R on brand navy, measured legible at 16px |
+| 8 | Contextual in-body internal links | DONE 2026-08-21. 9 hub-to-city links, verified live. See the result section |
+| -- | Search Console MCP | DONE 2026-08-21. Settled the redirect question; found /terms-of-service uncrawled |
 
 ### Next, in order
 
 | # | Task | Needs from Enrique | Why here |
 |---|------|--------------------|----------|
-| 8 | Contextual in-body internal links | anchor-text approval | Slawski's Reasonable Surfer independently confirms the 08-13 finding |
 | 9 | Citation pass, ~20 submissions | he does the submissions | The authority bottleneck. Target list now evidence-based, see baseline file |
 | 10 | Handwashing stations on the Portable Toilets page | nothing | GBP advertises it; the site never mentions it. Seattle and Portland pages establish the requirement and never offer the solution |
 | 11 | Mobile UX pass on all 19 pages | nothing | Shepard: raters evaluate 100% on mobile. Never performed |
@@ -178,6 +179,47 @@ assumption. Reasoning for every completed item is in the result sections below.
   than headquarters, and rewriting them would redo the title work twice since
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
+
+### Task 8 result (2026-08-21): the link graph only ran one direction
+
+All 9 city pages linked UP to their service hub. **Not one of the 5 hubs linked
+down to any city page.** The 8-city grid on each hub looks like it would, but
+every tag points at `#quote` on the same page.
+
+**Scope was cut deliberately. Do not re-litigate it without new evidence.** The
+baseline calls for three link types; Roof and Slawski agree on only one:
+
+| Link type | Roof (Virtual Silo) | Slawski (Reasonable Surfer) | Built? |
+|---|---|---|---|
+| Hub to its 3 city pages | endorses, completes the circuit | endorses, high click probability | **YES, 9 links** |
+| City to sibling cities | endorses, within-silo sequential | **penalises**, a Bend searcher never clicks Seattle | no |
+| City to same-city other services | **forbids**, cross-category dilution | mildly positive | no |
+
+The two frameworks contradict each other in OPPOSITE directions on the two
+that were cut, and both are the lower-value types. When evidence splits that
+sharply, build only the agreed set.
+
+The city grid was left pointing at `#quote` rather than repointed. Only 3 of
+the 8 cities have pages, so a mixed grid would behave unpredictably, and prose
+is what Reasonable Surfer actually rewards. Prose also allows real anchor text:
+**all 9 anchors are distinct**, each carries the keyword or a variation plus a
+city, and each describes what is genuinely on the target page. Three identical
+anchors per page would be the visible-optimisation pattern Shepard ties to the
+losing bucket.
+
+**The CSS fix is the important half, and it is the lesson.** The global reset
+sets `a { color: inherit; text-decoration: none }`, so the new links rendered
+**invisible**: same colour as body text, no underline. The build passed. The
+markup checks passed. Only the screenshot caught it.
+
+That is not cosmetic. Contextual links beat nav links **only because they get
+clicked**, so a link that does not look clickable fails the exact framework
+that justified the task. They now use the site's existing convention,
+`var(--secondary)` at weight 600, plus an underline. Measured 5.84:1 against
+the block background (passes AA); colour alone against body text is 1.44:1,
+under the 3:1 that colour-only cues require, so **the underline is
+load-bearing, not decorative.** Scoped to `.area-foot p a`, which matches only
+these nine.
 
 ### AI crawler access CONFIRMED unblocked (2026-08-20)
 
