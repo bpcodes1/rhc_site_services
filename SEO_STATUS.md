@@ -999,6 +999,42 @@ WHAT THIS DOES NOT COVER: the Enhancements reports (Breadcrumbs) and Core Web
 Vitals are not in the Search Console API at all. CWV comes from the CrUX API,
 a separate service. Those two still need a screenshot.
 
+## DataForSEO MCP (set up 2026-08-21, ONE STEP OUTSTANDING)
+
+Registered at user scope as `dataforseo` -> `npx -y dataforseo-mcp-server`, with
+`DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD` in `~/.claude.json` (which is
+`600`). Enrique ran the register command himself so the API password never
+entered a transcript. Account is on the be-techplus.com domain, business tier.
+
+**OUTSTANDING: the account is not verified.** Auth works (the
+`/v3/appendix/user_data` call returns `20000 Ok`), but any real endpoint returns
+`40104 Please verify your account before using the API`. Enrique needs to finish
+verification at app.dataforseo.com. Nothing else is blocking.
+
+**DO NOT FUND THE $50 YET.** Balance is the $1 signup trial credit, and that is
+**enough for all of task 9's research**. Real pricing is $0.024 per request plus
+$0.000036 per row, so a full 1,000-row pull is about $0.06:
+
+| Pull | Cost |
+|---|---|
+| Backlink summaries, 5 competitors | $0.12 |
+| Referring domain lists, 5 competitors at 1,000 rows | $0.30 |
+| Keyword volume for the porta potty vs portable toilet question | a few cents |
+
+Credits never expire, so the $50 top-up can wait until the trial credit actually
+runs out. An earlier note in this file implied $50 was the cost of entry; it is
+the minimum TOP-UP, not the minimum to start.
+
+Two notes for whoever uses it:
+
+- **There is no way to cap spend in config.** v3 has no ENABLED_MODULES or
+  module allowlist. Quote the cost before running anything beyond a trivial
+  check.
+- **The MCP applies a field filter to responses.** `/v3/appendix/user_data`
+  comes back with an empty `items` array through the tool even though the raw
+  API returns full account data. If a response looks empty but the status is
+  `20000`, suspect the filter before suspecting the API.
+
 ## Build gotchas that will bite a future session
 
 - **prerender.mjs must emit FLAT files** (dist/foo.html), never
