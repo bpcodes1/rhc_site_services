@@ -359,6 +359,11 @@ export default function TemporaryFencing() {
 
           <div className="area-foot" style={{ marginTop: '24px' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
+            <p>Right-of-way permits are city-specific and they gate your delivery date. RHC publishes a guide for each: <Link to="/temporary-fencing-rental-portland-or">temporary fencing in Portland and PBOT permits</Link>, <Link to="/temporary-fencing-rental-bend-or">construction fencing in Bend</Link>, and <Link to="/temporary-fencing-rental-seattle-wa">Seattle fencing and SDOT street use</Link>.</p>
+          </div>
+
+          <div className="area-foot" style={{ marginTop: '24px' }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
             <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
           </div>
         </div>

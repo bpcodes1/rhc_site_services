@@ -1052,6 +1052,18 @@ button.city-tag { width: 100%; text-align: left; cursor: pointer; font-family: i
 }
 .area-foot p { margin: 0; font-size: 14px; color: var(--on-surface-variant); }
 .area-foot strong { color: var(--on-surface); }
+/* The global reset sets `a { color: inherit; text-decoration: none }`, so an
+   unstyled link inside prose is invisible. These sit mid-sentence, where colour
+   alone is not a reliable cue, so they carry an underline as well. A link that
+   does not look clickable does not get clicked, and contextual links are only
+   worth more than nav links because they DO get clicked. */
+.area-foot p a {
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.area-foot p a:hover { color: var(--secondary-bright); }
 
 /* ---------- TESTIMONIALS ---------- */
 .testimonials { background: var(--surface-low); }

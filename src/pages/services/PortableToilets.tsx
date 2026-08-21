@@ -402,6 +402,11 @@ export default function PortableToilets() {
 
           <div className="area-foot" style={{ marginTop: '24px' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
+            <p>Portland, Bend, and Seattle each set their own permit rules and unit counts. RHC publishes a full guide for each: <Link to="/porta-potty-rental-portland-or">porta potty rental in Portland</Link>, <Link to="/porta-potty-rental-bend-or">portable toilets for Bend job sites</Link>, and <Link to="/porta-potty-rental-seattle-wa">Seattle porta potty permit rules</Link>.</p>
+          </div>
+
+          <div className="area-foot" style={{ marginTop: '24px' }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
             <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
           </div>
         </div>

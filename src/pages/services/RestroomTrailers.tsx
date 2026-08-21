@@ -474,6 +474,11 @@ export default function RestroomTrailers() {
 
           <div className="area-foot" style={{ marginTop: '24px' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
+            <p>Venue requirements differ by city. RHC publishes a guide for each market it serves: <Link to="/restroom-trailer-rental-portland-or">restroom trailer rental in Portland</Link>, <Link to="/restroom-trailer-rental-bend-or">event restroom trailers in Bend</Link>, and <Link to="/restroom-trailer-rental-seattle-wa">Seattle restroom trailers and King County code</Link>.</p>
+          </div>
+
+          <div className="area-foot" style={{ marginTop: '24px' }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--secondary)', letterSpacing: '.08em', textTransform: 'uppercase', flexShrink: 0 }}>i</div>
             <p><strong>Don't see your city listed?</strong> Fill out the form. We're actively expanding and may still be able to serve your location.</p>
           </div>
         </div>
