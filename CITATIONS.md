@@ -293,7 +293,53 @@ Rafa, so they belong to Pillar 3 item 5:
   listings will carry a blank square.
 - **Photos:** use the real About Us job-site photo, not stock.
 
-## 6. Measurement
+## 6. Run sheet for the 14 (added 2026-08-22)
+
+Work top to bottom. Every form wants the same block from section 0 and the
+description from section 1; only the quirks differ. Tick the tracker in
+section 4 as each one goes live and paste the live URL.
+
+**Before the first form:**
+
+- **Logo files** are in `public/`: `rhc-logo-1200.png` (square, for logo
+  slots), `rhc-logo-720.png` (same, smaller), `rhc-mark-400.png` (the R alone,
+  for tiny avatar slots), `rhc-logo-wide-1200x630.png` (banner slots that want
+  a logo), `rhc-cover-900x678.jpg` (the site's preview image as JPG, for
+  cover slots that reject webp; note `preview.webp` is 900x678, not the
+  1200x630 the schema comment claims). Real photo: the About Us job-site photo in
+  `src/assets/`.
+- **Account email:** use the agency Google account already managing the GBP
+  (enriquepiedra2005@gmail.com) so verification emails land somewhere that
+  gets read today. Record every login in one place. Add Rafa as owner on
+  Bing, Yelp, Apple, Facebook, Nextdoor and LinkedIn before handoff; the
+  vertical directories are single-login, so the register IS the handoff.
+- **Rafa's phone.** Yelp, Apple, Bing (unless the GBP import skips it), BBB
+  and Nextdoor verify by calling or texting 503-607-7412. Agree one 30-minute
+  window with him and do those five back to back, so it is one ask, not five.
+
+| Order | Listing | Start at | Quirks |
+|---|---|---|---|
+| 1 | Facebook page (fix) | facebook.com/RHCSiteServices, Settings > Page info | Already controlled, no verification. Website to https://rhcsiteservice.com/, hours 7 to 6 all seven days, category "Portable Toilet Supplier" (nearest), service area instead of street address, short description from section 1, logo `rhc-logo-720.png`, cover `rhc-cover-900x678.jpg`. Ten minutes; do it first so the NAP already matches somewhere |
+| 2 | Bing Places for Business | bingplaces.com | Try "Import from Google" with the agency account. If the staged (unverified) GBP does not import, create manually. Mark "I serve customers at their location" and hide the address. Bing may still ask to verify by phone, email or postcard; pick phone in the Rafa window |
+| 3 | Apple Business Connect | businessconnect.apple.com | Sign in with an Apple ID (create one on the agency email if needed). No hide-address toggle: choose the service-area option for businesses without a storefront. Logo square 1:1. Verification is usually a call to the business phone |
+| 4 | Yelp for Business | biz.yelp.com | SEARCH FIRST for "RHC Site Services" near Brooks, OR; claim if a stub exists. Service-area business: enter the address, then tick "don't show address". Decline the ad setup at every step; it will ask three times. Phone call or text verification |
+| 5 | BBB | bbb.org/get-listed | Search first; if absent, "Add A Business". Free profile, NOT accreditation (declines the paid pitch). Legal name field takes `RHC Site Services LLC`; display name stays `RHC Site Services`. BBB calls to verify before publishing |
+| 6 | Nextdoor Business | business.nextdoor.com | Service area by ZIPs or cities; phone or email code. Use the short description |
+| 7 | LinkedIn company page | linkedin.com/company/setup/new | Needs Enrique's personal LinkedIn as the creating admin. Industry "Construction" or "Facilities Services"; website; tagline from the short description. No verification. Add Rafa as admin later |
+| 8 | pottydirectory.com | pottydirectory.com/submit/ | Free basic; skip "featured". Under two minutes |
+| 9 | portapottyrentalguide.com | portapottyrentalguide.com/submit-rental-company/ | All 5 competitors are here. Cost not stated; if it asks for money, stop and note the price in the tracker |
+| 10 | portapottymatch.com | portapottymatch.com/add-listing/portapottyrental/ | 4 of 5 competitors. Same rule: free or stop |
+| 11 | The Blue Book ProView | thebluebook.com, "Get listed" (or construction.com/the-blue-book/proview) | Free complimentary listing for construction suppliers; decline Premier Membership. Category: portable toilets / site services. GCs search this for vendors, so it doubles as lead gen |
+| 12 | portablerestroom.net | dashboard.portablerestroom.net/claim?listing=13884870398 | RHC is already listed with the OLD data. Claim only if free; correct website, hours and description. If paid, skip; it re-scrapes Google |
+| 13 | luxuryportapottyrentals.com | luxuryportapottyrentals.com/signup/vendor | Lead-gen directory. Free listing only; if it is pay-per-lead or a subscription, skip and note it |
+| 14 | MapQuest | mapquest.com, search the business, "Claim it" or "Add your business" | Basic listing is free; premium is via Yext, decline. Lowest value of the 14; skip if it turns into a chore |
+| HELD | Foursquare, Data Axle, Yellow Pages, D&B | | Until Rafa confirms Brooks is long-term |
+
+When all 14 are in: list the live URLs here, then the `sameAs` update in
+`src/seo/schema.ts` is one commit (RHC-controlled profiles only: Bing, Apple,
+Yelp, BBB, Nextdoor, LinkedIn; not the directories).
+
+## 7. Measurement
 
 Before (2026-08-22): rhcsiteservice.com has 1 referring domain, 3 backlinks,
 `sameAs` has 2 entries.
