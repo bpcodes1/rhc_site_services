@@ -102,7 +102,9 @@ Actions, ranked by impact:
    anchors ("restroom trailer rental in Seattle"), not "click here".
 4. [TODO] "What changes the price" section on every form-only pricing page.
    Satisfies cost-intent queries and AI Overviews without violating the
-   no-pricing rule.
+   no-pricing rule. MEASURED 2026-08-22: "porta potty rental cost / prices"
+   draws 480 searches a month in Oregon, 20% of the head term; see the keyword
+   volume section in SEO_STATUS.md.
 5. [DONE 2026-08-15] Title audit: 51-60 chars, keyword + city front-loaded,
    brand last, aligned with H1 (Google rewrote ~76% of titles in 2025;
    alignment prevents it). Six titles rewritten; see SEO_STATUS.md.

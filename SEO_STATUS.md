@@ -36,7 +36,7 @@ in the 18 days since the property started collecting."
 
 Living tracker. SEO_BASELINE.md is the research reference (what to do and why).
 This file is the state of play (what is done, what is next, who is blocking).
-Update this file whenever a task moves. Last updated 2026-08-21.
+Update this file whenever a task moves. Last updated 2026-08-22.
 
 ### Reading at day 23 (2026-08-20)
 
@@ -159,7 +159,7 @@ assumption. Reasoning for every completed item is in the result sections below.
 
 | # | Task | Needs from Enrique | Why here |
 |---|------|--------------------|----------|
-| 9 | Citation pass, ~20 submissions | he does the submissions | The authority bottleneck. Target list now evidence-based, see baseline file |
+| 9 | Citation pass, ~20 submissions | **IN PROGRESS 2026-08-22.** Research done, address locked (Brooks), tracker in CITATIONS.md. He submits 14 now; 4 syndicators held until Rafa confirms the address is long-term | The authority bottleneck. Measured: RHC has 1 referring domain against 49 to 631 for the five local competitors |
 | 10 | Handwashing stations on the Portable Toilets page | nothing | GBP advertises it; the site never mentions it. Seattle and Portland pages establish the requirement and never offer the solution |
 | 11 | Mobile UX pass on all 19 pages | nothing | Shepard: raters evaluate 100% on mobile. Never performed |
 | 12 | Code-split the ~800 KB bundle | nothing | Last open speed item |
@@ -180,6 +180,105 @@ assumption. Reasoning for every completed item is in the result sections below.
   than headquarters, and rewriting them would redo the title work twice since
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
+
+### Task 9 progress (2026-08-22): research done, submissions with Enrique
+
+Full detail, the NAP block, the checked description, the evidence tables and
+the tracker are in **CITATIONS.md**. What belongs here is what changed the
+picture:
+
+- **RHC has essentially zero citations to clean up.** The old domain's 38
+  referring domains are category scrapers that link to every competitor too;
+  remove them and one scraped Maps listing remains. Four years of the old site
+  produced no real listings, so this pass is creation, not cleanup.
+- **Consequence for "Waiting on Rafa" item 1:** the old-domain 301 carries
+  almost no LINK equity. It stays first for entity continuity and because the
+  Google listing points there, but stop reading "four years of accumulated
+  signal" as backlinks. Measured, not inferred.
+- **The authority gap is closable at the bottom.** Willy Make It ranks in
+  Portland on 49 referring domains; Oregon Portable Toilets on 58. Honey
+  Bucket's 631 is not the target.
+- **The link data added a vertical set the baseline did not have:**
+  portapottyrentalguide.com (all 5 competitors), portapottymatch.com (4 of
+  5), pottydirectory.com, The Blue Book ProView, plus the Thryv network
+  (yellowpages / dexknows / superpages) which 4 to 5 of 5 sit in.
+- **PSAI dropped from the citation list.** Its member directory is behind a
+  login, so it is not a public citation. Paid membership is a separate
+  credibility decision for Rafa.
+- **A decision the site never had to make, and it is made:** directories
+  require an address. Enrique locked the GBP-verified 8792 Portland Rd NE,
+  Brooks (Rafa gave it to him) as a hidden service-area address, 2026-08-22.
+  14 directly-controlled listings go in now; the four syndicating aggregators
+  (Data Axle, Foursquare, YP/Thryv, D&B) are HELD until he confirms with Rafa
+  that Brooks is long-term. **This changes nothing on the website**, which
+  stays address-free; see CITATIONS.md section 0.
+- **The scraped listing on portablerestroom.net** shows what every scraper
+  currently says about RHC: old domain, "open 24 hours", the keyword-stuffed
+  description, and the Brooks street address in full. It is the preview of
+  why the GBP verification matters beyond Google.
+- Yelp, BBB, Facebook, Apple, Bing and Nextdoor do not appear in ANY
+  competitor's backlink data, and the search results show the competitors
+  are on them. Backlink indexes do not see those platforms' outbound links.
+  Do not read their absence as evidence against them.
+
+### Keyword volume measured (2026-08-22): the porta potty vs portable toilet question
+
+Google Ads search volume, Oregon and Washington, 73 keywords, $0.18. The
+question had been open since the 2026-08-15 title audit.
+
+**Google treats "porta potty rental", "portable toilet rental", "portable
+restroom rental" and "porta john rental" as ONE keyword group.** All four
+return identical numbers: 2,400/month Oregon, 2,900 Washington, the same CPC
+($11.45). That is Google Ads' documented close-variant grouping, and it means
+the rental-phrase question has no answer because Google does not see a
+difference. Titles do not split traffic by choosing one or the other. **No
+rewrite is warranted.**
+
+At the bare-noun level Google does separate them, and **"porta potty" beats
+"portable toilet" about 1.8 to 1**: 1,300 vs 720 in Oregon, 2,400 vs 1,300 in
+Washington. "Porta potty" is the word people use; "portable toilet" is the
+word companies use. Mild support for "porta potty" in user-facing copy where
+it reads naturally. A finding, not a title change.
+
+**"Honey bucket" is a generic term in this market**: 720/month Oregon, 2,400
+Washington, equal to "porta potty" in Washington. Mostly navigational (the
+company), CPC $2.70. Nothing to do with it except know it when reading
+competitor data.
+
+**Where the volume actually is**, Oregon per month: unqualified rental phrase
+2,400; "near me" 590; cost/price phrasing 480 ("porta potty rental cost",
+"prices" and "portable toilet rental cost" are also merged); city-qualified
+terms 40 to 110 each (Portland 110, Salem 50, Bend 50, Eugene 40; in
+Washington Seattle 70, Vancouver 40, Tacoma 30; Gresham returns no data).
+Three consequences:
+
+- **The unqualified and "near me" queries are map-pack queries.** That is
+  ~3,000/month in Oregon that the Google listing answers and the website
+  mostly does not. It is the measured reason the GBP verification is the
+  biggest lever left, and why proximity (Salem reachable, Portland 35 mi)
+  matters so much.
+- **City pages target tens of searches a month each.** 40 to 110 is the
+  ceiling for a city page, and it is expected; they are organic plays
+  because the map pack is out of reach there. Do not read low impressions on
+  a city page as failure.
+- **Cost queries are 20% of the head term** (480 vs 2,400). Evidence for
+  Pillar 2 item 4, the "what changes the price" sections, which satisfy cost
+  intent without publishing prices.
+
+Other services, Oregon / Washington: storage container rental 140 / 210 (CPC
+$23, the most expensive click on the site), restroom trailer rental 70 / 140,
+temporary fence(ing) rental 40 / 50 (merged), shower trailer rental 20 / 20,
+handwashing station rental 10 / 10. Task 10 stands on GBP consistency, not
+volume.
+
+**Seasonality:** "porta potty rental" in Oregon peaked at 3,600 in October
+2025 and bottomed at 1,300 in February 2026, a 2.8x swing. August to October
+is the high season. Read GSC month over month against that curve, not flat.
+
+Caveat: Google Ads volumes are rounded buckets (10, 20, 30, 40, 50, 70, 90,
+110, 140, 170, 210, 260, 320, 390, 480, 590, 720, 880, 1,000, 1,300, 1,600,
+1,900, 2,400, 2,900, 3,600), so "50 vs 40" is not a real difference. The
+1.8x is.
 
 ### Task 8 result (2026-08-21): the link graph only ran one direction
 
@@ -705,12 +804,14 @@ Each service title is now EXACTLY its own H1 plus ` | RHC`. Title/H1 alignment
 is the documented defence against Google rewriting a title, and it rewrote ~76%
 of them in 2025.
 
-UNVERIFIABLE, stated plainly: whether "porta potty" or "portable toilet" draws
-more searches. There is no keyword tool here and GSC has 15 impressions total,
-so any volume figure would be invented. The homepage was therefore NOT pointed
-at "Porta Potty Rental", on a structural argument instead: /portable-toilets
-already targets that idea, and two pages competing for one query splits the
-signal. Revisit once GSC has real query data.
+~~UNVERIFIABLE, stated plainly: whether "porta potty" or "portable toilet" draws
+more searches.~~ **MEASURED 2026-08-22**, see "Keyword volume measured" above:
+Google groups the two rental phrases as one keyword, so the titles were never
+splitting anything; at the noun level "porta potty" wins 1.8 to 1. The
+structural argument below still holds and no title changes. Original note:
+there was no keyword tool here and GSC had 15 impressions total, so the
+homepage was NOT pointed at "Porta Potty Rental"; /portable-toilets already
+targets that idea, and two pages competing for one query splits the signal.
 
 ~~STILL OPEN, not part of task 4: 11 of 19 meta descriptions exceed 160
 characters.~~ **CLOSED 2026-08-20 by task 7.** All 19 are now at or under 160.
@@ -877,7 +978,12 @@ requests or ask for anything requiring sustained attention right now.
 High priority first. Old domain access is DEFERRED by agreement 2026-08-07 until
 Rafa's workload eases; it is still the highest-value item when he is available.
 
-1. **Old domain access (highest leverage, deferred by agreement).** rhcsiteservices.com is still live,
+1. **Old domain access (highest leverage, deferred by agreement).** MEASURED
+   2026-08-22: the old domain has 38 referring domains, all but one of them
+   category scrapers shared with every competitor, so the 301 passes almost no
+   link equity; its value is entity continuity, the Google listing's website
+   field, and four years of indexing history. Still first. See CITATIONS.md.
+   rhcsiteservices.com is still live,
    WordPress + Elementor, registrar/DNS/hosting all on Namecheap
    (dns1.namecheaphosting.com), email on Zoho. Need the Namecheap login. Page
    level 301s from it pass roughly 90% of four years of accumulated signal into
@@ -1013,41 +1119,56 @@ WHAT THIS DOES NOT COVER: the Enhancements reports (Breadcrumbs) and Core Web
 Vitals are not in the Search Console API at all. CWV comes from the CrUX API,
 a separate service. Those two still need a screenshot.
 
-## DataForSEO MCP (set up 2026-08-21, ONE STEP OUTSTANDING)
+## DataForSEO MCP (set up 2026-08-21, VERIFIED and in use 2026-08-22)
 
 Registered at user scope as `dataforseo` -> `npx -y dataforseo-mcp-server`, with
 `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD` in `~/.claude.json` (which is
 `600`). Enrique ran the register command himself so the API password never
 entered a transcript. Account is on the be-techplus.com domain, business tier.
 
-**OUTSTANDING: the account is not verified.** Auth works (the
-`/v3/appendix/user_data` call returns `20000 Ok`), but any real endpoint returns
-`40104 Please verify your account before using the API`. Enrique needs to finish
-verification at app.dataforseo.com. Nothing else is blocking.
+Account verification was completed by Enrique between 08-21 and 08-22; real
+endpoints now return `20000`. **Task 9's research plus the keyword pull cost
+$0.65 of the $1 trial credit** (6 referring-domain pulls, 6 summaries, 3
+backlink lookups, 2 Google Ads volume requests); balance after was **$0.35**.
+**Still no reason to fund the $50 until that runs out**; it is the minimum
+top-up, not the cost of entry, and credits do not expire.
 
-**DO NOT FUND THE $50 YET.** Balance is the $1 signup trial credit, and that is
-**enough for all of task 9's research**. Real pricing is $0.024 per request plus
-$0.000036 per row, so a full 1,000-row pull is about $0.06:
+Prices verified on dataforseo.com 2026-08-22, per request unless noted:
+Google organic SERP $0.002 live ($0.0006 queued); Google Maps SERP the same;
+Google Ads search volume **$0.09 live** ($0.06 queued), any keyword count;
+DataForSEO Labs (ranked keywords, keyword ideas, domain intersection) $0.012
+plus $0.00012 per row; Backlinks $0.024 plus $0.000036 per row; Google
+Reviews $0.000075 per review.
 
-| Pull | Cost |
-|---|---|
-| Backlink summaries, 5 competitors | $0.12 |
-| Referring domain lists, 5 competitors at 1,000 rows | $0.30 |
-| Keyword volume for the porta potty vs portable toilet question | a few cents |
+Real pricing is $0.024 per request plus $0.000036 per row, so a full 1,000-row
+pull is about $0.06:
 
-Credits never expire, so the $50 top-up can wait until the trial credit actually
-runs out. An earlier note in this file implied $50 was the cost of entry; it is
-the minimum TOP-UP, not the minimum to start.
+| Pull | Estimated | Actual 2026-08-22 |
+|---|---|---|
+| Backlink summaries, 5 competitors | $0.12 | $0.12 |
+| Referring domain lists, 5 competitors at 1,000 rows | $0.30 | $0.18 (none had 1,000) |
+| Keyword volume for the porta potty vs portable toilet question | a few cents | $0.18 (Google Ads live is $0.09 per request; Oregon and Washington) |
 
-Two notes for whoever uses it:
+Four notes for whoever uses it, two of them learned the hard way on 08-22:
 
 - **There is no way to cap spend in config.** v3 has no ENABLED_MODULES or
   module allowlist. Quote the cost before running anything beyond a trivial
   check.
 - **The MCP applies a field filter to responses.** `/v3/appendix/user_data`
   comes back with an empty `items` array through the tool even though the raw
-  API returns full account data. If a response looks empty but the status is
-  `20000`, suspect the filter before suspecting the API.
+  API returns full account data, and the filter also strips `cost` from every
+  task. If a response looks empty but the status is `20000`, suspect the
+  filter. **To see the balance or what a call cost, hit the raw API.**
+- **Large pulls must not go through the MCP at all.** A 1,000-row referring
+  domain list is ~700 KB of JSON per call, straight into the conversation.
+  Run those from a script that reads the two env values out of
+  `~/.claude.json` into the process and writes JSON to the scratchpad, and
+  print only counts and costs. Never print or log the values.
+- **Python's urllib fails TLS against api.dataforseo.com on this machine**
+  (`CERTIFICATE_VERIFY_FAILED, self-signed certificate in certificate chain`;
+  the python.org build does not use the system trust store). Shell out to
+  `curl`, which does. Pass the auth header via a `-K` config file, not on the
+  command line.
 
 ## Build gotchas that will bite a future session
 

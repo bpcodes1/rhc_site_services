@@ -88,7 +88,9 @@ For any SEO work, read SEO_STATUS.md first: it is the living tracker of what is
 done, what is next, who is blocking, decisions already locked, and build gotchas.
 Then SEO_BASELINE.md (research reference and priorities) and
 SEO_FRAMEWORK_AUDITS.md (framework audit map and queue). SEO_GLOSSARY.md holds
-plain-English term explanations for Enrique.
+plain-English term explanations for Enrique. CITATIONS.md is the task 9
+citation tracker: the exact NAP, the checked listing description, and the
+per-directory status table.
 
 This site had fabricated testimonials and false founding claims removed on
 2026-07-27; see SEO_STATUS.md.
