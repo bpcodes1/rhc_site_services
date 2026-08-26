@@ -15,6 +15,7 @@ by counting from 2026-07-28, the day measurement actually began.
 | 2026-08-06 | First GSC data: 0 clicks, 5 impressions | |
 | 2026-08-15 | 1 click, 15 impressions, 17 of 19 indexed | Day 18 of measurement |
 | 2026-08-20 | 1 click, 19 impressions, position 22.4 | Day 23. First-100-words rewrite shipped |
+| 2026-08-25 | 1 click, 22 impressions, position 23.8 | Day 28. Read via the GSC MCP, data through 08-24 |
 
 **Read Search Console's date filter carefully.** Its default is "28 days",
 which is a REPORTING WINDOW, not our project age. On 2026-08-15 that window
@@ -65,6 +66,18 @@ treat the visible four as the whole.
 This is the same result the AI visibility run gave on 08-15, now showing up in
 ordinary Google: the narrow regulation-and-permit content is the only non-brand
 thing surfacing. Not the sales copy.
+
+### Reading at day 28 (2026-08-25, via the GSC MCP, data through 08-24)
+
+1 click, 22 impressions, position 23.8. The impression rate is still ~0.8/day,
+flat for the third consecutive reading. One new visible query, "site box
+rental" (the storage containers page, position 89). The homepage sits at
+position 4.3 on its visible queries, which are all narrow or brand-adjacent.
+Nothing changed and nothing was expected to: the citation pass began 08-25
+(Yelp submitted) and every larger lever is still Rafa-gated. Next dated
+checks: /terms-of-service re-inspection ~08-28 (still "URL is unknown to
+Google" on 08-25, four days after the re-request, which is early, not a
+verdict), breadcrumbs ~09-10, AI re-run 09-19.
 
 ## PHASE 0: one item left, and it is Rafa (as of 2026-08-15)
 
