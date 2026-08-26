@@ -22,7 +22,7 @@ decision the site never had to make.
 | Legal name (only where a separate field exists, BBB, D&B) | `RHC Site Services LLC` | Legal pages, Oregon registration |
 | Phone | `503-607-7412` | GBP, schema.ts. Directories reformat; the digits are what matter |
 | Website | `https://rhcsiteservice.com/` | Never the old domain. https, trailing slash is fine |
-| Email | `info@rhcsiteservices.com` | Old-domain email is correct, leave it |
+| Email | `info@rhcsiteservices.com` | Old-domain email is correct, leave it. **NOT `rhcsiteservices@gmail.com`**, which does not exist and was typed from memory once on 2026-08-26. The only other real address is Rafa's `rhcportabletoilets@gmail.com`. Where a form's email is purely for reaching the submitter, the agency email is fine and preferable |
 | Hours | Mon to Sun, 7:00 AM to 6:00 PM | Rafa, 2026-08-14 |
 | Address | `8792 Portland Rd NE, Brooks, OR 97305`, service-area, hidden where allowed. **LOCKED 2026-08-22** | Rafa gave Enrique this address; it is the one on the Google listing |
 | Service areas | Portland, Salem, Eugene, Bend, Gresham (OR); Vancouver, Tacoma, Seattle (WA). State-level Oregon and Washington where a platform takes states | schema.ts AREA_SERVED |
@@ -374,7 +374,7 @@ Facebook, Nextdoor) before the engagement ends.
 | 15 | portapottyrentalguide.com | free, no payment step | all 5 competitors | SUBMITTED 2026-08-26, they email when live. Full NAP incl. street address (displayed), 8 cities, types: Standard, Restroom Trailers, Wheelchair, Hand Washing, Crane Lift. Flushable and Environmentally Friendly deliberately unchecked; Flushable moved to the Rafa asks | | 2026-08-26 |
 | 16 | portapottymatch.com | **$99/yr to claim. DECLINED** | 4 of 5 | **ABANDONED 2026-08-26.** Creating was free but rejected as a duplicate; claiming the existing stub is paywalled at $99/yr (the claim form's only package option, checkout appeared after Send). Left to re-sync after GBP verification | portapottymatch.com/portapottyrental/brooks/oregon/rhc-site-services/ | 2026-08-26 |
 | 17 | pottydirectory.com | free basic, "under 2 minutes" | SaniCan | SUBMITTED 2026-08-26, review within 48h. Brooks OR, agency email, 6 services ticked (no VIP, no Holding Tanks), long description | | 2026-08-26 |
-| 18 | The Blue Book ProView (thebluebook.com) | free complimentary listing for construction suppliers | SaniCan, Willy Make It have profiles; GCs use it to find vendors | | | |
+| 18 | The Blue Book ProView (thebluebook.com) | free complimentary listing for construction suppliers | SaniCan, Willy Make It have profiles; GCs use it to find vendors | SUBMITTED 2026-08-26 via the Request A Free Listing form, "we will be in touch shortly". A rep completes the profile by phone/email. Line of business: the five rental categories. Market profile: GCs, subs, commercial/industrial/government, property managers, homeowners (NOT distributors). Locations: Oregon + Washington. License left blank. **Agency email used so the rep's reply is seen; swap to the business email once the profile is live IF email displays publicly** | | 2026-08-26 |
 | 19 | portablerestroom.net | check claim cost | all 5, and RHC already listed with old data | claim and correct, or leave to re-scrape | see section 3 | |
 | 20 | luxuryportapottyrentals.com | check; lead-gen model | 3 of 5, highest-ranked vertical | only if free; skip if pay-per-lead | | |
 
