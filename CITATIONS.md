@@ -223,7 +223,47 @@ as backlinks. Noted in SEO_STATUS.md under Waiting on Rafa item 1.
 - **Apple Business Connect has no "hide address" toggle**; since late 2024 it
   has a service-area option for businesses without a storefront. Use that.
 
-## 3. The scraped listing that already exists
+## 3. The scraped listings that already exist (SIX of them)
+
+**CORRECTION, 2026-08-26, and it revises the headline finding of section 2.**
+This file said RHC "has essentially no listings to claim, which makes this
+pass creation rather than cleanup." That was read off the BACKLINK data, and
+the backlink data cannot see these sites: their outbound links are nofollow,
+JavaScript-rendered or redirect-wrapped, which is the same blind spot already
+recorded for Yelp and BBB in section 2. Searching the PHONE NUMBER instead of
+the domain found six scraped listings in about two minutes. The lesson worth
+keeping: **to find existing citations, search the NAP, not the link graph.**
+
+Every one of them was scraped from the Google listing, so every one carries
+the state the previous designer left: the OLD domain, "open 24 hours", and
+the keyword-stuffed description. Worse, they disagree with each other about
+the address, which is the exact drift that costs the local ranking signal:
+
+| Listing | Address as shown | Notes |
+|---|---|---|
+| Google (the truth) | `8792 Portland Rd NE, Brooks, OR 97305` | what everything must match |
+| portablerestroom.net | Brooks, full street address | old domain, 24 hours |
+| botw.org | Brooks, full street address | old domain, old description |
+| portapottymatch.com | **"8792 Portland"** (truncated, no Rd NE) | old domain; also lists "Standard Flush Porta Potty Rentals", the flushable question again |
+| citysquares.com | **"Portland, Oregon 97305"** — WRONG CITY | 97305 is a Brooks/Salem ZIP, not Portland |
+| chamberofcommerce.com | Brooks, OR 97305 | phone correct; website unverified (Cloudflare-blocked) |
+| find-open.com | **"8792 Portland Road Northeast"** (spelled out) | differs from Google's abbreviation |
+
+**What this changes, and what it does not.** It does not change the plan: the
+14 still get created, because six scraped stubs are not the same as six
+controlled profiles. What it changes is the reason the GBP verification is
+top of the queue. Every one of these re-scrapes Google. When Rafa verifies
+and the corrected listing publishes, most of this table fixes itself with no
+claiming, no logins and no forms. **One video fixes six listings.** That is
+now the strongest single argument to put in front of him.
+
+So the order of operations is: claim only what is free to claim, correct what
+we can, and do not spend money or hours hand-editing stubs that will re-sync
+on their own. citysquares is the exception worth a manual fix regardless,
+because a wrong CITY is a genuine conflict rather than stale detail, and it
+will not self-correct if the scraper never re-runs.
+
+### The six, in detail
 
 `https://portablerestroom.net/Oregon/RHC-Site-Services-13884870398/`
 
@@ -248,6 +288,32 @@ the old "leading provider ... across the United States" description. Page sits
 behind a Cloudflare challenge so the claim cost could not be read; BOTW has
 historically charged for listings. Treat like portablerestroom.net: claim only
 if free, otherwise leave it to re-scrape once Rafa verifies.
+
+**Found 2026-08-26, when the portapottymatch submission was rejected as a
+duplicate** and the phone-number search that followed turned up the rest:
+
+- `https://portapottymatch.com/portapottyrental/brooks/oregon/rhc-site-services/`
+  Name and phone correct, address truncated to "8792 Portland", website is
+  the OLD domain, and its service list includes **Standard Flush Porta Potty
+  Rentals**, which is independent evidence for Rafa ask 11 (does he rent
+  flushing units): it is another echo of the old site, not a confirmation.
+  Has a "Claim This Listing" button. The site sells a $99/year "full control"
+  package, so **check what claiming costs before clicking through**; free,
+  claim and correct, otherwise leave it.
+- `https://citysquares.com/b/rhc-site-services-25776174`
+  **Says Portland, Oregon 97305.** That ZIP is Brooks. This is the only one
+  of the six with a factually wrong city, so it is the one worth fixing by
+  hand even though CitySquares is otherwise the lowest-value target on the
+  list. Cloudflare-challenged to automated fetching; open it in a browser.
+- `https://www.chamberofcommerce.com/business-directory/oregon/brooks/portable-toilet-supplier/2031221205-rhc-site-services`
+  Brooks and the phone look right. Website field unverified (Cloudflare).
+  Category already "portable toilet supplier", matching the GBP primary.
+- `https://find-open.com/brooks-or/rhc-site-services-14290789`
+  "8792 Portland Road Northeast" spelled out. Aggregator, low value, but it
+  is another address variant in circulation.
+
+Note that rows 14 (CitySquares, chamberofcommerce) and 16 (portapottymatch)
+of the tracker were written as things to CREATE. They are things to CLAIM.
 
 Yelp itself holds **no** RHC stub as far as search can see (checked 2026-08-22:
 no yelp.com result for the name in Oregon; the only "RHC" hits are unrelated
@@ -285,14 +351,15 @@ Facebook, Nextdoor) before the engagement ends.
 | 11 | Yellow Pages (covers DexKnows, Superpages) | free basic | phone | YES, Thryv network | 4 to 5 of 5 competitors | **HELD** until Rafa confirms the address | | |
 | 12 | Dun & Bradstreet (dandb.com) | free | email | YES, B2B data | Honey Bucket, SaniCan | **HELD** until Rafa confirms the address | | |
 | 13 | MapQuest | check | | no | Honey Bucket, SaniCan | optional | | |
-| 14 | CitySquares, chamberofcommerce.com | free | email | no | 2 to 3 of 5 | optional, lowest value | | |
+| 14 | CitySquares, chamberofcommerce.com | free | email | no | 2 to 3 of 5 | **CLAIM, do not create.** Both already hold scraped listings; CitySquares says the wrong CITY (Portland, not Brooks) and is worth a manual fix | citysquares.com/b/rhc-site-services-25776174 · chamberofcommerce.com/.../2031221205-rhc-site-services | |
+| -- | find-open.com | free? | | no | aggregator | Scraped stub, "8792 Portland Road Northeast". Low value; leave it to re-sync after GBP verification | find-open.com/brooks-or/rhc-site-services-14290789 | |
 
 ### Tier 2: vertical directories the link data surfaced
 
 | # | Directory | Cost | Evidence | Status | Live URL | Date |
 |---|---|---|---|---|---|---|
 | 15 | portapottyrentalguide.com | free, no payment step | all 5 competitors | SUBMITTED 2026-08-26, they email when live. Full NAP incl. street address (displayed), 8 cities, types: Standard, Restroom Trailers, Wheelchair, Hand Washing, Crane Lift. Flushable and Environmentally Friendly deliberately unchecked; Flushable moved to the Rafa asks | | 2026-08-26 |
-| 16 | portapottymatch.com | check ("Add Listing") | 4 of 5 | | | |
+| 16 | portapottymatch.com | check claim cost ($99/yr "full control" tier exists) | 4 of 5 | **CLAIM, do not create.** New-listing form rejected as a duplicate 2026-08-26. Existing stub has the old domain and a truncated address | portapottymatch.com/portapottyrental/brooks/oregon/rhc-site-services/ | |
 | 17 | pottydirectory.com | free basic, "under 2 minutes" | SaniCan | SUBMITTED 2026-08-26, review within 48h. Brooks OR, agency email, 6 services ticked (no VIP, no Holding Tanks), long description | | 2026-08-26 |
 | 18 | The Blue Book ProView (thebluebook.com) | free complimentary listing for construction suppliers | SaniCan, Willy Make It have profiles; GCs use it to find vendors | | | |
 | 19 | portablerestroom.net | check claim cost | all 5, and RHC already listed with old data | claim and correct, or leave to re-scrape | see section 3 | |

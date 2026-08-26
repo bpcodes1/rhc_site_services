@@ -234,10 +234,19 @@ Full detail, the NAP block, the checked description, the evidence tables and
 the tracker are in **CITATIONS.md**. What belongs here is what changed the
 picture:
 
-- **RHC has essentially zero citations to clean up.** The old domain's 38
-  referring domains are category scrapers that link to every competitor too;
-  remove them and one scraped Maps listing remains. Four years of the old site
-  produced no real listings, so this pass is creation, not cleanup.
+- ~~**RHC has essentially zero citations to clean up.**~~ **CORRECTED
+  2026-08-26: there are SIX scraped listings**, all carrying the old domain
+  and disagreeing with each other about the address, one of them (CitySquares)
+  naming the wrong city outright. The original claim came from the BACKLINK
+  data, which structurally cannot see these sites, the same blind spot already
+  recorded for Yelp and BBB. Searching the PHONE NUMBER found all six in
+  minutes. **Method note: find existing citations by searching the NAP, never
+  the link graph.** Full table in CITATIONS.md section 3.
+- **Consequence: one Rafa video fixes six listings.** Every one of the six
+  re-scrapes the Google listing, so they self-correct once the staged GBP
+  edits publish. That is a far better argument to put to Rafa than "it helps
+  ranking", and it is the single strongest reason the verification sits at the
+  top of the queue.
 - **Consequence for "Waiting on Rafa" item 1:** the old-domain 301 carries
   almost no LINK equity. It stays first for entity continuity and because the
   Google listing points there, but stop reading "four years of accumulated
