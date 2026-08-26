@@ -5,6 +5,7 @@ import LeadForm from '../../components/LeadForm'
 import heroImg from '../../assets/portable-toilets/portable_hero.webp'
 import portaPottyImg from '../../assets/portable-toilets/porta-potty1.webp'
 import adaPortableImg from '../../assets/portable-toilets/ada_portable.webp'
+import handwashImg from '../../assets/general/preview.webp'
 
 const cities = [
   { name: 'Salem', state: 'OR', hq: false },
@@ -41,6 +42,10 @@ const faqs = [
   {
     q: "What's the difference between a standard and an ADA-compliant unit?",
     a: 'ADA units have a larger footprint, interior grab bars, anti-slip flooring, and a wheelchair-accessible entrance. Required for any public event or job site where workers or guests with mobility limitations are present.',
+  },
+  {
+    q: 'Do I need a handwashing station, or is hand sanitizer enough?',
+    a: "Depends on the site. On job sites, Oregon OSHA requires washing facilities where crews handle paints, coatings, herbicides, or other contaminants that are harmful on skin, and sanitizer does not substitute for washing there. At events with food service in King County, health rules under WAC 246-215 require hot and cold running water within 200 feet of the food area; sanitizer dispensers do not satisfy that either, and a heated standalone station paired with standard units does, without renting a full restroom trailer. Everywhere else it is a comfort upgrade that crews and guests actually use. Note contaminant work or food service on the form and we'll confirm what applies.",
   },
   {
     q: 'Do portable toilets have lights inside?',
@@ -107,7 +112,7 @@ export default function PortableToilets() {
               </div>
               <div className="meta-row">
                 <div className="meta-label">Unit Types</div>
-                <div className="meta-value">Standard · ADA</div>
+                <div className="meta-value">Standard · ADA · Handwash</div>
               </div>
               <div className="meta-row">
                 <div className="meta-label">Coverage</div>
@@ -156,7 +161,7 @@ export default function PortableToilets() {
           <div className="section-head">
             <div className="head-lead">
               <div className="eyebrow">01 / Unit Types</div>
-              <h2 className="h-lg">Standard and ADA: What's the right unit for your site?</h2>
+              <h2 className="h-lg">Standard, ADA, and Handwash: What's the right setup for your site?</h2>
             </div>
             <p>Three unit classes cover almost every construction site and event scenario in Oregon and Washington. Pick by use case, or call RHC and we'll spec it for you in under five minutes.</p>
           </div>
@@ -204,6 +209,32 @@ export default function PortableToilets() {
                     { label: 'Grab Bars', value: 'Rear wall + lateral side wall' },
                     { label: 'Floor', value: 'Anti-slip textured surface' },
                     { label: 'Compliance', value: 'ADA Title II & Title III compliant' },
+                  ].map(spec => (
+                    <div key={spec.label} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--on-surface-variant)' }}>{spec.label}</span>
+                      <span style={{ fontSize: '13px', color: 'var(--on-surface)', lineHeight: '1.5' }}>{spec.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+
+            <article className="unit">
+              <div className="unit-photo">
+                <img src={handwashImg} width={900} height={678} alt="Standalone handwashing stations beside standard portable toilets on a job site" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              </div>
+              <div className="unit-body">
+                <div className="mono-num">03 / Handwash</div>
+                <h3>Standalone Handwashing Station</h3>
+                <p>Sanitizer dispensers come standard on every unit above, but they don't satisfy every site. Oregon OSHA requires washing facilities where crews handle paints, coatings, herbicides, or other contaminants that are harmful on skin, and King County requires hot and cold running water within 200 feet of food service at events. A standalone station pairs with any unit on this page, no plumbing and no power needed, and gets refilled on the same service visit as your toilets. Your crew actually washes up at lunch, and your sanitation plan holds up when someone checks it.</p>
+                <div style={{ paddingTop: '16px', borderTop: '1px solid var(--outline-variant)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {[
+                    { label: 'Configuration', value: 'Two-sided · two users at once' },
+                    { label: 'Fresh Water', value: '20–24 gal, the standard station size in the Portland metro market' },
+                    { label: 'Capacity', value: 'Roughly 350 handwashes per fill' },
+                    { label: 'Gray Water', value: 'Sealed tank, pumped out at service' },
+                    { label: 'Operation', value: 'Hands-free foot pump · no plumbing, no power' },
+                    { label: 'Food Events', value: 'Heated stations for King County hot-and-cold-water compliance' },
                   ].map(spec => (
                     <div key={spec.label} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2px' }}>
                       <span style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--on-surface-variant)' }}>{spec.label}</span>
