@@ -167,13 +167,13 @@ assumption. Reasoning for every completed item is in the result sections below.
 | -- | Replace the placeholder favicon | DONE 2026-08-20. RHC's own R on brand navy, measured legible at 16px |
 | 8 | Contextual in-body internal links | DONE 2026-08-21. 9 hub-to-city links, verified live. See the result section |
 | -- | Search Console MCP | DONE 2026-08-21. Settled the redirect question; found /terms-of-service uncrawled |
+| 10 | Handwashing stations on the Portable Toilets page | DONE 2026-08-25. Third unit card + FAQ, verified live. Deluxe card still Rafa-gated; see the result section |
 
 ### Next, in order
 
 | # | Task | Needs from Enrique | Why here |
 |---|------|--------------------|----------|
 | 9 | Citation pass, ~20 submissions | **IN PROGRESS 2026-08-22.** Research done, address locked (Brooks), tracker in CITATIONS.md. He submits 14 now; 4 syndicators held until Rafa confirms the address is long-term | The authority bottleneck. Measured: RHC has 1 referring domain against 49 to 631 for the five local competitors |
-| 10 | Handwashing stations on the Portable Toilets page | nothing | GBP advertises it; the site never mentions it. Seattle and Portland pages establish the requirement and never offer the solution |
 | 11 | Mobile UX pass on all 19 pages | nothing | Shepard: raters evaluate 100% on mobile. Never performed |
 | 12 | Code-split the ~800 KB bundle | nothing | Last open speed item |
 | 13 | Per-page social preview (og/twitter) tags | nothing | LAST by Enrique's call. Real but not a ranking factor |
@@ -193,6 +193,40 @@ assumption. Reasoning for every completed item is in the result sections below.
   than headquarters, and rewriting them would redo the title work twice since
   both would fall under the 51-char target. Revisit when Rafa answers where he
   actually operates.
+
+### Task 10 result (2026-08-25): the handwash gap is closed on the hub
+
+The Portable Toilets page now has a third Unit Types card, Standalone
+Handwashing Station, plus a question-format FAQ. The grid was already built
+for three columns and the intro already said "three unit classes"; the third
+card had simply never been written. The photo is Rafa's real shot of units
+with handwash stations in frame, from the 2026-08-25 photo intake.
+
+Claims and their sources, so nothing here gets "corrected" into being wrong:
+
+- "Oregon OSHA requires washing facilities where crews handle paints,
+  coatings, herbicides, or other contaminants that are harmful on skin" is
+  29 CFR 1926.51(f)(1) almost verbatim, re-verified against osha.gov.
+  Deliberately NOT claimed: that OSHA requires handwash stations on every
+  site. It does not.
+- The King County hot-and-cold-water line matches the Seattle pages' existing
+  WAC 246-215 copy word-for-word in substance.
+- Specs are the Portland-metro market standard per the project rule (20-24
+  gal, two-sided, foot pump, ~350 washes), not RHC stock claims.
+
+Framework pass was run compact, from the distilled rules already recorded
+plus the Wiebe and Schwartz profiles read in full this session, at Enrique's
+call to skip re-reading all five for 120 words. It caught one real fix: the
+card originally ended on logistics (refill cadence) instead of the outcome.
+
+Still open from the same gap, both Rafa-gated: the Deluxe unit card (six
+files advertise Deluxe, no page describes it, and the Portland FAQ claims a
+built-in handwash station; needs his spec) and whether he offers handwash
+stations directly (Rafa ask 5).
+
+Verified: prerendered HTML carries the card and the 8-question FAQPage
+schema; rendered at 375, 768 and 1280 with real device metrics, no overflow;
+live-domain marker checked after deploy.
 
 ### Task 9 progress (2026-08-22): research done, submissions with Enrique
 
