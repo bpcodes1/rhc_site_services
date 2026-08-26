@@ -1094,7 +1094,14 @@ Rafa's workload eases; it is still the highest-value item when he is available.
     facebook.com/RHCSiteServices; the run sheet's "already controlled" was
     wrong. Rafa adds Enrique under Page settings > Page access (full control).
     Two minutes from his phone, and it unlocks the fastest citation fix.
-11. **Can Rafa actually honor same-day quotes?** Raised by Enrique 2026-08-25
+11. **Does he rent flushing porta potty units?** Raised 2026-08-26 by a
+    directory checkbox. The OLD site advertised flushable units (it is where
+    ChatGPT's description of RHC got the word), so his suppliers likely carry
+    them, but nothing current confirms it. If yes: add to GBP services, tick
+    it on the directories, and eventually a site tier. Same
+    middleman-capability logic as handwashing stations, which was Enrique's
+    accepted judgment call; this one just has not been made yet.
+12. **Can Rafa actually honor same-day quotes?** Raised by Enrique 2026-08-25
     while writing the Yelp listing; he softened its closing line to "you get a
     quote" on this doubt. The site says "Get a Same-Day Quote" on every page
     and the staged GBP description promises same-day quotes, so if Rafa says

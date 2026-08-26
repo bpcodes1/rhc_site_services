@@ -291,7 +291,7 @@ Facebook, Nextdoor) before the engagement ends.
 
 | # | Directory | Cost | Evidence | Status | Live URL | Date |
 |---|---|---|---|---|---|---|
-| 15 | portapottyrentalguide.com | check ("Submit Rental Company") | all 5 competitors | | | |
+| 15 | portapottyrentalguide.com | free, no payment step | all 5 competitors | SUBMITTED 2026-08-26, they email when live. Full NAP incl. street address (displayed), 8 cities, types: Standard, Restroom Trailers, Wheelchair, Hand Washing, Crane Lift. Flushable and Environmentally Friendly deliberately unchecked; Flushable moved to the Rafa asks | | 2026-08-26 |
 | 16 | portapottymatch.com | check ("Add Listing") | 4 of 5 | | | |
 | 17 | pottydirectory.com | free basic, "under 2 minutes" | SaniCan | SUBMITTED 2026-08-26, review within 48h. Brooks OR, agency email, 6 services ticked (no VIP, no Holding Tanks), long description | | 2026-08-26 |
 | 18 | The Blue Book ProView (thebluebook.com) | free complimentary listing for construction suppliers | SaniCan, Willy Make It have profiles; GCs use it to find vendors | | | |
