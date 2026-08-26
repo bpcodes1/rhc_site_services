@@ -72,17 +72,42 @@ read by a person comparing ten near-identical listings, Solution Aware, in a
 Stage 3-4 market. The same rules task 5 and task 7 settled apply: mechanism
 first, category second, one outcome, RHC named at most twice.
 
-**Standard (608 characters, fits the 750 cap on GBP, Bing, Apple, Yelp):**
+**Standard (864 characters, Yelp and the directories; REVISED 2026-08-26).**
+Enrique rewrote the opening for the Yelp submission and his version replaced
+the original: it leads with the one differentiator no single-line competitor
+can copy (one call, one accountable team, five equipment lines) and names the
+two hiring moments. Ran through the frameworks 2026-08-26 and it beats the
+original on Schwartz (fresher mechanism in a saturated market) and
+Christensen (struggling moment named, not implied). Brand density exactly at
+Wiebe's cap. The ending stays softened to "you get a quote" until Rafa
+answers the same-day question.
 
-> Every unit is confirmed clean before it arrives, delivered inside a hard
-> delivery window, and installed by RHC, with no surprise fees on the invoice.
-> RHC Site Services rents portable toilets (porta potties), restroom trailers,
-> shower trailers, temporary fencing, and storage containers to construction
-> sites, events, and commercial properties across Oregon and Washington,
-> including Portland, Salem, Eugene, Bend, Gresham, Vancouver, Tacoma, and
-> Seattle. Founder Rafael Hernandez has worked Pacific Northwest job sites
-> since 2016. Tell us the site, the dates, and the headcount, and you get a
-> same-day quote.
+> Most sites need more than one rental: porta potties, temporary fencing, and
+> a storage container on a job site, or a restroom trailer and event fencing
+> for a wedding or festival. One call to RHC Site Services covers all of it,
+> with one accountable team instead of a separate vendor for each line. Every
+> unit is confirmed clean before it arrives, delivered inside a hard delivery
+> window, and installed by RHC, with no surprise fees. We rent portable
+> toilets (porta potties), restroom trailers, shower trailers, temporary
+> fencing, and storage containers to construction sites, events, and
+> commercial properties across Oregon and Washington, including Portland,
+> Salem, Eugene, Bend, Gresham, Vancouver, Tacoma, and Seattle. Founder
+> Rafael Hernandez has worked Pacific Northwest job sites since 2016. Tell us
+> the site, the dates, and the headcount, and you get a quote.
+
+**Capped (724 characters, for the 750-cap fields: Google, Bing, Apple).**
+Same text minus the two scenario examples in sentence one:
+
+> Most sites need more than one rental. One call to RHC Site Services covers
+> all of it, with one accountable team instead of a separate vendor for each
+> line. Every unit is confirmed clean before it arrives, delivered inside a
+> hard delivery window, and installed by RHC, with no surprise fees. We rent
+> portable toilets (porta potties), restroom trailers, shower trailers,
+> temporary fencing, and storage containers to construction sites, events,
+> and commercial properties across Oregon and Washington, including Portland,
+> Salem, Eugene, Bend, Gresham, Vancouver, Tacoma, and Seattle. Founder
+> Rafael Hernandez has worked Pacific Northwest job sites since 2016. Tell us
+> the site, the dates, and the headcount, and you get a quote.
 
 **Short (231 characters, for Facebook "about", Nextdoor, any 250-char field):**
 
@@ -268,7 +293,7 @@ Facebook, Nextdoor) before the engagement ends.
 |---|---|---|---|---|---|---|
 | 15 | portapottyrentalguide.com | check ("Submit Rental Company") | all 5 competitors | | | |
 | 16 | portapottymatch.com | check ("Add Listing") | 4 of 5 | | | |
-| 17 | pottydirectory.com | free basic, "under 2 minutes" | SaniCan | | | |
+| 17 | pottydirectory.com | free basic, "under 2 minutes" | SaniCan | SUBMITTED 2026-08-26, review within 48h. Brooks OR, agency email, 6 services ticked (no VIP, no Holding Tanks), long description | | 2026-08-26 |
 | 18 | The Blue Book ProView (thebluebook.com) | free complimentary listing for construction suppliers | SaniCan, Willy Make It have profiles; GCs use it to find vendors | | | |
 | 19 | portablerestroom.net | check claim cost | all 5, and RHC already listed with old data | claim and correct, or leave to re-scrape | see section 3 | |
 | 20 | luxuryportapottyrentals.com | check; lead-gen model | 3 of 5, highest-ranked vertical | only if free; skip if pay-per-lead | | |
