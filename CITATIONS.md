@@ -263,6 +263,19 @@ on their own. citysquares is the exception worth a manual fix regardless,
 because a wrong CITY is a genuine conflict rather than stale detail, and it
 will not self-correct if the scraper never re-runs.
 
+**Expect the claim route to be paywalled, and budget no money for it.** Proved
+on portapottymatch 2026-08-26: creating a new listing there is free, but
+claiming the scraped one costs **$99/year**, which was the claim form's only
+package option and surfaced as a checkout page only after the claim was sent.
+Declined. That is the likely business model on most of these sites, since the
+scraped listing is the asset they sell back to the business it describes.
+BOTW has historically charged too.
+
+So the rule for all six: attempt the free claim, stop at any checkout, and
+let the GBP re-scrape do the work. **Do not pay to correct a listing that
+will correct itself.** The only one worth real effort is CitySquares, because
+a wrong CITY is a factual conflict rather than stale detail.
+
 ### The six, in detail
 
 `https://portablerestroom.net/Oregon/RHC-Site-Services-13884870398/`
@@ -359,7 +372,7 @@ Facebook, Nextdoor) before the engagement ends.
 | # | Directory | Cost | Evidence | Status | Live URL | Date |
 |---|---|---|---|---|---|---|
 | 15 | portapottyrentalguide.com | free, no payment step | all 5 competitors | SUBMITTED 2026-08-26, they email when live. Full NAP incl. street address (displayed), 8 cities, types: Standard, Restroom Trailers, Wheelchair, Hand Washing, Crane Lift. Flushable and Environmentally Friendly deliberately unchecked; Flushable moved to the Rafa asks | | 2026-08-26 |
-| 16 | portapottymatch.com | check claim cost ($99/yr "full control" tier exists) | 4 of 5 | **CLAIM, do not create.** New-listing form rejected as a duplicate 2026-08-26. Existing stub has the old domain and a truncated address | portapottymatch.com/portapottyrental/brooks/oregon/rhc-site-services/ | |
+| 16 | portapottymatch.com | **$99/yr to claim. DECLINED** | 4 of 5 | **ABANDONED 2026-08-26.** Creating was free but rejected as a duplicate; claiming the existing stub is paywalled at $99/yr (the claim form's only package option, checkout appeared after Send). Left to re-sync after GBP verification | portapottymatch.com/portapottyrental/brooks/oregon/rhc-site-services/ | 2026-08-26 |
 | 17 | pottydirectory.com | free basic, "under 2 minutes" | SaniCan | SUBMITTED 2026-08-26, review within 48h. Brooks OR, agency email, 6 services ticked (no VIP, no Holding Tanks), long description | | 2026-08-26 |
 | 18 | The Blue Book ProView (thebluebook.com) | free complimentary listing for construction suppliers | SaniCan, Willy Make It have profiles; GCs use it to find vendors | | | |
 | 19 | portablerestroom.net | check claim cost | all 5, and RHC already listed with old data | claim and correct, or leave to re-scrape | see section 3 | |
