@@ -216,6 +216,19 @@ will re-scrape the corrected Google listing once Rafa verifies.
 It is also a preview of what every scraper currently says about RHC, and the
 reason the Google verification matters beyond Google.
 
+**A second one, found 2026-08-22 while checking Yelp for a stub:**
+`https://botw.org/listing/rhc-site-services/` (Best of the Web). Same scraped
+Google data: Brooks street address in full, "open 24 hours", old website, and
+the old "leading provider ... across the United States" description. Page sits
+behind a Cloudflare challenge so the claim cost could not be read; BOTW has
+historically charged for listings. Treat like portablerestroom.net: claim only
+if free, otherwise leave it to re-scrape once Rafa verifies.
+
+Yelp itself holds **no** RHC stub as far as search can see (checked 2026-08-22:
+no yelp.com result for the name in Oregon; the only "RHC" hits are unrelated
+companies in other states). Still search inside biz.yelp.com before adding,
+since Yelp's own index is wider than what search engines show.
+
 ## 4. Target list and tracker
 
 ~19 listings. Tier 1 is the baseline's standard set; Tier 2 is what the link
@@ -237,8 +250,8 @@ Facebook, Nextdoor) before the engagement ends.
 | 1 | Google Business Profile | free | video, Rafa | yes, everywhere | anchor for all of this | STAGED 2026-08-07, pending Rafa | maps.google.com/?cid=5264847313884870398 | |
 | 2 | Bing Places for Business | free | import from GBP (try Enrique's manager account first) or phone/email | Bing, Yahoo, DuckDuckGo; Bing's index also feeds AI search | baseline | | | |
 | 3 | Apple Business Connect | free | phone/email, sometimes more | Apple Maps, Siri | baseline; service-area option, no hide toggle | | | |
-| 4 | Yelp for Business | free (decline ads) | phone call/text | Yelp, and Apple reads Yelp | SaniCan, OPT, Green Latrine all on Yelp | | | |
-| 5 | Facebook page | free | already controlled | no | exists; FIX fields: website to new domain, hours 7 to 6, service area, category, short description | | facebook.com/RHCSiteServices/ | |
+| 4 | Yelp for Business | free (decline ads) | phone call/text | Yelp, and Apple reads Yelp | SaniCan, OPT, Green Latrine all on Yelp | SUBMITTED 2026-08-25, pending moderation. Service area: Salem, Portland, Gresham, Vancouver, Albany (Eugene refused by the diameter cap). Closing line softened to "you get a quote" pending the same-day question. Latinx attribute and Rafa's invite still to do, likely gated until approval | | 2026-08-25 |
+| 5 | Facebook page | free | **Rafa must grant admin access; Enrique has none (found 2026-08-25)** | no | exists; FIX fields: website to new domain, hours 7 to 6, service area, category, short description | RAFA-GATED: ask him to add Enrique under Page settings > Page access (full control), better than sharing a password | facebook.com/RHCSiteServices/ | |
 | 6 | BBB business profile | free (decline accreditation) | BBB calls | no | Willy Make It has one | | | |
 | 7 | Nextdoor Business | free | phone/email | no | baseline; home-renovation and backyard-event demand | | | |
 | 8 | LinkedIn company page | free | none | no | optional; B2B construction buyers; no cost | | | |
@@ -292,6 +305,16 @@ Rafa, so they belong to Pillar 3 item 5:
   transparent. Make one proper navy-background logo PNG before starting, or
   listings will carry a blank square.
 - **Photos:** use the real About Us job-site photo, not stock.
+  **Rafa supplied three more real photos (confirmed by Enrique 2026-08-25):**
+  the blue-units-with-handwash-stations shot already in the repo as
+  `public/rhc-cover-900x678.jpg` / `src/assets/general/preview.webp`, plus two
+  delivery photos currently only in Enrique's Downloads
+  (`porta-potty-delivery.png`, a unit at a residential driveway;
+  `portable-toilet-delivery.png`, a 3-stall restroom trailer behind the truck).
+  All four are cleared for listings. The two delivery photos are copied into
+  `client-photos/` in this repo (untracked as of 2026-08-25; committing them
+  is fine, they are photos, not context). They are also the seed for the
+  Phase 2 real-photos item on the site.
 
 ## 6. Run sheet for the 14 (added 2026-08-22)
 
@@ -313,16 +336,20 @@ section 4 as each one goes live and paste the live URL.
   gets read today. Record every login in one place. Add Rafa as owner on
   Bing, Yelp, Apple, Facebook, Nextdoor and LinkedIn before handoff; the
   vertical directories are single-login, so the register IS the handoff.
+- **Rafa's invite email on every platform: `rhcportabletoilets@gmail.com`.**
+  Confirmed by Enrique 2026-08-25 (Rafa named it as his main one previously;
+  it is also the likely GBP owner account). Invite him as a user right after
+  each listing verifies, not at handoff, so customer messages reach him.
 - **Rafa's phone.** Yelp, Apple, Bing (unless the GBP import skips it), BBB
   and Nextdoor verify by calling or texting 503-607-7412. Agree one 30-minute
   window with him and do those five back to back, so it is one ask, not five.
 
 | Order | Listing | Start at | Quirks |
 |---|---|---|---|
-| 1 | Facebook page (fix) | facebook.com/RHCSiteServices, Settings > Page info | Already controlled, no verification. Website to https://rhcsiteservice.com/, hours 7 to 6 all seven days, category "Portable Toilet Supplier" (nearest), service area instead of street address, short description from section 1, logo `rhc-logo-720.png`, cover `rhc-cover-900x678.jpg`. Ten minutes; do it first so the NAP already matches somewhere |
+| 1 | Facebook page (fix) | facebook.com/RHCSiteServices, Settings > Page info | **CORRECTION 2026-08-25: "already controlled" was wrong.** The page is under Rafa's personal Facebook and Enrique has no access; the earlier note over-read "controlled by RHC" in schema.ts as "controlled by us". Add to the Rafa asks: he adds Enrique under Page settings > Page access with full control (safer than sharing a password; takes him two minutes from his phone). Then the fix itself: website to https://rhcsiteservice.com/, hours 7 to 6 all seven days, category "Portable Toilet Supplier" (nearest), service area instead of street address, short description from section 1, logo `rhc-logo-720.png`, cover `rhc-cover-900x678.jpg` |
 | 2 | Bing Places for Business | bingplaces.com | Try "Import from Google" with the agency account. If the staged (unverified) GBP does not import, create manually. Mark "I serve customers at their location" and hide the address. Bing may still ask to verify by phone, email or postcard; pick phone in the Rafa window |
 | 3 | Apple Business Connect | businessconnect.apple.com | Sign in with an Apple ID (create one on the agency email if needed). No hide-address toggle: choose the service-area option for businesses without a storefront. Logo square 1:1. Verification is usually a call to the business phone |
-| 4 | Yelp for Business | biz.yelp.com | SEARCH FIRST for "RHC Site Services" near Brooks, OR; claim if a stub exists. Service-area business: enter the address, then tick "don't show address". Decline the ad setup at every step; it will ask three times. Phone call or text verification |
+| 4 | Yelp for Business | biz.yelp.com/claim | SEARCH FIRST for "RHC Site Services" near Brooks, OR; claim if a stub exists (none visible to search as of 2026-08-22). Decline the ad setup at every step; it will ask three times. **Verified against Yelp's help center 2026-08-22:** categories, up to 3: `Portable Toilet Services` (parent Local Services) primary, `Party Equipment Rentals` (Event Planning & Services) second, leave the third empty; Yelp's Fences & Gates, Self Storage and Trailer Rental all misdescribe. Service Areas live under Business Information > Basic Information > Edit: answer **Yes** to "Do you service your customers at their location", enter cities, and only then does the hide-address option appear. **Yelp caps service areas at 6 cities inside a 100-mile diameter**, so the 8-city list does not fit: enter Salem, Portland, Gresham, Vancouver; try Eugene fifth and drop it if refused. Bend, Seattle and Tacoma cannot be entered (Yelp support can widen it on request; not worth a ticket now). Verification offers email, text or call: the email route wants an address on the website's domain and nobody has one at rhcsiteservice.com, so use **text** to 503-607-7412 if offered (4-digit code, Rafa forwards it), call if not. Add Rafa afterwards under User Management (up to 15 users, all with identical full access). Add the `Latinx-owned` attribute, which matches the GBP |
 | 5 | BBB | bbb.org/get-listed | Search first; if absent, "Add A Business". Free profile, NOT accreditation (declines the paid pitch). Legal name field takes `RHC Site Services LLC`; display name stays `RHC Site Services`. BBB calls to verify before publishing |
 | 6 | Nextdoor Business | business.nextdoor.com | Service area by ZIPs or cities; phone or email code. Use the short description |
 | 7 | LinkedIn company page | linkedin.com/company/setup/new | Needs Enrique's personal LinkedIn as the creating admin. Industry "Construction" or "Facilities Services"; website; tagline from the short description. No verification. Add Rafa as admin later |

@@ -1043,6 +1043,16 @@ Rafa's workload eases; it is still the highest-value item when he is available.
 9. **Salem vs Gresham address decision** (see below). Not urgent, but it decides
    which city RHC can reach in the map pack. Needs a real conversation, so it
    waits until his workload eases.
+10. **Facebook page admin access.** Found 2026-08-25: Enrique has NO access to
+    facebook.com/RHCSiteServices; the run sheet's "already controlled" was
+    wrong. Rafa adds Enrique under Page settings > Page access (full control).
+    Two minutes from his phone, and it unlocks the fastest citation fix.
+11. **Can Rafa actually honor same-day quotes?** Raised by Enrique 2026-08-25
+    while writing the Yelp listing; he softened its closing line to "you get a
+    quote" on this doubt. The site says "Get a Same-Day Quote" on every page
+    and the staged GBP description promises same-day quotes, so if Rafa says
+    no, that is a sitewide copy change, not a listing tweak. Until answered,
+    new listings may use the softer line; the site stays as-is.
 
 ## Open strategic decision: Salem vs Gresham
 
