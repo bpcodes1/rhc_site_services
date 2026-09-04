@@ -473,6 +473,15 @@ Yelp, BBB, Nextdoor, LinkedIn; not the directories).
 
 ## 7. Measurement
 
+**Check 2026-09-04, nine days after the first submissions:** none of the
+four is visible yet. portapottyrentalguide's Salem page lists Buck's, Honey
+Bucket and Oregon Portable Toilets, not RHC; pottydirectory's search returns
+nothing for RHC; Yelp blocks automated lookups, so it needs Enrique's inbox
+or a browser; Blue Book depends on a rep making contact. DataForSEO still
+shows 1 referring domain, as expected at nine days. Next step is Enrique's
+inbox: Yelp approval, the pottydirectory confirmation link, the
+portapottyrentalguide "live" email, and a Blue Book rep.
+
 Before (2026-08-22): rhcsiteservice.com has 1 referring domain, 3 backlinks,
 `sameAs` has 2 entries.
 

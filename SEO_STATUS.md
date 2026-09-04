@@ -79,6 +79,21 @@ checks: /terms-of-service re-inspection ~08-28 (still "URL is unknown to
 Google" on 08-25, four days after the re-request, which is early, not a
 verdict), breadcrumbs ~09-10, AI re-run 09-19.
 
+### Reading at day 38 (2026-09-04, via the GSC MCP)
+
+28-day window now covers 08-07 to 09-04, so it no longer overlaps the July
+days; compare rates, not totals. 1 click, 19 impressions, ~0.7/day, flat for
+the fourth consecutive reading. Two visible queries ("site box rental",
+"wac 246-215"), both at position 89. The homepage holds position 4.1 on its
+own narrow queries. 18 of 19 URLs re-inspected: all indexed, no canonical,
+robots or fetch issues. Nothing moved because nothing that builds authority
+has landed yet: no listing has gone live and the GBP is still unverified.
+DataForSEO re-measure the same day: still 1 referring domain, expected.
+
+**The /terms-of-service cause was found and acted on today**; see that
+section. The pages.dev contradiction with the shared rules file was also
+settled today; see Phase 0.
+
 ## PHASE 0: one item left, and it is Rafa (as of 2026-08-15)
 
 One open item. It does not block Phase 1 work; do not stall the queue waiting on
@@ -815,6 +830,22 @@ Worth noting how this was found: the Pages report says "18 indexed" and gives
 no way to see WHICH one is missing without clicking through. Per-URL inspection
 answered it in about thirty seconds.
 
+**CAUSE FOUND 2026-09-04, fourteen days after the re-request, still "URL is
+unknown to Google".** The sitemap report answered it: Google last downloaded
+`sitemap.xml` on **2026-07-28 19:06** and its stored copy holds **17 URLs**.
+The two legal pages were added 2026-08-06, so the sitemap Google has never
+listed them. Privacy-policy got in anyway through the 08-15 indexing request;
+the terms request evidently never registered, and with one footer link on a
+zero-authority domain there was no other path in. The live file has 19 URLs.
+
+ACTION 2026-09-04: sitemap resubmitted through the API, which makes Google
+re-download it. **Re-inspect ~2026-09-11.** If the sitemap report then shows
+19 URLs and terms is still unknown, Enrique re-requests indexing once more in
+the UI; if the sitemap report still says 17, the re-download did not happen
+and the next step is a UI resubmit. Lesson for the file: **adding a page to
+sitemap.xml does not make Google re-read the sitemap.** Resubmit it whenever
+the route list changes.
+
 **Enhancements > Breadcrumbs (08-18): 0 invalid, 1 valid.** The 0 is the
 confirmation that mattered: the BreadcrumbList markup shipped 08-14 parses.
 The 1 is low against the 16 pages carrying it, but the chart shows it only
@@ -888,6 +919,16 @@ descriptions do not index at all.
 Extra, discovered mid-Phase 0 and completed: pages.dev duplicate was serving a
 full copy of the site with no noindex. Fixed with a host-scoped rule in
 public/_headers. Cloudflare does NOT add noindex to pages.dev automatically.
+
+RE-VERIFIED 2026-09-04 because the shared rules file (`../CLAUDE.md`, audit
+dated 2026-09-01) lists `rhc-site-services.pages.dev` as a live crawlable
+duplicate with no canonical. For THIS site that row is wrong on both counts:
+the twin returns `x-robots-tag: noindex` and its HTML canonical points at
+`https://rhcsiteservice.com/`. The audit read robots.txt (`Allow: /`), which
+is true and irrelevant; the header does the work. The account-level redirect
+rule the shared file recommends is still the cleaner permanent fix and would
+retire the header; optional, not urgent, and the shared file's row has a
+correction note as of today.
 
 GSC details (task 2, done 2026-07-28): Domain property for rhcsiteservice.com,
 verified by DNS TXT via Google's one-click Cloudflare authorization. The TXT
